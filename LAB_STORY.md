@@ -38,7 +38,7 @@ Steps (check them off inside the issue):
   ```bash
   git config --global user.name "Your Name"
   git config --global user.email "your@email"
-```
+  ```
 
 - [ ] Clone the repo to your laptop.
     
@@ -144,7 +144,7 @@ Work in branch `feature/architecture` (or similar).
         
     - Request a review from a classmate.
         
-4. After review (see Task 4), you will update the file and merge.
+4. Continue with next tasks, the reviews will be done in Task 4.
     
 ---
 
