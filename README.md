@@ -12,15 +12,18 @@ By the end of this lab you should be able to:
 
 ## How the lab works
 
-1. **Fork or clone** this repo to your GitHub account (or accept the Classroom assignment link).
+1. **Fork** this repo to your GitHub account.
 2. **Create GitHub issues** for the tasks in [`LAB_STORY.md`](./LAB_STORY.md) using the provided templates.
-3. For each task:
+3. Add a classmate to the repo as a contributor.
+4. For each task:
    - Create/assign an **issue**.
    - Implement the task on a **feature branch**.
-   - Open a **Pull Request** and request review from one of your classmates.
-4. At the end:
-   - Make sure your main branch is green.
-   - Be ready to **demo** your work to the TA.
+   - Open a **Pull Request**.
+   - Assign the classmate in the PR as the reviewer.
+   - After the review, make the necessary changes and get the classmate to approve the PR.
+   - Merge the PR to the `main` branch.
+5. At the end:
+   - Be ready to demonstrate the completed tasks to the TA.
 
 ---
 
