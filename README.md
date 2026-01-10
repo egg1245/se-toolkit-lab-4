@@ -138,8 +138,8 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
 
 1. [ ] Create an issue `[Task] Product & architecture description`.
 2. [ ] Create a branch for it and switch to that branch, e.g., `git checkout -b task-1`.
-3. [ ] Decide on how to make the architecture diagrams. We suggest the following options:
-   1. You can *prototype* diagrams via the [`hediet.vscode-drawio`](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) extension. However, it's not a good idea to version control images because you can't conveniently visualize their diffs and therefore can't track changes. Therefore, you must use the ["diagrams as code"](https://simmering.dev/blog/diagrams/) approach and eventually switch to one of the other options.
+3. [ ] Decide on how to make the architecture diagrams. We suggest the following approaches:
+   1. You can *prototype* diagrams via the [`hediet.vscode-drawio`](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) extension. However, it's not a good idea to version control images because you can't conveniently visualize their diffs and therefore can't track changes. Therefore, you must use the ["diagrams as code"](https://simmering.dev/blog/diagrams/) approach and eventually switch to one of the other approaches.
    2. You can write [PlantUML](https://plantuml.com/) code.
       - [ ] Install the [`jebbs.plantuml`](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) VS Code extension.
       - [ ] Run `docker run --name plantuml-server -d -p 48080:8080 plantuml/plantuml-server:jetty` to access the PlantUML server. The `48080` port is already set in `./.vscode/settings.json`.
@@ -155,7 +155,7 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
              - ChatGPT.com
              - Wildberries.ru
              - Uchi.ru
-             - Any other widely used full-stack app (agree with TA if picking this option).
+             - Any other widely used full-stack app except for Uber because it's used in examples (agree with TA if you choose this option).
     2. [ ] In the `## Motivation` section:
          - [ ] Explain in 3-4 sentences why you personally would be interested to work on this product as a tech specialist.
     3. [ ] In the `## Main modules` section:
@@ -168,21 +168,28 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
           - Admin panel
           - Data analytics
         - [ ] For each module, explain in 1–2 sentences what it does.
-        - [ ] Provide a [component diagram](https://en.wikipedia.org/wiki/Component_diagram). If you use [`PlantUML`](https://plantuml.com/component-diagram):
-            - [ ] See [how to draw a connection](https://stackoverflow.com/questions/55077828/using-required-provided-interfaces-in-component-diagrams-plantuml/57134601#57134601).
+        - [ ] Provide a [component diagram](https://en.wikipedia.org/wiki/Component_diagram).
+          - [ ] If you use [`PlantUML`](https://plantuml.com/component-diagram):
             - [ ] Store the diagram source code in `docs/diagrams/src/architecture-component.puml`.
+            - [ ] See [how to draw a connection](https://stackoverflow.com/questions/55077828/using-required-provided-interfaces-in-component-diagrams-plantuml/57134601#57134601).
     4. [ ] In the `## Data flow` section:
           - [ ] Describe what happens when a typical user action occurs (e.g. user orders a taxi / sends a message).
           - [ ] Mention which modules talk to each other and what kind of data they exchange.
-          - [ ] Provide a [sequence diagram](https://en.wikipedia.org/wiki/Sequence_diagram) in [`PlantUML`](https://plantuml.com/sequence-diagram) or [`Mermaid`](https://mermaid.js.org/syntax/sequenceDiagram.html). Store the diagram source code in `docs/diagrams/src/architecture-sequence.puml` and the rendered image in `docs/diagrams/out`.
+          - [ ] Provide a [sequence diagram](https://en.wikipedia.org/wiki/Sequence_diagram).
+            - [ ] If you use [`PlantUML`](https://plantuml.com/sequence-diagram):
+              - [ ] Store the diagram source code in `docs/diagrams/src/architecture-sequence.puml`.
+            - [ ] Alternatively, use [`Mermaid`](https://mermaid.js.org/syntax/sequenceDiagram.html).
     5. [ ] In the `## Deployment` section:
          - [ ] Briefly describe where these modules live (high-level view):
              - On user devices (mobile/web app).
              - On servers (backend services, databases).
-         - [ ] Provide a [deployment diagram](https://en.wikipedia.org/wiki/Deployment_diagram) in [`PlantUML`](https://plantuml.com/deployment-diagram) or [`Mermaid`](https://mermaid.js.org/syntax/c4.html#c4-deployment-diagram-c4deployment). Store the diagram source code in `docs/diagrams/src/architecture-deployment.puml`.
+         - [ ] Provide a [deployment diagram](https://en.wikipedia.org/wiki/Deployment_diagram).
+           - [ ] If you use [`PlantUML`](https://plantuml.com/deployment-diagram):
+             - [ ] Store the diagram source code in `docs/diagrams/src/architecture-deployment.puml`.
+           - [ ] Alternatively, use [`Mermaid`](https://mermaid.js.org/syntax/c4.html#c4-deployment-diagram-c4deployment).
     6. [ ] In the `## Knowledge Gaps` section:
-             - [ ] Write at least two things in your architecture that you are not fully sure about (guesses, questions, etc.).
-5. [ ] Commit your changes with a clear message following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) using one of these methods:
+         - [ ] Write at least two things in your architecture that you are not fully sure about (guesses, questions, etc.).
+5. [ ] Commit and push your changes with a clear message following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) using one of these methods:
     1. In VS Code:
        1. Activity Bar -> Source Control -> Commit.
        2. GitLens panel -> `task-1` -> Publish task-1 to GitHub.
