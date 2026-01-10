@@ -125,12 +125,24 @@ The exact flow for each task is `Issue -> PR -> Review`:
 - Write a commit message following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) format for each commit.
 - [Create](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#creating-the-pull-request) a PR to the `main` branch.
 - Request a review of the PR from the collaborator.
-- Make necessary changes based on the review.
+- Address the comments, e.g., make fixes or ask to clarify the comment.
 - Get the collaborator to approve the PR.
 - Merge the PR to the `main` branch.
 - Close the issue.
 
 Be ready to demonstrate the completed tasks to the TA at the end of the lab.
+
+## PR reviews
+
+As a PR reviewer, you must:
+
+- Review the assigned PR and leave at least 2 meaningful comments created for [particular lines](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request).
+- Approve the PR if you're satisfied with the PR.
+
+As a PR author, you must:
+
+- Reply to comments in a meaningful way, e.g., write “Fixed in d0d5aeb” (`d0d5aeb` being the id of commit where you addressed the comment), ask to clarify the comment, or explain why you disagree.
+- Make necessary changes based on the review.
 
 ---
 
@@ -288,36 +300,6 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
 
 12. Follow the process for [Main tasks](#main-tasks) to complete the issue with a PR.
 
----
-
-### 4. Peer review via PR
-
-Create an issue:
-
-- `[Task] Code review for Lab 01`
-You will act as both **author** and **reviewer**.
-
-1. As an **author**:
-    - Create two **PRs** that:
-        - Adds `docs/architecture.md` with the diagram.
-        - Adds `src/roles-and-skills.md`.
-    - Request a review from a collaborator for at least one of the PRs.
-    - Use the [PR template](.github/pull_request_template.md) and make sure the PR descriptions are clear and links the relevant issue(s).
-2. As a **reviewer**:
-    - Review at least **one PR** from a collaborator.
-    - Leave at least **2 meaningful comments** to improve your colleagues work, which they need to address. For example:
-        - A question about architecture (“Why does the mobile app talk directly to the database?”).
-        - Some important commonly-appearing skills weren't mentioned.
-3. As an **author**, address the comments:
-    - Make changes where reasonable.
-    - Reply to comments with something like “Fixed in 123abc” (123abc being the commit id) or explain why you disagree.
-4. When both sides are happy, **merge the PR**.
-
-> 💡 **LLM check:**
->
-> - You can ask an LLM “how to phrase a polite review comment”,  
->     but you must read your collaborator’s work and think of **real feedback**.
->
 ---
 
 ### 5. Short personal reflection
