@@ -26,18 +26,18 @@ title Uber Application Deployment Diagram (Physical View)
 
 ' --- Client Tier ---
 node "User Smartphone" <<device>> as SmartPhone {
-  component [Mobile App Instance\n(iOS/Android)] as MobileApp
+  component [Mobile App Instance\n(iOS/Android)] as mobile_app
 }
 
 node "User Computer" <<device>> as Computer {
   node "Web Browser" <<execution environment>> {
-    component [Web App Instance\n(React SPA)] as WebApp
+    component [Web App Instance\n(React SPA)] as web_app
   }
 }
 
 ' --- External Systems ---
 node "External Payment Provider" <<external>> {
-  component [Stripe API] as Stripe
+  component [Stripe API] as stripe
 }
 
 ' --- Cloud Infrastructure ---
@@ -48,68 +48,68 @@ cloud "Cloud Infrastructure (AWS)" {
   }
 
   node "Load Balancer / Ingress" as LB {
-    component [Nginx Gateway] as Nginx
+    component [Nginx Gateway] as nginx
   }
 
   ' --- Compute Cluster ---
   node "Kubernetes Cluster (Application Tier)" as K8s {
     node "Pod" {
-      component [User Service] as UserService
-      component [Payment Service] as PaymentService
-      component [Driver Service] as DriverService
-      component [Notification Service] as NotifService
+      component [User Service] as user_service
+      component [Payment Service] as payment_service
+      component [Driver Service] as driver_service
+      component [Notification Service] as notification_service
     }
   }
 
   ' --- Middleware & Data ---
   node "Message Broker Cluster" as KafkaCluster {
-    queue [Kafka Topic] as Kafka
+    queue [Kafka Topic] as kafka
   }
 
   node "Redis Cluster" as RedisNode {
-    component [Redis Cache] as Redis
+    component [Redis Cache] as redis
   }
 
   node "Database Server (Primary)" as DBServer {
-    database [PostgreSQL] as Postgres
+    database [PostgreSQL] as postgres
   }
 }
 
 ' --- Relationships ---
 
 ' Client to Infrastructure
-MobileApp --> Nginx : HTTPS (JSON)
+mobile_app --> nginx : HTTPS (JSON)
 Computer --> CDN : HTTPS (Fetch Static Assets)
-WebApp --> Nginx : HTTPS (API Calls)
+web_app --> nginx : HTTPS (API Calls)
 
 ' Gateway to Services
-Nginx --> UserService : REST
-Nginx --> PaymentService : REST
-Nginx --> DriverService : REST
-Nginx --> NotifService : REST
+nginx --> user_service : REST
+nginx --> payment_service : REST
+nginx --> driver_service : REST
+notification_service --> nginx : REST
 
 ' Service to Database
-UserService --> Postgres : TCP
-PaymentService --> Postgres : TCP
-DriverService --> Postgres : TCP
-NotifService --> Postgres : TCP
+user_service --> postgres : TCP
+payment_service --> postgres : TCP
+driver_service --> postgres : TCP
+notification_service --> postgres : TCP
 
 ' Service to Cache
-UserService ..> Redis : TCP
-PaymentService ..> Redis : TCP
-DriverService ..> Redis : TCP
-NotifService ..> Redis : TCP
+user_service ..> redis : TCP
+payment_service ..> redis : TCP
+driver_service ..> redis : TCP
+notification_service ..> redis : TCP
 
 ' Service to Messaging
-UserService --> Kafka : Publish
-PaymentService --> Kafka : Publish
-DriverService --> Kafka : Publish
-NotifService --> Kafka : Subscribe
+user_service --> kafka : Publish
+payment_service --> kafka : Publish
+driver_service --> kafka : Publish
+notification_service --> kafka : Subscribe
 
 ' Inter-service via Queue (Example)
-Kafka ..> NotifService : Consume Events
+kafka ..> notification_service : Consume Events
 
 ' External
-PaymentService --> Stripe : HTTPS (TLS)
+payment_service --> stripe : HTTPS (TLS)
 
 @enduml
