@@ -132,54 +132,61 @@ Be ready to demonstrate the completed tasks to the TA at the end of the lab.
 
 ### 1. Pick a product & describe its architecture (text)
 
+> [!NOTE]
+>
+> If you use PlantUML, you can render it to PNG/SVG using the [PlantUML VS Code extension](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml).
+>
+> If you use Mermaid, just include the code in a Markdown code block with the `mermaid` language tag (see [docs](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#creating-mermaid-diagrams)).
+
 1. [ ] Create an issue `[Task] Product & architecture description`.
 2. [ ] Create a branch for it.
 3. [ ] Switch to that branch.
-4. [ ] In `docs/architecture.md`:
-    1. [ ] In the `## Product choice` section:
-        - [ ] Pick one product from this list or propose your own:
-            - Yandex Taxi
-            - Telegram
-            - ChatGPT.com
-            - Wildberries.ru
-            - Uchi.ru
-            - Any other widely used full-stack app (agree with TA if picking this option).
-    2. [ ] In the `## Motivation` section:
-        - [ ] Explain why you personally would be interested to work on this product as a tech specialist.
-    3. [ ] In the `## Main modules` section:
-        - [ ] Describe the main system modules in your own words. For example:
-            - Mobile app
-            - Backend API
-            - Authentication service
-            - Payment / billing
-            - Notifications
-            - Admin panel
-            - Data analytics
-        - [ ] For each module, write in 1–2 sentences what it does.
-        - [ ] Provide a [component diagram](https://en.wikipedia.org/wiki/Component_diagram) in [`PlantUML`](https://plantuml.com/component-diagram) (see [how to draw a connection](https://stackoverflow.com/questions/55077828/using-required-provided-interfaces-in-component-diagrams-plantuml/57134601#57134601)).
-    4. [ ] In the `## Data flow` section:
-            - Describe what happens when a typical user action occurs (e.g. user orders a taxi / sends a message).
-            - Mention which modules talk to each other and what kind of data they exchange.
-            - Provide a [sequence diagram](https://en.wikipedia.org/wiki/Sequence_diagram) in [`PlantUML`](https://plantuml.com/sequence-diagram) or [`Mermaid`](https://mermaid.js.org/syntax/sequenceDiagram.html) (see [Creating Mermaid diagrams](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#creating-mermaid-diagrams)). Store the code for the diagram in the repo.
-    5. [ ] In the `## Deployment` section:
-        - [ ] Briefly describe where these modules live (high-level view):
-            - On user devices (mobile/web app).
-            - On servers (backend services, databases).
-        - [ ] Provide a [deployment diagram](https://en.wikipedia.org/wiki/Deployment_diagram) in [`PlantUML`](https://plantuml.com/deployment-diagram) or [`Mermaid`](https://mermaid.js.org/syntax/c4.html#c4-deployment-diagram-c4deployment).
-    6. [ ] In the `## Uncertainties` section:
-            - [ ] Write at least two things in your architecture that you are not fully sure about (guesses, questions, etc.).
-5. [ ] Commit your changes with a clear message using one of these methods:
+4. [ ] Create the `docs/` directory if it doesn't exist.
+5. [ ] Create `docs/architecture.md`:
+     1. [ ] In the `## Product choice` section:
+         - [ ] Pick one product from this list or propose your own:
+             - Yandex Taxi
+             - Telegram
+             - ChatGPT.com
+             - Wildberries.ru
+             - Uchi.ru
+             - Any other widely used full-stack app (agree with TA if picking this option).
+     2. [ ] In the `## Motivation` section:
+         - [ ] Explain in 3-4 sentences why you personally would be interested to work on this product as a tech specialist.
+     3. [ ] In the `## Main modules` section:
+         - [ ] Select at least 5 main system modules. For example:
+             - Mobile app
+             - Backend API
+             - Authentication service
+             - Payment / billing
+             - Notifications
+             - Admin panel
+             - Data analytics
+         - [ ] For each module, explain in 1–2 sentences what it does.
+         - [ ] Provide a [component diagram](https://en.wikipedia.org/wiki/Component_diagram) in [`PlantUML`](https://plantuml.com/component-diagram) (see [how to draw a connection](https://stackoverflow.com/questions/55077828/using-required-provided-interfaces-in-component-diagrams-plantuml/57134601#57134601)). Save the PlantUML code in `docs/diagrams/architecture-component.puml` and render it to PNG/SVG format.
+     4. [ ] In the `## Data flow` section:
+             - Describe what happens when a typical user action occurs (e.g. user orders a taxi / sends a message).
+             - Mention which modules talk to each other and what kind of data they exchange.
+             - Provide a [sequence diagram](https://en.wikipedia.org/wiki/Sequence_diagram) in [`PlantUML`](https://plantuml.com/sequence-diagram) or [`Mermaid`](https://mermaid.js.org/syntax/sequenceDiagram.html). Store the diagram source code in `docs/diagrams/architecture-sequence.puml` and the rendered image in `docs/images/`.
+     5. [ ] In the `## Deployment` section:
+         - [ ] Briefly describe where these modules live (high-level view):
+             - On user devices (mobile/web app).
+             - On servers (backend services, databases).
+         - [ ] Provide a [deployment diagram](https://en.wikipedia.org/wiki/Deployment_diagram) in [`PlantUML`](https://plantuml.com/deployment-diagram) or [`Mermaid`](https://mermaid.js.org/syntax/c4.html#c4-deployment-diagram-c4deployment). Store the diagram source code in `docs/diagrams/architecture-deployment.puml` and the rendered image in `docs/images/`.
+     6. [ ] In the `## Knowledge Gaps` section:
+             - [ ] Write at least two things in your architecture that you are not fully sure about (guesses, questions, etc.).
+6. [ ] Commit your changes with a clear message using one of these methods:
    - Method 1: Activity Bar -> Source Control
    - Method 2: `git` CLI (replace `your-branch` with an actual branch name):
 
         ```bash
         git checkout -b your-branch
-        git add docs/architecture.md
+        git add docs
         git commit -m "feat(docs): describe high-level architecture of <product>"
         git push -u origin your-branch
         ```
 
-6. [ ] Open a PR to `main`:
+7. [ ] Open a PR to `main`:
     - [ ] [Link the PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to the issue, e.g. `Closes #<issue number>`.
     - [ ] Request a review from the collaborator.
 
