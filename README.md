@@ -190,6 +190,12 @@ For each task, follow the [procedure](#procedure-for-each-task).
    3. You can write [Mermaid](https://mermaid.js.org/) code in Markdown code blocks with the `mermaid` language tag (see [docs](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#creating-mermaid-diagrams)).
    4. You can use any other tool if it supports the "diagrams as code" approach, e.g., [Structurizr](https://structurizr.com/), [D2](https://d2lang.com/), [LikeC4](https://github.com/likec4/likec4) etc.
 
+    > [!IMPORTANT]
+    >
+    > The goal of the diagram drawing tasks is to get familiar with certain architectural views (static, dynamic), not to design a system.
+    >
+    > To design a system rationally, you need to consider the architectural drivers. This approach is outlined in the optional [Task 4](#4-update-architecture-optional-stretch-task).
+
 3. [ ] Create `./docs/architecture.md`. In `./docs/architecture.md`:
     1. [ ] In the `## Product choice` section:
          - [ ] Pick one product from this list or propose your own:
