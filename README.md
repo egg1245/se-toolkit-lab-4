@@ -115,7 +115,7 @@ This and all other lab assignments will simulate the engineering practices in a 
 
 You work **independently** on the tasks below in your forked repo.
 
-Here's the process for a task:
+Follow this process for each task:
 
 1. [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a GitHub issue in your forked repo using the "Lab Task" option and fill in the details.
 2. Create a new branch for the issue via [GitHub](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue) or via `git checkout -b <branch name>`.
@@ -164,8 +164,7 @@ As a PR author, you must:
 ### 1. Pick a product and describe its architecture
 
 1. [ ] Create an issue `[Task] Product & architecture description`.
-2. [ ] Create a branch for it and switch to that branch, e.g., `git checkout -b task-1`.
-3. [ ] Decide on how to make the architecture diagrams. We suggest the following approaches:
+2. [ ] Decide on how to make the architecture diagrams. We suggest the following approaches:
    1. You can *prototype* diagrams via the [`hediet.vscode-drawio`](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) extension. However, it's not a good idea to version control images because you can't conveniently visualize their diffs and therefore can't track changes. Therefore, you must use the ["diagrams as code"](https://simmering.dev/blog/diagrams/) approach and eventually switch to one of the other approaches.
    2. You can write [PlantUML](https://plantuml.com/) code.
       - [ ] Install the [`jebbs.plantuml`](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) VS Code extension.
@@ -174,7 +173,7 @@ As a PR author, you must:
       - [ ] [Include](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) the rendered images into your Markdown file.
    3. You can write [Mermaid](https://mermaid.js.org/) code in Markdown code blocks with the `mermaid` language tag (see [docs](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#creating-mermaid-diagrams)).
    4. You can use any other tool if it supports the "diagrams as code" approach, e.g., [Structurizr](https://structurizr.com/), [D2](https://d2lang.com/), [LikeC4](https://github.com/likec4/likec4) etc.
-4. [ ] Create `./docs/architecture.md`. In `./docs/architecture.md`:
+3. [ ] Create `./docs/architecture.md`. In `./docs/architecture.md`:
     1. [ ] In the `## Product choice` section:
          - [ ] Pick one product from this list or propose your own:
              - Yandex Taxi
@@ -216,19 +215,6 @@ As a PR author, you must:
            - [ ] Alternatively, use [`Mermaid`](https://mermaid.js.org/syntax/c4.html#c4-deployment-diagram-c4deployment).
     6. [ ] In the `## Knowledge Gaps` section:
          - [ ] Write at least two things in your architecture that you are not fully sure about (guesses, questions, etc.).
-5. [ ] Commit and push your changes with a clear message following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) using one of these methods:
-    1. In VS Code:
-       1. Activity Bar -> Source Control -> Commit.
-       2. GitLens panel -> `task-1` -> Publish task-1 to GitHub.
-    2. Via `git` CLI:
-
-        ```bash
-        git add docs
-        git commit -m "feat(docs): describe the high-level architecture of the product"
-        git push -u origin task-1
-        ```
-
-6. [ ] Follow the process for [Main tasks](#main-tasks) to complete the issue with a PR.
 
 ---
 
@@ -236,15 +222,13 @@ As a PR author, you must:
 
 1. [ ] Create an issue `[Task] Roles and skills mapping`.
 
-2. [ ] Create a branch for it and switch to that branch, e.g., `git checkout -b task-2`.
-
     > [!IMPORTANT]
     > You can ask an LLM “what does a *role* usually do?”, but:
     >
     > - You must visit `roadmap.sh` and real job postings yourself.
     > - Your reflections about what you have / don’t have must be honest and personal.
 
-3. [ ] In `./docs/roles-and-skills.md`:
+2. [ ] In `./docs/roles-and-skills.md`:
 
      - [ ] In the `## Roles for components` section:
         - [ ] For each component from `architecture.md`, list IT roles that are likely involved in the development and maintenance of that component.
@@ -270,11 +254,11 @@ As a PR author, you must:
           - Planning
           - ...
 
-4. [ ] Choose *one* role that seems most interesting to you now.
-5. [ ] Go to [`roadmap.sh`](https://roadmap.sh/) and sign up.
-6. [ ] Find the roadmap relevant for the role you chose.
-7. [ ] In that roadmap, mark the items you already have at least some knowledge in.
-8. [ ] In `./docs/roles-and-skills.md`, in the `## My chosen role` section, write:
+3. [ ] Choose *one* role that seems most interesting to you now.
+4. [ ] Go to [`roadmap.sh`](https://roadmap.sh/) and sign up.
+5. [ ] Find the roadmap relevant for the role you chose.
+6. [ ] In that roadmap, mark the items you already have at least some knowledge in.
+7. [ ] In `./docs/roles-and-skills.md`, in the `## My chosen role` section, write:
 
     ```markdown
     ### Role
@@ -290,13 +274,13 @@ As a PR author, you must:
     - ...
     ```
 
-9. [ ] Find **5-7 job postings** for this role on [`HH.ru`](https://hh.ru) or a similar job site.
-10. [ ] For each posting, list:
+8. [ ] Find **5-7 job postings** for this role on [`HH.ru`](https://hh.ru) or a similar job site.
+9. [ ] For each posting, list:
     - Link to the posting.
     - Company name.
     - Role title.
     - 3–5 key skills/requirements they mention.
-11. [ ] In `./docs/roles-and-skills.md`, in the `## Job market snapshot` section, write:
+10. [ ] In `./docs/roles-and-skills.md`, in the `## Job market snapshot` section, write:
 
     ```markdown
     ### Skills that appear in almost every posting
@@ -310,8 +294,6 @@ As a PR author, you must:
     ### My key takeaway
     ...
     ```
-
-12. Follow the process for [Main tasks](#main-tasks) to complete the issue with a PR.
 
 ---
 
