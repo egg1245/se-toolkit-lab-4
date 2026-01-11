@@ -314,36 +314,36 @@ As a PR author, you must:
 
 ---
 
-### 4. Stretch tasks (optional)
+### 4. Update architecture (optional stretch task)
 
-If you finish early:
+1. Create the issue `[Task] Update architecture`.
+2. [ ] In `./docs/architecture.md`:
+    - [ ] In the `## Architectural drivers` section:
+      - [ ] List 10-15 [architectural drivers](https://github.com/inno-se/the-guide?tab=readme-ov-file#architectural-drivers) for the system:
+        - [ ] business goals;
+        - [ ] technical constraints;
+        - [ ] primary functional requirements;
+        - [ ] quality requirements.
+        - [ ] architectural concerns.
+    - [ ] In the `## Design decisions` section:
+      - [ ] List 5-7 key design decisions for the system ([example](https://github.com/otrebmuh/HotelPricingSystem/blob/433e061f712a8748fdf04a6f767752e12be2f4b9/Design/Architecture.md#10-design-decisions)).
+      - [ ] Link each decision to an architectural driver.
+      - [ ] Justify each decision (provide rationale) in 1-2 sentences.
+      - [ ] List 1-2 discarded alternatives for each decision.
 
-1. [ ] Update the architecture docs.
-   1. [ ] In `./docs/architecture.md`:
-       - [ ] In the `## Architectural drivers` section:
-         - [ ] List 10-15 [architectural drivers](https://github.com/inno-se/the-guide?tab=readme-ov-file#architectural-drivers) for the system:
-           - [ ] business goals;
-           - [ ] technical constraints;
-           - [ ] primary functional requirements;
-           - [ ] quality requirements.
-           - [ ] architectural concerns.
-       - [ ] In the `## Design decisions` section:
-         - [ ] List 5-7 key design decisions for the system ([example](https://github.com/otrebmuh/HotelPricingSystem/blob/433e061f712a8748fdf04a6f767752e12be2f4b9/Design/Architecture.md#10-design-decisions)).
-         - [ ] Link each decision to an architectural driver.
-         - [ ] Justify each decision (provide rationale) in 1-2 sentences.
-         - [ ] List 1-2 discarded alternatives for each decision.
+3. [ ] Update the diagrams to match your design decisions.
 
-   2. [ ] Update the diagrams to match your design decisions.
+### 5. Work on an agent (optional stretch task)
 
-2. [ ] Work on an agent that can help you with this lab.
-   1. [ ] In `docs/agent-idea.md`, sketch how an AI agent could:
-          - [ ] Read `README.md`;
-          - [ ] Generate GitHub issues automatically;
-          - [ ] Create initial markdown files for you.
-          - [ ] Complete all tasks for you.
+1. Create the issue `[Task] Work on an agent`.
+2. [ ] In `docs/agent-idea.md`, sketch how an AI agent could:
+    - [ ] Read `README.md`;
+    - [ ] Generate GitHub issues automatically;
+    - [ ] Create initial markdown files for you.
+    - [ ] Complete all tasks for you.
 
-   2. [ ] Try to implement a part of that agent.
-   3. [ ] Test that agent in a different repo.
+3. [ ] Try to implement a part of that agent.
+4. [ ] Test that agent in a different fork of this repo.
 
 ---
 
