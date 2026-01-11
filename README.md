@@ -125,6 +125,8 @@ By the end of the lab:
 <!-- - TODO how does a TA check the work? -->
 - Explain your diagram, chosen role in a short conversation with the TA.
 
+<!-- TODO check out all completed steps -->
+
 ---
 
 ## Procedure for each task
@@ -176,6 +178,8 @@ As a PR author, you must:
 You work **independently** on the tasks below in your forked repo.
 
 For each task, follow the [procedure](#procedure-for-each-task).
+
+Tasks are non-optional unless marked as "optional".
 
 ### 1. Pick a product and describe its architecture
 
