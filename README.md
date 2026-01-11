@@ -318,17 +318,36 @@ As a PR author, you must:
 
 ---
 
-### 6. Stretch tasks (optional)
+### 4. Stretch tasks (optional)
 
 If you finish early:
 
-- Add a second diagram showing **only backend services** and how they might scale (load balancer, multiple service instances, database).
-- Create a file `src/agent-idea.md`:
-  - Sketch how an “agent/script” could:
-    - Read `LAB_STORY.md`,
-    - Generate GitHub issues automatically via API,
-    - Create initial markdown files for you.
-- Try to implement a tiny part of that agent (even just a script that reads this file and prints task titles).
+1. [ ] Update the architecture docs.
+   1. [ ] In `./docs/architecture.md`:
+       - [ ] In the `## Architectural drivers` section:
+         - [ ] List 10-15 [architectural drivers](https://github.com/inno-se/the-guide?tab=readme-ov-file#architectural-drivers) for the system:
+           - [ ] business goals;
+           - [ ] technical constraints;
+           - [ ] primary functional requirements;
+           - [ ] quality requirements.
+           - [ ] architectural concerns.
+       - [ ] In the `## Design decisions` section:
+         - [ ] List 5-7 key design decisions for the system ([example](https://github.com/otrebmuh/HotelPricingSystem/blob/433e061f712a8748fdf04a6f767752e12be2f4b9/Design/Architecture.md#10-design-decisions)).
+         - [ ] Link each decision to an architectural driver.
+         - [ ] Justify each decision (provide rationale) in 1-2 sentences.
+         - [ ] List 1-2 discarded alternatives for each decision.
+
+   2. [ ] Update the diagrams to match your design decisions.
+
+2. [ ] Work on an agent that can help you with this lab.
+   1. [ ] In `docs/agent-idea.md`, sketch how an AI agent could:
+          - [ ] Read `README.md`;
+          - [ ] Generate GitHub issues automatically;
+          - [ ] Create initial markdown files for you.
+          - [ ] Complete all tasks for you.
+
+   2. [ ] Try to implement a part of that agent.
+   3. [ ] Test that agent in a different repo.
 
 ---
 
