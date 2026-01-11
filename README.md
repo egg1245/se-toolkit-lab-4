@@ -198,7 +198,11 @@ For each task, follow the [procedure](#procedure-for-each-task).
              - ChatGPT.com
              - Wildberries.ru
              - Uchi.ru
-             - Any other widely used full-stack app except for Uber because it's used in examples (agree with TA if you choose this option).
+             - Any other widely used full-stack app (except for Uber because it's used in diagram examples). Agree with your TA if you choose this option.
+         - [ ] Provide:
+           - [ ] The product's name;
+           - [ ] A link to the product's website.
+           - [ ] A short description of the product (1–2 sentences).
     2. [ ] In the `## Motivation` section:
          - [ ] Explain in 3-4 sentences why you personally would be interested to work on this product as a tech specialist.
     3. [ ] In the `## Main components` section:
