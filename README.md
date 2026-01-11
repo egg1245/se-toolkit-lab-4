@@ -150,8 +150,6 @@ Follow this process for each task:
 11. Merge the PR to the `main` branch.
 12. Close the issue.
 
-Be ready to demonstrate the completed tasks to the TA at the end of the lab.
-
 ## PR reviews
 
 As a PR reviewer, you must:
@@ -314,8 +312,6 @@ As a PR author, you must:
     - [ ] What is one thing about the product’s architecture that was new to you?
     - [ ] Which course topics (Git, Linux, Docker, REST, CI/CD, fullstack, data) seem most relevant to your chosen role?
     - [ ] What is one concrete skill you would like to improve this semester?
-
-3. [ ] Follow the process for [Main tasks](#main-tasks) to complete the issue with a PR.
 
 ---
 
