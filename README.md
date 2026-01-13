@@ -16,6 +16,7 @@ By the end of this lab you should be able to:
 ## Tasks overview
 
 To complete this lab, you will need to:
+
 - Setup your github account and this lab's repo.
 - Pick an existing digital product.
 - Sketch its architecture: components, data flow, deployment.
@@ -23,6 +24,7 @@ To complete this lab, you will need to:
 - Practice using GitHub issues, branches and pull requests (PRs) to organize your work in a repository (repo) and get feedback from peers.
 
 This and all other lab assignments will simulate real-life engineering practices:
+
 - Follow processes;
 - Communicate via issues/PRs;
 - Keep the work reviewable;
@@ -30,6 +32,7 @@ This and all other lab assignments will simulate real-life engineering practices
 - Write clear commit messages.
 
 ## Repo structure
+
 - `.github/ISSUE_TEMPLATE` – templates for your issues.
 - `.github/pull_request_template.md` – a template for PRs.
 
@@ -38,6 +41,7 @@ This and all other lab assignments will simulate real-life engineering practices
 ## Lab setup
 
 ### Set up a fork
+
 1. Create a GitHub account.
 2. Fork this repo to your GitHub account.
 3. Continue your work in the forked repo.
@@ -61,19 +65,19 @@ This and all other lab assignments will simulate real-life engineering practices
 
 ### Add a classmate as a collaborator
 
-7. In the repo `Settings` -> `Collaborators` -> `Add people`, add a classmate as a collaborator.
-8. Make sure your collaborator have accepted the invitation sent to their email.
+1. In the repo `Settings` -> `Collaborators` -> `Add people`, add a classmate as a collaborator.
+2. Make sure your collaborator have accepted the invitation sent to their email.
 
 ### Set up your local tools
 
-9. (If needed) On your computer, configure [`git`](https://git-scm.com/):
+1. (If needed) On your computer, configure [`git`](https://git-scm.com/):
 
     ```bash
     git config --global user.name "Your Name"
     git config --global user.email "your@email"
     ```
 
-10. Install [`VS Code`](https://code.visualstudio.com/). This is our code editor of choice that we'll use in this course.
+2. Install [`VS Code`](https://code.visualstudio.com/). This is our code editor of choice that we'll use in this course.
     <!-- TODO: Add a screenshot with all key elements marked. -->
     Optionally, you can learn more about it:
     - [Basic Layout](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout).
@@ -85,14 +89,15 @@ This and all other lab assignments will simulate real-life engineering practices
     - How to enable [`files.autoSave`](https://code.visualstudio.com/docs/editing/codebasics#_save-auto-save) and [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting).
 
 ### Open the repository on your machine
+
 11. On your computer, create a directory `pre-swp`.
-12. In that directory, clone the lab repo.
+2. In that directory, clone the lab repo.
 
     ```bash
     git clone https://github.com/your-username/lab-01-market-product-and-git
     ```
 
-13. Open the repo in `VS Code`.
+3. Open the repo in `VS Code`.
 
     ```bash
     cd pre-swp
@@ -100,15 +105,16 @@ This and all other lab assignments will simulate real-life engineering practices
     ```
 
 ### Set up VS Code extensions
+
 14. Install the recommended VS Code extensions (listed in `./.vscode/extensions.json`) when VS Code suggests to install them.
-15. Sign in to accounts.
+2. Sign in to accounts.
     In the Activity Bar:
     1. Click `Accounts`
     2. Click `Sign in with GitHub`
     3. Repeat for any of the extensions if neeeded.
 
 <!-- TODO: move all gitlens related points to extra section (recommendations) -->
-16. Check GitLens.
+1. Check GitLens.
 
     In the Activity Bar:
 
@@ -119,9 +125,11 @@ This and all other lab assignments will simulate real-life engineering practices
     5. Make sure you can see commits to this repo.
 
 ### Set up an agent
+
 17. Set up [Kilo Code](https://kilo.ai/install) with Qwen3 Coder (watch [tutorial](https://www.youtube.com/watch?v=G0uIVEt3aj4)) or another [free model](https://openrouter.ai/collections/free-models).
 
 ### Skim the lab description
+
 18. Skim this `README.md` file once so you know what’s coming.
 
 ---
@@ -389,7 +397,7 @@ Tasks are non-optional unless marked as "optional".
 3. [ ] Try to implement a part of that agent.
 4. [ ] Test that agent in a different fork of this repo.
 
-
 ### Take home exercise
+
 - Learn about Git -> Github -> Github flow
-https://hackmd.io/@aabounegm/SWP-git
+<https://hackmd.io/@aabounegm/SWP-git>
