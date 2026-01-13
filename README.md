@@ -40,28 +40,38 @@ This and all other lab assignments will simulate real-life engineering practices
 
 ## Lab setup
 
+<!-- TODO list what you'll get as a result of the setup -->
+
 ### Set up a fork
 
 1. Create a GitHub account.
 2. Fork this repo to your GitHub account.
 3. Continue your work in the forked repo.
 4. In the repo -> `Settings` -> `General` -> `Features`, enable `Issues`.
-5. In the repo -> `Issues` -> `Labels`, create a new label:
+5. <details> <summary> (Optional) Create a label for tasks.</summary>
+
+   In the repo -> `Issues` -> `Labels`, create a new label:
    1. Click `New label`.
    2. Name: `task`.
    3. Click `Create label`.
+
+   </details>
     <!-- TODO ask students to provide a proof of the setup -->
-6. In the repo -> `Settings` -> `Code and automation` -> `Add branch ruleset`:
-   1. Ruleset Name: `push`
-   2. Enforcement status: `Active`
-   3. Target branches -> Add target -> Include default branch
+6. <details> <summary>(Optional) Protect your <code>main</code> branch. </summary>
+
+   In the repo -> `Settings` -> `Code and automation` -> `Add branch ruleset`:
+   1. `Ruleset Name`: `push`
+   2. `Enforcement status`: `Active`
+   3. `Target branches` -> `Add target` -> `Include default branch`
    4. Rules:
-      - [x] Restrict deletions
-      - [x] Require a pull request before merging:
-         - Required approvals: `1`
-         - Require conversation resolution before merging
-         - Allowed merge methods: `Merge`.
+      - [x] `Restrict deletions`
+      - [x] `Require a pull request before merging`:
+         - `Required approvals`: `1`
+         - `Require conversation resolution before merging`
+         - `Allowed merge methods`: `Merge`.
       - [x] Block force pushes
+  
+  </details>
 
 ### Add a classmate as a collaborator
 
@@ -78,15 +88,23 @@ This and all other lab assignments will simulate real-life engineering practices
     ```
 
 2. Install [`VS Code`](https://code.visualstudio.com/). This is our code editor of choice that we'll use in this course.
+
+    - Read about [`Basic Layout`](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout) - Basic UI elements in `VS Code`.
+
     <!-- TODO: Add a screenshot with all key elements marked. -->
-    (Optional) Learn more about it:
-    - [Basic Layout](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout).
-    - [Activity Bar](https://code.visualstudio.com/api/ux-guidelines/activity-bar)
-    - [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)
-    - [Terminal](https://code.visualstudio.com/docs/terminal/getting-started).
-    - [Source Control](https://code.visualstudio.com/docs/sourcecontrol/overview).
-    - [Extension Marketplace](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace).
-    - How to enable [`files.autoSave`](https://code.visualstudio.com/docs/editing/codebasics#_save-auto-save) and [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting).
+    - <details> <summary> (Optional) Learn more about <code>VS Code</code>. </summary>
+
+      - [`Activity Bar`](https://code.visualstudio.com/api/ux-guidelines/activity-bar) - Menus of extensions;
+      - [`Status Bar`] - Status information and additional menus of extensions.
+      - [`Command Palette`](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) - How to use commands provided by extensions;
+      - [`Terminal`](https://code.visualstudio.com/docs/terminal/getting-started) - How to run terminal commands inside `VS Code`;
+      - [`Source Control`](https://code.visualstudio.com/docs/sourcecontrol/overview) - How to use `Git` via `VS Code` UI;
+      - [`Extension Marketplace`](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace) - How to install extensions;
+      - Enable [`files.autoSave`](https://code.visualstudio.com/docs/editing/codebasics#_save-auto-save) - How to enable auto-save to not lose your work;
+      - Enable [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting) - How to enable auto-formatting to keep your code clean;
+      - [`Custom Layout`](https://code.visualstudio.com/docs/configure/custom-layout) - E.g., move the `Primary Side Bar` to the right.
+
+      </details>
 
 ### Open the repository on your machine
 
@@ -104,31 +122,37 @@ This and all other lab assignments will simulate real-life engineering practices
     code lab-01-market-product-and-git
     ```
 
-### Set up VS Code extensions
+### Set up `VS Code` extensions
 
-1. Install the recommended VS Code extensions (listed in [`./.vscode/extensions.json`](./.vscode/extensions.json)) when VS Code suggests to install them.
+1. Install the recommended `VS Code` extensions (listed in [`./.vscode/extensions.json`](./.vscode/extensions.json)) when `VS Code` suggests to install them.
 2. Sign in to accounts.
-    In the Activity Bar:
+    In the `Activity Bar`:
     1. Click `Accounts`
     2. Click `Sign in with GitHub`
     3. Repeat for any of the extensions if neeeded.
 
 3. <details><summary> (Optional) Check <code>GitLens</code>.</summary>
 
-    In the Activity Bar:
+    In the `Status Bar`:
 
-    1. Click `Source Control`
-    2. In the `GitLens` panel, click `Remotes`.
-    3. Make sure `origin` points to your repo URL.
-    4. In the `GitLens` panel, click `Commits`.
-    5. Make sure you can see commits to this repo.
+    1. Click `Visualize commits on the Commit Graph`.
+    2. Make sure you can see the commit graph.
+
+    In the `Activity Bar`:
+
+    1. Click `Source Control`.
+    2. Click `GitLens` in the opened `Primary Side Bar` to open the `GitLens` panel.
+    3. In the `GitLens` panel, click `Remotes`.
+    4. Make sure `origin` points to your repo URL.
+    5. In the `GitLens` panel, click `Commits`.
+    6. Make sure you can see commits on the current branch.
   
   </details>
   
 ### Set up an agent
 
 1. Watch [tutorial](https://www.youtube.com/watch?v=G0uIVEt3aj4).
-2. Set up [Kilo Code](https://kilo.ai/install) or another coding agent with [Qwen3 Coder](https://github.com/QwenLM/Qwen3-Coder) or another [free model](https://openrouter.ai/collections/free-models).
+2. Set up [`Kilo Code`](https://kilo.ai/install) or another coding agent with [`Qwen3 Coder`](https://github.com/QwenLM/Qwen3-Coder) or another free model, e.g., from [`OpenRouter`](https://openrouter.ai/collections/free-models).
 
 ### Skim the lab description
 
@@ -140,7 +164,7 @@ This and all other lab assignments will simulate real-life engineering practices
 
 By the end of the lab:
 
-- Make sure that each non-optional task has a corresponding issue linked to a PR.
+- Make sure that each task that you have completed has a corresponding issue linked to a PR.
 - Close the issues for which all related activities are done.
 <!-- - TODO how does a TA check the work? -->
 - Explain your diagram, chosen role in a short conversation with the TA.
@@ -152,14 +176,14 @@ By the end of the lab:
 ## Procedure for each task
 
 > [!NOTE]
-> This procedure is based on the [GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow).
+> This procedure is based on the [`GitHub flow`](https://docs.github.com/en/get-started/using-github/github-flow).
 
-1. [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a GitHub issue in your forked repo using the "Lab Task" option and fill in the details.
-2. Create a new branch for the issue via [GitHub](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue) or via `git checkout -b <branch name>`.
+1. [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a `GitHub` issue in your forked repo using the `Lab Task` [issue form](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms).
+2. Create a new branch for the issue via [`GitHub`](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue) or via `git checkout -b <branch-name>`.
 3. Make [commits](https://smartprogramming.in/tutorials/git-and-github/git-commit) to that branch to complete the task.
-     - Commit messages must follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) format.
+     - Commit messages must follow the [`Conventional Commits`](https://www.conventionalcommits.org/en/v1.0.0/) format.
      - Commit to the branch using one of these approaches:
-       1. Using VS Code (see [docs](https://code.visualstudio.com/docs/sourcecontrol/staging-commits)): "Activity Bar" -> "Source Control" -> Click a file -> Select lines in the editor -> Right mouse click the selected lines -> Click `Stage Selected Ranges` -> Write a commit message -> Click `Commit`.
+       1. Using `VS Code` (see [docs](https://code.visualstudio.com/docs/sourcecontrol/staging-commits)): `Activity Bar` -> `Source Control` -> Click a file -> Select lines in the editor -> Right mouse click the selected lines -> Click `Stage Selected Ranges` -> Write a commit message -> Click `Commit`.
        2. Using a terminal (adds all changes in these files to the staging area):
 
           ```console
@@ -167,13 +191,13 @@ By the end of the lab:
           git commit -m "<message>"
           ```
 
-4. Push the branch to your forked repo via [GitLens](https://www.gitkraken.com/blog/vs-code-pull-request) or via the terminal:
+4. Push the branch to your forked repo:
 
     ```console
-    git push -u origin <branch name>
+    git push -u origin <branch-name>
     ```
 
-5. Create a PR to the `main` branch via [GitLens](https://www.gitkraken.com/blog/vs-code-pull-request) or via [GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+5. Create a PR to the `main` branch via [`GitHub`](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) ([tutorial](https://www.geeksforgeeks.org/git/creating-a-pull-request-on-any-public-repository-from-github-using-vs-code/)) or via [`GitHub Pull Requests`](https://code.visualstudio.com/docs/sourcecontrol/github#_pull-requests).
 6. Write an appropriate PR description following the PR template.
 7. [Link the PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to the issue, e.g. `Closes #<issue number>`.
 8. Request a review of the PR from the collaborator.
@@ -209,14 +233,28 @@ Tasks are non-optional unless marked as "optional".
 
 1. [ ] Create an issue `[Task] Product & architecture description`.
 2. [ ] Decide on how to make the architecture diagrams. We suggest the following approaches:
-   1. You can *prototype* diagrams via the [`hediet.vscode-drawio`](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) extension. However, it's not a good idea to version control images because you can't conveniently visualize their diffs and therefore can't track changes. Therefore, you must use the ["diagrams as code"](https://simmering.dev/blog/diagrams/) approach and eventually switch to one of the other approaches.
-   2. You can write [`PlantUML`](https://plantuml.com/) code.
-      - [ ] Install the [`jebbs.plantuml`](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) VS Code extension.
+   1. You can *prototype* diagrams via the [`hediet.vscode-drawio`](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) extension.
+
+      However, it's not a good idea to version control images because you can't conveniently visualize their diffs and therefore can't track changes.
+
+      Therefore, you must use the ["diagrams as code"](https://simmering.dev/blog/diagrams/) approach and eventually switch to one of the following approaches.
+   2. <details><summary> You can write <code><a href="https://plantuml.com/">PlantUML</a></code> code.</summary>
+
+      - [ ] Install the [`jebbs.plantuml`](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) `VS Code` extension.
       - [ ] Install [`Docker`](https://docs.docker.com/get-started/get-docker/).
-      - [ ] Run `docker run --name plantuml-server -d -p 48080:8080 plantuml/plantuml-server:jetty` to access the `PlantUML` server. The `48080` port is already set in `./.vscode/settings.json`.
-      - [ ] Write the `PlantUML` code in `./docs/diagrams/src/` and render the diagrams to SVG in `./docs/diagrams/out/` using the `jebbs.plantuml` extension. These directories are already set in `./.vscode/settings.json`.
-      - [ ] [Include](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) the rendered images into your Markdown file.
-   3. You can write [Mermaid](https://mermaid.js.org/) code in Markdown code blocks with the `mermaid` language tag (see [docs](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#creating-mermaid-diagrams)).
+      - [ ] Run in the terminal `docker run --name plantuml-server -d -p 48080:8080 plantuml/plantuml-server:jetty` to start a `PlantUML` server.
+      - [ ] Open the `PlantUML` server in the browser at `http://localhost:48080` to make sure it works.
+      - [ ] Open [`./docs/diagrams/src/architecture-component.puml`](./docs/diagrams/src/architecture-component.puml) in `VS Code`.
+      - [ ] Click the `Preview Current Diagram` icon.
+
+          The `48080` port is already set in [`./.vscode/settings.json`](./.vscode/settings.json). Therefore, previewing should work out of the box.
+
+      - [ ] Write the `PlantUML` code in `./docs/diagrams/src/` and render the diagrams to SVG in `./docs/diagrams/out/` using the `jebbs.plantuml` extension. These directories are already set in [`./.vscode/settings.json`](./.vscode/settings.json).
+      - [ ] To render diagrams to SVG, open the [`Command Palette`](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette), write `PlantUML: Export Workspace Diagrams`, and choose `svg`.
+      - [ ] [Include](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) the rendered images into your `Markdown` file.
+
+      </details>
+   3. You can write [`Mermaid`](https://mermaid.js.org/) code in `Markdown` files in code blocks with the `mermaid` language tag (see [docs](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#creating-mermaid-diagrams)).
    4. You can use any other tool if it supports the "diagrams as code" approach, e.g., [`Structurizr`](https://structurizr.com/), [`D2`](https://d2lang.com/), [`LikeC4`](https://github.com/likec4/likec4) etc.
 
     > [!IMPORTANT]
@@ -233,7 +271,7 @@ Tasks are non-optional unless marked as "optional".
              - ChatGPT.com
              - Wildberries.ru
              - Uchi.ru
-             - Any other widely used full-stack app (except for Uber because it's used in diagram examples). Agree with your TA if you choose this option.
+             - Any other widely used full-stack app (except for Uber because it's used in examples). Agree with your TA if you choose this option.
          - [ ] Provide:
            - [ ] The product's name;
            - [ ] A link to the product's website.
@@ -279,7 +317,7 @@ Tasks are non-optional unless marked as "optional".
 1. [ ] Create an issue `[Task] Roles and skills mapping`.
 
     > [!IMPORTANT]
-    > You can ask an LLM “what does a *role* usually do?”, but:
+    > You can ask an LLM “what does a `<role-name>` usually do?”, but:
     >
     > - You must visit `roadmap.sh` and real job postings yourself.
     > - Your reflections about what you have / don’t have must be honest and personal.
@@ -303,10 +341,10 @@ Tasks are non-optional unless marked as "optional".
        - [ ] Based on your intuition and some research, list **skills that almost everyone needs**. Example:
           - Git
           - Basic Linux usage
-          - Understanding of HTTP / REST APIs
+          - Understanding of HTTP and REST APIs
           - Agentic coding
           - Communicating in a team
-          - Writing clear issues/PR descriptions
+          - Writing clear issues and PR descriptions
           - Planning
           - ...
 
@@ -363,12 +401,12 @@ Tasks are non-optional unless marked as "optional".
 2. [ ] In `./docs/reflection.md` write 5–10 sentences answering:
     - [ ] Which role did you choose and why?
     - [ ] What is one thing about the product’s architecture that was new to you?
-    - [ ] Which course topics (Git, Linux, Docker, REST, CI/CD, fullstack, data) seem most relevant to your chosen role?
+    - [ ] Which course topics (`Git`, `Linux`, `Docker`, `REST`, `CI/CD`, full-stack development, data processing) seem most relevant to your chosen role?
     - [ ] What is one concrete skill you would like to improve this semester?
 
 ---
 
-### 4. Update architecture (optional stretch task)
+### 4. (Optional) Update architecture
 
 1. Create the issue `[Task] Update architecture`.
 2. [ ] In `./docs/architecture.md`:
@@ -387,19 +425,18 @@ Tasks are non-optional unless marked as "optional".
 
 3. [ ] Update the diagrams to match your design decisions.
 
-### 5. Work on an agent (optional stretch task)
+### 5. (Optional) Work on an agent
 
 1. Create the issue `[Task] Work on an agent`.
 2. [ ] In `docs/agent-idea.md`, sketch how an AI agent could:
     - [ ] Read `README.md`;
-    - [ ] Generate GitHub issues automatically;
-    - [ ] Create initial markdown files for you.
+    - [ ] Generate `GitHub` issues automatically;
+    - [ ] Create initial `Markdown` files for you.
     - [ ] Complete all tasks for you.
 
 3. [ ] Try to implement a part of that agent.
 4. [ ] Test that agent in a different fork of this repo.
 
-### Take home exercise
+### 6. (Optional) Take-home exercise
 
-- Learn about Git -> Github -> Github flow
-<https://hackmd.io/@aabounegm/SWP-git>
+- [ ] Read this [tutorial](https://hackmd.io/@aabounegm/SWP-git) to learn about `Git`, `Github`, and `Git` workflows.
