@@ -1,0 +1,90 @@
+@startuml Component Diagram
+!theme plain
+
+title Uber Application Component Diagram
+
+package "Uber Application" {
+  [Mobile App] as mobile_app
+  [Web App] as web_app
+  
+  package "API Layer" {
+    [API Gateway] as api_gateway
+  }
+  
+  package "Business Services" {
+    [User Service] as user_service
+    [Payment Service] as payment_service
+    [Driver Service] as driver_service
+    [Notification Service] as notification_service
+  }
+  
+  package "Data Layer" {
+    [Database (PostgreSQL)] as db
+    [Cache (Redis)] as cache
+  }
+  
+  queue "Message Queue (Kafka)" as queue
+  
+  ' Interface Components
+  () "HTTP/HTTPS" as http_interface
+  () "CRUD" as db_crud_api
+  () "Read/Write" as cache_api
+  () "Publish/Pull Events" as queue_api
+
+  () "REST API" as user_service_rest_api
+  () "REST API" as payment_service_rest_api
+  () "REST API" as driver_service_rest_api
+  () "REST API" as notification_service_rest_api
+  
+  () "Payment Processing" as payment_api
+  
+  
+  ' Client to API Gateway
+  mobile_app -down-( http_interface
+  web_app -down-( http_interface
+  http_interface -down- api_gateway
+
+}
+
+package "External Systems" {
+  [External Payment Gateway (Stripe)] as external_payment_gateway
+}
+
+
+' API Gateway to Business Services
+api_gateway -down-( user_service_rest_api
+api_gateway -down-( payment_service_rest_api
+api_gateway -down-( driver_service_rest_api
+api_gateway -down-( notification_service_rest_api
+
+user_service_rest_api -down- user_service
+payment_service_rest_api -down- payment_service
+driver_service_rest_api -down- driver_service
+notification_service_rest_api -down- notification_service
+
+db -up- db_crud_api
+cache -up- cache_api
+queue -up- queue_api
+
+' Business Services to Data Layer
+user_service -down-( db_crud_api
+payment_service -down-( db_crud_api
+driver_service -down-( db_crud_api
+notification_service -down-( db_crud_api
+
+user_service -down-( cache_api
+payment_service -down-( cache_api
+driver_service -down-( cache_api
+notification_service -down-( cache_api
+
+' Business Services to Message Queue
+user_service -down-( queue_api
+payment_service -down-( queue_api
+driver_service -down-( queue_api
+notification_service -down-( queue_api
+
+' Payment Service to External Payment Gateway
+payment_service -down-( payment_api
+payment_api -down- external_payment_gateway
+
+@enduml

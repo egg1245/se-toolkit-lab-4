@@ -1,0 +1,115 @@
+@startuml Deployment Diagram
+!theme plain
+
+skinparam node {
+  BackgroundColor WhiteSmoke
+  BorderColor DarkBlue
+  ArrowColor #444444
+}
+
+skinparam component {
+  BackgroundColor White
+  BorderColor Black
+}
+
+skinparam cloud {
+  BackgroundColor LightCyan
+  BorderColor DarkCyan
+}
+
+skinparam database {
+  BackgroundColor White
+  BorderColor Black
+}
+
+title Uber Application Deployment Diagram (Physical View)
+
+' --- Client Tier ---
+node "User Smartphone" <<device>> as SmartPhone {
+  component [Mobile App Instance\n(iOS/Android)] as mobile_app
+}
+
+node "User Computer" <<device>> as Computer {
+  node "Web Browser" <<execution environment>> {
+    component [Web App Instance\n(React SPA)] as web_app
+  }
+}
+
+' --- External Systems ---
+node "External Payment Provider" <<external>> {
+  component [Stripe API] as stripe
+}
+
+' --- Cloud Infrastructure ---
+cloud "Cloud Infrastructure (AWS)" {
+
+  node "Content Delivery Network / Web Server" as CDN {
+    artifact "React Static Files"
+  }
+
+  node "Load Balancer / Ingress" as LB {
+    component [Nginx Gateway] as nginx
+  }
+
+  ' --- Compute Cluster ---
+  node "Kubernetes Cluster (Application Tier)" as K8s {
+    node "Pod" {
+      component [User Service] as user_service
+      component [Payment Service] as payment_service
+      component [Driver Service] as driver_service
+      component [Notification Service] as notification_service
+    }
+  }
+
+  ' --- Middleware & Data ---
+  node "Message Broker Cluster" as KafkaCluster {
+    queue [Kafka Topic] as kafka
+  }
+
+  node "Redis Cluster" as RedisNode {
+    component [Redis Cache] as redis
+  }
+
+  node "Database Server (Primary)" as DBServer {
+    database [PostgreSQL] as postgres
+  }
+}
+
+' --- Relationships ---
+
+' Client to Infrastructure
+mobile_app --> nginx : HTTPS (JSON)
+Computer --> CDN : HTTPS (Fetch Static Assets)
+web_app --> nginx : HTTPS (API Calls)
+
+' Gateway to Services
+nginx --> user_service : REST
+nginx --> payment_service : REST
+nginx --> driver_service : REST
+notification_service --> nginx : REST
+
+' Service to Database
+user_service --> postgres : TCP
+payment_service --> postgres : TCP
+driver_service --> postgres : TCP
+notification_service --> postgres : TCP
+
+' Service to Cache
+user_service ..> redis : TCP
+payment_service ..> redis : TCP
+driver_service ..> redis : TCP
+notification_service ..> redis : TCP
+
+' Service to Messaging
+user_service --> kafka : Publish
+payment_service --> kafka : Publish
+driver_service --> kafka : Publish
+notification_service --> kafka : Subscribe
+
+' Inter-service via Queue (Example)
+kafka ..> notification_service : Consume Events
+
+' External
+payment_service --> stripe : HTTPS (TLS)
+
+@enduml
