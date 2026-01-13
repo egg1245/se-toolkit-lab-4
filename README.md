@@ -374,3 +374,8 @@ Tasks are non-optional unless marked as "optional".
 
 3. [ ] Try to implement a part of that agent.
 4. [ ] Test that agent in a different fork of this repo.
+
+
+### Take home exercise
+- Learn about Git -> Github -> Github flow
+https://hackmd.io/@aabounegm/SWP-git
