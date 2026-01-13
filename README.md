@@ -51,7 +51,7 @@ This and all other lab assignments will simulate real-life engineering practices
    2. Name: `task`.
    3. Click `Create label`.
     <!-- TODO ask students to provide a proof of the setup -->
-6. In the repo Settings -> Code and automation -> Add branch ruleset:
+6. In the repo -> `Settings` -> `Code and automation` -> `Add branch ruleset`:
    1. Ruleset Name: `push`
    2. Enforcement status: `Active`
    3. Target branches -> Add target -> Include default branch
@@ -79,7 +79,7 @@ This and all other lab assignments will simulate real-life engineering practices
 
 2. Install [`VS Code`](https://code.visualstudio.com/). This is our code editor of choice that we'll use in this course.
     <!-- TODO: Add a screenshot with all key elements marked. -->
-    Optionally, you can learn more about it:
+    (Optional) Learn more about it:
     - [Basic Layout](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout).
     - [Activity Bar](https://code.visualstudio.com/api/ux-guidelines/activity-bar)
     - [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)
@@ -94,7 +94,7 @@ This and all other lab assignments will simulate real-life engineering practices
 2. In that directory, clone the lab repo.
 
     ```bash
-    git clone https://github.com/your-username/lab-01-market-product-and-git
+    git clone https://github.com/<your-username>/lab-01-market-product-and-git
     ```
 
 3. Open the repo in `VS Code`.
@@ -106,15 +106,14 @@ This and all other lab assignments will simulate real-life engineering practices
 
 ### Set up VS Code extensions
 
-1. Install the recommended VS Code extensions (listed in `./.vscode/extensions.json`) when VS Code suggests to install them.
+1. Install the recommended VS Code extensions (listed in [`./.vscode/extensions.json`](./.vscode/extensions.json)) when VS Code suggests to install them.
 2. Sign in to accounts.
     In the Activity Bar:
     1. Click `Accounts`
     2. Click `Sign in with GitHub`
     3. Repeat for any of the extensions if neeeded.
 
-<!-- TODO: move all gitlens related points to extra section (recommendations) -->
-3. Check GitLens.
+3. <details><summary> (Optional) Check <code>GitLens</code>.</summary>
 
     In the Activity Bar:
 
@@ -123,10 +122,13 @@ This and all other lab assignments will simulate real-life engineering practices
     3. Make sure `origin` points to your repo URL.
     4. In the `GitLens` panel, click `Commits`.
     5. Make sure you can see commits to this repo.
-
+  
+  </details>
+  
 ### Set up an agent
 
-1. Set up [Kilo Code](https://kilo.ai/install) with Qwen3 Coder (watch [tutorial](https://www.youtube.com/watch?v=G0uIVEt3aj4)) or another [free model](https://openrouter.ai/collections/free-models).
+1. Watch [tutorial](https://www.youtube.com/watch?v=G0uIVEt3aj4).
+2. Set up [Kilo Code](https://kilo.ai/install) or another coding agent with [Qwen3 Coder](https://github.com/QwenLM/Qwen3-Coder) or another [free model](https://openrouter.ai/collections/free-models).
 
 ### Skim the lab description
 
