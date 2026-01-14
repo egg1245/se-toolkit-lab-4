@@ -17,7 +17,7 @@ By the end of this lab you should be able to:
 
 To complete this lab, you will need to:
 
-- Setup your github account and this lab's repo.
+- Set up your `GitHub` account and this lab's repo.
 - Pick an existing digital product.
 - Sketch its architecture: components, data flow, deployment.
 - Map components to tech roles and skills using real job postings and `roadmap.sh`.
@@ -44,8 +44,8 @@ This and all other lab assignments will simulate real-life engineering practices
 
 ### Set up a fork
 
-1. Create a GitHub account.
-2. Fork this repo to your GitHub account.
+1. Create a `GitHub` account.
+2. Fork this repo to your `GitHub` account.
 3. Continue your work in the forked repo.
 4. In the repo -> `Settings` -> `General` -> `Features`, enable `Issues`.
 5. <details> <summary> (Optional) Create a label for tasks.</summary>
