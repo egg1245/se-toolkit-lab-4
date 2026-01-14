@@ -242,19 +242,24 @@ For each task, follow the [procedure](#procedure-for-each-task).
 
 Tasks are non-optional unless marked as "optional".
 
-### 1. Pick a product and describe its architecture
+### 1. Pick a product and study its architecture
 
 1. [ ] Create an issue `[Task] Product & architecture description`.
-2. [ ] Create `./docs/architecture.md`. In `./docs/architecture.md`:
+2. [ ] Learn how to [embed images](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images) into your `Markdown` files.
+3. [ ] Pick one product from this list or propose your own:
+    <!-- TODO update the project list and provide diagrams for each project -->
+    <!-- TODO exclude? Yandex Taxi may be too similar to the Uber example -->
+    - Yandex Taxi
+    - Telegram
+    - ChatGPT.com
+    - Wildberries.ru
+    - Uchi.ru
+    - Any other widely used full-stack app (except for Uber because it's used in examples). Agree with your TA if you choose this option.
+4. [ ] Find the directory with the product's `PlantUML` architecture diagrams in `./docs/diagrams/src/<product-name>`.  [visualizing the architecture](#visualize-the-architecture).
+5. [ ] Find the directory with the product's rendered architecture diagrams in `./docs/diagrams/out/<product-name>`.
+6. [ ] Create `./docs/architecture.md`.
+7. [ ] In `./docs/architecture.md`:
     1. [ ] In the `## Product choice` section:
-         - [ ] Pick one product from this list or propose your own:
-             <!-- TODO exclude? Yandex Taxi may be too similar to the Uber example -->
-             - Yandex Taxi
-             - Telegram
-             - ChatGPT.com
-             - Wildberries.ru
-             - Uchi.ru
-             - Any other widely used full-stack app (except for Uber because it's used in examples). Agree with your TA if you choose this option.
          - [ ] Provide:
            - [ ] The product's name;
            - [ ] A link to the product's website.
@@ -262,34 +267,20 @@ Tasks are non-optional unless marked as "optional".
     2. [ ] In the `## Motivation` section:
          - [ ] Explain in 3-4 sentences why you personally would be interested to work on this product as a tech specialist.
     3. [ ] In the `## Main components` section:
-        - [ ] Select at least 5 main [components](https://c4model.com/abstractions/component) of the product. For example:
-          - Mobile app
-          - Backend API
-          - Authentication service
-          - Payment / billing
-          - Notifications
-          - Admin panel
-          - Data analytics
+        - [ ] Embed the product's `Component Diagram.svg`.
+        - [ ] Provide a link to the `PlantUML` code for that [component diagram](#component-diagram).
+        - [ ] Read about the `C4 model` [components](https://c4model.com/abstractions/component) (just the first paragraph).
+        - [ ] Select at least 5 main components of the product from the component diagram.
         - [ ] For each component, explain in 1–2 sentences what it does.
-        - [ ] Provide a [component diagram](https://en.wikipedia.org/wiki/Component_diagram).
-          - [ ] If you use [`PlantUML`](https://plantuml.com/component-diagram):
-            - [ ] Store the diagram source code in `./docs/diagrams/src/architecture-component.puml`.
-            - [ ] See [how to draw a connection](https://stackoverflow.com/questions/55077828/using-required-provided-interfaces-in-component-diagrams-plantuml/57134601#57134601).
     4. [ ] In the `## Data flow` section:
-          - [ ] Describe what happens when a typical user action occurs (e.g. user orders a taxi / sends a message).
+          - [ ] Embed the product's `Sequence Diagram.svg`.
+          - [ ] Provide a link to the `PlantUML` code for that [sequence diagram](#sequence-diagram).
+          - [ ] Describe what happens when a typical user action occurs (e.g. a user orders a taxi or sends a message).
           - [ ] Mention which components talk to each other and what kind of data they exchange.
-          - [ ] Provide a [sequence diagram](https://en.wikipedia.org/wiki/Sequence_diagram).
-            - [ ] If you use [`PlantUML`](https://plantuml.com/sequence-diagram):
-              - [ ] Store the diagram source code in `./docs/diagrams/src/architecture-sequence.puml`.
-            - [ ] Alternatively, use [`Mermaid`](https://mermaid.js.org/syntax/sequenceDiagram.html).
     5. [ ] In the `## Deployment` section:
-         - [ ] Briefly describe where these components live (high-level view). Example:
-             - On user devices (mobile/web app).
-             - On servers (backend services, databases).
-         - [ ] Provide a [deployment diagram](https://en.wikipedia.org/wiki/Deployment_diagram).
-           - [ ] If you use [`PlantUML`](https://plantuml.com/deployment-diagram):
-             - [ ] Store the diagram source code in `./docs/diagrams/src/architecture-deployment.puml`.
-           - [ ] Alternatively, use [`Mermaid`](https://mermaid.js.org/syntax/c4.html#c4-deployment-diagram-c4deployment).
+         - [ ] Embed the product's `Deployment Diagram.svg`.
+         - [ ] Provide a link to the `PlantUML` code for that [deployment diagram](#deployment-diagram).
+         - [ ] Briefly describe where the components are deployed.
     6. [ ] In the `## Knowledge Gaps` section:
          - [ ] Write at least two things in your architecture that you are not fully sure about (guesses, questions, etc.).
 
@@ -406,7 +397,7 @@ Tasks are non-optional unless marked as "optional".
       - [ ] Justify each decision (provide rationale) in 1-2 sentences.
       - [ ] List 1-2 discarded alternatives for each decision.
 
-3. [ ] Update the diagrams to match your design decisions.
+3. [ ] Update the architecture diagrams to match your design decisions.
 
 ### 5. (Optional) Work on an agent
 
@@ -426,7 +417,43 @@ Tasks are non-optional unless marked as "optional".
 
 ## Appendix
 
+### Architectural views
+
+#### Component diagram
+
+This is a *static view* of the architecture. It doesn't show how the system works, but rather what components it has and how they are connected.
+
+We use `PlantUML` [component diagrams](https://plantuml.com/component-diagram).
+
+"Balls" (circle) are *provided interfaces*, "sockets" (open ring) are *required interfaces* (see [explanation](https://stackoverflow.com/a/78941132), [how to draw them](https://stackoverflow.com/questions/55077828/using-required-provided-interfaces-in-component-diagrams-plantuml/57134601#57134601)).
+
+Learn more about the component diagrams on [wiki](https://en.wikipedia.org/wiki/Component_diagram).
+
+#### Sequence diagram
+
+This is a *dynamic view* of the architecture. It shows how the system works by showing the sequence of interactions between components.
+
+We use `PlantUML` [sequence diagrams](https://plantuml.com/sequence-diagram).
+
+[`Mermaid`](#visualize-the-architecture---mermaid) also [supports](https://mermaid.js.org/syntax/sequenceDiagram.html) sequence diagrams.
+
+Learn more about the sequence diagrams on [wiki](https://en.wikipedia.org/wiki/Sequence_diagram).
+
+#### Deployment diagram
+
+This is a *static view* of the architecture. It shows how the system is deployed, i.e., what hardware and software components are used and how they are connected.
+
+We use `PlantUML` [deployment diagrams](https://plantuml.com/deployment-diagram).
+
+[`Mermaid`](#visualize-the-architecture---mermaid) supports [Architecture](https://mermaid.js.org/syntax/architecture.html) diagrams and [C4](https://mermaid.js.org/syntax/c4.html#c4-deployment-diagram-c4deployment) deployment diagrams.
+
+Some [other tools](#visualize-the-architecture---other-tools) also support deployment diagrams.
+
+Learn more about the deployment diagrams on [wiki](https://en.wikipedia.org/wiki/Deployment_diagram).
+
 ### Visualize the architecture
+
+<!-- TODO update wording -->
 
 > [!NOTE]
 > Visualizing the architecture is not the same as designing the architecture.
@@ -443,20 +470,24 @@ Therefore, you must use the ["diagrams as code"](https://simmering.dev/blog/diag
 
 #### Visualize the architecture - `PlantUML`
 
-You can write <code><a href="https://plantuml.com/">PlantUML</a></code> code.
+[`PlantUML`](https://plantuml.com/) supports all the diagrams we need. Therefore, we use it to visualize the architecture.
+
+If you want to preview the `PlantUML` diagrams in `VS Code`, follow these steps:
 
 - [ ] Install the [`jebbs.plantuml`](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) `VS Code` extension.
 - [ ] Install [`Docker`](https://docs.docker.com/get-started/get-docker/).
 - [ ] Run in the terminal `docker run --name plantuml-server -d -p 48080:8080 plantuml/plantuml-server:jetty` to start a `PlantUML` server.
 - [ ] Open the `PlantUML` server in the browser at `http://localhost:48080` to make sure it works.
-- [ ] Open [`./docs/diagrams/src/architecture-component.puml`](./docs/diagrams/src/architecture-component.puml) in `VS Code`.
+- [ ] In `VS Code`, in the `./docs/diagrams/src/` directory, open a `PlantUML` file with the `.puml` extension.
 - [ ] Click the `Preview Current Diagram` icon.
 
-    The `48080` port is already set in [`./.vscode/settings.json`](./.vscode/settings.json). Therefore, previewing should work out of the box.
+    The extension should connect to the `PlantUML` server and render the diagram.
 
-- [ ] Write the `PlantUML` code in `./docs/diagrams/src/` and render the diagrams to SVG in `./docs/diagrams/out/` using the `jebbs.plantuml` extension. These directories are already set in [`./.vscode/settings.json`](./.vscode/settings.json).
+    The `48080` port is already set in [`./.vscode/settings.json`](./.vscode/settings.json).
+
+- [ ] Write the `PlantUML` code in `./docs/diagrams/src/` and render the diagrams to `SVG` in `./docs/diagrams/out/` using the `jebbs.plantuml` extension. These directories are already set in [`./.vscode/settings.json`](./.vscode/settings.json)..
 - [ ] To render diagrams to SVG, open the [`Command Palette`](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette), write `PlantUML: Export Workspace Diagrams`, and choose `svg`.
-- [ ] [Include](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) the rendered images into your `Markdown` file.
+- [ ] [Embed](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) the rendered images into your `Markdown` file.
 
 #### Visualize the architecture - `Mermaid`
 
@@ -464,4 +495,8 @@ You can write [`Mermaid`](https://mermaid.js.org/) code in `Markdown` files in c
 
 #### Visualize the architecture - other tools
 
-You can use any other tool if it supports the "diagrams as code" approach, e.g., [`Structurizr`](https://structurizr.com/), [`D2`](https://d2lang.com/), [`LikeC4`](https://github.com/likec4/likec4) etc.
+Other tools that implement the "diagrams as code" approach are:
+
+- [`Structurizr`](https://structurizr.com/)
+- [`D2`](https://d2lang.com/)
+- [`LikeC4`](https://github.com/likec4/likec4) etc.
