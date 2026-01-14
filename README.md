@@ -101,8 +101,7 @@ This and all other lab assignments will simulate real-life engineering practices
     <!-- TODO: Add a screenshot with all key elements marked. -->
     - <details> <summary> (Optional) Learn more about <code>VS Code</code> (click to expand).</summary>
 
-      - [`Activity Bar`](https://code.visualstudio.com/api/ux-guidelines/activity-bar) - Menus of extensions;
-      - [`Status Bar`] - Status information and additional menus of extensions.
+      - `Activity Bar`, `Status Bar` (see [`Basic Layout`](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)) - Menus of extensions;
       - [`Command Palette`](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) - How to use commands provided by extensions;
       - [`Terminal`](https://code.visualstudio.com/docs/terminal/getting-started) - How to run terminal commands inside `VS Code`;
       - [`Source Control`](https://code.visualstudio.com/docs/sourcecontrol/overview) - How to use `Git` via `VS Code` UI;
