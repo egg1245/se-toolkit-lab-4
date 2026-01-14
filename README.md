@@ -48,7 +48,7 @@ This and all other lab assignments will simulate real-life engineering practices
 2. Fork this repo to your `GitHub` account.
 3. Continue your work in the forked repo.
 4. In the repo -> `Settings` -> `General` -> `Features`, enable `Issues`.
-5. <details> <summary> (Optional) Create a label for tasks.</summary>
+5. <details> <summary> (Optional) Create a label for tasks (click to expand).</summary>
 
    In the repo -> `Issues` -> `Labels`, create a new label:
    1. Click `New label`.
@@ -57,7 +57,7 @@ This and all other lab assignments will simulate real-life engineering practices
 
    </details>
     <!-- TODO ask students to provide a proof of the setup -->
-6. <details> <summary>(Optional) Protect your <code>main</code> branch. </summary>
+6. <details> <summary>(Optional) Protect your <code>main</code> branch (click to expand).</summary>
 
    In the repo -> `Settings` -> `Code and automation` -> `Add branch ruleset`:
    1. `Ruleset Name`: `push`
@@ -87,7 +87,7 @@ This and all other lab assignments will simulate real-life engineering practices
     git config --global user.email "your@email"
     ```
 
-2. <details> <summary> (Optional) Learn more about <code>Git</code> (click to expand) </summary>
+2. <details> <summary> (Optional) Learn more about <code>Git</code> (click to expand).</summary>
 
    - [How Git Works: Explained in 4 Minutes](https://www.youtube.com/watch?v=e9lnsKot_SQ)
    - [Git MERGE vs REBASE: Everything You Need to Know](https://www.youtube.com/watch?v=0chZFIZLR_0)
@@ -99,7 +99,7 @@ This and all other lab assignments will simulate real-life engineering practices
     - Read about [`Basic Layout`](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout) - Basic UI elements in `VS Code`.
 
     <!-- TODO: Add a screenshot with all key elements marked. -->
-    - <details> <summary> (Optional) Learn more about <code>VS Code</code>. </summary>
+    - <details> <summary> (Optional) Learn more about <code>VS Code</code> (click to expand).</summary>
 
       - [`Activity Bar`](https://code.visualstudio.com/api/ux-guidelines/activity-bar) - Menus of extensions;
       - [`Status Bar`] - Status information and additional menus of extensions.
@@ -138,7 +138,7 @@ This and all other lab assignments will simulate real-life engineering practices
     2. Click `Sign in with GitHub`
     3. Repeat for any of the extensions if needed.
 
-3. <details><summary> (Optional) Check <code>GitLens</code>.</summary>
+3. <details><summary> (Optional) Check <code>GitLens</code> (click to expand).</summary>
 
     In the `Status Bar`:
 
@@ -247,7 +247,7 @@ Tasks are non-optional unless marked as "optional".
       However, it's not a good idea to version control images because you can't conveniently visualize their diffs and therefore can't track changes well.
 
       Therefore, you must use the ["diagrams as code"](https://simmering.dev/blog/diagrams/) approach and eventually switch to one of the following approaches.
-   2. <details><summary> You can write <code><a href="https://plantuml.com/">PlantUML</a></code> code.</summary>
+   2. <details><summary> You can write <code><a href="https://plantuml.com/">PlantUML</a></code> code (click to expand).</summary>
 
       - [ ] Install the [`jebbs.plantuml`](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) `VS Code` extension.
       - [ ] Install [`Docker`](https://docs.docker.com/get-started/get-docker/).
