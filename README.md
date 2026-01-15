@@ -254,7 +254,7 @@ Tasks are non-optional unless marked as "optional" or "homework".
     - Wildberries.ru
 
 4. [ ] Find the directory with the product's architecture in two formats:
-    - `PlantUML`  diagrams in `./docs/diagrams/src/<product-name>`  (see [visualizing the architecture](./Appendix.md#visualize-the-architecture)).
+    - `PlantUML` diagrams in `./docs/diagrams/src/<product-name>` (see [visualizing the architecture](./Appendix.md#visualize-the-architecture)).
     - Rendered architecture diagrams in `./docs/diagrams/out/<product-name>`.
 
 5. [ ] Create `./docs/architecture.md` and add the following contents:
