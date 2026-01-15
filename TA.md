@@ -4,42 +4,107 @@
 
 Points are given as follows:
 
-- `0.5` if only tasks 1 and 2 are complete.
-- `1` if all non-optional tasks are complete.
-- `1.5` if all non-optional tasks and at least one optional task are complete.
+<!-- TODO provide a weight for each task -->
 
 ## Process
 
-<!-- TODO move this file to the parent repo with all labs as submodules -->
+> [!IMPORTANT]
+>
+> There are 30 students and they'll presumably start submitting their works in the last two hours of the lab.
+>
+> A TA has only approximately 4 minutes for each student.
 
-- TA walks around the class and signs off progress in his own file.
-- Работу студент показывает со своего компа ТАю.
-- у ТА по каждой лабе есть таблица заданий и краткое описание по каждой таске на что обращать внимание.
-- Студент сделал таску, отмечает в таблице, и зовет ТА. если сделал несколько таск, можно показать несколько сразу. примерно как на лабах по математике.
-- Обратная связь - можно попросить студента объяснить, комментировать и задавать вопросы.
+- There's a table where:
+  - each student provides:
+    - their GitHub username;
+    - collaborator's GitHub username;
+    - links to task issues;
+    - statuses of tasks.
+  - TA marks accepted tasks.
 
+- TA walks around the class and tracks progress for tasks in that table.
 
-## Checklist
+- Student:
+  - completes one or more tasks;
+  - marks in the table that these tasks are waiting for a TA's review;
+  - raises a hand to call the TA.
 
-1. Lab setup: 
-   - student repo is a public fork of the lab repo.
-   - classmate is added to the repo
-   - they are reviewing / have reviewed each others' PRs.
-Note: it is enough to just ask him and get a quick verbal/visual confirmation. There will also be an additional automatic check, and students need to provide the issue link in the table.
+- TA:
+  - comes to the student;
+  - answers questions, if any;
+  - checks tasks using the [Checklist for TA](#checklist-for-ta);
+  - asks additional questions to check student's understanding (remember the time limit for each student);
+  - suggests improvements;
+  - marks the task as accepted in the table when the task is complete.
 
-2. Product & architecture: 
-   - Product selected
-   - architecture described (`./docs/architecture.md`)
-   - student can explain each diagram in a sensible way, i.e. it's clear he understands it himself.
+- After the lab, [automated checks](#automated-checks) will run.
+
+## Checklist for TA
+
+### [Required tasks](#required-tasks)
+
+### [Lab setup](./README.md#lab-setup)
+
+- Student shows that there's a collaborator in the repo `Settings` -> `Collaborators and teams`.
+
+### [1. Pick a product and study its architecture](./README.md#1-pick-a-product-and-study-its-architecture)
+
+- Student can explain what's on the component diagram in `./docs/architecture.md`.
+
+### [2. Tech roles involved in the selected product](./README.md#2-study-the-market-for-your-product)
+
+- In `./docs/roles-and-skills.md`, skills (`## Common skills across roles`) seem to be related to the identified roles (`## Roles and responsibilities`)
+
+### [3. My tech skills and the market: roadmap.sh and job postings](./README.md#3-my-tech-skills-and-the-market-roadmapsh-and-job-postings)
+
+- Student shows their roadmap with marked items on `roadmap.sh`.
+- Student can name one skill they chose to improve this semester and explain why they chose it.
+
+### [Optional tasks](#optional-tasks)
+
+### [1. Merge conflicts & resolution](./README.md#1-merge-conflicts--resolution)
+
+- PR shows that it had conflicts and was later fixed.
+- PR description contains `Conflict resolution note`.
+
+### [2. Add a CI check (GitHub Actions)](./README.md#2-add-a-ci-check-github-actions)
+
+- Workflow file exists under `.github/workflows/`.
+- PR has a green check for the lint job.
+
+### [3. Tag and release notes (shipping mindset)](./README.md#3-tag-and-release-notes-shipping-mindset)
+
+- A GitHub Release exists for tag `v0.1.0` and contains release notes.
+
+### [4. Skill spotlight (from job market → deep learning → teach-back)](./README.md#4-skill-spotlight-from-job-market--deep-learning--teach-back)
+
+- `./docs/skill-development-strategy.md` exists and contains a realistic plan (`## Planning`) and progress tracking (`## Tracking`) descriptions.
+
+## Automated checks
+
+### [Lab setup](./README.md#lab-setup)
+
+- Student repo is a public fork of the lab repo.
+- The repo has a classmate as a collaborator (check the table).
+
+### [PR reviews](./README.md#pr-reviews)
+
+- Student has reviewed at least 2 PRs.
+- Student's PRs have been reviewed.
+
+### Required tasks
+
+#### [1. Pick a product and study its architecture](./README.md#1-pick-a-product-and-study-its-architecture)
+
 - roles per component are outlined (`./docs/roles-and-skills.md`).
 
-3. Personal skills reflection
-   - chose a role
-   - found the job postings and knows the required skills for each
-   - signed into `roadmap.sh` and marked the roadmap nodes.
-   - identified a few skills he should target
+#### [2. Tech roles involved in the selected product](./README.md#2-study-the-market-for-your-product)
 
-4. Personal reflection: `./docs/reflection.md` 
-<!-- TODO: define what to check -->
+#### [3. My tech skills and the market: roadmap.sh and job postings](./README.md#3-my-tech-skills-and-the-market-roadmapsh-and-job-postings)
 
-5. Stretch tasks (optional): No comment yet
+- Job posting links are real.
+- `./docs/roles-and-skills.md` has the `## Job market snapshot` section filled in.
+
+### Optional tasks
+
+<!-- TODO -->
