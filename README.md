@@ -288,7 +288,7 @@ Follow the [procedure for each task](#procedure-for-each-task).
 1. [ ] Create an issue `[Task] Roles and skills mapping`.
 2. [ ] In `./docs/roles-and-skills.md`:
 
-     - [ ] In the `## Roles and components` section:
+     - [ ] In the `## Components and roles` section:
         - [ ] For each selected component from `architecture.md`, list IT roles that are likely involved in the development and maintenance of that component.
         - [ ] Use a nested list. Example:
 
@@ -304,11 +304,12 @@ Follow the [procedure for each task](#procedure-for-each-task).
           - ...
           ```
 
-     - [ ] Select any five roles.
-        - [ ] Do you know what are the typical responsibilities of that role? Consult an LLM or search engine to find out.
-        - [ ] Briefly describe the responsibilities for chosen roles.
+     - [ ] In the `## Roles and responsibilities` section:
+        - [ ] Select any five roles.
+        - [ ] Consult an LLM or search engine to find out what are the typical responsibilities of these roles (what do people holding these role do?).
+        - [ ] For each selected role, briefly describe the responsibilities.
      - [ ] In the `## Common skills across roles` section:
-       - [ ] Based on your intuition and some research, list **tech skills that almost everyone needs**.
+       - [ ] Based on your intuition and some research, list **tech skills that are required for these responsibilities**.
 
 ### 3. My tech skills and the market: roadmap.sh and job postings
 
