@@ -389,7 +389,70 @@ Tasks are non-optional unless marked as "optional" or "homework".
 3. [ ] Try to implement a part of that agent.
 4. [ ] Test that agent in a different fork of this repo.
 
-### 6 (Homework) Learn about Git, Github, and Github Flow
+### 6. (Optional) Deep dives (pick one)
+
+> [!NOTE]
+> Pick **one** deep dive track below. Still follow the [procedure for each task](#procedure-for-each-task).
+
+#### Track A — Merge conflicts & resolution
+
+1. [ ] Create the issue `[Task] Deep dive: Merge conflicts`.
+2. [ ] Complete a short learning resource on conflicts:
+    - [Learn Git Branching](https://learngitbranching.js.org/) (focus on merge/rebase and conflicts).
+3. [ ] Coordinate with your collaborator:
+    - [ ] Both of you create PRs that edit the **same lines** in the same file (e.g., the same paragraph in `README.md`).
+    - [ ] Merge one PR first.
+4. [ ] In the second PR, resolve the conflict (locally or in GitHub) and push the fix.
+5. [ ] In the PR description, add a short `Conflict resolution note`:
+    - [ ] What conflicted (1–2 sentences).
+    - [ ] How you resolved it (1–2 sentences).
+6. [ ] Merge the PR.
+
+**Completion check (TA)**
+- PR shows that it had conflicts and was later fixed.
+- PR description contains `Conflict resolution note`.
+
+#### Track B — Add a CI check (GitHub Actions)
+
+1. [ ] Create the issue `[Task] Deep dive: Add CI`.
+2. [ ] Read: [GitHub Actions — Quickstart](https://docs.github.com/en/actions/writing-workflows/quickstart).
+3. [ ] Add a GitHub Actions workflow that runs `markdownlint` on every PR (use `.markdownlint.jsonc`).
+4. [ ] Open a PR for the workflow and make sure the checks pass.
+
+**Completion check (TA)**
+- PR has a green check for the lint job.
+- Workflow file exists under `.github/workflows/`.
+
+#### Track C — Tag and release notes (shipping mindset)
+
+1. [ ] Create the issue `[Task] Deep dive: Tag and release`.
+2. [ ] Read: [Managing releases in a repository](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository).
+3. [ ] Create a tag `v0.1.0` for the current state of your lab repo.
+4. [ ] Create a GitHub Release for `v0.1.0` with notes:
+    - [ ] What you built (links to your key docs/PRs).
+    - [ ] What you learned (3–5 bullets).
+    - [ ] What you would do next (2–3 bullets).
+
+**Completion check (TA)**
+- A GitHub Release exists for tag `v0.1.0` and contains release notes.
+
+#### Track D — Skill spotlight (from job market → deep learning → teach-back)
+
+1. [ ] Create the issue `[Task] Deep dive: Skill spotlight`.
+2. [ ] Pick **one** skill you found in job postings / roadmap.sh that you want to actually learn deeper (examples: SQL joins/indexes, HTTP auth, Docker basics, message queues, caching).
+3. [ ] Choose **one** high-quality learning resource and link it in the issue (docs/tutorial/course).
+4. [ ] Create `./docs/skill-spotlight/<skill>.md` with:
+    - [ ] `## What it is` (5–10 sentences in your own words).
+    - [ ] `## Where it shows up in my product` (link to a component from `architecture.md` and explain the connection).
+    - [ ] `## Mini demo` (a short example: snippet, config, pseudo-code, or a small diagram).
+    - [ ] `## Exercises` (3 small practice tasks).
+    - [ ] `## Self-check` (5 quiz questions + short answers).
+    - [ ] `## References` (links you used).
+
+**Completion check (TA)**
+- `./docs/skill-spotlight/<skill>.md` exists and contains all sections above and a link to `architecture.md`.
+
+### 7 (Homework) Learn about Git, Github, and Github Flow
 
 - [ ] Read this [tutorial](https://hackmd.io/@aabounegm/SWP-git) to learn about `Git`, `Github`, and `Git` workflows.
 - [ ] Learn about `Github Flow`.
