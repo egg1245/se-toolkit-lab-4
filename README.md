@@ -357,7 +357,8 @@ Follow the [procedure for each task](#procedure-for-each-task).
     > This is your opportunity to think and arrive at useful conclusions.
     - [ ] Which role did I choose and why?
     - [ ] How my skillset compares to the market demands?
-    - [ ] Which one or two key skills for this role would I like to develop this semester?
+    - [ ] Which one or two key skills for this role would I like to develop this semester and why?
+    - [ ] What did I learn in this lab?
 
 ---
 
