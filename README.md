@@ -239,8 +239,6 @@ You work **independently** on the tasks below in your forked repo.
 
 For each task, follow the [procedure above](#procedure-for-each-task).
 
-Tasks are non-optional unless marked as "optional" or "homework".
-
 ### 1. Pick a product and study its architecture
 
 > [!WARNING]
@@ -359,7 +357,7 @@ Tasks are non-optional unless marked as "optional" or "homework".
 
 ---
 
-### 6. (Optional) Deep dives (pick one)
+## Optional tasks
 
 > [!NOTE]
 > Pick **one** deep dive track below. Still follow the [procedure for each task](#procedure-for-each-task).
@@ -422,7 +420,7 @@ Tasks are non-optional unless marked as "optional" or "homework".
 **Completion check (TA)**
 - `./docs/skill-spotlight/<skill>.md` exists and contains all sections above and a link to `architecture.md`.
 
-### 7 (Homework) Learn about Git, Github, and Github Flow
+## Homework
 
 - [ ] Read this [tutorial](https://hackmd.io/@aabounegm/SWP-git) to learn about `Git`, `Github`, and `Git` workflows.
 - [ ] Learn about `Github Flow`.
