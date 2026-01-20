@@ -1,74 +1,95 @@
 @startuml Sequence Diagram
 !theme plain
+autonumber
 
-title Uber Application Sequence Diagram - Ride Booking Process
+title Yandex Go Sequence Diagram - Ride Booking Flow
 
-actor Customer
-participant "Mobile App" as mobile_app
-participant "API Gateway" as api_gateway
-participant "User Service" as user_service
-participant "Driver Service" as driver_service
-participant "Payment Service" as payment_service
-participant "Notification Service" as notification_service
-database "Database" as database
-participant "Cache" as cache
-participant "Message Queue" as message_queue
-participant "External Payment Gateway" as external_payment_gateway
+actor "User" as user
+participant "Mobile App" as app
+participant "API Gateway" as gateway
 
-== Customer Authentication ==
-Customer -> mobile_app: Login Request
-mobile_app -> api_gateway: Forward Login Request
-api_gateway -> user_service: Authenticate User
-user_service -> database: Validate Credentials
-database -> user_service: Return User Data
-user_service -> cache: Store Session
-user_service -> api_gateway: Authentication Response
-api_gateway -> mobile_app: Login Success/Failure
-mobile_app -> Customer: Display Result
+box "Core Services" #WhiteSmoke
+    participant "User Service" as user_svc
+    participant "Maps & Routing\nService" as maps_svc
+    participant "Pricing Service" as pricing_svc
+    participant "Dispatch Service" as dispatch_svc
+    participant "Payment Service" as payment_svc
+    participant "Notification\nService" as notif_svc
+end box
 
-== Find Nearby Drivers ==
-Customer -> mobile_app: Request Ride
-mobile_app -> api_gateway: Get Available Drivers
-api_gateway -> driver_service: Find Nearby Drivers
-driver_service -> database: Query Driver Locations
-database -> driver_service: Return Driver List
-driver_service -> api_gateway: Available Drivers
-api_gateway -> mobile_app: Driver Options
-mobile_app -> Customer: Display Driver Options
+box "Data Layer" #LightCyan
+    participant "Cache (Redis)" as redis
+    database "Operational DB\n(YDB)" as ydb
+    queue "Message Broker\n(Kafka)" as kafka
+end box
 
-== Book Ride ==
-Customer -> mobile_app: Select Driver & Confirm Ride
-mobile_app -> api_gateway: Create Ride Request
-api_gateway -> user_service: Validate User
-user_service -> cache: Check User Status
-user_service -> api_gateway: Validation Result
-api_gateway -> driver_service: Assign Ride to Driver
-driver_service -> database: Update Ride Status
-database -> driver_service: Confirmation
-driver_service -> message_queue: Publish Ride Assignment
-message_queue -> notification_service: Process Notification
-notification_service -> mobile_app: Send Driver Assignment
-notification_service -> "Driver App": Notify Driver Assignment
-driver_service -> api_gateway: Ride Created Response
-api_gateway -> mobile_app: Ride Confirmed
-mobile_app -> Customer: Show Ride Status
+box "External Services" #White
+    participant "Yandex Maps" as ext_maps
+    participant "Yandex Pay" as ext_pay
+end box
 
-== Process Payment ==
-Customer -> mobile_app: Confirm Ride Completion
-mobile_app -> api_gateway: Complete Ride Request
-api_gateway -> payment_service: Process Payment
-payment_service -> database: Retrieve Payment Info
-database -> payment_service: Payment Details
-payment_service -> external_payment_gateway: Charge Customer
-external_payment_gateway -> payment_service: Payment Confirmation
-payment_service -> database: Update Transaction
-database -> payment_service: Transaction Saved
-payment_service -> message_queue: Publish Payment Event
-message_queue -> notification_service: Send Receipt
-notification_service -> mobile_app: Send Receipt to Customer
-notification_service -> "Driver App": Send Payment to Driver
-payment_service -> api_gateway: Payment Success
-api_gateway -> mobile_app: Payment Confirmed
-mobile_app -> Customer: Show Receipt
+== 1. App Initialization & Auth ==
+user -> app: Open App
+app -> gateway: Validate Session
+gateway -> user_svc: Authenticate Token (gRPC)
+user_svc -> redis: Check Cached Session
+redis --> user_svc: Session Valid
+user_svc --> gateway: User Profile Data
+gateway --> app: Auth Success
+
+== 2. Price Estimation & Routing (Pre-Ride) ==
+user -> app: Enter Destination
+app -> gateway: Request Estimate (Coords A to B)
+
+par
+    gateway -> maps_svc: Calculate Route & ETA
+    maps_svc -> ext_maps: Get Traffic/Route Data
+    ext_maps --> maps_svc: Route Details
+    maps_svc --> gateway: Route Info
+else
+    gateway -> pricing_svc: Calculate Fare
+    pricing_svc -> ydb: Fetch Tariff Rules
+    pricing_svc -> redis: Check Surge/Demand
+    pricing_svc --> gateway: Estimated Price
+end
+
+gateway --> app: Show Route & Price Options (Economy, Comfort, etc.)
+
+== 3. Ride Booking & Dispatch ==
+user -> app: Click "Order Ride"
+app -> gateway: Create Order Request
+gateway -> dispatch_svc: Initialize Ride
+dispatch_svc -> user_svc: Validate Payment Method
+user_svc --> dispatch_svc: Payment Method OK
+
+dispatch_svc -> ydb: Create Order Record (Status: SEARCHING)
+dispatch_svc -> redis: Find Nearby Drivers (Geospatial)
+redis --> dispatch_svc: Candidate Drivers
+
+loop Matching Logic
+    dispatch_svc -> dispatch_svc: Algorithm matches Driver
+end
+
+dispatch_svc -> ydb: Update Order (Status: ASSIGNED)
+dispatch_svc -> kafka: Publish Event: <font color=blue>RideAssigned</font>
+
+kafka -> notif_svc: Consume: <font color=blue>RideAssigned</font>
+notif_svc -> app: Push Notification: "Driver Found (Plate 123)"
+app -> user: Show Driver on Map
+
+== 4. Ride Completion & Payment ==
+note right of dispatch_svc: Ride physically occurs... \nDriver marks "Complete" via Driver App (implied)
+
+dispatch_svc -> payment_svc: Initiate Payment (Ride Cost)
+payment_svc -> ydb: Fetch Order Details
+payment_svc -> ext_pay: Charge User Card
+ext_pay --> payment_svc: Transaction Success
+
+payment_svc -> ydb: Update Payment Status (PAID)
+payment_svc -> kafka: Publish Event: <font color=green>PaymentSuccess</font>
+
+kafka -> notif_svc: Consume: <font color=green>PaymentSuccess</font>
+notif_svc -> app: Push Notification: "Receipt"
+app -> user: Display Receipt & Rate Driver
 
 @enduml
