@@ -32,7 +32,7 @@ node "User Smartphone" <<device>> as SmartPhone {
 node "User Computer" <<device>> as Computer {
   component [Telegram Desktop App] as desktop_app
   node "Web Browser" <<execution environment>> {
-    component [Telegram Web Client\n(Version K/Z)] as web_app
+    component [Telegram Web Client\n(WebA/WebK)] as web_app
   }
 }
 
@@ -61,7 +61,7 @@ cloud "Telegram Global Infrastructure (Primary DC)" {
       component [Message Service] as msg_svc
       component [Channel Service] as chan_svc
       component [Media Service] as media_svc
-      component [Push Notif Service] as push_svc
+      component [Push Notification Service] as push_svc
     }
   }
 
