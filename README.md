@@ -5,24 +5,55 @@ To kickstart the course, you will explore two things:
 > 1) How real software products are structured;
 > 2) What kind of engineers build and operate them.
 >
+
+## Table of contents
+
+- [Lab 01 – Products, Architecture \& Roles](#lab-01--products-architecture--roles)
+  - [Table of contents](#table-of-contents)
+  - [Learning Outcomes](#learning-outcomes)
+  - [Tasks overview](#tasks-overview)
+  - [Repo structure](#repo-structure)
+  - [Lab setup](#lab-setup)
+    - [Set up a fork](#set-up-a-fork)
+    - [Add a classmate as a collaborator](#add-a-classmate-as-a-collaborator)
+    - [Set up your local tools](#set-up-your-local-tools)
+    - [Open the repository on your machine](#open-the-repository-on-your-machine)
+    - [Set up `VS Code` extensions](#set-up-vs-code-extensions)
+    - [Skim the lab description](#skim-the-lab-description)
+  - [Submission checklist](#submission-checklist)
+  - [Procedure for each task](#procedure-for-each-task)
+  - [PR reviews](#pr-reviews)
+  - [Required tasks](#required-tasks)
+    - [1. Pick a product and study its architecture](#1-pick-a-product-and-study-its-architecture)
+    - [2. Tech roles involved in the selected product](#2-tech-roles-involved-in-the-selected-product)
+    - [3. My tech skills and the market: roadmap.sh and job postings](#3-my-tech-skills-and-the-market-roadmapsh-and-job-postings)
+  - [Optional tasks](#optional-tasks)
+    - [1. Merge conflicts \& resolution](#1-merge-conflicts--resolution)
+    - [2. Add a CI check (`GitHub Actions`)](#2-add-a-ci-check-github-actions)
+    - [3. Tag and release notes (shipping mindset)](#3-tag-and-release-notes-shipping-mindset)
+    - [4. Skill development strategy (from job market → deep learning → planning)](#4-skill-development-strategy-from-job-market--deep-learning--planning)
+  - [Homework](#homework)
+
 ## Learning Outcomes
 
 By the end of this lab you should be able to:
 
 - Use GitHub to structure your work and collaborate with peers (issues, branches, pull requests, and reviews).
-- Explain the basic architecture of a real-world digital product in terms of components, data flow, and deployment.
+- Explain the basic architecture of a real-world digital product in terms of components, data flow, deployment, and tech roles.
 - Reflect on your career in tech, examine your current skillset, and plan for the future.
 
 ## Tasks overview
 
 To complete this lab, you will need to:
-- Setup your github account and this lab's repo.
+
+- Set up your `GitHub` account and this lab's repo.
 - Pick an existing digital product.
 - Sketch its architecture: components, data flow, deployment.
 - Map components to tech roles and skills using real job postings and `roadmap.sh`.
 - Practice using GitHub issues, branches and pull requests (PRs) to organize your work in a repository (repo) and get feedback from peers.
 
 This and all other lab assignments will simulate real-life engineering practices:
+
 - Follow processes;
 - Communicate via issues/PRs;
 - Keep the work reviewable;
@@ -30,99 +61,145 @@ This and all other lab assignments will simulate real-life engineering practices
 - Write clear commit messages.
 
 ## Repo structure
-- `.github/ISSUE_TEMPLATE` – templates for your issues.
-- `.github/pull_request_template.md` – a template for PRs.
+
+- [`.github/ISSUE_TEMPLATE/01-task.yml`](./.github/ISSUE_TEMPLATE/01-task.yml) - an issue form for a task.
+- [`.github/pull_request_template.md`](./.github/pull_request_template.md) - a template for PRs.
+- [`./docs/diagrams`](./docs/diagrams) - diagrams of the product's architecture.
+- [`./.vscode/settings.json`](./.vscode/settings.json) - `VS Code` settings.
+- [`./.vscode/extensions.json`](./.vscode/extensions.json) - recommended `VS Code` extensions.
+- [`./Appendix.md`](./Appendix.md) - Additional info.
 
 ---
 
 ## Lab setup
 
 ### Set up a fork
-1. Create a GitHub account.
-2. Fork this repo to your GitHub account.
+
+1. Create a `GitHub` account.
+2. Fork this repo to your `GitHub` account and make it public.
 3. Continue your work in the forked repo.
 4. In the repo -> `Settings` -> `General` -> `Features`, enable `Issues`.
-5. In the repo -> `Issues` -> `Labels`, create a new label:
+5. <details> <summary> (Optional) Create a label for tasks (click to expand).</summary>
+
+   In the repo -> `Issues` -> `Labels`, create a new label:
    1. Click `New label`.
    2. Name: `task`.
    3. Click `Create label`.
-    <!-- TODO ask students to provide a proof of the setup -->
-6. In the repo Settings -> Code and automation -> Add branch ruleset:
-   1. Ruleset Name: `push`
-   2. Enforcement status: `Active`
-   3. Target branches -> Add target -> Include default branch
+
+   </details>
+
+6. <details> <summary>(Optional) Protect your <code>main</code> branch (click to expand).</summary>
+
+   In the repo -> `Settings` -> `Code and automation` -> `Add branch ruleset`:
+   1. `Ruleset Name`: `push`
+   2. `Enforcement status`: `Active`
+   3. `Target branches` -> `Add target` -> `Include default branch`
    4. Rules:
-      - [x] Restrict deletions
-      - [x] Require a pull request before merging:
-         - Required approvals: `1`
-         - Require conversation resolution before merging
-         - Allowed merge methods: `Merge`.
+      - [x] `Restrict deletions`
+      - [x] `Require a pull request before merging`:
+         - `Required approvals`: `1`
+         - `Require conversation resolution before merging`
+         - `Allowed merge methods`: `Merge`.
       - [x] Block force pushes
+  
+  </details>
 
 ### Add a classmate as a collaborator
 
-7. In the repo `Settings` -> `Collaborators` -> `Add people`, add a classmate as a collaborator.
-8. Make sure your collaborator have accepted the invitation sent to their email.
+1. In the repo `Settings` -> `Collaborators` -> `Add people`, add a classmate as a collaborator.
+2. Make sure your collaborator have accepted the invitation sent to their email.
 
 ### Set up your local tools
 
-9. (If needed) On your computer, configure [`git`](https://git-scm.com/):
+1. (If needed) On your computer, configure [`git`](https://git-scm.com/):
 
     ```bash
     git config --global user.name "Your Name"
     git config --global user.email "your@email"
     ```
 
-10. Install [`VS Code`](https://code.visualstudio.com/). This is our code editor of choice that we'll use in this course.
-    <!-- TODO: Add a screenshot with all key elements marked. -->
-    Optionally, you can learn more about it:
-    - [Basic Layout](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout).
-    - [Activity Bar](https://code.visualstudio.com/api/ux-guidelines/activity-bar)
-    - [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)
-    - [Terminal](https://code.visualstudio.com/docs/terminal/getting-started).
-    - [Source Control](https://code.visualstudio.com/docs/sourcecontrol/overview).
-    - [Extension Marketplace](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace).
-    - How to enable [`files.autoSave`](https://code.visualstudio.com/docs/editing/codebasics#_save-auto-save) and [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting).
+2. <details> <summary> (Optional) Learn more about <code>Git</code> (click to expand).</summary>
+
+   - [How Git Works: Explained in 4 Minutes](https://www.youtube.com/watch?v=e9lnsKot_SQ)
+   - [Git MERGE vs REBASE: Everything You Need to Know](https://www.youtube.com/watch?v=0chZFIZLR_0)
+
+   </details>
+
+3. Install [`VS Code`](https://code.visualstudio.com/). This is our code editor of choice that we'll use in this course.
+
+4. <details> <summary> Skim <code>VS Code</code> docs. </summary>
+
+    - [`Basic Layout`](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout) - Basic UI elements in `VS Code`.
+    - `Activity Bar`, `Status Bar` (see [`Basic Layout`](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)) - Menus of extensions;
+    - [`Command Palette`](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) - How to use commands provided by extensions;
+    - [`Terminal`](https://code.visualstudio.com/docs/terminal/getting-started) - How to run terminal commands inside `VS Code`;
+    - [`Source Control`](https://code.visualstudio.com/docs/sourcecontrol/overview) - How to use `Git` via `VS Code` UI;
+    - [`Extension Marketplace`](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace) - How to install extensions;
+    - [`Custom Layout`](https://code.visualstudio.com/docs/configure/custom-layout) - E.g., move the `Primary Side Bar` to the right so that it doesn't move your code whenever it opens;
+    - [Keyboard shortcuts](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-reference).
+  
+   </details>
+
+5. Enable:
+    - [`files.autoSave`](https://code.visualstudio.com/docs/editing/codebasics#_save-auto-save) - to not lose your work if VS Code closes;
+    - [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting) - to keep your code formatted;
+    - Force saving and hence formatting by clicking `Ctrl + S` (or `Cmd + S` on `macOS`).
 
 ### Open the repository on your machine
-11. On your computer, create a directory `pre-swp`.
-12. In that directory, clone the lab repo.
+
+1. On your computer, create a directory `pre-swp`.
+2. In that directory, clone the lab repo.
 
     ```bash
-    git clone https://github.com/your-username/lab-01-market-product-and-git
+    git clone https://github.com/<your-username>/lab-01-market-product-and-git
     ```
 
-13. Open the repo in `VS Code`.
+3. Open the repo in `VS Code`.
 
     ```bash
     cd pre-swp
     code lab-01-market-product-and-git
     ```
 
-### Set up VS Code extensions
-14. Install the recommended VS Code extensions (listed in `./.vscode/extensions.json`) when VS Code suggests to install them.
-15. Sign in to accounts.
-    In the Activity Bar:
+### Set up `VS Code` extensions
+
+1. Install the recommended `VS Code` extensions (listed in [`./.vscode/extensions.json`](./.vscode/extensions.json)) when `VS Code` suggests to install them.
+2. Sign in to accounts.
+    In the `Activity Bar`:
     1. Click `Accounts`
-    2. Click `Sign in with GitHub`
-    3. Repeat for any of the extensions if neeeded.
+    2. Click `Sign in with GitHub ...`
+    3. Repeat for the remaining extensions if there any.
 
-<!-- TODO: move all gitlens related points to extra section (recommendations) -->
-16. Check GitLens.
+3. <details><summary> (Optional) Check <code>GitLens</code> (click to expand).</summary>
 
-    In the Activity Bar:
+    In the `Status Bar`:
 
-    1. Click `Source Control`
-    2. In the `GitLens` panel, click `Remotes`.
-    3. Make sure `origin` points to your repo URL.
-    4. In the `GitLens` panel, click `Commits`.
-    5. Make sure you can see commits to this repo.
+    1. Click `Visualize commits on the Commit Graph`.
+    2. Make sure you can see the commit graph.
 
-### Set up an agent
-17. Set up [Kilo Code](https://kilo.ai/install) with Qwen3 Coder (watch [tutorial](https://www.youtube.com/watch?v=G0uIVEt3aj4)) or another [free model](https://openrouter.ai/collections/free-models).
+    In the `Activity Bar`:
+
+    1. Click `Source Control`.
+    2. Click `GitLens` in the opened `Primary Side Bar` to open the `GitLens` panel.
+    3. In the `GitLens` panel, click `Remotes`.
+    4. Make sure `origin` points to your repo URL.
+    5. In the `GitLens` panel, click `Commits`.
+    6. Make sure you can see commits on the current branch.
+
+    Learn more about [`GitLens` features](https://help.gitkraken.com/gitlens/gitlens-features/).
+  
+   </details>
+
+4. <details><summary> (Optional) Add the <code>Kilo Code</code> extension and setup a free coding agent to help you with the lab (click to expand).</summary>
+
+    1. Watch [tutorial](https://www.youtube.com/watch?v=G0uIVEt3aj4).
+    2. Set up [`Kilo Code`](https://kilo.ai/install) or another coding agent with [`Qwen3 Coder`](https://github.com/QwenLM/Qwen3-Coder) or another free model, e.g., from [`OpenRouter`](https://openrouter.ai/collections/free-models).  
+
+  </details>
 
 ### Skim the lab description
-18. Skim this `README.md` file once so you know what’s coming.
+
+1. Skim this `README.md` file once so you know what’s coming.
 
 ---
 
@@ -130,23 +207,24 @@ This and all other lab assignments will simulate real-life engineering practices
 
 By the end of the lab:
 
-- Make sure that each non-optional task has a corresponding issue linked to a PR.
+- Make sure that each task that you have completed has a corresponding issue linked to a PR.
 - Close the issues for which all related activities are done.
-<!-- - TODO how does a TA check the work? -->
-- Explain your diagram, chosen role in a short conversation with the TA.
-
-<!-- TODO check out all completed steps -->
+- Show your progress to the TA as your proceed with the lab. TA will share a link to the table to mark the status of your tasks.
 
 ---
 
 ## Procedure for each task
 
-1. [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a GitHub issue in your forked repo using the "Lab Task" option and fill in the details.
-2. Create a new branch for the issue via [GitHub](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue) or via `git checkout -b <branch name>`.
-3. Make [commits](https://smartprogramming.in/tutorials/git-and-github/git-commit) to that branch to complete the task.
-     - Commit messages must follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) format.
+> [!NOTE]
+> This procedure is based on the [`GitHub flow`](https://docs.github.com/en/get-started/using-github/github-flow).
+
+1. [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a `GitHub` issue in your forked repo using the `Lab Task` [issue form](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms).
+2. Create a new branch for the issue via [`GitHub`](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue) or via `git checkout -b <branch-name>`.
+3. <details><summary> Make <a href="https://smartprogramming.in/tutorials/git-and-github/git-commit">commits</a> to that branch to complete the task (click to expand).</summary>
+
+     - Commit messages must follow the [`Conventional Commits`](https://www.conventionalcommits.org/en/v1.0.0/) format.
      - Commit to the branch using one of these approaches:
-       1. Using VS Code (see [docs](https://code.visualstudio.com/docs/sourcecontrol/staging-commits)): "Activity Bar" -> "Source Control" -> Click a file -> Select lines in the editor -> Right mouse click the selected lines -> Click `Stage Selected Ranges` -> Write a commit message -> Click `Commit`.
+       1. Using `VS Code` (see [docs](https://code.visualstudio.com/docs/sourcecontrol/staging-commits)): `Activity Bar` -> `Source Control` -> Click a file -> Select lines in the editor -> Right mouse click the selected lines -> Click `Stage Selected Ranges` -> Write a commit message -> Click `Commit`.
        2. Using a terminal (adds all changes in these files to the staging area):
 
           ```console
@@ -154,26 +232,30 @@ By the end of the lab:
           git commit -m "<message>"
           ```
 
-4. Push the branch to your forked repo via [GitLens](https://www.gitkraken.com/blog/vs-code-pull-request) or via the terminal:
+   </details>
+
+4. Push the branch to your forked repo:
 
     ```console
-    git push -u origin <branch name>
+    git push -u origin <branch-name>
     ```
 
-5. Create a PR to the `main` branch via [GitLens](https://www.gitkraken.com/blog/vs-code-pull-request) or via [GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+5. Create a PR to the `main` branch via [`GitHub`](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) ([tutorial](https://www.geeksforgeeks.org/git/creating-a-pull-request-on-any-public-repository-from-github-using-vs-code/)) or via the [`GitHub Pull Requests` extension](https://code.visualstudio.com/docs/sourcecontrol/github#_pull-requests).
 6. Write an appropriate PR description following the PR template.
 7. [Link the PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to the issue, e.g. `Closes #<issue number>`.
-8. Request a review of the PR from the collaborator.
-9. Address the comments, e.g., make fixes or ask to clarify the comment.
+8. [Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review#requesting-reviews-from-collaborators-and-organization-members) a review of the PR from the collaborator.
+9. Get the collaborator comments and address them, e.g., make fixes or ask to clarify the comment.
 10. Get the collaborator to approve the PR.
 11. Merge the PR to the `main` branch.
 12. Close the issue.
+13. Delete the branch.
 
 ## PR reviews
 
 As a PR reviewer, you must:
 
-- Review the assigned PR and leave at least 2 meaningful comments created for [particular lines](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request).
+- Review the assigned PR.
+- Leave at least 2 meaningful comments highlighting [particular lines](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request).
 - Approve the PR if you're satisfied with the PR.
 
 As a PR author, you must:
@@ -183,124 +265,99 @@ As a PR author, you must:
 
 ---
 
-## Tasks
+## Required tasks
 
 You work **independently** on the tasks below in your forked repo.
 
-For each task, follow the [procedure](#procedure-for-each-task).
+Follow the [procedure for each task](#procedure-for-each-task).
 
-Tasks are non-optional unless marked as "optional".
+### 1. Pick a product and study its architecture
 
-### 1. Pick a product and describe its architecture
+> [!WARNING]
+> System architecture diagrams are a part of the architecture documentation and not the [system architecture](https://github.com/inno-se/the-guide?tab=readme-ov-file#architecture).
 
 1. [ ] Create an issue `[Task] Product & architecture description`.
-2. [ ] Decide on how to make the architecture diagrams. We suggest the following approaches:
-   1. You can *prototype* diagrams via the [`hediet.vscode-drawio`](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) extension. However, it's not a good idea to version control images because you can't conveniently visualize their diffs and therefore can't track changes. Therefore, you must use the ["diagrams as code"](https://simmering.dev/blog/diagrams/) approach and eventually switch to one of the other approaches.
-   2. You can write [`PlantUML`](https://plantuml.com/) code.
-      - [ ] Install the [`jebbs.plantuml`](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) VS Code extension.
-      - [ ] Install [`Docker`](https://docs.docker.com/get-started/get-docker/).
-      - [ ] Run `docker run --name plantuml-server -d -p 48080:8080 plantuml/plantuml-server:jetty` to access the `PlantUML` server. The `48080` port is already set in `./.vscode/settings.json`.
-      - [ ] Write the `PlantUML` code in `./docs/diagrams/src/` and render the diagrams to SVG in `./docs/diagrams/out/` using the `jebbs.plantuml` extension. These directories are already set in `./.vscode/settings.json`.
-      - [ ] [Include](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) the rendered images into your Markdown file.
-   3. You can write [Mermaid](https://mermaid.js.org/) code in Markdown code blocks with the `mermaid` language tag (see [docs](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#creating-mermaid-diagrams)).
-   4. You can use any other tool if it supports the "diagrams as code" approach, e.g., [`Structurizr`](https://structurizr.com/), [`D2`](https://d2lang.com/), [`LikeC4`](https://github.com/likec4/likec4) etc.
+2. [ ] Learn how to [embed images](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images) into your `Markdown` files.
+3. [ ] Pick one product from this list:
 
-    > [!IMPORTANT]
-    >
-    > The goal of the diagram drawing tasks is to get familiar with certain architectural views (static, dynamic), not to design a system.
-    >
-    > To design a system rationally, you need to consider the architectural drivers. This approach is outlined in the optional [Task 4](#4-update-architecture-optional-stretch-task).
+    - Yandex Go
+    - Telegram
+    - Wildberries.ru
 
-3. [ ] Create `./docs/architecture.md`. In `./docs/architecture.md`:
+    Alternatively, choose another full-stack product with at least a million users. In that case, you'll have to [visualize the architecture](./Appendix.md#visualize-the-architecture) on your own.
+
+   > [!NOTE]
+   > The provided architecture diagrams are based on educated guesses since the products in the list are mostly closed-source.
+   > All diagrams were generated via Gemini 3 Pro (free web version) and edited by the course instructors.
+
+4. [ ] Find the directory with the product's architecture diagrams in two formats:
+    - `PlantUML` code in `./docs/diagrams/src/<product-name>`.
+    - Rendered architecture diagrams in `./docs/diagrams/out/<product-name>`.
+
+    If you chose another project, provide component, deployment, sequence diagrams in two formats in corresponding directories.
+
+5. [ ] Create `./docs/architecture.md` and add the following contents:
     1. [ ] In the `## Product choice` section:
-         - [ ] Pick one product from this list or propose your own:
-             - Yandex Taxi
-             - Telegram
-             - ChatGPT.com
-             - Wildberries.ru
-             - Uchi.ru
-             - Any other widely used full-stack app (except for Uber because it's used in diagram examples). Agree with your TA if you choose this option.
-         - [ ] Provide:
-           - [ ] The product's name;
-           - [ ] A link to the product's website.
-           - [ ] A short description of the product (1–2 sentences).
-    2. [ ] In the `## Motivation` section:
-         - [ ] Explain in 3-4 sentences why you personally would be interested to work on this product as a tech specialist.
-    3. [ ] In the `## Main components` section:
-        - [ ] Select at least 5 main [components](https://c4model.com/abstractions/component) of the product. For example:
-          - Mobile app
-          - Backend API
-          - Authentication service
-          - Payment / billing
-          - Notifications
-          - Admin panel
-          - Data analytics
-        - [ ] For each component, explain in 1–2 sentences what it does.
-        - [ ] Provide a [component diagram](https://en.wikipedia.org/wiki/Component_diagram).
-          - [ ] If you use [`PlantUML`](https://plantuml.com/component-diagram):
-            - [ ] Store the diagram source code in `./docs/diagrams/src/architecture-component.puml`.
-            - [ ] See [how to draw a connection](https://stackoverflow.com/questions/55077828/using-required-provided-interfaces-in-component-diagrams-plantuml/57134601#57134601).
-    4. [ ] In the `## Data flow` section:
-          - [ ] Describe what happens when a typical user action occurs (e.g. user orders a taxi / sends a message).
-          - [ ] Mention which components talk to each other and what kind of data they exchange.
-          - [ ] Provide a [sequence diagram](https://en.wikipedia.org/wiki/Sequence_diagram).
-            - [ ] If you use [`PlantUML`](https://plantuml.com/sequence-diagram):
-              - [ ] Store the diagram source code in `./docs/diagrams/src/architecture-sequence.puml`.
-            - [ ] Alternatively, use [`Mermaid`](https://mermaid.js.org/syntax/sequenceDiagram.html).
-    5. [ ] In the `## Deployment` section:
-         - [ ] Briefly describe where these components live (high-level view). Example:
-             - On user devices (mobile/web app).
-             - On servers (backend services, databases).
-         - [ ] Provide a [deployment diagram](https://en.wikipedia.org/wiki/Deployment_diagram).
-           - [ ] If you use [`PlantUML`](https://plantuml.com/deployment-diagram):
-             - [ ] Store the diagram source code in `./docs/diagrams/src/architecture-deployment.puml`.
-           - [ ] Alternatively, use [`Mermaid`](https://mermaid.js.org/syntax/c4.html#c4-deployment-diagram-c4deployment).
-    6. [ ] In the `## Knowledge Gaps` section:
-         - [ ] Write at least two things in your architecture that you are not fully sure about (guesses, questions, etc.).
+        - [ ] Provide:
+          - [ ] The product's name;
+          - [ ] A link to the product's website.
+          - [ ] A short description of the product (1–2 sentences).
+    2. [ ] In the `## Main components` section:
+        > [!NOTE]
+        > According to the [`C4 model`](https://c4model.com/abstractions/component), a *component* is a grouping of related functionality encapsulated behind a well-defined interface.
+        - [ ] Add the product's `Component Diagram.svg`.
+        - [ ] Provide a link to the `PlantUML` code for that [component diagram](./Appendix.md#component-diagram).
+        - [ ] Select at least 5 main components of the product from the component diagram.
+        - [ ] For each selected component, explain in 1–2 sentences what it does.
+    3. [ ] In the `## Data flow` section:
+        - [ ] Embed the product's `Sequence Diagram.svg`.
+        - [ ] Provide a link to the `PlantUML` code for that [sequence diagram](./Appendix.md#sequence-diagram).
+        - [ ] Describe what happens when a typical user action occurs (e.g. a user orders a taxi or sends a message).
+        - [ ] Mention which components talk to each other and what kind of data they exchange.
+    4. [ ] In the `## Deployment` section:
+        - [ ] Embed the product's `Deployment Diagram.svg`.
+        - [ ] Provide a link to the `PlantUML` code for that [deployment diagram](./Appendix.md#deployment-diagram).
+        - [ ] Briefly describe where the components are deployed.
+    5. [ ] In the `## Knowledge Gaps` section:
+        - [ ] Write at least two things in your architecture descriptions that you're not fully sure about (guesses, questions, etc.).
 
 ---
 
-### 2. Roles, skills, roadmap.sh, and job postings
+### 2. Tech roles involved in the selected product
 
 1. [ ] Create an issue `[Task] Roles and skills mapping`.
-
-    > [!IMPORTANT]
-    > You can ask an LLM “what does a *role* usually do?”, but:
-    >
-    > - You must visit `roadmap.sh` and real job postings yourself.
-    > - Your reflections about what you have / don’t have must be honest and personal.
-
 2. [ ] In `./docs/roles-and-skills.md`:
 
-     - [ ] In the `## Roles for components` section:
-        - [ ] For each component from `architecture.md`, list IT roles that are likely involved in the development and maintenance of that component.
+     - [ ] In the `## Components and roles` section:
+        - [ ] For each selected component from `architecture.md`, list IT roles that are likely involved in the development and maintenance of that component.
         - [ ] Use a nested list. Example:
+
+          ```markdown  
           - Mobile app
             - Mobile engineer (iOS/Android)
             - QA
             - ...
           - Payment service
-            - Back end engineer
+            - Back-end engineer
             - DevOps
             - QA
           - ...
+          ```
 
+     - [ ] In the `## Roles and responsibilities` section:
+        - [ ] Select any five roles.
+        - [ ] Consult an LLM or search engine to find out what are the typical responsibilities of these roles (what do people holding these role do?).
+        - [ ] For each selected role, briefly describe the responsibilities.
      - [ ] In the `## Common skills across roles` section:
-       - [ ] Based on your intuition and some research, list **skills that almost everyone needs**. Example:
-          - Git
-          - Basic Linux usage
-          - Understanding of HTTP / REST APIs
-          - Agentic coding
-          - Communicating in a team
-          - Writing clear issues/PR descriptions
-          - Planning
-          - ...
+       - [ ] Based on your intuition and some research, list **tech skills that are required for these responsibilities**.
 
-3. [ ] Choose *one* role that seems most interesting to you now.
-4. [ ] Go to [`roadmap.sh`](https://roadmap.sh/) and sign up.
-5. [ ] Find the roadmap relevant for the role you chose.
-6. [ ] In that roadmap, mark the items you already have at least some knowledge in.
-7. [ ] In `./docs/roles-and-skills.md`, in the `## My chosen role` section, write:
+### 3. My tech skills and the market: roadmap.sh and job postings
+
+1. [ ] Choose *one* role that seems most interesting to you now.
+2. [ ] Go to [`roadmap.sh`](https://roadmap.sh/) and sign up.
+3. [ ] Find the roadmap relevant for the role you chose.
+4. [ ] In that roadmap, mark the items you already have at least some knowledge in.
+5. [ ] In `./docs/roles-and-skills.md`, in the `## My chosen role` section, write:
 
     ```markdown
     ### Role
@@ -312,80 +369,94 @@ Tasks are non-optional unless marked as "optional".
     - ...
     
     ### Skills I clearly lack
-    <!-- from roadmap.sh, 8-10 skills -->
+    <!-- 4-5 skills from roadmap.sh that seemed important to have -->
     - ...
     ```
 
-8. [ ] Find **5-7 job postings** for this role on [`HH.ru`](https://hh.ru) or a similar job site.
-9. [ ] For each posting, list:
-    - Link to the posting.
-    - Company name.
+6. [ ] Find **5-7 job postings** for this role on [`HH.ru`](https://hh.ru) or a similar job site.
+7. [ ] For each posting, write:
     - Role title.
+    - Link to the posting.
     - 3–5 key skills/requirements they mention.
-10. [ ] In `./docs/roles-and-skills.md`, in the `## Job market snapshot` section, write:
+8. [ ] In `./docs/roles-and-skills.md`, in the `## Job market snapshot` section, write:
 
     ```markdown
-    ### Skills that appear in almost every posting
+    ### Skills that appear in several postings
     <!-- 3-10 skills -->
     - ...
     
-    ### Skills from postings that I haven't yet seen on roadmap.sh
-    <!-- 1-5 skills -->
+    ### Skills specific to a single posting
+    <!-- 2-5 skills -->
     - ...
-    
-    ### My key takeaway
-    ...
+
     ```
 
----
-
-### 3. Short personal reflection
-
-1. [ ] Create the issue `[Task] Personal reflection`.
-
+9. [ ] In `./docs/roles-and-skills.md`, in the `## Personal reflection.` section write 5–10 sentences reflecting on the following questions:
     > [!IMPORTANT]
-    > Write this section **without** an LLM. It’s about your own thoughts.
-
-2. [ ] In `./docs/reflection.md` write 5–10 sentences answering:
-    - [ ] Which role did you choose and why?
-    - [ ] What is one thing about the product’s architecture that was new to you?
-    - [ ] Which course topics (Git, Linux, Docker, REST, CI/CD, fullstack, data) seem most relevant to your chosen role?
-    - [ ] What is one concrete skill you would like to improve this semester?
+    > Write this section **without** an LLM.
+    > This is your opportunity to think and arrive at useful conclusions.
+    - [ ] Which role did I choose and why?
+    - [ ] How my skillset compares to the market demands?
+    - [ ] Which one or two key skills for this role would I like to develop this semester and why?
+    - [ ] What did I learn in this lab?
+    - [ ] If you used an AI tool to work on this lab:
+      - [ ] What did the tool do well?
+      - [ ] What did it do bad?
 
 ---
 
-### 4. Update architecture (optional stretch task)
+## Optional tasks
 
-1. Create the issue `[Task] Update architecture`.
-2. [ ] In `./docs/architecture.md`:
-    - [ ] In the `## Architectural drivers` section:
-      - [ ] List 10-15 [architectural drivers](https://github.com/inno-se/the-guide?tab=readme-ov-file#architectural-drivers) for the system:
-        - [ ] business goals;
-        - [ ] technical constraints;
-        - [ ] primary functional requirements;
-        - [ ] quality requirements.
-        - [ ] architectural concerns.
-    - [ ] In the `## Design decisions` section:
-      - [ ] List 5-7 key design decisions for the system ([example](https://github.com/otrebmuh/HotelPricingSystem/blob/433e061f712a8748fdf04a6f767752e12be2f4b9/Design/Architecture.md#10-design-decisions)).
-      - [ ] Link each decision to an architectural driver.
-      - [ ] Justify each decision (provide rationale) in 1-2 sentences.
-      - [ ] List 1-2 discarded alternatives for each decision.
+> [!NOTE]
+> Pick **one** optional task below. Still follow the [procedure for each task](#procedure-for-each-task).
 
-3. [ ] Update the diagrams to match your design decisions.
+### 1. Merge conflicts & resolution
 
-### 5. Work on an agent (optional stretch task)
+1. [ ] Create the issue `[Task] Deep dive: Merge conflicts`.
+2. [ ] Complete a short learning resource on conflicts:
+    - [Learn Git Branching](https://learngitbranching.js.org/) (focus on merge/rebase and conflicts).
+3. [ ] Coordinate with your collaborator:
+    - [ ] Both of you create PRs that edit the **same lines** in the same file (e.g., the same paragraph in `README.md`).
+    - [ ] Merge one PR first.
+4. [ ] In the second PR, resolve the conflict (locally or on `GitHub`) and push the fix.
+5. [ ] In the PR description, add a short `Conflict resolution note`:
+    - [ ] What conflicted (1–2 sentences).
+    - [ ] How you resolved it (1–2 sentences).
+6. [ ] Merge the PR.
 
-1. Create the issue `[Task] Work on an agent`.
-2. [ ] In `docs/agent-idea.md`, sketch how an AI agent could:
-    - [ ] Read `README.md`;
-    - [ ] Generate GitHub issues automatically;
-    - [ ] Create initial markdown files for you.
-    - [ ] Complete all tasks for you.
+### 2. Add a CI check (`GitHub Actions`)
 
-3. [ ] Try to implement a part of that agent.
-4. [ ] Test that agent in a different fork of this repo.
+1. [ ] Create the issue `[Task] Deep dive: Add CI`.
+2. [ ] Read [Quickstart for `GitHub Actions`](https://docs.github.com/en/actions/get-started/quickstart).
+3. [ ] Add a `GitHub Actions` workflow that runs `markdownlint` on every PR (use `.markdownlint.jsonc`).
+4. [ ] Open a PR for the workflow and make sure the checks pass.
 
+### 3. Tag and release notes (shipping mindset)
 
-### Take home exercise
-- Learn about Git -> Github -> Github flow
-https://hackmd.io/@aabounegm/SWP-git
+1. [ ] Create the issue `[Task] Deep dive: Tag and release`.
+2. [ ] Read [Managing releases in a repository](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository).
+3. [ ] Read [Semantic Versioning 2.0.0](https://semver.org/).
+4. [ ] Create a tag `v0.1.0` for the current state of your lab repo.
+5. [ ] Create a release for `v0.1.0` with notes:
+    - [ ] What you built (links to your key docs/PRs).
+    - [ ] What you learned (3–5 bullets).
+    - [ ] What you would do next (2–3 bullets).
+
+### 4. Skill development strategy (from job market → deep learning → planning)
+
+1. [ ] Create the issue `[Task] Skill development strategy`.
+2. [ ] Choose one skill that you decided to improve this semester in [Task 3](#3-my-tech-skills-and-the-market-roadmapsh-and-job-postings).
+3. [ ] Create `./docs/skill-development-strategy.md` with:
+    - [ ] `## About the skill` (3–5 sentences):
+      - [ ] What is this skill?
+    - [ ] `## Planning` (5–10 sentences):
+      - [ ] Plan to develop this skill during the semester.
+      - [ ] Include specific resources, timeline, and milestones.
+    - [ ] `## Tracking` (5-10 sentences):
+      - [ ] How will I measure my progress in developing the skill?
+
+## Homework
+
+- [ ] Read this [tutorial](https://hackmd.io/@aabounegm/SWP-git) to learn about `Git`, `Github`, and `Git` workflows.
+- [ ] Practice on [Learn Git Branching](https://learngitbranching.js.org/) (focus on merge/rebase and conflicts).
+- [ ] Read about [`GitHub flow`](https://docs.github.com/en/get-started/using-github/github-flow).
