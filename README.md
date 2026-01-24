@@ -348,9 +348,9 @@ Follow the [procedure for each task](#procedure-for-each-task).
         - [ ] List at least two questions you couldn't answer from public information.
 
         Examples:
-        - *"I assumed the Payment Service communicates synchronously, but it might use async messaging."*
-        - *"I don't know if they use Kubernetes or another orchestration tool."*
-        - *"It's unclear how they handle data replication across regions."*
+        - Yandex Go: *"I assumed the rider app talks directly to the driver app, but there's probably a server in between."*
+        - Telegram: *"I'm not sure if media files are stored on the same servers as text messages."*
+        - Wildberries: *"I don't know if payments are processed by Wildberries or by an external payment service."*
 
 ---
 
