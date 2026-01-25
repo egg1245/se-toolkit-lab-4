@@ -208,8 +208,18 @@ This and all other lab assignments will simulate real-life engineering practices
 
 4. <details><summary> (Optional) Set up a free coding agent to help you with the lab (click to expand).</summary>
 
-    1. Watch the [tutorial](https://youtube.com/shorts/SQ-bwPDIrVY).
-    2. Set up [`Roo Code`](https://roocode.com/) or another coding agent with [`Qwen3 Coder`](https://github.com/QwenLM/Qwen3-Coder) or another free model, e.g., from [`OpenRouter`](https://openrouter.ai/collections/free-models).
+    You may use any coding agent with any model. `OpenRouter` provides [free models](https://openrouter.ai/collections/free-models).
+
+    Here's how to use `Copilot Chat` with free [`Qwen3 Coder`](https://github.com/QwenLM/Qwen3-Coder):
+
+    1. Create an account at <https://chat.qwen.ai>.
+    2. [Install](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace#_browse-for-extensions) the `github.copilot-chat` and `denizhandaklr.vscode-qwen-copilot` extensions.
+    3. Open [`Command Palette`](https://code.visualstudio.com/docs/getstarted/getting-started#_access-commands-with-the-command-palette), type `Qwen Copilot: Authenticate`, press `Enter`.
+    4. Complete the authentication procedure.
+    5. Open `Command Palette`, run `Chat: Manage Language Models`.
+    6. Double click `Qwen 3 Coder Plus` to make the model visible.
+    7. In `Command Palette`, run `Chat: Open Chat`.
+    8. In the `Chat`, click `Auto` (`Pick Model`) and then click `Qwen 3 Coder Plus`.
 
   </details>
 
