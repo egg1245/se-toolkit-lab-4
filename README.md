@@ -6,33 +6,47 @@ To kickstart the course, you will explore two things:
 > 2) What kind of engineers build and operate them.
 >
 
+## Quick Start
+
+1. **Setup**: Fork repo → Clone locally → Open in VS Code
+2. **For each task**: Issue → Branch → Commits → PR → Review → Merge
+3. **Start with**: [Task 1: Pick a product](#1-pick-a-product-and-study-its-architecture)
+
+### Time estimates
+
+| Section | Time |
+|---------|------|
+| [Setup](#lab-setup) | ~30 min |
+| [Task 1](#1-pick-a-product-and-study-its-architecture) | ~30–40 min |
+| [Task 2](#2-tech-roles-involved-in-the-selected-product) | ~20–30 min |
+| [Task 3](#3-my-tech-skills-and-the-market-roadmapsh-and-job-postings) | ~30–40 min |
+| **Total** | **~2–2.5 hours** |
+
+---
+
 ## Table of contents
 
-- [Lab 01 – Products, Architecture \& Roles](#lab-01--products-architecture--roles)
-  - [Table of contents](#table-of-contents)
-  - [Learning Outcomes](#learning-outcomes)
-  - [Tasks overview](#tasks-overview)
-  - [Repo structure](#repo-structure)
-  - [Lab setup](#lab-setup)
-    - [Set up a fork](#set-up-a-fork)
-    - [Add a classmate as a collaborator](#add-a-classmate-as-a-collaborator)
-    - [Set up your local tools](#set-up-your-local-tools)
-    - [Open the repository on your machine](#open-the-repository-on-your-machine)
-    - [Set up `VS Code` extensions](#set-up-vs-code-extensions)
-    - [Skim the lab description](#skim-the-lab-description)
-  - [Submission checklist](#submission-checklist)
-  - [Procedure for each task](#procedure-for-each-task)
-  - [PR reviews](#pr-reviews)
-  - [Required tasks](#required-tasks)
-    - [1. Pick a product and study its architecture](#1-pick-a-product-and-study-its-architecture)
-    - [2. Tech roles involved in the selected product](#2-tech-roles-involved-in-the-selected-product)
-    - [3. My tech skills and the market: roadmap.sh and job postings](#3-my-tech-skills-and-the-market-roadmapsh-and-job-postings)
-  - [Optional tasks](#optional-tasks)
-    - [1. Merge conflicts \& resolution](#1-merge-conflicts--resolution)
-    - [2. Add a CI check (`GitHub Actions`)](#2-add-a-ci-check-github-actions)
-    - [3. Tag and release notes (shipping mindset)](#3-tag-and-release-notes-shipping-mindset)
-    - [4. Skill development strategy (from job market → deep learning → planning)](#4-skill-development-strategy-from-job-market--deep-learning--planning)
-  - [Homework](#homework)
+**Overview**
+
+- [Learning Outcomes](#learning-outcomes)
+- [Tasks overview](#tasks-overview)
+- [Repo structure](#repo-structure)
+
+**Before you start**
+
+- [Lab setup](#lab-setup)
+- [Submission checklist](#submission-checklist)
+- [Procedure for each task](#procedure-for-each-task)
+- [PR reviews](#pr-reviews)
+
+**Tasks**
+
+- [Required tasks](#required-tasks)
+  - [1. Pick a product and study its architecture](#1-pick-a-product-and-study-its-architecture) ⬅️ Start here
+  - [2. Tech roles involved in the selected product](#2-tech-roles-involved-in-the-selected-product)
+  - [3. My tech skills and the market](#3-my-tech-skills-and-the-market-roadmapsh-and-job-postings)
+- [Optional tasks](#optional-tasks)
+- [Homework](#homework)
 
 ## Learning Outcomes
 
@@ -147,7 +161,7 @@ This and all other lab assignments will simulate real-life engineering practices
 
 ### Open the repository on your machine
 
-1. On your computer, create a directory `pre-swp`.
+1. On your computer, create a directory `software-engineering-toolkit`.
 2. In that directory, clone the lab repo.
 
     ```bash
@@ -157,7 +171,7 @@ This and all other lab assignments will simulate real-life engineering practices
 3. Open the repo in `VS Code`.
 
     ```bash
-    cd pre-swp
+    cd software-engineering-toolkit
     code lab-01-market-product-and-git
     ```
 
@@ -190,10 +204,10 @@ This and all other lab assignments will simulate real-life engineering practices
   
    </details>
 
-4. <details><summary> (Optional) Add the <code>Kilo Code</code> extension and setup a free coding agent to help you with the lab (click to expand).</summary>
+4. <details><summary> (Optional) Set up a free coding agent to help you with the lab (click to expand).</summary>
 
-    1. Watch [tutorial](https://www.youtube.com/watch?v=G0uIVEt3aj4).
-    2. Set up [`Kilo Code`](https://kilo.ai/install) or another coding agent with [`Qwen3 Coder`](https://github.com/QwenLM/Qwen3-Coder) or another free model, e.g., from [`OpenRouter`](https://openrouter.ai/collections/free-models).  
+    1. Watch the [tutorial](https://youtube.com/shorts/SQ-bwPDIrVY).
+    2. Set up [`Roo Code`](https://roocode.com/) or another coding agent with [`Qwen3 Coder`](https://github.com/QwenLM/Qwen3-Coder) or another free model, e.g., from [`OpenRouter`](https://openrouter.ai/collections/free-models).
 
   </details>
 
@@ -217,6 +231,12 @@ By the end of the lab:
 
 > [!NOTE]
 > This procedure is based on the [`GitHub flow`](https://docs.github.com/en/get-started/using-github/github-flow).
+
+```text
+┌───────┐    ┌────────┐    ┌─────────┐    ┌────┐    ┌────────┐    ┌───────┐
+│ Issue │ →  │ Branch │ →  │ Commits │ →  │ PR │ →  │ Review │ →  │ Merge │
+└───────┘    └────────┘    └─────────┘    └────┘    └────────┘    └───────┘
+```
 
 1. [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a `GitHub` issue in your forked repo using the `Lab Task` [issue form](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms).
 2. Create a new branch for the issue via [`GitHub`](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue) or via `git checkout -b <branch-name>`.
@@ -255,7 +275,8 @@ By the end of the lab:
 As a PR reviewer, you must:
 
 - Review the assigned PR.
-- Leave at least 2 meaningful comments highlighting [particular lines](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request).
+- Leave at least 2 meaningful comments highlighting [particular lines](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request). It's enough to select line(s), write a comment and click `Comment`.
+- Click `Submit review` if you clicked `Start a review` before.
 - Approve the PR if you're satisfied with the PR.
 
 As a PR author, you must:
@@ -267,11 +288,16 @@ As a PR author, you must:
 
 ## Required tasks
 
+> [!TIP]
+> **Start here** after completing the [lab setup](#lab-setup).
+
 You work **independently** on the tasks below in your forked repo.
 
 Follow the [procedure for each task](#procedure-for-each-task).
 
 ### 1. Pick a product and study its architecture
+
+⏱️ **~30–40 min**
 
 > [!WARNING]
 > System architecture diagrams are a part of the architecture documentation and not the [system architecture](https://github.com/inno-se/the-guide?tab=readme-ov-file#architecture).
@@ -318,12 +344,20 @@ Follow the [procedure for each task](#procedure-for-each-task).
         - [ ] Embed the product's `Deployment Diagram.svg`.
         - [ ] Provide a link to the `PlantUML` code for that [deployment diagram](./Appendix.md#deployment-diagram).
         - [ ] Briefly describe where the components are deployed.
-    5. [ ] In the `## Knowledge Gaps` section:
-        - [ ] Write at least two things in your architecture descriptions that you're not fully sure about (guesses, questions, etc.).
+    5. [ ] In the `## Assumptions and Open Questions` section:
+        - [ ] List at least two assumptions you made while describing the architecture.
+        - [ ] List at least two questions you couldn't answer from public information.
+
+        Examples:
+        - Yandex Go: *"I assumed the rider app talks directly to the driver app, but there's probably a server in between."*
+        - Telegram: *"I'm not sure if media files are stored on the same servers as text messages."*
+        - Wildberries: *"I don't know if payments are processed by Wildberries or by an external payment service."*
 
 ---
 
 ### 2. Tech roles involved in the selected product
+
+⏱️ **~20–30 min**
 
 1. [ ] Create an issue `[Task] Roles and skills mapping`.
 2. [ ] In `./docs/roles-and-skills.md`:
@@ -352,6 +386,8 @@ Follow the [procedure for each task](#procedure-for-each-task).
        - [ ] Based on your intuition and some research, list **tech skills that are required for these responsibilities**.
 
 ### 3. My tech skills and the market: roadmap.sh and job postings
+
+⏱️ **~30–40 min**
 
 1. [ ] Choose *one* role that seems most interesting to you now.
 2. [ ] Go to [`roadmap.sh`](https://roadmap.sh/) and sign up.
