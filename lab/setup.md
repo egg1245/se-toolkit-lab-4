@@ -36,7 +36,7 @@
 1. In the repo `Settings` -> `Collaborators` -> `Add people`, add a classmate as a collaborator.
 2. Make sure your collaborator have accepted the invitation sent to their email.
 
-## Set up your local tools
+## Set up `git`
 
 1. (If needed) On your computer, configure [`git`](https://git-scm.com/):
 
@@ -52,9 +52,13 @@
 
    </details>
 
-3. Install [`VS Code`](https://code.visualstudio.com/). This is our code editor of choice that we'll use in this course.
+## Set up `VS Code`
 
-4. <details> <summary> Skim <code>VS Code</code> docs (click to open). </summary>
+1. Install [`VS Code`](https://code.visualstudio.com/). This is our code editor of choice that we'll use in this course.
+
+    ![VS Code UI](./images/vs-code-ui.png)
+
+2. <details> <summary> Skim <code>VS Code</code> docs (click to open). </summary>
 
     - [`Basic Layout`](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout) - Basic UI elements in `VS Code`.
     - `Activity Bar`, `Status Bar` (see [`Basic Layout`](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)) - Menus of extensions;
@@ -64,15 +68,13 @@
     - [`Terminal`](https://code.visualstudio.com/docs/terminal/getting-started) - How to run terminal commands inside `VS Code`;
     - [`Source Control`](https://code.visualstudio.com/docs/sourcecontrol/overview) - How to use `Git` via `VS Code` UI;
     - [`Extension Marketplace`](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace) - How to install extensions;
-    - [`Custom Layout`](https://code.visualstudio.com/docs/configure/custom-layout) - E.g., move the `Primary Side Bar` to the right so that it doesn't move your code whenever it opens;
+    - [`Custom Layout`](https://code.visualstudio.com/docs/configure/custom-layout) - E.g., move the `Primary Side Bar` to the right so that it doesn't move your code whenever the `Primary Side Bar` opens;
     - [Keyboard shortcuts](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-reference).
-  
-   </details>
+    - [`settings.json`](https://code.visualstudio.com/docs/configure/settings#_settings-json-file) - Keep workspace settings in a JSON file.
+      - [`files.autoSave`](https://code.visualstudio.com/docs/editing/codebasics#_save-auto-save) - Enabled to save your work if VS Code closes;
+      - [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting) - Enabled to run formatters when you press `Ctrl + S` (or `Cmd + S` on `macOS`) to save code.
 
-5. Enable:
-    - [`files.autoSave`](https://code.visualstudio.com/docs/editing/codebasics#_save-auto-save) - to not lose your work if VS Code closes;
-    - [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting) - to keep your code formatted;
-    - Force saving and hence formatting by clicking `Ctrl + S` (or `Cmd + S` on `macOS`).
+   </details>
 
 ## Open the repository on your computer
 
