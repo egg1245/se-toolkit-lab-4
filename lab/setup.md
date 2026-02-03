@@ -81,6 +81,10 @@
 
    </details>
 
+## Set up the shell prompt
+
+(Optional) Install [`Starship`](https://github.com/starship/starship#-installation).
+
 ## Open the repository on your computer
 
 1. On your computer, create a directory `software-engineering-toolkit`.
