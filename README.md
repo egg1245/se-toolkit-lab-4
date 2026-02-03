@@ -86,10 +86,10 @@ This and all other lab assignments will simulate real-life engineering practices
 
 - [`.github/ISSUE_TEMPLATE/01-task.yml`](./.github/ISSUE_TEMPLATE/01-task.yml) - an issue form for a task.
 - [`.github/pull_request_template.md`](./.github/pull_request_template.md) - a template for PRs.
-- [`./docs/diagrams`](./docs/diagrams) - diagrams of the product's architecture.
-- [`./.vscode/settings.json`](./.vscode/settings.json) - `VS Code` settings.
-- [`./.vscode/extensions.json`](./.vscode/extensions.json) - recommended `VS Code` extensions.
-- [`./lab/appendix`](./lab/appendix) - Additional info.
+- [`docs/diagrams`](./docs/diagrams) - diagrams of the product's architecture.
+- [`.vscode/settings.json`](./.vscode/settings.json) - `VS Code` settings.
+- [`.vscode/extensions.json`](./.vscode/extensions.json) - recommended `VS Code` extensions.
+- [`lab/appendix`](./lab/appendix) - Additional info.
 
 ---
 

@@ -12,7 +12,7 @@
 
 Title: `[Task] Roles and skills mapping`
 
-### 2. Create `./docs/roles-and-skills.md`
+### 2. Create `docs/roles-and-skills.md`
 
 Create the file and add the following sections:
 

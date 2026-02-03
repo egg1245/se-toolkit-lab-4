@@ -31,12 +31,12 @@ Alternatively, choose another full-stack product with at least a million users. 
 > All diagrams were generated via Gemini 3 Pro (free web version) and edited by the course instructors.
 
 1. Find the directory with the product's architecture diagrams in two formats:
-    - `PlantUML` code is in `./docs/diagrams/src/<product-name>`.
-    - Rendered architecture diagrams are in `./docs/diagrams/out/<product-name>`.
+    - `PlantUML` code is in [`docs/diagrams/src/<product-name>`](../../../docs/diagrams/src/).
+    - Rendered architecture diagrams are in [`docs/diagrams/out/<product-name>`](../../../docs/diagrams/out/).
 
 2. If you chose another project, provide component, deployment, sequence diagrams in two formats in corresponding directories.
 
-### 4. Create `./docs/architecture.md`
+### 4. Create `docs/architecture.md`
 
 Create the file and add the following sections:
 

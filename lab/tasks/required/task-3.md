@@ -24,7 +24,7 @@ Choose *one* role that seems most interesting to you now.
 
 ### 4. Document your chosen role
 
-In `./docs/roles-and-skills.md`, in the `## My chosen role` section, write:
+In `docs/roles-and-skills.md`, in the `## My chosen role` section, write:
 
 ```markdown
 ### Role
@@ -50,7 +50,7 @@ In `./docs/roles-and-skills.md`, in the `## My chosen role` section, write:
 
 ### 6. Document job market snapshot
 
-In `./docs/roles-and-skills.md`, in the `## Job market snapshot` section, write:
+In `docs/roles-and-skills.md`, in the `## Job market snapshot` section, write:
 
 ```markdown
 ### Skills that appear in several postings
@@ -65,7 +65,7 @@ In `./docs/roles-and-skills.md`, in the `## Job market snapshot` section, write:
 
 ### 7. Personal reflection
 
-In `./docs/roles-and-skills.md`, in the `## Personal reflection.` section write 5–10 sentences reflecting on the following questions:
+In `docs/roles-and-skills.md`, in the `## Personal reflection.` section write 5–10 sentences reflecting on the following questions:
 
 > [!IMPORTANT]
 > Write this section **without** an LLM.
