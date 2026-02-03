@@ -13,7 +13,7 @@
     - Telegram
     - Wildberries.ru
 
-    Alternatively, choose another full-stack product with at least a million users. In that case, you'll have to [visualize the architecture](./Appendix.md#visualize-the-architecture) on your own.
+    Alternatively, choose another full-stack product with at least a million users. In that case, you'll have to [visualize the architecture](../../appendix.md#visualize-the-architecture) on your own.
 
    > [!NOTE]
    > The provided architecture diagrams are based on educated guesses since the products in the list are mostly closed-source.
@@ -35,17 +35,17 @@
         > [!NOTE]
         > According to the [`C4 model`](https://c4model.com/abstractions/component), a *component* is a grouping of related functionality encapsulated behind a well-defined interface.
         - [ ] Add the product's `Component Diagram.svg`.
-        - [ ] Provide a link to the `PlantUML` code for that [component diagram](./Appendix.md#component-diagram).
+        - [ ] Provide a link to the `PlantUML` code for that [component diagram](../../appendix.md#visualize-the-architecture#component-diagram).
         - [ ] Select at least 5 main components of the product from the component diagram.
         - [ ] For each selected component, explain in 1–2 sentences what it does.
     3. [ ] In the `## Data flow` section:
         - [ ] Embed the product's `Sequence Diagram.svg`.
-        - [ ] Provide a link to the `PlantUML` code for that [sequence diagram](./Appendix.md#sequence-diagram).
+        - [ ] Provide a link to the `PlantUML` code for that [sequence diagram](../../appendix.md#visualize-the-architecture#sequence-diagram).
         - [ ] Describe what happens when a typical user action occurs (e.g. a user orders a taxi or sends a message).
         - [ ] Mention which components talk to each other and what kind of data they exchange.
     4. [ ] In the `## Deployment` section:
         - [ ] Embed the product's `Deployment Diagram.svg`.
-        - [ ] Provide a link to the `PlantUML` code for that [deployment diagram](./Appendix.md#deployment-diagram).
+        - [ ] Provide a link to the `PlantUML` code for that [deployment diagram](../../appendix.md#visualize-the-architecture#deployment-diagram).
         - [ ] Briefly describe where the components are deployed.
     5. [ ] In the `## Assumptions and Open Questions` section:
         - [ ] List at least two assumptions you made while describing the architecture.
