@@ -1,4 +1,4 @@
-# Merge conflicts & resolution
+# Resolve a merge conflict
 
 1. [ ] Create the issue `[Task] Deep dive: Merge conflicts`.
 2. [ ] Complete a short learning resource on conflicts:

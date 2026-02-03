@@ -1,4 +1,4 @@
-# Add a CI check (`GitHub Actions`)
+# Add a CI check
 
 1. [ ] Create the issue `[Task] Deep dive: Add CI`.
 2. [ ] Read [Quickstart for `GitHub Actions`](https://docs.github.com/en/actions/get-started/quickstart).

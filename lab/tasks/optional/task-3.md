@@ -1,4 +1,4 @@
-# Tag and release notes
+# Create a release
 
 1. [ ] Create the issue `[Task] Deep dive: Tag and release`.
 2. [ ] Read [Managing releases in a repository](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository).

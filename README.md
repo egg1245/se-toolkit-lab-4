@@ -111,9 +111,9 @@ Follow the [procedure for each task](./lab/tasks/required/procedure.md).
 
 Tasks:
 
-1. [Pick a product and study its architecture](./lab/tasks/required/task-1.md)
-2. [Tech roles involved in the selected product](./lab/tasks/required/task-2.md)
-3. [My tech skills and the market: `roadmap.sh` and job postings](./lab/tasks/required/task-3.md)
+1. [Choose a product and study its architecture](./lab/tasks/required/task-1.md#choose-a-product-and-study-its-architecture)
+2. [Study tech roles involved in the chosen product](./lab/tasks/required/task-2.md#study-tech-roles-involved-in-the-chosen-product)
+3. [Compare your tech skills with the market needs](./lab/tasks/required/task-3.md#compare-your-tech-skills-with-the-market-needs)
 
 ---
 
@@ -124,10 +124,10 @@ Tasks:
 
 Tasks:
 
-1. [Merge conflicts & resolution](./lab/tasks/optional/task-1.md).
-2. [Add a CI check (`GitHub Actions`)](./lab/tasks/optional/task-2.md)
-3. [Tag and release notes](./lab/tasks/optional/task-3.md)
-4. [Skill development strategy (job market → deep learning → planning)](./lab/tasks/optional/task-4.md)
+1. [Resolve a merge conflict](./lab/tasks/optional/task-1.md#resolve-a-merge-conflict).
+2. [Add a CI check](./lab/tasks/optional/task-2.md#add-a-ci-check)
+3. [Create a release](./lab/tasks/optional/task-3.md#create-a-release)
+4. [Plan skill development](./lab/tasks/optional/task-4.md#plan-skill-development)
 
 ## Homework
 

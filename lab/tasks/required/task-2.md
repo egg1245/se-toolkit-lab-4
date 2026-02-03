@@ -1,4 +1,4 @@
-# Tech roles involved in the selected product
+# Study tech roles involved in the chosen product
 
 **Time:** ~20-30 min
 

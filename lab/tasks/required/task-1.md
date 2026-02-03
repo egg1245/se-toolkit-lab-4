@@ -1,4 +1,4 @@
-# Pick a product and study its architecture
+# Choose a product and study its architecture
 
 **Time:** ~30-40 min
 

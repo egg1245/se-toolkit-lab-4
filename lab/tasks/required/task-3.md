@@ -1,4 +1,4 @@
-# My tech skills and the market: `roadmap.sh` and job postings
+# Compare your tech skills with the market needs
 
 **Time:** ~30-40 min
 

@@ -1,4 +1,4 @@
-# Skill development strategy (job market → deep learning → planning)
+# Plan skill development
 
 1. [ ] Create the issue `[Task] Skill development strategy`.
 2. [ ] Choose one skill that you decided to improve this semester in the required [Task 3](../required/task-3.md).
