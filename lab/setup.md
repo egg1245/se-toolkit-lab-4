@@ -3,7 +3,7 @@
 ## Set up a fork
 
 1. Create a `GitHub` account.
-2. Fork this repo to your `GitHub` account and make it public.
+2. Fork this repo to your `GitHub` account and make your fork public.
 3. Continue your work in the forked repo.
 4. In the repo -> `Settings` -> `General` -> `Features`, enable `Issues`.
 5. <details> <summary> (Optional) Create a label for tasks (click to expand).</summary>
@@ -74,7 +74,7 @@
     - [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting) - to keep your code formatted;
     - Force saving and hence formatting by clicking `Ctrl + S` (or `Cmd + S` on `macOS`).
 
-## Open the repository on your machine
+## Open the repository on your computer
 
 1. On your computer, create a directory `software-engineering-toolkit`.
 2. In that directory, clone the lab repo.
