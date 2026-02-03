@@ -41,7 +41,7 @@
     ```
 
 9. [ ] In `./docs/roles-and-skills.md`, in the `## Personal reflection.` section write 5–10 sentences reflecting on the following questions:
-    > [!IMPORTANT]
+    > ⚠ IMPORTANT
     > Write this section **without** an LLM.
     > This is your opportunity to think and arrive at useful conclusions.
     - [ ] Which role did I choose and why?

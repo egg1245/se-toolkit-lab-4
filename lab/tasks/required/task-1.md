@@ -15,7 +15,8 @@
 
     Alternatively, choose another full-stack product with at least a million users. In that case, you'll have to [visualize the architecture](../../appendix.md#visualize-the-architecture) on your own.
 
-   > [!NOTE]
+   > 🛈 NOTE
+   >
    > The provided architecture diagrams are based on educated guesses since the products in the list are mostly closed-source.
    > All diagrams were generated via Gemini 3 Pro (free web version) and edited by the course instructors.
 
@@ -32,7 +33,8 @@
           - [ ] A link to the product's website.
           - [ ] A short description of the product (1–2 sentences).
     2. [ ] In the `## Main components` section:
-        > [!NOTE]
+        > 🛈 NOTE
+        >
         > According to the [`C4 model`](https://c4model.com/abstractions/component), a *component* is a grouping of related functionality encapsulated behind a well-defined interface.
         - [ ] Add the product's `Component Diagram.svg`.
         - [ ] Provide a link to the `PlantUML` code for that [component diagram](../../appendix.md#visualize-the-architecture#component-diagram).
