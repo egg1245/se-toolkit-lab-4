@@ -74,3 +74,14 @@ In `docs/roles-and-skills.md`, in the `## Personal reflection` section write 5â€
 - Which role did I choose and why?
 - How my skillset compares to the market demands?
 - Which one or two key skills for this role would I like to develop this semester and why?
+
+## Acceptance Criteria
+
+- [ ] Issue created
+- [ ] Role is clearly stated with a reason for choosing it
+- [ ] Skills from `roadmap.sh` are listed (both existing and lacking)
+- [ ] 5-7 job postings analyzed
+- [ ] Common and unique skills identified
+- [ ] Personal reflection written (5-10 sentences, no LLM)
+- [ ] Personal reflection appears genuine and thoughtful
+- [ ] The development goals look realistic for one semester

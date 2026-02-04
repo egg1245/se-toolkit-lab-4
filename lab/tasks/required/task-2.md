@@ -43,3 +43,13 @@ Use a nested list. Example:
 #### `## Common skills across roles`
 
 Based on your intuition and some research, list **tech skills that are required for these responsibilities**.
+
+## Acceptance Criteria
+
+- [ ] Issue created
+- [ ] `docs/roles-and-skills.md` created
+- [ ] Components mapped to roles (at least 5 components)
+- [ ] Role mapping seems reasonable for this product
+- [ ] 5 roles described with responsibilities
+- [ ] Common skills section is present
+- [ ] Common skills seem reasonable

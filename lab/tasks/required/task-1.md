@@ -90,3 +90,16 @@ Provide:
     - Wildberries: *"I don't know if payments are processed by Wildberries or by an external payment service."*
 
 2. List at least two questions you couldn't answer from public information.
+
+## Acceptance criteria
+
+- [ ] Issue created
+- [ ] `docs/architecture.md` created with all required sections
+- [ ] Product name, link, and description are present
+- [ ] Component diagram is visible
+- [ ] At least 5 components are described (1-2 sentences each)
+- [ ] Sequence diagram is visible
+- [ ] Data flow description explains which components interact and what data they exchange during a user action
+- [ ] Deployment diagram is visible
+- [ ] Deployment is briefly described
+- [ ] At least 2 assumptions and 2 open questions listed
