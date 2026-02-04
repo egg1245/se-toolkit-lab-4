@@ -49,11 +49,11 @@ Points are given as follows:
 
 ### [1. Pick a product and study its architecture](./README.md#1-pick-a-product-and-study-its-architecture)
 
-- Student can explain what's on the component diagram in `./docs/architecture.md`.
+- Student can explain what's on the component diagram in `docs/architecture.md`.
 
 ### [2. Tech roles involved in the selected product](./README.md#2-study-the-market-for-your-product)
 
-- In `./docs/roles-and-skills.md`, skills (`## Common skills across roles`) seem to be related to the identified roles (`## Roles and responsibilities`)
+- In `docs/roles-and-skills.md`, skills (`## Common skills across roles`) seem to be related to the identified roles (`## Roles and responsibilities`)
 
 ### [3. My tech skills and the market: roadmap.sh and job postings](./README.md#3-my-tech-skills-and-the-market-roadmapsh-and-job-postings)
 
@@ -78,11 +78,11 @@ Points are given as follows:
 
 ### [4. Skill spotlight (from job market → deep learning → teach-back)](./README.md#4-skill-spotlight-from-job-market--deep-learning--teach-back)
 
-- `./docs/skill-development-strategy.md` exists and contains a realistic plan (`## Planning`) and progress tracking (`## Tracking`) descriptions.
+- `docs/skill-development-strategy.md` exists and contains a realistic plan (`## Planning`) and progress tracking (`## Tracking`) descriptions.
 
 ## Automated checks
 
-### [Lab setup](./README.md#lab-setup)
+### Check - [Lab setup](./README.md#lab-setup)
 
 - Student repo is a public fork of the lab repo.
 - The repo has a classmate as a collaborator (check the table).
@@ -94,16 +94,16 @@ Points are given as follows:
 
 ### Required tasks
 
-#### [1. Pick a product and study its architecture](./README.md#1-pick-a-product-and-study-its-architecture)
+#### Check - [1. Pick a product and study its architecture](./README.md#1-pick-a-product-and-study-its-architecture)
 
-- roles per component are outlined (`./docs/roles-and-skills.md`).
+- roles per component are outlined (`docs/roles-and-skills.md`).
 
-#### [2. Tech roles involved in the selected product](./README.md#2-study-the-market-for-your-product)
+#### Check - [2. Tech roles involved in the selected product](./README.md#2-study-the-market-for-your-product)
 
-#### [3. My tech skills and the market: roadmap.sh and job postings](./README.md#3-my-tech-skills-and-the-market-roadmapsh-and-job-postings)
+#### Check - [3. My tech skills and the market: roadmap.sh and job postings](./README.md#3-my-tech-skills-and-the-market-roadmapsh-and-job-postings)
 
 - Job posting links are real.
-- `./docs/roles-and-skills.md` has the `## Job market snapshot` section filled in.
+- `docs/roles-and-skills.md` has the `## Job market snapshot` section filled in.
 
 ### Optional tasks
 

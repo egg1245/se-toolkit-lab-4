@@ -16,14 +16,9 @@ body:
     attributes:
       label: Plan
       description: Steps you plan to take (update as you go).
-      placeholder: "- [ ] Step 1\n- [ ] Step 2 ..."
-    validations:
-      required: true
-  - type: textarea
-    id: acceptance
-    attributes:
-      label: Acceptance Criteria
-      description: When is this task done with a good quality of work?
-      placeholder: "- [ ] Criterion 1\n- [ ] Criterion 2 ..."
+      placeholder: |
+        - [ ] Step 1
+        - [ ] Step 2
+        ...
     validations:
       required: true
