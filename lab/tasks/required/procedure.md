@@ -1,4 +1,4 @@
-# Procedure for each task
+# Procedure for tasks
 
 > [!NOTE]
 > This procedure is based on the [`GitHub flow`](https://docs.github.com/en/get-started/using-github/github-flow).

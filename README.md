@@ -86,7 +86,7 @@ First complete the [lab setup](./lab/setup.md).
 
 ### Required tasks
 
-Follow the [procedure for each task](./lab/tasks/required/procedure.md) and complete all these tasks:
+Follow the [procedure for tasks](./lab/tasks/required/procedure.md) for each of these tasks:
 
 1. [Choose a product and study its architecture](./lab/tasks/required/task-1.md#choose-a-product-and-study-its-architecture)
 2. [Study tech roles involved in the chosen product](./lab/tasks/required/task-2.md#study-tech-roles-involved-in-the-chosen-product)
