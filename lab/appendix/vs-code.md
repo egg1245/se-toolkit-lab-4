@@ -6,7 +6,7 @@ Basic UI elements in `VS Code`.
 
 ### Docs
 
-- [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout).
+- [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 
 ## `Activity Bar`, `Status Bar`
 
@@ -18,12 +18,12 @@ Docs:
 
 ## `Command Palette`
 
-Allows you to run editor commands.
+Run editor commands.
 
 Docs:
 
 - [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)
-- [docs 2](https://code.visualstudio.com/docs/getstarted/getting-started#_access-commands-with-the-command-palette);
+- [docs 2](https://code.visualstudio.com/docs/getstarted/getting-started#_access-commands-with-the-command-palette)
 
 To run a command:
 
@@ -34,7 +34,7 @@ To run a command:
 
 ## `Terminal`
 
-Allows you you to run terminal commands inside `VS Code`.
+Run terminal commands inside `VS Code`.
 
 Docs:
 
@@ -46,7 +46,7 @@ To open a terminal:
 
 ## `Source Control`
 
-Allows to interact with `Git` via `VS Code` UI.
+Interact with `Git` via `VS Code` UI.
 
 Docs:
 
