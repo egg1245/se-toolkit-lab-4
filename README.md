@@ -42,7 +42,7 @@ This and all other lab assignments will simulate some of the real-life engineeri
 - Follow processes;
 - Communicate via issues/PRs;
 - Keep the work reviewable;
-- Come up with acceptance criteria;
+- Check your work against acceptance criteria;
 - Write clear commit messages.
 
 ## Submission checklist
