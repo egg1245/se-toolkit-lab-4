@@ -11,17 +11,19 @@
 
 1. [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a `GitHub` issue in your forked repo using the `Lab Task` [issue form](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms).
 2. Create a new branch for the issue via [`GitHub`](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue) or via `git checkout -b <branch-name>`.
-3. <details><summary> Make <a href="https://smartprogramming.in/tutorials/git-and-github/git-commit">commits</a> to that branch to complete the task (click to expand).</summary>
+3. <details><summary> Make commits to that branch to complete the task (click to expand).</summary>
 
+     - Read a [tutorial](https://smartprogramming.in/tutorials/git-and-github/git-commit) on `git commit`.
      - Commit messages should (not must) follow the [`Conventional Commits`](https://www.conventionalcommits.org/en/v1.0.0/) format.
      - Commit to the branch using one of these approaches:
-       1. Using `VS Code` (see [docs](https://code.visualstudio.com/docs/sourcecontrol/staging-commits)): `Activity Bar` -> `Source Control` -> `Changes` -> Click a file -> Select changed lines in the editor (red-green) -> Right mouse click the selected lines -> Click `Stage Selected Ranges` -> Write a commit message -> Click `Commit`.
-       2. Using a terminal (adds all changes in specified files to the [staging area](https://smartprogramming.in/tutorials/git-and-github/git-add-files-to-staging)):
+       1. Using a terminal (adds all changes in specified files to the [staging area](https://smartprogramming.in/tutorials/git-and-github/git-add-files-to-staging)):
 
           ```console
           git add <file 1> <file 2> ... <file n>
           git commit -m "<message>"
           ```
+
+       2. Using `VS Code` (see [docs](https://code.visualstudio.com/docs/sourcecontrol/staging-commits)): `Activity Bar` -> `Source Control` -> `Changes` -> Click a file -> Select changed lines in the editor (red-green) -> Right mouse click the selected lines -> Click `Stage Selected Ranges` -> Write a commit message -> Click `Commit`.
 
    </details>
 
