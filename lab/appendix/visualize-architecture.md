@@ -17,20 +17,20 @@ Therefore, you must use the ["diagrams as code"](https://simmering.dev/blog/diag
 
 If you want to preview the `PlantUML` diagrams in `VS Code`, follow these steps:
 
-- [ ] Install the [`jebbs.plantuml`](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) `VS Code` extension.
-- [ ] Install [`Docker`](https://docs.docker.com/get-started/get-docker/).
-- [ ] Run in the terminal `docker run --name plantuml-server -d -p 48080:8080 plantuml/plantuml-server:jetty` to start a `PlantUML` server.
-- [ ] Open the `PlantUML` server in the browser at `http://localhost:48080` to make sure it works.
-- [ ] In `VS Code`, in the [`docs/diagrams/src/`](../../docs/diagrams/src/) directory, open a `PlantUML` file with the `.puml` extension.
-- [ ] Click the `Preview Current Diagram` icon.
+- Install the [`jebbs.plantuml`](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) `VS Code` extension.
+- Install [`Docker`](https://docs.docker.com/get-started/get-docker/).
+- Run in the terminal `docker run --name plantuml-server -d -p 48080:8080 plantuml/plantuml-server:jetty` to start a `PlantUML` server.
+- Open the `PlantUML` server in the browser at `http://localhost:48080` to make sure it works.
+- In `VS Code`, in the [`docs/diagrams/src/`](../../docs/diagrams/src/) directory, open a `PlantUML` file with the `.puml` extension.
+- Click the `Preview Current Diagram` icon.
 
     The extension should connect to the `PlantUML` server and render the diagram.
 
     The `48080` port is already set in [`.vscode/settings.json`](../../.vscode/settings.json).
 
-- [ ] Write the `PlantUML` code in [`docs/diagrams/src/`](../../docs/diagrams/src/) and render the diagrams to `SVG` in [`docs/diagrams/out/`](../../docs/diagrams/out/) using the `jebbs.plantuml` extension. These directories are already set in [`.vscode/settings.json`](../../.vscode/settings.json).
-- [ ] To render diagrams to SVG, open the [`Command Palette`](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette), write `PlantUML: Export Workspace Diagrams`, and choose `svg`.
-- [ ] [Embed](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) the rendered images into your `Markdown` file.
+- Write the `PlantUML` code in [`docs/diagrams/src/`](../../docs/diagrams/src/) and render the diagrams to `SVG` in [`docs/diagrams/out/`](../../docs/diagrams/out/) using the `jebbs.plantuml` extension. These directories are already set in [`.vscode/settings.json`](../../.vscode/settings.json).
+- To render diagrams to SVG, open the [`Command Palette`](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette), write `PlantUML: Export Workspace Diagrams`, and choose `svg`.
+- [Embed](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) the rendered images into your `Markdown` file.
 
 ## `Mermaid`
 
