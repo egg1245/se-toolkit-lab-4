@@ -9,7 +9,7 @@
    git switch main
    ```
 
-   Alternatively, use `Command Palette` -> `GitLens: Git Switch to...`.
+   Alternatively, use [`Command Palette`](https://code.visualstudio.com/docs/getstarted/getting-started#_access-commands-with-the-command-palette) -> `GitLens: Git Switch to...`.
 
 5. Create two branches from `main`:
 
