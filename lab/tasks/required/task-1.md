@@ -64,7 +64,7 @@ Provide:
 
 3. Select at least 5 components of the product from the component diagram.
 
-4. For each selected component, explain in 1-2 sentences what it does.
+4. For each selected component, explain in 1-2 sentences what it does (as you think).
 
 #### `## Data flow`
 
