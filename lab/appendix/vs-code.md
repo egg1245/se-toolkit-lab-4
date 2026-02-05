@@ -35,12 +35,23 @@ Docs:
 - [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)
 - [docs 2](https://code.visualstudio.com/docs/getstarted/getting-started#_access-commands-with-the-command-palette)
 
+To open the `Command Palette`:
+
+1. Press `Ctrl+Shift+P` (`Cmd+Shift+P` on `macOS`).
+
 To run a command:
 
-1. Open `Command Palette`: `Ctrl+Shift+P` (`Cmd+Shift+P` on `macOS`).
+1. Open the `Command Palette`.
 1. Start typing a command.
 1. Select the necessary command (move the cursor via arrow up and arrow down on your keyboard).
 1. Press `Enter`.
+
+To open a file:
+
+1. Press `Ctrl+P` (`Cmd+P` on `macOS`).
+2. Start typing the name of the file.
+3. Select a file (move the cursor via arrow up and arrow down on your keyboard).
+4. Press `Enter`.
 
 ## `Terminal`
 
