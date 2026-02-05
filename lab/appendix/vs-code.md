@@ -4,7 +4,7 @@
 
 Basic UI elements in `VS Code`.
 
-### Docs
+Docs:
 
 - [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 
