@@ -118,9 +118,9 @@ Docs:
 
 Useful:
 
-- `Alt+-` - go back.
+- `Alt+-` (`Ctrl+-` on `macOS`) - go back.
 - `Ctrl+Tab` - switch to the previous editor.
-- `Ctrl+F` - search in the current editor.
+- `Ctrl+F` (`Cmd+F` on `macOS`) - search in the current editor.
 - `Ctrl+Shift+F` (`Cmd+Shift+F` on `macOS`) - search in all files.
 
 ## `settings.json`
