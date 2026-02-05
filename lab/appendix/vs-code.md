@@ -46,7 +46,12 @@ To open a terminal:
 
 ## `Source Control`
 
-Interact with `Git` via `VS Code` UI.
+Interact with `git` via `VS Code` UI.
+
+Ways to open:
+
+- [`Activity Bar`](#activity-bar) -> `Source Control`
+- `Ctrl+Shift+G G` or `Ctrl+Shift+G` on `macOS`
 
 Docs:
 
