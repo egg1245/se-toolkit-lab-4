@@ -16,7 +16,6 @@ Along the way, you'll practice using Git and GitHub — essential tools for coll
 - [Learning outcomes](#learning-outcomes)
 - [Tasks overview](#tasks-overview)
 - [Tasks](#tasks)
-- [Repo structure](#repo-structure)
 
 ## Learning outcomes
 
@@ -76,7 +75,8 @@ First complete the [lab setup](./lab/setup.md).
 
 ### Required tasks
 
-For all tasks, we follow the same [git workflow procedure](./lab/tasks/required/procedure.md). Task 0 below allows you to practice it.
+For all tasks, we follow the same [git workflow procedure](./lab/tasks/required/procedure.md). 
+Task 0 below allows you to practice it.
 
 0. [Practice the git workflow](./lab/tasks/required/task-0.md#practice-the-git-workflow)
 1. [Choose a product and study its architecture](./lab/tasks/required/task-1.md#choose-a-product-and-study-its-architecture)
@@ -98,13 +98,3 @@ Complete all optional tasks to leave up to 1 hour early (lab is 3 hours):
 - Practice on [Learn Git Branching](https://learngitbranching.js.org/) (focus on merge/rebase and conflicts).
 - Read about [`GitHub flow`](https://docs.github.com/en/get-started/using-github/github-flow).
 - (Optional) Learn about [`Conventional Commits`](https://www.conventionalcommits.org/en/v1.0.0/) for commit message formatting.
-
-
-## Repo structure
-
-- [`.github/ISSUE_TEMPLATE/01-task.yml`](./.github/ISSUE_TEMPLATE/01-task.yml) - an issue form for a task.
-- [`.github/pull_request_template.md`](./.github/pull_request_template.md) - a template for PRs.
-- [`docs/diagrams`](./docs/diagrams) - diagrams of the product's architecture.
-- [`.vscode/settings.json`](./.vscode/settings.json) - `VS Code` settings.
-- [`.vscode/extensions.json`](./.vscode/extensions.json) - recommended `VS Code` extensions.
-- [`lab/appendix`](./lab/appendix) - Additional info.
