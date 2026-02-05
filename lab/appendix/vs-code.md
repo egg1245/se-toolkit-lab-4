@@ -69,6 +69,18 @@ To close a terminal:
 
 - Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 
+## `Folders`
+
+View the file tree.
+
+Docs:
+
+- [docs](https://code.visualstudio.com/docs/editing/workspaces/workspaces)
+
+To open `Folders`:
+
+- [`Activity Bar`](#activity-bar) -> Click `Folders`.
+
 ## `Source Control`
 
 Interact with `Git` via `VS Code` UI.
