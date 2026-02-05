@@ -113,7 +113,15 @@ Keyboard shortcuts for various commands.
 
 Docs:
 
-- [docs 1](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-reference).
+- [docs 2](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-editor)
+- [docs 1](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-reference)
+
+Useful:
+
+- `Alt+-` - go back.
+- `Ctrl+Tab` - switch to the previous editor.
+- `Ctrl+F` - search in the current editor.
+- `Ctrl+Shift+F` (`Cmd+Shift+F` on `macOS`) - search in all files.
 
 ## `settings.json`
 
@@ -123,7 +131,7 @@ This repo has [`.vscode/settings.json`](../../.vscode/settings.json).
 
 Docs:
 
-- [docs 1](https://code.visualstudio.com/docs/configure/settings#_settings-json-file).
+- [docs 1](https://code.visualstudio.com/docs/configure/settings#_settings-json-file)
 
 ### Settings
 
