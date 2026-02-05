@@ -38,7 +38,7 @@ git config --global user.email "your@email"
    - **Terminal**: Press `` Ctrl+` `` (`` Cmd+` `` on Mac) — you'll use this to run `git` commands.
    - **Source Control**: Press `Ctrl+Shift+G G` (`Ctrl+Shift+G` on `macOS`) — you'll use this to interact with `git` using the `VS Code` UI.
 
-3. (Optional) [Learn more](./lab/appendix/vs-code.md) about `VS Code`.
+3. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
 
 ## Open the repository on your computer
 
