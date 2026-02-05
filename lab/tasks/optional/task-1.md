@@ -4,7 +4,7 @@
 
 **Purpose:** Learn how to resolve merge conflicts — a common situation when working with Git.
 
-**Context:** When multiple changes affect the same lines of code, Git cannot automatically merge them. You need to manually decide which changes to keep. This exercise creates that situation so you can practice resolving it.
+**Context:** In team environments, multiple developers often work on the same codebase simultaneously. They might edit the same lines of code, leading to situations where changes conflict with each other. Understanding how to resolve these conflicts is essential for maintaining a healthy codebase.
 
 ## Steps
 
@@ -12,16 +12,39 @@
 
 Title: `[Task] Resolve a merge conflict`
 
-### 2. Create a practice branch
+### 2. Create practice branches
 
 ```console
 git switch main
-git switch -c conflict-practice
+git branch conflict-branch-1
+git branch conflict-branch-2
 ```
 
-### 3. Make a change on the practice branch
+Alternatively:
 
-Edit `CONTRIBUTORS.md` — change the comment text to something else (e.g., "Add your name here").
+1. Open [`Command Palette`](../../appendix/vs-code.md#command-palette).
+2. Start typing and select `GitLens: Git Create Branch...`.
+3. Press `Enter`.
+4. Select `main`.
+5. Enter `conflict-branch-1`.
+6. Press `Create Branch`.
+7. Repeat for another branch.
+
+### 3. Make a change on the `conflict-branch-1`
+
+```console
+git switch conflict-branch-1
+```
+
+Alternatively:
+
+1. Open [`Command Palette`](../../appendix/vs-code.md#command-palette).
+2. Start typing and select `GitLens: Git Switch to...`.
+3. Press `Enter`.
+4. Start typing and select `conflict-branch-1`.
+5. Press `Enter`.
+
+Edit [`CONTRIBUTORS.md`](../../../CONTRIBUTORS.md) — change the comment text to something else (e.g., "Add your name here").
 
 Commit:
 
@@ -30,12 +53,10 @@ git add CONTRIBUTORS.md
 git commit -m "docs: update contributors instructions"
 ```
 
-### 4. Make a conflicting change on main
-
-Switch to main and edit the **same line** differently:
+### 4. Make a conflicting change on `conflict-branch-2`
 
 ```console
-git switch main
+git switch conflict-branch-2
 ```
 
 Edit `CONTRIBUTORS.md` — change the same comment to something different (e.g., "Write your name below").
@@ -49,13 +70,19 @@ git commit -m "docs: update contributors comment"
 
 ### 5. Merge and resolve the conflict
 
+You're currently on the branch `conflict-branch-2`.
+
 ```console
-git merge conflict-practice
+git merge conflict-branch-1
 ```
 
-Git will report a conflict. Open `CONTRIBUTORS.md` — you'll see conflict markers:
+#### Resolve the conflict using without the merge editor
 
-```
+Git will report a conflict.
+
+Open [`CONTRIBUTORS.md`](../../../CONTRIBUTORS.md) — you'll see conflict markers:
+
+```console
 <<<<<<< HEAD
 <!-- Write your name below -->
 =======
@@ -72,19 +99,37 @@ git add CONTRIBUTORS.md
 git commit -m "docs: resolve merge conflict in contributors"
 ```
 
-### 6. Document what you learned
+#### Resolve the conflict using the merge editor
 
-Create a PR from `main` to `main` of your fork (or simply add a comment to your issue) explaining:
+- In the `Primary Sidebar` -> `Merge Changes` -> Click the file that you changed. The file will open.
 
-- What caused the conflict (1 sentence)
-- How you resolved it (1 sentence)
+- Click inside that file.
+
+- Click `Resolve in Merge Editor` to resolve the merge conflict in the [3-way merge editor](https://code.visualstudio.com/docs/sourcecontrol/merge-conflicts#_use-the-3way-merge-editor).
+
+- Accept a change that you like more.
+
+- Click `Complete Merge`.
+
+- In the `Primary Sidebar` -> `Source Control` -> `Staged Changes` -> Click the file to see changes that you applied.
+
+- Click `Continue`.
+
+### 6. Create a PR
+
+Create a PR from `conflict-branch-2` to `main`.
+
+Don't merge it.
+
+Link the issue as usually.
 
 ### 7. Clean up
 
-Delete the practice branch:
+Delete the practice branches:
 
 ```console
-git branch -d conflict-practice
+git branch -d conflict-branch-1
+git branch -d conflict-branch-2
 ```
 
 Close the issue.
@@ -93,10 +138,5 @@ Close the issue.
 
 - [ ] Issue created
 - [ ] Successfully created and resolved a merge conflict
-- [ ] Documented what caused the conflict and how you resolved it
 - [ ] Closed the issue
-
-## Reviewer checklist
-
-- [ ] Issue shows evidence of conflict resolution (screenshot or explanation)
-- [ ] Documentation explains what conflicted and how it was resolved
+- [ ] PR is not merged
