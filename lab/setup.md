@@ -75,6 +75,50 @@ A coding agent can help you write code, explain concepts, and debug issues.
 
 See [Coding agents](./appendix/coding-agents.md).
 
+### Shell: Set up the prompt
+
+Starship shows your current `git` branch, status, and other useful info directly in your terminal prompt.
+
+Install [`Starship`](https://github.com/starship/starship#-installation).
+
+### VS Code: Check `GitLens`
+
+GitLens shows commit history, blame annotations, and branch visualization right inside VS Code.
+
+In the `Status Bar`:
+
+1. Click `Visualize commits on the Commit Graph`.
+2. Make sure you can see the commit graph.
+
+In the `Activity Bar`:
+
+1. Click `Source Control`.
+2. Click `GitLens` in the opened `Primary Side Bar` to open the `GitLens` panel.
+3. In the `GitLens` panel, click `Remotes`.
+4. Make sure `origin` points to your repo URL.
+5. In the `GitLens` panel, click `Commits`.
+6. Make sure you can see commits on the current branch.
+
+Learn more about [`GitLens` features](https://help.gitkraken.com/gitlens/gitlens-features/).
+
+### Repo: Protect your `main` branch
+
+Branch protection prevents accidental pushes directly to `main`.
+This enforces the PR workflow and ensures all changes are reviewed.
+
+In the repo -> `Settings` -> `Code and automation` -> `Add branch ruleset`:
+
+1. `Ruleset Name`: `push`
+2. `Enforcement status`: `Active`
+3. `Target branches` -> `Add target` -> `Include default branch`
+4. Rules:
+   - [ ] `Restrict deletions`
+   - [ ] `Require a pull request before merging`:
+      - `Required approvals`: `1`
+      - `Require conversation resolution before merging`
+      - `Allowed merge methods`: `Merge`.
+   - [ ] Block force pushes
+
 ### Repo: Create a label for tasks
 
 > [!TIP]
@@ -98,46 +142,3 @@ Next, in the repo -> `Issues`, filter by the label:
 2. In the `Filter labels` input area, write `task`.
 3. Click the suggested label.
 4. You'll see all issues that have this label.
-
-### Repo: Protect your `main` branch
-
-Branch protection prevents accidental pushes directly to `main`. This enforces the PR workflow and ensures all changes are reviewed.
-
-In the repo -> `Settings` -> `Code and automation` -> `Add branch ruleset`:
-
-1. `Ruleset Name`: `push`
-2. `Enforcement status`: `Active`
-3. `Target branches` -> `Add target` -> `Include default branch`
-4. Rules:
-   - [ ] `Restrict deletions`
-   - [ ] `Require a pull request before merging`:
-      - `Required approvals`: `1`
-      - `Require conversation resolution before merging`
-      - `Allowed merge methods`: `Merge`.
-   - [ ] Block force pushes
-
-### VS Code: Check `GitLens`
-
-GitLens shows commit history, blame annotations, and branch visualization right inside VS Code.
-
-In the `Status Bar`:
-
-1. Click `Visualize commits on the Commit Graph`.
-2. Make sure you can see the commit graph.
-
-In the `Activity Bar`:
-
-1. Click `Source Control`.
-2. Click `GitLens` in the opened `Primary Side Bar` to open the `GitLens` panel.
-3. In the `GitLens` panel, click `Remotes`.
-4. Make sure `origin` points to your repo URL.
-5. In the `GitLens` panel, click `Commits`.
-6. Make sure you can see commits on the current branch.
-
-Learn more about [`GitLens` features](https://help.gitkraken.com/gitlens/gitlens-features/).
-
-### Shell: Set up the prompt
-
-Starship shows your current `git` branch, status, and other useful info directly in your terminal prompt.
-
-Install [`Starship`](https://github.com/starship/starship#-installation).
