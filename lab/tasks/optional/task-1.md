@@ -23,12 +23,11 @@ git branch conflict-branch-2
 Alternatively:
 
 1. Open [`Command Palette`](../../appendix/vs-code.md#command-palette).
-2. Start typing and select `GitLens: Git Create Branch...`.
-3. Press `Enter`.
-4. Select `main`.
-5. Enter `conflict-branch-1`.
-6. Press `Create Branch`.
-7. Repeat for another branch.
+2. Run `GitLens: Git Create Branch...`.
+3. Select `main`.
+4. Enter `conflict-branch-1`.
+5. Press `Create Branch`.
+6. Repeat for another branch.
 
 ### 3. Make a change on the `conflict-branch-1`
 
@@ -39,10 +38,9 @@ git switch conflict-branch-1
 Alternatively:
 
 1. Open [`Command Palette`](../../appendix/vs-code.md#command-palette).
-2. Start typing and select `GitLens: Git Switch to...`.
-3. Press `Enter`.
-4. Start typing and select `conflict-branch-1`.
-5. Press `Enter`.
+2. Run `GitLens: Git Switch to...`.
+3. Start typing and select `conflict-branch-1`.
+4. Press `Enter`.
 
 Edit [`CONTRIBUTORS.md`](../../../CONTRIBUTORS.md) — change the comment text to something else (e.g., "Add your name here").
 
