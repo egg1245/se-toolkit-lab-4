@@ -30,15 +30,17 @@ git config --global user.email "your@email"
 
 ## Set up `VS Code`
 
-1. Install [`VS Code`](https://code.visualstudio.com/). This is our code editor of choice that we'll use in this course.
+1. Install [`VS Code`](https://code.visualstudio.com/).
+
+   We chose this editor because it has built-in AI features and many useful [extensions](./appendix/vs-code.md#extensions).
+
+1. This is the [`Basic Layout`](./appendix/vs-code.md#basic-layout) of `VS Code`:
 
     ![VS Code UI](./images/vs-code-ui.png)
 
-2. Try opening:
-   - **Terminal**: Press `` Ctrl+` `` (`` Cmd+` `` on Mac) — you'll use this to run `git` commands.
-   - **Source Control**: Press `Ctrl+Shift+G G` (`Ctrl+Shift+G` on `macOS`) — you'll use this to interact with `git` using the `VS Code` UI.
-
-3. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
+1. Try to [open `Terminal`](./appendix/vs-code.md#terminal).
+1. Try to [open `Source Control`](./appendix/vs-code.md#source-conrol).
+1. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
 
 ## Open the repository on your computer
 
@@ -58,7 +60,7 @@ git config --global user.email "your@email"
 
 ## Set up `VS Code` extensions
 
-1. Install the recommended `VS Code` extensions (listed in [`.vscode/extensions.json`](../.vscode/extensions.json)) when `VS Code` suggests to install them.
+1. Install the recommended `VS Code` extensions (listed in [`.vscode/extensions.json`](../.vscode/extensions.json)) when `VS Code` prompts to install them.
 2. If you missed the prompt:
    1. Go to the [`Activity Bar`](./appendix/vs-code.md#activity-bar).
    2. Click the icon `Extensions`. Alternatively, press `Ctrl+Shift+X` (`Cmd+Shift+G` on `macOS`).
@@ -87,9 +89,9 @@ Starship shows your current `git` branch, status, and other useful info directly
 
 Install [`Starship`](https://github.com/starship/starship#-installation).
 
-### VS Code: Check `GitLens`
+### `VS Code`: Check `GitLens`
 
-GitLens shows commit history, blame annotations, and branch visualization right inside VS Code.
+GitLens shows commit history, blame annotations, and branch visualization right inside `VS Code`.
 
 #### Look at the commit graph
 
