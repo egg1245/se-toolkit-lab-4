@@ -2,9 +2,9 @@
 
 **Time:** ~15 min
 
-**Purpose:** Practice our git workflow on a simple task before starting the main assignments.
+**Purpose:** Practice the git workflow before working on the main tasks.
 
-**Context:** This task is an opportunity to practice the full cycle (Issue → Branch → Commits → PR → Review → Merge) on something simple. If anything goes wrong here, it's easy to fix.
+**Context:** This task is an opportunity to practice the full cycle (Issue → Branch → Commits → PR → Review → Merge).
 
 ## Steps
 
@@ -16,19 +16,25 @@ Title: `[Task] Add my name to contributors`
 
 On the issue page, click `Create a branch` in the right sidebar.
 
-Or use the terminal:
+Alternatively, use the terminal:
 
 ```bash
-git checkout -b add-contributor-<your-name>
+git checkout -b add-contributor
 ```
 
 ### 3. Add your name
 
-1. Open `CONTRIBUTORS.md`.
-2. Add your name below the comment:
+> [!NOTE]
+> Replace `<your-username>` with your `GitHub` username without `@`.
+
+1. Open [`CONTRIBUTORS.md`](../../../CONTRIBUTORS.md).
+2. Add your GitHub username below the comment:
 
     ```markdown
-    - Your Name (@your-github-username)
+    <!--
+    ...
+    -->
+    - @<your-username>
     ```
 
 3. Save the file.
@@ -37,35 +43,30 @@ git checkout -b add-contributor-<your-name>
 
 ```bash
 git add CONTRIBUTORS.md
-git commit -m "docs: add my name to contributors"
-git push -u origin <branch-name>
+git commit -m "docs: add <your-username> to contributors"
+git push -u origin add-contributor
 ```
 
-### 5. Create a Pull Request
+### 5. Create a Pull Request (PR)
 
-1. Go to your repo on GitHub.
-2. Click `Compare & pull request`.
-3. Title: `Add [Your Name] to contributors`
-4. Description: `Closes #<issue-number>`
-5. Click `Create pull request`.
+1. Go to your repo on `GitHub`.
+2. Click `Pull requests`.
+3. Click `Compare & pull request`.
+4. Title: `Add @<your-username> to contributors`.
+5. Write PR description.
+6. Click `Create pull request`.
 
 ### 6. Get review and merge
 
 1. Request a review from your partner.
-2. Once approved, click `Merge pull request`.
+2. Once your partner has approved the PR, click `Merge pull request`.
 3. Delete the branch when prompted.
 
 ## Acceptance criteria
 
 - [ ] Issue created
-- [ ] Branch created from the issue
-- [ ] Name added to `CONTRIBUTORS.md`
+- [ ] Username added to `CONTRIBUTORS.md`
 - [ ] Commit message follows `type: description` format
 - [ ] PR created and linked to issue
 - [ ] Partner reviewed and approved
 - [ ] PR merged
-
-## Reviewer checklist
-
-- [ ] Name is added to `CONTRIBUTORS.md`
-- [ ] PR links to the issue (`Closes #...`)
