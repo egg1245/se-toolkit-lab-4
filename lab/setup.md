@@ -39,8 +39,8 @@ git config --global user.email "your@email"
     ![VS Code UI](./images/vs-code-ui.png)
 
 1. Try to [open `Folders`](./appendix/vs-code.md#folders).
-1. Try to [open `Terminal`](./appendix/vs-code.md#terminal).
-1. Try to [open `Source Control`](./appendix/vs-code.md#source-conrol).
+1. Try to [open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
+1. Try to [open the `Source Control`](./appendix/vs-code.md#open-the-source-control).
 1. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
 
 ## Open the repository on your computer
@@ -96,7 +96,7 @@ GitLens shows commit history, blame annotations, and branch visualization right 
 
 #### Inspect remotes and the current branch
 
-1. Open [`Source Control`](../lab/appendix/vs-code.md#source-control).
+1. [Open the `Source Control`](../lab/appendix/vs-code.md#open-the-source-control).
 1. Click `GitLens` in the opened `Primary Side Bar`.
 1. In the `GitLens` panel, click the icon `Remotes`.
 1. Make sure `origin` points to your repo URL (hover over it an look at URLs).
