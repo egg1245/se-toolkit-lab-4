@@ -110,3 +110,10 @@ List two or more questions that you couldn't answer based on the openly availabl
 - [ ] Deployment diagram is visible
 - [ ] Deployment is briefly described
 - [ ] At least 2 assumptions and 2 open questions listed
+
+## Reviewer checklist
+
+- [ ] All 3 diagrams are visible (component, sequence, deployment)
+- [ ] At least 5 components have descriptions
+- [ ] Data flow explains a user action step-by-step
+- [ ] Assumptions and open questions are present

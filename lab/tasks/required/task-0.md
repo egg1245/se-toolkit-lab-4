@@ -64,3 +64,8 @@ git push -u origin <branch-name>
 - [ ] PR created and linked to issue
 - [ ] Partner reviewed and approved
 - [ ] PR merged
+
+## Reviewer checklist
+
+- [ ] Name is added to `CONTRIBUTORS.md`
+- [ ] PR links to the issue (`Closes #...`)

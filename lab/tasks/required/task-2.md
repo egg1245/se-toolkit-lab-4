@@ -53,3 +53,9 @@ Based on your intuition and some research, list **tech skills that are required 
 - [ ] 5 roles described with responsibilities
 - [ ] Common skills section is present
 - [ ] Common skills seem reasonable
+
+## Reviewer checklist
+
+- [ ] At least 5 components have roles listed
+- [ ] 5 roles have responsibility descriptions
+- [ ] Common skills are listed

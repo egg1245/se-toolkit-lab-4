@@ -85,3 +85,10 @@ In `docs/roles-and-skills.md`, in the `## Personal reflection` section write 5â€
 - [ ] Personal reflection written (5-10 sentences, no LLM)
 - [ ] Personal reflection appears genuine and thoughtful
 - [ ] The development goals look realistic for one semester
+
+## Reviewer checklist
+
+- [ ] Role chosen with reason
+- [ ] Skills listed (have and lack)
+- [ ] At least 5 job postings analyzed
+- [ ] Personal reflection is present (5-10 sentences)
