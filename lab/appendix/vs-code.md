@@ -43,14 +43,14 @@ To run a command:
 
 1. Open the `Command Palette`.
 1. Start typing a command.
-1. Select the necessary command (move the cursor via arrow up and arrow down on your keyboard).
+1. Select the necessary command (move the cursor via `UpArrow` and `DownArrow` on your keyboard).
 1. Press `Enter`.
 
 To open a file:
 
 1. Press `Ctrl+P` (`Cmd+P` on `macOS`).
 2. Start typing the name of the file.
-3. Select a file (move the cursor via arrow up and arrow down on your keyboard).
+3. Select a file (move the cursor via `UpArrow` and `DownArrow` on your keyboard).
 4. Press `Enter`.
 
 ## `Terminal`
