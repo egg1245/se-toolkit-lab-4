@@ -69,6 +69,11 @@ To close a terminal:
 
 - Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 
+Copy inside the terminal:
+
+- Select text.
+- Press `Ctrl+Shift+C` (`Cmd+C` on `macOS`).
+
 ## `Folders`
 
 View the file tree.
