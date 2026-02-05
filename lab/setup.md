@@ -38,6 +38,7 @@ git config --global user.email "your@email"
 
     ![VS Code UI](./images/vs-code-ui.png)
 
+1. Try to [open `Folders`](./appendix/vs-code.md#folders).
 1. Try to [open `Terminal`](./appendix/vs-code.md#terminal).
 1. Try to [open `Source Control`](./appendix/vs-code.md#source-conrol).
 1. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
