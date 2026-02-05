@@ -37,10 +37,10 @@ Docs:
 
 To run a command:
 
-- Open `Command Palette`: `Ctrl+Shift+P` (`Cmd+Shift+P` on `macOS`).
-- Start typing a command.
-- Select the necessary command (move the cursor via arrow up and arrow down on your keyboard).
-- Press `Enter`.
+1. Open `Command Palette`: `Ctrl+Shift+P` (`Cmd+Shift+P` on `macOS`).
+1. Start typing a command.
+1. Select the necessary command (move the cursor via arrow up and arrow down on your keyboard).
+1. Press `Enter`.
 
 ## `Terminal`
 
