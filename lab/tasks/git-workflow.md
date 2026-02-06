@@ -82,13 +82,24 @@ Common types:
 8. Write a commit message.
 9. Click `Commit`.
 
-## Push the branch
+## Publish the branch
 
-Push the branch to your forked repo:
+### Publish using `Terminal`
 
-```console
-git push -u origin <branch-name>
-```
+1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
+1. Run:
+
+   ```console
+   git push -u origin <branch-name>
+   ```
+
+### Publish using `GitLens`
+
+1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
+2. Click `GITLENS`.
+3. Click the `Publish Branch` icon to the right of `Publish <branch-name> to GitHub`.
+4. Press `Enter`.
+
 
 ## Create a PR
 
