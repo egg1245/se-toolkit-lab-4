@@ -28,8 +28,10 @@
   - [Workspace settings](#workspace-settings)
 
 > [!IMPORTANT]
-> The first keyboard shortcut is always for `Linux`.
+> The first [keyboard shortcut](#keyboard-shortcuts) is always for `Linux`.
 > It usually coincides with the shortcut for `Windows`.
+>
+> You can check shortcuts for your platform in the [reference](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-reference).
 
 ## `Basic Layout`
 
