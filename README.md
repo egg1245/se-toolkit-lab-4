@@ -15,6 +15,7 @@ Along the way, you'll practice using `Git` and `GitHub` — essential tools for 
 
 ## Table of contents
 
+<!-- no toc -->
 - [Learning outcomes](#learning-outcomes)
 - [Learning advice](#learning-advice)
 - [Tasks overview](#tasks-overview)
