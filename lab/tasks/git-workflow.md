@@ -99,8 +99,9 @@ Common types:
 
 1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
 2. Click `GITLENS`.
-3. Click the `Publish Branch` icon to the right of `Publish <branch-name> to GitHub`.
-4. Press `Enter`.
+3. Click the `Commits` icon.
+4. Click the `Publish Branch` icon to the right of `Publish <branch-name> to GitHub`.
+5. Press `Enter`.
 
 ## Push more commits
 
