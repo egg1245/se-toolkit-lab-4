@@ -17,7 +17,7 @@
 
 Create a new branch for the issue using one of these ways:
 
-### Using `GitHub`
+### Create using `GitHub`
 
 1. [Create a branch](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue).
 1. Copy the command.
@@ -25,7 +25,7 @@ Create a new branch for the issue using one of these ways:
 1. Paste the command to the `Terminal`.
 1. Press `Enter` to run the command.
 
-### Using `Terminal`
+### Create using `Terminal`
 
 1. [Open the `Terminal`](../appendix/vs-code.md#open-the-terminal).
 2. [Run](../appendix/vs-code.md#run-a-command-using-the-terminal):
@@ -34,7 +34,7 @@ Create a new branch for the issue using one of these ways:
     git checkout -b <branch-name>
     ```
 
-### Using `VS Code`
+### Create using `GitLens`
 
 1. [Open the `Command Palette`](../appendix/vs-code.md#open-the-command-palette).
 2. Run `GitLens: Git Create Branch...`.
