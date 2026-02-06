@@ -35,6 +35,8 @@ Outline:
 - [Merge the PR](#merge-the-pr)
 - [Clean up](#clean-up)
 - [Pull changes](#pull-changes)
+  - [Pull using the `Terminal`](#pull-using-the-terminal)
+  - [Pull using `GitLens`](#pull-using-gitlens)
 
 ## Create an issue
 
