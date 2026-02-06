@@ -38,7 +38,7 @@ After this lab, you should be able to say:
 ## Tasks overview
 
 ```console
-□ Setup   — fork repo, find a partner
+□ Setup   — fork repo (repository), find a partner
 □ Task 0  — practice git workflow
 □ Task 1  — analyze a product's architecture
 □ Task 2  — map components to tech roles
