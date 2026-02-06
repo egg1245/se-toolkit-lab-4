@@ -9,6 +9,33 @@
 └───────┘    └────────┘    └─────────┘    └────┘    └────────┘    └───────┘
 ```
 
+Outline:
+
+- [Create an issue](#create-an-issue)
+- [Create a branch](#create-a-branch)
+  - [Create using `GitHub`](#create-using-github)
+  - [Create using `Terminal`](#create-using-terminal)
+  - [Create using `GitLens`](#create-using-gitlens)
+- [Make commits](#make-commits)
+  - [Commit message format](#commit-message-format)
+  - [Commit using the `Terminal`](#commit-using-the-terminal)
+  - [Commit using `Source Control`](#commit-using-source-control)
+  - [Commit using `Source Control` (specific changes)](#commit-using-source-control-specific-changes)
+- [Publish the branch](#publish-the-branch)
+  - [Publish using `Terminal`](#publish-using-terminal)
+  - [Publish using `GitLens`](#publish-using-gitlens)
+- [Push more commits](#push-more-commits)
+  - [Push using `Terminal`](#push-using-terminal)
+  - [Push using `GitLens`](#push-using-gitlens)
+- [Create a PR](#create-a-pr)
+- [Get a PR review](#get-a-pr-review)
+  - [PR review rules](#pr-review-rules)
+    - [As a PR reviewer](#as-a-pr-reviewer)
+    - [As a PR author](#as-a-pr-author)
+- [Merge the PR](#merge-the-pr)
+- [Clean up](#clean-up)
+- [Pull changes](#pull-changes)
+
 ## Create an issue
 
 [Create](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue) a `GitHub` issue in your forked repo using the `Lab Task` [issue form](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms) (defined in [`.github/ISSUE_TEMPLATE/01-task.yml`](../../.github/ISSUE_TEMPLATE/01-task.yml)).
