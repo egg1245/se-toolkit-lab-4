@@ -102,19 +102,23 @@ Look at the [`Basic Layout`](./appendix/vs-code.md#basic-layout).
 
 ## Open `Markdown` file preview
 
-Open `README.md` using one of these approaches.
+Open `README.md` using one of these approaches:
 
-- [Use the `Command Palette`](./appendix/vs-code.md#open-a-file).
-- Use `Folders`:
+- Approach 1:
+  - [Use the `Command Palette`](./appendix/vs-code.md#open-a-file).
+- Approach 2:
     1. [Open `Folders`](./appendix/vs-code.md#open-folders).
-    1. Click `README.md`.
+    2. Click `README.md`.
 
 Open the [`Markdown` preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) using one of these approaches:
 
-- In the [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar), click `Open Preview to the Side`.
-- Use the `Command Palette`:
-  1. [Open the `Command Palette`](./appendix/vs-code.md#open-the-command-palette).
-  2. Run `Markdown: Open Preview to the Side`.
+- Approach 1:
+  1. Go to [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar).
+  2. Click `Open Preview to the Side`.
+
+- Approach 2:
+   1. [Open the `Command Palette`](./appendix/vs-code.md#open-the-command-palette).
+   2. Run `Markdown: Open Preview to the Side`.
 
 ## Change workspace settings
 
