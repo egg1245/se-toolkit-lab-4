@@ -116,15 +116,17 @@ Common types:
 ### Commit using `Source Control`
 
 1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
-2. Click `+` next to changed files to stage them.
-3. Type commit message, e.g., `docs: add architecture diagram`.
-4. Click `Commit`.
+2. Go to `Changes`.
+3. Hover over a file name.
+4. Click `+` to stage the file.
+5. Type commit message, e.g., `docs: add architecture diagram`.
+6. Click `Commit`.
 
 ### Commit using `Source Control` (specific changes)
 
 1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
 2. Go to `Changes`.
-3. Click a file.
+3. Click a file to open it.
 4. Select changed lines in the editor (red-green).
 5. Right mouse click the selected lines.
 6. Click `Stage Selected Ranges`.
