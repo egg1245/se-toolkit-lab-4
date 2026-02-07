@@ -9,7 +9,7 @@
 └───────┘    └────────┘    └─────────┘    └────┘    └────────┘    └───────┘
 ```
 
-Here's this workflow in the context of repos (issues and PR reviews not mentioned for brevity; `improve-lab` is given for an example):
+Here's this workflow in the context of repos:
 
 ![Git workflow](../images/git-workflow.drawio.svg)
 
@@ -32,13 +32,11 @@ Outline:
   - [Push using the `Terminal`](#push-using-the-terminal)
   - [Push using `GitLens`](#push-using-gitlens)
 - [Create a PR](#create-a-pr)
-  - [Create a PR using `GitHub`](#create-a-pr-using-github)
-    - [Open the PR editor](#open-the-pr-editor)
-      - [Open the PR editor using a prompt](#open-the-pr-editor-using-a-prompt)
-      - [Open the PR editor using `Pull requests`](#open-the-pr-editor-using-pull-requests)
-      - [Open the PR editor using the branch list](#open-the-pr-editor-using-the-branch-list)
-    - [Finish creating a PR](#finish-creating-a-pr)
-  - [6. Get review and merge](#6-get-review-and-merge)
+  - [Open the PR editor using `GitHub`](#open-the-pr-editor-using-github)
+    - [Open the PR editor using a button](#open-the-pr-editor-using-a-button)
+    - [Open the PR editor using `Pull requests`](#open-the-pr-editor-using-pull-requests)
+    - [Open the PR editor using the branch list](#open-the-pr-editor-using-the-branch-list)
+  - [Finish creating a PR](#finish-creating-a-pr)
 - [Get a PR review](#get-a-pr-review)
   - [PR review rules](#pr-review-rules)
     - [As a PR reviewer](#as-a-pr-reviewer)
@@ -79,11 +77,11 @@ Create a new branch for the issue using one of these ways:
 1. [Open the `Command Palette`](../appendix/vs-code.md#open-the-command-palette).
 2. Run `GitLens: Git Create Branch...`.
 3. Select `main` as the base branch (e.g., using `UpArrow` and `DownArrow` on your keyboard).
-4. Press `Enter`.
-5. Write `<branch-name>`.
-6. Press `Enter`.
+4. Press `Enter` to confirm.
+5. Write `<branch-name>` to provide the new branch name.
+6. Press `Enter` to confirm.
 7. `Select Create & Switch to Branch` (e.g., using `UpArrow` and `DownArrow` on your keyboard).
-8. Press `Enter`.
+8. Press `Enter` to confirm.
 
 ## Make commits
 
@@ -105,8 +103,10 @@ Common types:
 2. Run:
 
    ```console
-   git add '<file>'
-   # example: git add 'docs/diagrams/out/yandex-go/architecture-sequence/Sequence Diagram.svg'
+   git add <file>
+   # example: git add README.md
+   # example (spaces): git add 'path/some image.svg'
+   
    git commit -m '<type>: <short description>'
    # example: git commit -m 'docs: add architecture diagram'
    ```
@@ -114,15 +114,17 @@ Common types:
 ### Commit using `Source Control`
 
 1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
-2. Click `+` next to changed files to stage them.
-3. Type commit message, e.g., `docs: add architecture diagram`.
-4. Click `Commit`.
+2. Go to `Changes`.
+3. Hover over a file name.
+4. Click `+` to stage the file.
+5. Type commit message, e.g., `docs: add architecture diagram`.
+6. Click `Commit`.
 
 ### Commit using `Source Control` (specific changes)
 
 1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
 2. Go to `Changes`.
-3. Click a file.
+3. Click a file to open it.
 4. Select changed lines in the editor (red-green).
 5. Right mouse click the selected lines.
 6. Click `Stage Selected Ranges`.
@@ -144,10 +146,10 @@ Common types:
 ### Publish using `GitLens`
 
 1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
-2. Click `GITLENS`.
+2. Click `GITLENS` to open the `GitLens` panel.
 3. Click the `Commits` icon.
 4. Click the `Publish Branch` icon to the right of `Publish <branch-name> to GitHub`.
-5. Press `Enter`.
+5. Press `Enter` to confirm.
 
 ## Push more commits
 
@@ -171,47 +173,43 @@ Common types:
 
 Create a PR to the `main` branch via [`GitHub`](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#creating-the-pull-request) or via the [`GitHub Pull Requests` extension](https://code.visualstudio.com/docs/sourcecontrol/github#_creating-pull-requests).
 
-### Create a PR using `GitHub`
-
-Go to your fork on `GitHub`.
-
-#### Open the PR editor
+### Open the PR editor using `GitHub`
 
 Open the PR editor using one of the following methods.
 
-##### Open the PR editor using a prompt
+#### Open the PR editor using a button
+
+Go to your fork on `GitHub`.
 
 If you see the `Compare & pull request` button, click it.
 
-##### Open the PR editor using `Pull requests`
+#### Open the PR editor using `Pull requests`
 
+1. Go to your fork on `GitHub`.
 1. Click `Pull requests`.
-2. Click `New pull request`.
-3. Click `base repository: <your-username>/lab-01-market-product-and-git`.
-4. Click `<your-username>/lab-01-market-product-and-git`.
-5. Click `compare: main`.
-6. Click `<branch-name>`.
-7. Click `Create pull request`.
+1. Click `New pull request`.
+1. Click `base repository: <your-username>/lab-01-market-product-and-git`.
+1. Click `<your-username>/lab-01-market-product-and-git` to select the base repo.
+1. The PR will be created in your repo with `main` as the base branch.
+1. Click `compare: main` to choose a branch to compare with the base.
+1. Click `<branch-name>`.
+1. Click `Create pull request`.
 
-##### Open the PR editor using the branch list
+#### Open the PR editor using the branch list
 
-1. Click `main`.
-2. Click `<branch-name>`.
-3. Click `Contribute`.
-4. Click `Open pull request`.
+1. Go to your fork on `GitHub`.
+2. Click `main` under the `forked from ...` text.
+3. Click `<branch-name>`.
+4. Click `Contribute`.
+5. Click `Open pull request`.
 
-#### Finish creating a PR
+### Finish creating a PR
 
 1. Write the PR title (`Add @<your-username> to contributors`).
 2. Write the PR description.
 3. [Link the PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to the issue, e.g. `Closes #<issue number>`.
-4. Click `Create pull request`.
-
-### 6. Get review and merge
-
-1. Request a review from your partner.
-2. Once your partner has approved the PR, click `Merge pull request`.
-3. Delete the branch when prompted.
+4. Check the boxes.
+5. Click `Create pull request`.
 
 ## Get a PR review
 
@@ -236,7 +234,7 @@ Get the collaborator to approve the PR.
 
 ## Merge the PR
 
-Merge the PR to the `main` branch.
+Click `Merge pull request`.
 
 ## Clean up
 

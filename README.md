@@ -11,7 +11,10 @@ In this lab, you will explore three things:
 2. What kind of engineers may build and operate them;
 3. How your skills compare to market demands.
 
-Along the way, you'll practice using `Git` and `GitHub` — essential tools for collaboration between developers.
+You'll also practice using `Git` and `GitHub`. These tools are essential for:
+
+- collaboration between developers;
+- incremental and iterative improvement of the code base.
 
 ## Table of contents
 
