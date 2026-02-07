@@ -46,12 +46,19 @@ This enforces the PR workflow and ensures all changes are reviewed.
 
 ## Set up `Git`
 
-(If needed) On your computer, configure [`Git`](https://git-scm.com/):
+[Install `Git`](https://git-scm.com/install/).
+
+On your computer, configure `Git`:
 
 ```bash
-git config --global user.name 'Your Name'
-git config --global user.email 'your@email'
+git config --global user.name '<your-name>'
+git config --global user.email '<your-email>'
 ```
+
+> ![NOTE]
+> Replace `<your-name>` with a name and `<your-email>` with an email that you want to see in the commits.
+>
+> See [docs](https://git-scm.com/docs/git-config#Documentation/git-config.txt-username).
 
 ## Set up `VS Code`
 
