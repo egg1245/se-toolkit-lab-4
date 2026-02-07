@@ -154,12 +154,19 @@ Install extensions for `VS Code` from [`VS Code Marketplace`](https://marketplac
 
 ### Install recommended extensions
 
-1. Go to the [`Activity Bar`](#activity-bar).
-2. Click the icon `Extensions`.
-3. Alternatively, press `Ctrl+Shift+X` (`Cmd+Shift+G` on `macOS`).
-4. In the input field, type `@recommended`.
-5. Look at `WORKSPACE RECOMMENDATIONS`.
-6. Click the icon `Install Workspace Recommended extensions`.
+1. Open `Extensions`:
+
+   - Approach 1:
+
+      1. Go to the [`Activity Bar`](#activity-bar).
+      2. Click the icon `Extensions`.
+
+   - Approach 2: 
+     1. Press `Ctrl+Shift+X` (`Cmd+Shift+X` on `macOS`).
+
+2. In the input field, type `@recommended`.
+3. Look at `WORKSPACE RECOMMENDATIONS`.
+4. Click the icon `Install Workspace Recommended extensions`.
 
 ## `Custom Layout`
 
