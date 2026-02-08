@@ -177,7 +177,7 @@ Install [`Starship`](https://github.com/starship/starship#-installation).
 
 ### `VS Code`: Check `GitLens`
 
-GitLens shows commit history, blame annotations, and branch visualization right inside `VS Code`.
+`GitLens` shows commit history, blame annotations, and branch visualization right inside `VS Code`.
 
 #### Look at the commit graph
 
