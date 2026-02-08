@@ -39,14 +39,14 @@
 
 ## `Basic Layout`
 
-Basic layout elements in `VS Code`:
-
-![VS Code UI](../images/vs-code-ui.drawio.svg)
-
-Docs:
+How `VS Code` looks like by default.
 
 - [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 - [docs 2](https://code.visualstudio.com/api/ux-guidelines/overview#items)
+
+Some of the `Basic Layout` elements:
+
+![VS Code UI](../images/vs-code-ui.drawio.svg)
 
 ## `Activity Bar`
 
