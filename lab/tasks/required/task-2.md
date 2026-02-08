@@ -14,7 +14,9 @@
   - [`## Common skills across roles`](#-common-skills-across-roles)
 - [Acceptance Criteria](#acceptance-criteria)
 
-## Steps
+## 0. Follow the `Git workflow`
+
+Follow the [`Git workflow`](../git-workflow.md) to complete this task.
 
 ## 1. Create an issue
 
