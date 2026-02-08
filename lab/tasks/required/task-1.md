@@ -6,6 +6,19 @@
 
 **Context:** Imagine you have joined one of these product teams. On your first days, you need to understand what the product does and how it is structured.
 
+- [Steps](#steps)
+  - [1. Create an issue](#1-create-an-issue)
+  - [2. Choose a product](#2-choose-a-product)
+  - [3. Find the diagrams](#3-find-the-diagrams)
+  - [4. Create `docs/architecture.md`](#4-create-docsarchitecturemd)
+    - [`## Product Choice`](#-product-choice)
+    - [`## Main components`](#-main-components)
+    - [`## Data flow`](#-data-flow)
+    - [`## Deployment`](#-deployment)
+    - [`## Assumptions`](#-assumptions)
+    - [`## Open questions`](#-open-questions)
+- [Acceptance criteria](#acceptance-criteria)
+
 ## Steps
 
 ### 1. Create an issue

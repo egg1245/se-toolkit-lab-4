@@ -6,6 +6,14 @@
 
 **Context:** Now that you have analyzed the product architecture, you need to understand what roles are typically involved in building and maintaining such systems.
 
+- [Steps](#steps)
+  - [1. Create an issue](#1-create-an-issue)
+  - [2. Create `docs/roles-and-skills.md`](#2-create-docsroles-and-skillsmd)
+    - [`## Components and roles`](#-components-and-roles)
+    - [`## Roles and responsibilities`](#-roles-and-responsibilities)
+    - [`## Common skills across roles`](#-common-skills-across-roles)
+- [Acceptance Criteria](#acceptance-criteria)
+
 ## Steps
 
 ### 1. Create an issue

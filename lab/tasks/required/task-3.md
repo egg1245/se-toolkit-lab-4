@@ -6,6 +6,16 @@
 
 **Context:** As you begin your journey in software engineering, it's important to understand what skills are valued in the market and how your current abilities align with industry expectations.
 
+- [Steps](#steps)
+  - [1. Create an issue](#1-create-an-issue)
+  - [2. Choose a role](#2-choose-a-role)
+  - [3. Explore `roadmap.sh`](#3-explore-roadmapsh)
+  - [4. Document your chosen role](#4-document-your-chosen-role)
+  - [5. Research job postings](#5-research-job-postings)
+  - [6. Document job market snapshot](#6-document-job-market-snapshot)
+  - [7. Personal reflection](#7-personal-reflection)
+- [Acceptance Criteria](#acceptance-criteria)
+
 ## Steps
 
 ### 1. Create an issue
