@@ -6,6 +6,7 @@
 
 **Context:** This task is an opportunity to practice the full cycle (Issue → Branch → Commits → PR → Review → Merge).
 
+- [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
 - [1. Create an issue](#1-create-an-issue)
 - [2. Create a branch](#2-create-a-branch)
 - [3. Add your name](#3-add-your-name)
@@ -13,8 +14,9 @@
 - [5. Create a Pull Request (PR)](#5-create-a-pull-request-pr)
 - [Acceptance criteria](#acceptance-criteria)
 
-> [!IMPORTANT]
-> Read [`Git workflow`](../git-workflow.md).
+## 0. Follow the `Git workflow`
+
+Follow the [`Git workflow`](../git-workflow.md) to complete this task.
 
 ## 1. Create an issue
 
