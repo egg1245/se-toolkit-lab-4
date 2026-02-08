@@ -6,25 +6,25 @@
 
 **Context:** Now that you have analyzed the product architecture, you need to understand what roles are typically involved in building and maintaining such systems.
 
-- [Steps](#steps)
-  - [1. Create an issue](#1-create-an-issue)
-  - [2. Create `docs/roles-and-skills.md`](#2-create-docsroles-and-skillsmd)
-    - [`## Components and roles`](#-components-and-roles)
-    - [`## Roles and responsibilities`](#-roles-and-responsibilities)
-    - [`## Common skills across roles`](#-common-skills-across-roles)
+- [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
+- [1. Create an issue](#1-create-an-issue)
+- [2. Create `docs/roles-and-skills.md`](#2-create-docsroles-and-skillsmd)
+  - [`## Components and roles`](#-components-and-roles)
+  - [`## Roles and responsibilities`](#-roles-and-responsibilities)
+  - [`## Common skills across roles`](#-common-skills-across-roles)
 - [Acceptance Criteria](#acceptance-criteria)
 
 ## Steps
 
-### 1. Create an issue
+## 1. Create an issue
 
 Title: `[Task] Roles and skills mapping`
 
-### 2. Create `docs/roles-and-skills.md`
+## 2. Create `docs/roles-and-skills.md`
 
 Create the file and add the following sections:
 
-#### `## Components and roles`
+### `## Components and roles`
 
 For each selected component from `architecture.md`, list IT roles that are likely involved in the development and maintenance of that component.
 
@@ -42,13 +42,13 @@ Use a nested list. Example:
 - ...
 ```
 
-#### `## Roles and responsibilities`
+### `## Roles and responsibilities`
 
 1. Select any five roles from the previous section.
 2. Consult an LLM or search engine to find out what are the typical responsibilities of these roles (what do people holding these roles do?).
 3. For each selected role, briefly describe the responsibilities.
 
-#### `## Common skills across roles`
+### `## Common skills across roles`
 
 Based on your intuition and some research, list **tech skills that are required for these responsibilities**.
 

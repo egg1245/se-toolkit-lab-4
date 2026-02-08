@@ -6,52 +6,52 @@
 
 **Context:** As you begin your journey in software engineering, it's important to understand what skills are valued in the market and how your current abilities align with industry expectations.
 
-- [Steps](#steps)
-  - [1. Create an issue](#1-create-an-issue)
-  - [2. Choose a role](#2-choose-a-role)
-  - [3. Explore `roadmap.sh`](#3-explore-roadmapsh)
-  - [4. Document your chosen role](#4-document-your-chosen-role)
-  - [5. Research job postings](#5-research-job-postings)
-  - [6. Document job market snapshot](#6-document-job-market-snapshot)
-  - [7. Personal reflection](#7-personal-reflection)
+- [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
+- [1. Create an issue](#1-create-an-issue)
+- [2. Choose a role](#2-choose-a-role)
+- [3. Explore `roadmap.sh`](#3-explore-roadmapsh)
+- [4. Document your chosen role](#4-document-your-chosen-role)
+- [5. Research job postings](#5-research-job-postings)
+- [6. Document job market snapshot](#6-document-job-market-snapshot)
+- [7. Personal reflection](#7-personal-reflection)
 - [Acceptance Criteria](#acceptance-criteria)
 
 ## Steps
 
-### 1. Create an issue
+## 1. Create an issue
 
 Title: `[Task] Tech skills assessment and market analysis`
 
-### 2. Choose a role
+## 2. Choose a role
 
 Choose *one* role that seems most interesting to you now.
 
-### 3. Explore `roadmap.sh`
+## 3. Explore `roadmap.sh`
 
 1. Go to [`roadmap.sh`](https://roadmap.sh/)
 2. Sign up there.
 3. Find the roadmap relevant for the role you chose.
 4. In that roadmap, mark the items you already have at least some knowledge in.
 
-### 4. Document your chosen role
+## 4. Document your chosen role
 
 In `docs/roles-and-skills.md`, in the `## My chosen role` section, write:
 
 ```markdown
-### Role
+## Role
 
 <name>
 
-### Skills I already have
+## Skills I already have
 <!-- from roadmap.sh -->
 - ...
 
-### Skills I clearly lack
+## Skills I clearly lack
 <!-- 4-5 skills from roadmap.sh that seemed important to have -->
 - ...
 ```
 
-### 5. Research job postings
+## 5. Research job postings
 
 1. Find **5-7 job postings** for this role on [`HH.ru`](https://hh.ru) or a similar job site.
 2. For each posting, write:
@@ -59,22 +59,22 @@ In `docs/roles-and-skills.md`, in the `## My chosen role` section, write:
     - link to the posting.
     - 3–5 key skills/requirements they mention.
 
-### 6. Document job market snapshot
+## 6. Document job market snapshot
 
 In `docs/roles-and-skills.md`, in the `## Job market snapshot` section, write:
 
 ```markdown
-### Skills that appear in several postings
+## Skills that appear in several postings
 <!-- 3-5 skills -->
 - ...
 
-### Skills specific to a single posting
+## Skills specific to a single posting
 <!-- 2-5 skills -->
 - ...
 
 ```
 
-### 7. Personal reflection
+## 7. Personal reflection
 
 > [!IMPORTANT]
 > Write this section **without** an LLM.
