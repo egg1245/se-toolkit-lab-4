@@ -18,9 +18,10 @@ Choose *one* role that seems most interesting to you now.
 
 ### 3. Explore `roadmap.sh`
 
-1. Go to [`roadmap.sh`](https://roadmap.sh/) and sign up.
-2. Find the roadmap relevant for the role you chose.
-3. In that roadmap, mark the items you already have at least some knowledge in.
+1. Go to [`roadmap.sh`](https://roadmap.sh/)
+2. Sign up there.
+3. Find the roadmap relevant for the role you chose.
+4. In that roadmap, mark the items you already have at least some knowledge in.
 
 ### 4. Document your chosen role
 
