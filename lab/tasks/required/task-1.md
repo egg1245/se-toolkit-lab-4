@@ -94,23 +94,27 @@ Provide:
 >
 > Replace space in the path with `%20` (see [URL encoding](https://en.wikipedia.org/wiki/Percent-encoding)).
 
-1. Embed the product's `Component Diagram.svg`.
+#### Embed the product's `Component Diagram.svg`
 
-   Example (path provided relative to this file): `![Telegram Component Diagram](../../../docs/diagrams/out/telegram/component-diagram/Component%20Diagram.svg)`
+Example (path provided relative to this file): `![Telegram Component Diagram](../../../docs/diagrams/out/telegram/component-diagram/Component%20Diagram.svg)`
 
-   <details><summary>Embedded image example (click to open)</summary>
+<details><summary>Embedded image example (click to open)</summary>
 
-   ![Telegram Component Diagram](../../../docs/diagrams/out/telegram/component-diagram/Component%20Diagram.svg)
+![Telegram Component Diagram](../../../docs/diagrams/out/telegram/component-diagram/Component%20Diagram.svg)
 
-   </details>
+</details>
 
-2. Provide a link to the `PlantUML` code for that [component diagram](../../appendix/architectural-views.md#component-diagram).
+#### Add link to `PlantUML` code
+
+Provide a link to the `PlantUML` code for that [component diagram](../../appendix/architectural-views.md#component-diagram).
   
-   Example: [Telegram Component Diagram Code](../../../docs/diagrams/src/telegram/component-diagram.puml)
+Example: [Telegram Component Diagram Code](../../../docs/diagrams/src/telegram/component-diagram.puml)
 
-3. Select at least 5 components of the product from the component diagram.
+#### Explain the components
 
-4. For each selected component, explain in 1-2 sentences what it does (as you think).
+1. Select at least 5 components of the product from the component diagram.
+
+2. For each selected component, explain in 1-2 sentences what it does (as you think).
 
 #### `## Data flow`
 
