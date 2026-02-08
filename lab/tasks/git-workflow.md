@@ -27,6 +27,9 @@ Outline:
     - [Stage specific changes](#stage-specific-changes)
     - [(Optional) Unstage specific changes](#optional-unstage-specific-changes)
     - [Commit staged changes](#commit-staged-changes)
+- [(Optional) Undo commits](#optional-undo-commits)
+  - [Undo commits using the `Terminal`](#undo-commits-using-the-terminal)
+  - [Undo commits using `GitLens`](#undo-commits-using-gitlens)
 - [Publish the branch](#publish-the-branch)
   - [Publish using the `Terminal`](#publish-using-the-terminal)
   - [Publish using `GitLens`](#publish-using-gitlens)
@@ -178,6 +181,50 @@ Complete these steps:
 1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
 1. Write a commit message.
 1. Click `Commit`.
+
+## (Optional) Undo commits
+
+> [!NOTE]
+> There can appear a conflict when you try to undo.
+
+Undo commits using one of these approaches:
+
+- [Undo commits using the `Terminal`](#undo-commits-using-the-terminal)
+- [Undo commits using `GitLens`](#undo-commits-using-gitlens)
+
+### Undo commits using the `Terminal`
+
+[Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
+
+```console
+git reset --soft HEAD~1
+```
+
+Your changes are staged now.
+
+You can stage more changes.
+
+```console
+git add some-file
+```
+
+Then, you can commit using the previous message.
+
+```console
+git commit -C ORIG_HEAD
+```
+
+### Undo commits using `GitLens`
+
+1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
+2. Click `GITLENS`.
+3. Go to the latest commit (the highest one).
+4. Undo using one of these approaches:
+   1. Approach 1:
+      1. Click the `Undo Commit` icon.
+   2. Approach 2:
+      1. Click the commit.
+      2. Click `Undo Commit`.
 
 ## Publish the branch
 
