@@ -240,10 +240,11 @@ Install [`Starship`](https://github.com/starship/starship#-installation).
 
 Complete these steps:
 
-1. [See all branches](#see-all-branches)
-2. [Look at the commit graph](#look-at-the-commit-graph)
-3. [Inspect remotes and the current branch](#inspect-remotes-and-the-current-branch)
-4. [(Optional) Learn more about `GitLens`](#optional-learn-more-about-gitlens)
+1. Open `VS Code`.
+2. [See all branches](#see-all-branches)
+3. [Look at the commit graph](#look-at-the-commit-graph)
+4. [Inspect the current branch](#inspect-the-current-branch)
+5. [(Optional) Learn more about `GitLens`](#optional-learn-more-about-gitlens)
 
 #### See all branches
 
@@ -258,17 +259,25 @@ Complete these steps:
 1. Click the icon `Visualize commits on the Commit Graph`.
 1. Make sure you can see the commit graph.
 
-#### Inspect remotes and the current branch
+#### Inspect the current branch
 
 1. [Open the `Source Control`](../lab/appendix/vs-code.md#open-the-source-control).
-2. Go to the [`Sidebar Toolbar`](../lab/appendix/vs-code.md#basic-layout).
-3. Click three dots.
-4. Click `GITLENS` in the opened [`Primary Side Bar`](../lab/appendix/vs-code.md#basic-layout).
-5. Go to the `GITLENS` panel.
-6. Click the icon `Remotes`.
-7. Make sure `origin` points to your repo URL (hover over it an look at URLs).
-8. Click the icon `Commits`.
-9. Make sure you can see commits on the current branch.
+2. Click `GITLENS`.
+3. Click the `Commits` icon.
+4. See `COMMITS <branch-name>`.
+5. See commits below it.
+6. Click a commit to open a list of files changed in that commit.
+7. Click a file changed in that commit to see changes in that file.
+
+#### Inspect remotes
+
+1. [Open the `Source Control`](../lab/appendix/vs-code.md#open-the-source-control).
+2. Click `GITLENS` to uncollapse the view.
+3. Hover over the `GITLENS` view name.
+4. Click the icon `Remotes` (looks like a cloud).
+5. Make sure `origin` points to your repo URL:
+   1. Hover over `origin`:
+   2. Look at URLs.
 
 #### (Optional) Learn more about `GitLens`
 
