@@ -186,7 +186,7 @@ Look at the [`Basic Layout`](./appendix/vs-code.md#basic-layout).
 >
 > `Markdown` is a markup language that gets translated into `HTML` and demonstrated to you when you open a preview in `VS Code` or on `GitHub`.
 
-Open `README.md` using one of these approaches:
+Open [`README.md`](../README.md) using one of these approaches:
 
 - Approach 1:
   - [Use the `Command Palette`](./appendix/vs-code.md#open-a-file).
