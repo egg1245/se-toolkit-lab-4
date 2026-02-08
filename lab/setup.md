@@ -188,7 +188,7 @@ Install [`Starship`](https://github.com/starship/starship#-installation).
 #### Inspect remotes and the current branch
 
 1. [Open the `Source Control`](../lab/appendix/vs-code.md#open-the-source-control).
-2. Go to [`Sidebar Toolbar`](../lab/appendix/vs-code.md#basic-layout).
+2. Go to the [`Sidebar Toolbar`](../lab/appendix/vs-code.md#basic-layout).
 3. Click three dots.
 4. Click `GITLENS` in the opened [`Primary Side Bar`](../lab/appendix/vs-code.md#basic-layout).
 5. Go to the `GITLENS` panel.
