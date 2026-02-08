@@ -134,7 +134,7 @@ Commit using one of these approaches:
    ```console
    git add <file>
    # example: git add README.md
-   # example (spaces): git add 'path/some image.svg'
+   # example (path with spaces): git add 'path/some image.svg'
    
    git commit -m '<type>: <short description>'
    # example: git commit -m 'docs: add architecture diagram'
@@ -146,7 +146,7 @@ Commit using one of these approaches:
 2. Go to `Changes`.
 3. Hover over a file name.
 4. Click `+` to stage the file.
-5. Type commit message, e.g., `docs: add architecture diagram`.
+5. Write a commit message, e.g., `docs: add architecture diagram`.
 6. Click `Commit`.
 
 #### Commit using `Source Control` (specific changes)
