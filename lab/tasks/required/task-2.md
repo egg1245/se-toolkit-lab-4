@@ -9,6 +9,7 @@
 - [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
 - [1. Create an issue](#1-create-an-issue)
 - [2. Create `docs/roles-and-skills.md`](#2-create-docsroles-and-skillsmd)
+  - [`# Roles and skills`](#-roles-and-skills)
   - [`## Components and roles`](#-components-and-roles)
   - [`## Roles and responsibilities`](#-roles-and-responsibilities)
   - [`## Common skills across roles`](#-common-skills-across-roles)
@@ -25,6 +26,10 @@ Title: `[Task] Roles and skills mapping`
 ## 2. Create `docs/roles-and-skills.md`
 
 Create the file and add the following sections:
+
+### `# Roles and skills`
+
+The document title.
 
 ### `## Components and roles`
 
