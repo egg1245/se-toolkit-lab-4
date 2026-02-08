@@ -24,7 +24,9 @@ Check the box near `Issues`.
 
 ## Add a classmate as a collaborator
 
-In your repo `Settings` -> `Collaborators` -> `Add people`, add your partner as a collaborator.
+Go to `Settings` -> `Collaborators` -> `Add people`.
+
+Add your partner as a collaborator.
 
 Your partner should add you as a collaborator in their repo.
 
