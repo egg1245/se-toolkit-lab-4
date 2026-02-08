@@ -27,20 +27,8 @@ git checkout -b add-contributor
 
 ### 3. Add your name
 
-> [!NOTE]
-> Replace `@<your-username>` with your `GitHub` username.
-> Example: `@johndoe`
-
 1. Open [`CONTRIBUTORS.md`](../../../CONTRIBUTORS.md).
-2. Add your GitHub username below the comment:
-
-    ```markdown
-    <!--
-    ...
-    -->
-    - @<your-username>
-    ```
-
+2. Replace `@johndoe` with `@<your-username>`.
 3. Save the file.
 
 ### 4. Commit and push
