@@ -1,5 +1,40 @@
 # Lab setup
 
+- [Find a partner](#find-a-partner)
+- [Set up a fork](#set-up-a-fork)
+- [Enable issues](#enable-issues)
+- [Add a classmate as a collaborator](#add-a-classmate-as-a-collaborator)
+- [Protect your `main` branch](#protect-your-main-branch)
+- [Install `Git`](#install-git)
+- [Install `VS Code`](#install-vs-code)
+- [Open the `Terminal`](#open-the-terminal)
+- [Configure `Git`](#configure-git)
+- [Open `VS Code` in the `software-engineering-toolkit` directory](#open-vs-code-in-the-software-engineering-toolkit-directory)
+- [Copy your fork URL](#copy-your-fork-url)
+- [Clone the fork on your computer](#clone-the-fork-on-your-computer)
+  - [Clone the fork using the `Terminal`](#clone-the-fork-using-the-terminal)
+  - [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
+- [Open the repo in `VS Code`](#open-the-repo-in-vs-code)
+- [Set up `VS Code` extensions](#set-up-vs-code-extensions)
+- [Reload `VS Code`](#reload-vs-code)
+- [Explore `VS Code` layout](#explore-vs-code-layout)
+- [Open `README.md`](#open-readmemd)
+- [Open `Markdown` preview](#open-markdown-preview)
+- [Change workspace settings](#change-workspace-settings)
+- [Optional enhancements](#optional-enhancements)
+  - [Set up a coding agent](#set-up-a-coding-agent)
+  - [Set up the shell prompt](#set-up-the-shell-prompt)
+  - [Check `GitLens` in `VS Code`](#check-gitlens-in-vs-code)
+    - [See all branches](#see-all-branches)
+    - [Look at the commit graph](#look-at-the-commit-graph)
+    - [Inspect the current branch](#inspect-the-current-branch)
+    - [Inspect remotes](#inspect-remotes)
+    - [(Optional) Learn more about `GitLens`](#optional-learn-more-about-gitlens)
+  - [Create a label for tasks](#create-a-label-for-tasks)
+    - [Create the `task` label](#create-the-task-label)
+    - [Add the label to issues](#add-the-label-to-issues)
+    - [See all issues with the label](#see-all-issues-with-the-label)
+
 ## Find a partner
 
 1. Find a classmate to be your partner for this lab.
@@ -174,6 +209,12 @@ Clone the fork using one of these approaches:
 
 [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette): `Developer: Reload Window`.
 
+<!-- 
+TODO hide graph 
+collapse graph and gitlens
+click and hold gitlens
+move it over graph
+-->
 
 ## Explore `VS Code` layout
 
@@ -239,6 +280,9 @@ Complete these steps:
 3. You should see something like `lab-01-market-product-and-git on main`.
 
 ### Check `GitLens` in `VS Code`
+
+<!-- TODO create appendix gitlens -->
+<!-- TODO move to the appendix -->
 
 `GitLens` shows commit history, blame annotations, and branch visualization right inside `VS Code`.
 
