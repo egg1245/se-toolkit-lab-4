@@ -215,6 +215,13 @@ Look at the [workspace settings](./appendix/vs-code.md#workspace-settings) and c
 
 ## Optional enhancements
 
+These enhancements can make your life easier:
+
+- [Set up a coding agent](#set-up-a-coding-agent)
+- [Set up the shell prompt](#set-up-the-shell-prompt)
+- [Check `GitLens`](#check-gitlens)
+- [Create a label for tasks](#create-a-label-for-tasks)
+
 ### Set up a coding agent
 
 A coding agent can help you write code, explain concepts, and debug issues.
