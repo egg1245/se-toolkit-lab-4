@@ -93,51 +93,72 @@ This enforces the PR workflow and ensures all changes are reviewed.
 
      Example: `git config --global user.name 'johndoe@gmail.com'`
 
-## Clone the repo on your computer
+## Open `VS Code` in the `software-engineering-toolkit` directory
 
-Clone the repo using one of these approaches:
+1. On your computer, create somewhere a directory `software-engineering-toolkit` (e.g., on your `Desktop`).
+2. Open `VS Code`.
+3. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette): `File: Open Folder...`.
+4. Find the `software-engineering-toolkit` directory that you created.
+5. Open this directory.
+6. `VS Code` should now open in that directory.
+7. [Open `Folders`](./appendix/vs-code.md#open-folders).
+8. Look at `FOLDERS`.
+9. You should see `SOFTWARE-ENGINEERING-TOOLKIT` there.
 
-- [Clone the repo using a terminal](#clone-the-repo-using-a-terminal)
-- [Clone the repo using `VS Code`](#clone-the-repo-using-vs-code)
+## Copy your fork URL
 
-### Clone the repo using a terminal
+1. Go to your fork on `Gitub`.
+1. Copy its [URL](https://en.wikipedia.org/wiki/URL).
+1. It should look like `https://github.com/<your-username>/lab-01-market-product-and-git`.
 
-1. On your computer, create a directory `software-engineering-toolkit`.
-2. Open a terminal in that directory (google how to do that).
-3. In the terminal, you should see `software-engineering-toolkit`.
-4. Copy your fork link ([`URL`](https://en.wikipedia.org/wiki/URL)):
-   1. Go to your fork on `GitHub`.
-   2. Copy its `URL`.
-   3. It should look like `https://github.com/<your-username>/lab-01-market-product-and-git`.
-5. Return to the terminal.
-6. Run the command (replace `<fork-url>` with the copied `URL`):
+## Clone the fork on your computer
 
-    ```console
+Clone the fork using one of these approaches:
+
+- [Clone the fork using the `Terminal`](#clone-the-fork-using-the-terminal)
+- [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
+
+### Clone the fork using the `Terminal`
+
+1. [Open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
+1. Make sure you see `software-engineering-toolkit` as your current directory.
+1. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
+
+   ```console
     git clone <fork-url>
     ```
 
-### Clone the repo using `VS Code`
+    Note: replace `<fork-url>` with the copied fork URL.
+1. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
 
-1. Open `VS Code`.
-2. [Open the `Command Palette`](../lab/appendix/vs-code.md#open-the-command-palette).
-3. Run
-4. [Open the `Source Control`](../lab/appendix/vs-code.md#open-the-source-control).
-5. Click `CHANGES` to uncollapse that panel.
-6. Click `Clone Repository`.
-7. Click `Clone from GitHub`.
-8. Allow the extension to sign in.
-9. Find your fork in the list.
-10. Click it.
-11. Choose a directory where to clone the repo.
-12. Confirm the choice.
+   ```console
+   ls
+   ```
+
+1. You should see `lab-01-market-product-and-git` - the directory with the cloned repo.
+
+### Clone the fork using the `Command Palette`
+
+1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette): `Git: Clone`.
+2. Click `Clone from GitHub`.
+3. Allow the extension to sign in.
+4. Find your fork in the list.
+5. It should look like `<your-username>/lab-01-market-product-and-git`.
+6. Click it.
+7. Choose a directory where to clone the repo.
+8. You should choose `software-engineering-toolkit` that you created before.
+9. Confirm the choice.
 
 ## Open the repo in `VS Code`
 
-1. Open `VS Code`.
-2. [Open the `Command Palette`](../lab/appendix/vs-code.md#command-palette).
-3. Run `File: Open Folder...`
-4. Find the directory `lab-01-market-product-and-git` that stores the clone of your fork.
-5. Make sure there is `README.md` inside that directory.
+1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette): `File: Open Folder...`.
+2. Choose the directory `lab-01-market-product-and-git` that is a clone of your fork.
+3. Make sure there is `README.md` inside that directory.
+4. `VS Code` should open in that directory.
+5. [Open `Folders`](./appendix/vs-code.md#open-folders).
+6. Look at `FOLDERS`.
+7. You should see `LAB-01-MARKET-PRODUCT-AND-GIT` there.
+8. You can close the `VS Code` that you [opened in the `software-engineering-toolkit` directory](#open-vs-code-in-the-software-engineering-toolkit-directory).
 
 ## Set up `VS Code` extensions
 
