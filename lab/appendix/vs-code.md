@@ -27,7 +27,6 @@
   - [Frequently used shortcuts](#frequently-used-shortcuts)
 - [`settings.json`](#settingsjson)
   - [Workspace settings](#workspace-settings)
-- [Open the repository](#open-the-repository)
 
 > [!IMPORTANT]
 > The first [keyboard shortcut](#keyboard-shortcuts) is always for `Linux`.
