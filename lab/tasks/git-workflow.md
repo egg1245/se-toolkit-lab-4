@@ -99,14 +99,13 @@ Create a new branch using one of these approaches:
 
 ### Create a branch using `GitLens`
 
-1. [Open the `Command Palette`](../appendix/vs-code.md#open-the-command-palette).
-2. Run `GitLens: Git Create Branch...`.
-3. Select `main` as the base branch (e.g., using `UpArrow` and `DownArrow` on your keyboard).
-4. Press `Enter` to confirm.
-5. Write `<branch-name>` to provide the new branch name.
-6. Press `Enter` to confirm.
-7. `Select Create & Switch to Branch` (e.g., using `UpArrow` and `DownArrow` on your keyboard).
-8. Press `Enter` to confirm.
+1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Git Create Branch...`.
+2. Select `main` as the base branch (e.g., using `UpArrow` and `DownArrow` on your keyboard).
+3. Press `Enter` to confirm.
+4. Write `<branch-name>` to provide the new branch name.
+5. Press `Enter` to confirm.
+6. `Select Create & Switch to Branch` (e.g., using `UpArrow` and `DownArrow` on your keyboard).
+7. Press `Enter` to confirm.
 
 ## Make commits
 
