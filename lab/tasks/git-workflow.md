@@ -17,6 +17,8 @@ Outline:
 
 - [Create a `Lab Task` issue](#create-a-lab-task-issue)
 - [Switch to the `main` branch](#switch-to-the-main-branch)
+  - [Switch to the `main` branch using the `Terminal`](#switch-to-the-main-branch-using-the-terminal)
+  - [Switch to the `main` branch using `GitLens`](#switch-to-the-main-branch-using-gitlens)
 - [Switch to a new branch](#switch-to-a-new-branch)
   - [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
   - [Switch to a new branch using the `Terminal`](#switch-to-a-new-branch-using-the-terminal)
@@ -67,12 +69,26 @@ Outline:
 
 ## Switch to the `main` branch
 
-1. Go to `VS Code`.
-2. [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
+Go to `VS Code`.
+
+Switch to the `main` branch using any of these approaches:
+
+- [Switch to the `main` branch using the `Terminal`](#switch-to-the-main-branch-using-the-terminal)
+- [Switch to the `main` branch using `GitLens`](#switch-to-the-main-branch-using-gitlens)
+
+### Switch to the `main` branch using the `Terminal`
+
+1. [Run using the `Terminal`](../appendix/vs-code.md#run-a-command-using-the-terminal):
 
    ```terminal
    git switch main
    ```
+
+### Switch to the `main` branch using `GitLens`
+
+1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Git Switch to...`.
+2. Select the `main` branch (e.g., using `UpArrow` and `DownArrow` on your keyboard).
+3. Press `Enter` to confirm.
 
 ## Switch to a new branch
 
