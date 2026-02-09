@@ -83,6 +83,10 @@ Click icons in the [`Activity Bar`](#activity-bar) to switch between views.
 
 For example, [open the `Source Control`](#open-the-source-control).
 
+### Switch between views
+
+Click icons in the [`Activity Bar`](#activity-bar).
+
 ## `Status Bar`
 
 Statuses and menus of extensions at the bottom of the `VS Code` window.
