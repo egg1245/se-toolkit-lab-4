@@ -1,6 +1,7 @@
 # `VS Code`
 
 - [`Basic Layout`](#basic-layout)
+- [`Custom Layout`](#custom-layout)
 - [`Editor`](#editor)
 - [`Activity Bar`](#activity-bar)
 - [`Primary Sidebar`](#primary-sidebar)
@@ -24,7 +25,6 @@
   - [Close the `Source Control`](#close-the-source-control)
 - [`Extensions`](#extensions)
   - [Install recommended extensions](#install-recommended-extensions)
-- [`Custom Layout`](#custom-layout)
   - [Use cases](#use-cases)
     - [Move the `Primary Sidebar` to the right](#move-the-primary-sidebar-to-the-right)
 - [Keyboard shortcuts](#keyboard-shortcuts)
@@ -40,14 +40,25 @@
 
 ## `Basic Layout`
 
-How `VS Code` looks like by default.
+Default user interface (UI).
 
 - [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
-- [docs 2](https://code.visualstudio.com/api/ux-guidelines/overview#items)
+- [docs 2](https://code.visualstudio.com/docs/getstarted/tips-and-tricks)
 
-Some of the `Basic Layout` elements:
+![Basic Layout](../images/vs-code-ui.drawio.svg)
 
-![VS Code UI](../images/vs-code-ui.drawio.svg)
+<!-- 
+The schema is based on:
+- https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout
+- https://code.visualstudio.com/api/ux-guidelines/overview
+-->
+
+## `Custom Layout`
+
+Custom UI appearance.
+
+- [docs 1](https://www.youtube.com/watch?v=nORT3-kONgA)
+- [docs 2](https://code.visualstudio.com/docs/configure/custom-layout)
 
 ## `Editor`
 
@@ -198,12 +209,6 @@ Install extensions for `VS Code` from [`VS Code Marketplace`](https://marketplac
 2. In the input field, type `@recommended`.
 3. Look at `WORKSPACE RECOMMENDATIONS`.
 4. Click the icon `Install Workspace Recommended extensions`.
-
-## `Custom Layout`
-
-Change the [Basic Layout](#basic-layout).
-
-- [docs](https://code.visualstudio.com/docs/configure/custom-layout)
 
 ### Use cases
 
