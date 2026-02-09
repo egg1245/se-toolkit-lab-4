@@ -84,7 +84,7 @@ Views on a side of the [`Editor`](#editor). See [`Basic Layout`](#basic-layout).
 
 For example, [open the `Source Control`](#open-the-source-control).
 
-### Switch between views
+### Switch between `Primary Sidebar` views
 
 Click icons in the [`Activity Bar`](#activity-bar).
 
