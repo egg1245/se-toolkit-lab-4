@@ -280,7 +280,7 @@ Approach 2:
 3. Click `WORKSPACE RECOMMENDATIONS` to uncollapse this view.
 4. Click the icon `Install Workspace Recommended extensions`.
 
-   <img alt="Filter Extensions" src="../images/appendix/vs-code/extensions-install-workspace-recommended.png" style="width:400px"></img>
+   <img alt="Install Workspace Recommended Extensions" src="../images/appendix/vs-code/extensions-install-workspace-recommended.png" style="width:400px"></img>
 
 ## Keyboard shortcuts
 
