@@ -143,11 +143,12 @@ Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 
 View the file tree.
 
-- [docs](https://code.visualstudio.com/docs/editing/workspaces/workspaces)
+- [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_explorer-view)
 
 ### Open `Folders`
 
-[`Activity Bar`](#activity-bar) -> Click `Folders`.
+1. Go to the [`Activity Bar`](#activity-bar).
+2. Click `Folders`.
 
 ## `Source Control`
 
