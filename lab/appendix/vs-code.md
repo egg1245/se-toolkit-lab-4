@@ -273,7 +273,7 @@ Approach 2:
 ### Install recommended `Extensions`
 
 > [!NOTE]
-> Recommended extensions are listed in [`.vscode/extensions.json`](../.vscode/extensions.json).
+> Recommended extensions are listed in [`.vscode/extensions.json`](../../.vscode/extensions.json).
 
 1. [Filter the extensions](#filter-the-extensions).
 2. Click `Recommended` in the menu.
