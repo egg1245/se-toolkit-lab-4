@@ -1,7 +1,7 @@
 # Lab setup
 
 - [Find a partner](#find-a-partner)
-- [Set up a fork](#set-up-a-fork)
+- [Fork the course instructors' repo](#fork-the-course-instructors-repo)
 - [Enable issues](#enable-issues)
 - [Add a classmate as a collaborator](#add-a-classmate-as-a-collaborator)
 - [Protect your `main` branch](#protect-your-main-branch)
@@ -40,14 +40,14 @@
 1. Find a classmate to be your partner for this lab.
 2. Sit together.
 
-## Set up a fork
+## Fork the course instructors' repo
 
 1. Create a `GitHub` account.
-2. Go to the [original repo](https://github.com/inno-se-toolkit/lab-01-market-product-and-git) (repository).
-3. [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) the original repo.
-4. Go to your fork.
-5. The URL should be like `https://github.com/<your-username>/lab-01-market-product-and-git`.
-6. If you see a lock sign near your fork name, [make your fork public](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#changing-a-repositorys-visibility).
+2. Go to the course instructors' [repo](https://github.com/inno-se-toolkit/lab-01-market-product-and-git) (repository).
+3. Fork this repo: follow the [instructions on forking](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository).
+4. Go to your fork (a partial copy of the instructors' repo stored on `GitHub`).
+5. The URL of your fork should be like `https://github.com/<your-username>/lab-01-market-product-and-git`.
+6. If you don't see `Public` near your fork name, [make your fork public](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#changing-a-repositorys-visibility).
 
 > [!NOTE]
 > Continue working in your fork.
