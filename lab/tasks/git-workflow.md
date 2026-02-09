@@ -112,7 +112,7 @@ Edit files in the [`Editor`](../appendix/vs-code.md#editor) to produce changes.
 
 ## Commit
 
-Make commits to the `<branch-name>` to complete the task.
+Commit changes to the `<branch-name>` to complete the task.
 
 > ![NOTE]
 > Commit message format is: `type: short description`
