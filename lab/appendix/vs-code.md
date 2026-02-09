@@ -61,21 +61,19 @@ Custom UI appearance.
 
 ## `Editor`
 
-Space where you can edit files.
+Space where you can edit files. See [`Basic Layout`](#basic-layout).
 
 - [docs](https://code.visualstudio.com/docs/editing/codebasics)
 
 ## `Activity Bar`
 
-Menus of extensions on a side of the [`Editor`](#editor).
+Menus of extensions on a side of the [`Editor`](#editor). See [`Basic Layout`](#basic-layout).
 
 - [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 
 ## `Primary Sidebar`
 
-Views on a side of the [`Editor`](#editor).
-
-Click icons in the [`Activity Bar`](#activity-bar) to switch between views.
+Views on a side of the [`Editor`](#editor). See [`Basic Layout`](#basic-layout).
 
 - [docs](https://code.visualstudio.com/docs/configure/custom-layout#_primary-side-bar)
 
