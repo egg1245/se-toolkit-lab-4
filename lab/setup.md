@@ -174,7 +174,7 @@ Clone the fork using one of these approaches:
    ls
    ```
 
-1. You should see `lab-01-market-product-and-git` - the directory with the cloned repo.
+1. You should see `lab-01-market-product-and-git` - the output of the command. This is the directory that contains the cloned repo.
 
 ### Clone the fork using the `Command Palette`
 
