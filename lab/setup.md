@@ -212,13 +212,6 @@ Clone the fork using one of these approaches:
 
 [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette): `Developer: Reload Window`.
 
-<!-- 
-TODO hide graph 
-collapse graph and gitlens
-click and hold gitlens
-move it over graph
--->
-
 ## Explore `VS Code` layout
 
 Look at the [`Basic Layout`](./appendix/vs-code.md#basic-layout).
@@ -285,6 +278,13 @@ Complete these steps:
 
 <!-- TODO create appendix gitlens -->
 <!-- TODO move to the appendix -->
+
+<!-- 
+TODO hide graph 
+collapse graph and gitlens
+click and hold gitlens
+move it over graph
+-->
 
 `GitLens` shows commit history, blame annotations, and branch visualization right inside `VS Code`.
 
