@@ -16,8 +16,8 @@
 - [`Terminal`](#terminal)
   - [Open the `Terminal`](#open-the-terminal)
   - [Close the `Terminal`](#close-the-terminal)
-  - [Copy inside the `Terminal`](#copy-inside-the-terminal)
-  - [Paste inside the `Terminal`](#paste-inside-the-terminal)
+  - [Copy text inside the `Terminal`](#copy-text-inside-the-terminal)
+  - [Paste text inside the `Terminal`](#paste-text-inside-the-terminal)
   - [Run a command using the `Terminal`](#run-a-command-using-the-terminal)
 - [`Folders`](#folders)
   - [Open `Folders`](#open-folders)
@@ -143,19 +143,19 @@ Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 
 Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 
-### Copy inside the `Terminal`
+### Copy text inside the `Terminal`
 
 1. Select text.
 1. Press `Ctrl+Shift+C` (`Cmd+C` on `macOS`).
 
-### Paste inside the `Terminal`
+### Paste text inside the `Terminal`
 
 `Ctrl+Shift+V` (`Cmd+V` on `macOS`, `Ctrl+V` on `Windows`)
 
 ### Run a command using the `Terminal`
 
 1. [Open the `Terminal`](#open-the-terminal).
-1. Write or [paste](#paste-inside-the-terminal) a command.
+1. Write or [paste](#paste-text-inside-the-terminal) a command.
 1. Press `Enter`.
 
 ## `Folders`
