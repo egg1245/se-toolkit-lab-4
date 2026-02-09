@@ -45,9 +45,9 @@ Default user interface (UI).
 - [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 - [docs 2](https://code.visualstudio.com/docs/getstarted/tips-and-tricks)
 
-![Basic Layout](../images/vs-code-ui.drawio.svg)
+Slightly modified `Basic Layout` schema:
 
-The schema is based on:
+![Basic Layout Schema](../images/vs-code-ui.drawio.svg)
 
 - [Basic layout](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
 - [UX Guidelines](https://code.visualstudio.com/api/ux-guidelines/overview)
