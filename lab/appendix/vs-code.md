@@ -25,7 +25,9 @@
   - [Open the `Source Control`](#open-the-source-control)
   - [Close the `Source Control`](#close-the-source-control)
 - [`Extensions`](#extensions)
-  - [Install recommended extensions](#install-recommended-extensions)
+  - [Open the `Extensions`](#open-the-extensions)
+  - [Filter the `Extensions`](#filter-the-extensions)
+  - [Install recommended `Extensions`](#install-recommended-extensions)
   - [Use cases](#use-cases)
     - [Move the `Primary Sidebar` to the right](#move-the-primary-sidebar-to-the-right)
 - [Keyboard shortcuts](#keyboard-shortcuts)
@@ -203,24 +205,43 @@ Install extensions for `VS Code` from [`VS Code Marketplace`](https://marketplac
 
 - [docs](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace)
 
-### Install recommended extensions
+Actions:
+
+- [Open the `Extensions`](#open-the-extensions)
+- [Filter the `Extensions`](#filter-the-extensions)
+- [Install recommended `Extensions`](#install-recommended-extensions)
+
+### Open the `Extensions`
+
+Approach 1:
+
+1. Go to the [`Activity Bar`](#activity-bar).
+2. Click the icon `Extensions`.
+
+Approach 2:
+
+1. Press `Ctrl+Shift+X` (`Cmd+Shift+X` on `macOS`).
+
+### Filter the `Extensions`
+
+1. [Open the `Extensions`](#open-the-extensions).
+2. Click the icon `Filter Extensions...`.
+
+   <img alt="Filter Extensions" src="../images/appendix/vs-code/extensions-filter.png" style="width:400px"></img>
+3. A menu will open.
+4. Select a filter in the menu and click it to apply the filter.
+
+### Install recommended `Extensions`
 
 > [!NOTE]
 > Recommended extensions are listed in [`.vscode/extensions.json`](../.vscode/extensions.json).
 
-1. Open `Extensions`:
-
-   - Approach 1:
-
-      1. Go to the [`Activity Bar`](#activity-bar).
-      2. Click the icon `Extensions`.
-
-   - Approach 2:
-     1. Press `Ctrl+Shift+X` (`Cmd+Shift+X` on `macOS`).
-
-2. In the input field, type `@recommended`.
-3. Look at `WORKSPACE RECOMMENDATIONS`.
+1. [Filter the extensions](#filter-the-extensions).
+2. Click `Recommended` in the menu.
+3. Click `WORKSPACE RECOMMENDATIONS` to uncollapse this view.
 4. Click the icon `Install Workspace Recommended extensions`.
+
+   <img alt="Filter Extensions" src="../images/appendix/vs-code/extensions-install-workspace-recommended.png" style="width:400px"></img>
 
 ### Use cases
 
