@@ -17,8 +17,9 @@ Then, you can check whether the web server works before the web server is deploy
 
 - [1. Create an issue](#1-create-an-issue)
 - [2. Learn about environments](#2-learn-about-environments)
-- [Open the file `.env.no-docker.example`](#open-the-file-envno-dockerexample)
-  - [Copy the `.env.example` file](#copy-the-envexample-file)
+- [View the file `.env.no-docker.example`](#view-the-file-envno-dockerexample)
+  - [Create the file `.env.secret`](#create-the-file-envsecret)
+  - [View the file `.env.secret`](#view-the-file-envsecret)
   - [Run the web server using `uv` and `poe`](#run-the-web-server-using-uv-and-poe)
 - [Check `/status`](#check-status)
   - [Check `/status` using a browser](#check-status-using-a-browser)
@@ -34,25 +35,33 @@ Title: `[Task] Run the web server`
 
 ## 2. Learn about environments
 
-Read these sections:
+Read the following sections:
 
 1. [Environment variables](../../appendix/environments.md#environment-variables)
 2. [`.env` file](../../appendix/environments.md#env-file)
 
-## Open the file `.env.no-docker.example`
+## View the file `.env.no-docker.example`
 
 1. [Open the file using the `Command Palette`](../../appendix/vs-code.md#open-a-file-using-the-command-palette): [`.env.no-docker.example`](../../../.env.no-docker.example).
 
-### Copy the `.env.example` file
+### Create the file `.env.secret`
 
 1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
 
    ```terminal
-   cp .env.no-docker.example .env.no-docker
+   cp .env.no-docker.example .env.secret
+   ```
+
+### View the file `.env.secret`
+
+1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+
+   ```terminal
+   cat .env.secret
    ```
 
 > [!NOTE]
-> The `.env.no-docker` file is added to [`.gitignore`](../../../.gitignore) because you may specify there
+> The `.env.secret` file was added to [`.gitignore`](../../../.gitignore) because you may specify there
 > [secrets](../../appendix/environments.md#secrets) such as the address of your VM.
 
 ### Run the web server using `uv` and `poe`
@@ -67,7 +76,7 @@ Read these sections:
    uv run poe dev
    ```
 
-2. The web server will automatically read the [environment variables](../../appendix/environments.md#environment-variables) from the `.env.no-docker` file.
+2. The web server will automatically read the [environment variables](../../appendix/environments.md#environment-variables) from the `.env.secret` file.
 
 > [!NOTE]
 > You will see in the output a key shortcut to stop the server such as `Ctrl+C`.
