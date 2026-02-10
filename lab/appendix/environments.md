@@ -77,4 +77,6 @@ Match in [`.gitignore`](./git.md#gitignore) all files that can contain [unencryp
 
 ## Deployment environments
 
-See [Environments](https://github.com/inno-se/the-guide?tab=readme-ov-file#environments).
+A program can run in multiple deployment [environments](https://github.com/inno-se/the-guide?tab=readme-ov-file#environments).
+
+Each deployment environment can have own [environment variables](#environment-variables).
