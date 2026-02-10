@@ -44,10 +44,10 @@
 ## Fork the course instructors' repo
 
 1. Create a `GitHub` account.
-2. Go to the course instructors' [repo](https://github.com/inno-se-toolkit/lab-01-market-product-and-git) (repository).
+2. Go to the course instructors' [repo](https://github.com/inno-se-toolkit/se-toolkit-lab-2) (repository).
 3. Fork this repo: follow the [instructions on forking](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository).
 4. Go to your fork (a partial copy of the instructors' repo stored on `GitHub`).
-5. The URL of your fork should be like `https://github.com/<your-username>/lab-01-market-product-and-git`.
+5. The URL of your fork should be like `https://github.com/<your-username>/se-toolkit-lab-2`.
 6. If you don't see `Public` near your fork name, [make your fork public](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#changing-a-repositorys-visibility).
 
 > [!NOTE]
@@ -150,7 +150,7 @@ Complete these steps:
 
 1. Go to your fork on `Gitub`.
 2. Copy its [URL](https://en.wikipedia.org/wiki/URL).
-3. It should look like `https://github.com/<your-username>/lab-01-market-product-and-git`.
+3. It should look like `https://github.com/<your-username>/se-toolkit-lab-2`.
 
 ## Clone the fork on your computer
 
@@ -176,7 +176,7 @@ Clone the fork using any of the following methods:
    ls
    ```
 
-5. You should see `lab-01-market-product-and-git` - the output of the command. This is the directory that contains the cloned repo.
+5. You should see `se-toolkit-lab-2` - the output of the command. This is the directory that contains the cloned repo.
 
 ### Clone the fork using the `Command Palette`
 
@@ -185,7 +185,7 @@ Clone the fork using any of the following methods:
 2. Click `Clone from GitHub`.
 3. Allow the extension to sign in.
 4. Find your fork in the list.
-5. It should look like `<your-username>/lab-01-market-product-and-git`.
+5. It should look like `<your-username>/se-toolkit-lab-2`.
 6. Click it.
 7. Choose a directory where to clone the repo.
 8. You should choose `software-engineering-toolkit` that you created before.
@@ -195,7 +195,7 @@ Clone the fork using any of the following methods:
 
 1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette):
    `File: Open Folder...`.
-2. Choose the directory `lab-01-market-product-and-git` that is a clone of your fork.
+2. Choose the directory `se-toolkit-lab-2` that is a clone of your fork.
 3. Make sure there is `README.md` inside that directory.
 4. `VS Code` should open in that directory.
 5. [Open `Folders`](./appendix/vs-code.md#open-folders).
@@ -286,7 +286,7 @@ Complete these steps:
 
 1. Install [`Starship`](https://github.com/starship/starship#-installation).
 2. [Open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
-3. You should see something like `lab-01-market-product-and-git on main`.
+3. You should see something like `se-toolkit-lab-2 on main`.
 
 ## Customize the `Source Control`
 

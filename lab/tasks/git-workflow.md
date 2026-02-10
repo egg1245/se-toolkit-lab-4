@@ -387,8 +387,8 @@ If you see the `Compare & pull request` button, click it.
 1. Go to your fork on `GitHub`.
 2. Click `Pull requests`.
 3. Click `New pull request`.
-4. Click `base repository: <your-username>/lab-01-market-product-and-git`.
-5. Click `<your-username>/lab-01-market-product-and-git` to select the base repo.
+4. Click `base repository: <your-username>/se-toolkit-lab-2`.
+5. Click `<your-username>/se-toolkit-lab-2` to select the base repo.
 6. The PR will be created in your repo with `main` as the base branch.
 7. Click `compare: main` to choose a branch to compare with the base.
 8. Click `<branch-name>`.
