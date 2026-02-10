@@ -8,7 +8,7 @@
   - [Unencrypted secrets in the repo](#unencrypted-secrets-in-the-repo)
   - [Store encrypted secrets in the repo](#store-encrypted-secrets-in-the-repo)
   - [Add files containing secrets to `.gitignore`](#add-files-containing-secrets-to-gitignore)
-- [Environments and deployment](#environments-and-deployment)
+- [Deployment environments](#deployment-environments)
 
 ## Environment
 
@@ -75,12 +75,6 @@ Then, you can commit the file containing the secrets.
 
 Match in [`.gitignore`](./git.md#gitignore) all files that can contain [unencrypted secrets](#unencrypted-secrets-in-the-repo) so that these secrets don't get added to the repo.
 
-## Environments and deployment
+## Deployment environments
 
-### `dev` environment
-
-### `test` environment
-
-### `staging` environment
-
-### `prod` environment
+See [Environments](https://github.com/inno-se/the-guide?tab=readme-ov-file#environments).
