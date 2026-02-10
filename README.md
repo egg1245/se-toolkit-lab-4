@@ -16,13 +16,15 @@ You'll also practice using `Git` and `GitHub`. These tools are essential for:
 - collaboration between developers;
 - incremental and iterative improvement of the code base.
 
-## Table of contents
+<h2>Table of contents</h2>
 
-<!-- no toc -->
-- [Learning outcomes](#learning-outcomes)
 - [Learning advice](#learning-advice)
-- [Tasks overview](#tasks-overview)
+- [Learning outcomes](#learning-outcomes)
 - [Tasks](#tasks)
+  - [Setup (~30 min)](#setup-30-min)
+  - [Required tasks (~2 hours)](#required-tasks-2-hours)
+  - [Optional tasks](#optional-tasks)
+- [Additional Resources on `Git`](#additional-resources-on-git)
 
 ## Learning advice
 
@@ -46,7 +48,8 @@ Verify this information against credible sources such as official documentation,
 
 By the end of this lab, you should be able to:
 
-- Use `GitHub` to structure your work and collaborate with peers (issues, branches, pull requests, and reviews).
+- Use `Git` and `GitHub` to structure your work and collaborate with peers (commits with clear messages, branches, issues, pull requests, and reviews).
+- Check your work against specified acceptance criteria.
 - Explain the basic architecture of a real-world digital product in terms of components, data flow, deployment, and tech roles.
 - Reflect on your career in tech, examine your current skillset, and plan for the future.
 
@@ -57,28 +60,6 @@ After this lab, you should be able to say:
 > I understand how software products can be structured.
 >
 > I know how I can grow as an IT specialist.
-
-## Tasks overview
-
-```console
-□ Setup   — fork repo (repository), find a partner
-□ Task 0  — practice git workflow
-□ Task 1  — analyze a product's architecture
-□ Task 2  — map components to tech roles
-□ Task 3  — compare your skills to market demands
-```
-
-In this lab, you'll simulate some of the real-life engineering practices:
-
-- Communicate via issues/PRs;
-- Check your work against acceptance criteria;
-- Write clear commit messages.
-
-### Pair work and TA
-
-You'll work with a partner throughout this lab. You complete tasks individually, but review each other's work via pull requests.
-
-As your proceed with the lab, show your progress to the TA.
 
 ## Tasks
 
