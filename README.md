@@ -6,9 +6,8 @@
 - [Learning advice](#learning-advice)
 - [Learning outcomes](#learning-outcomes)
 - [Tasks](#tasks)
-  - [Setup (~1 hour)](#setup-1-hour)
-  - [Required tasks (~2 hours)](#required-tasks-2-hours)
-  - [Optional tasks](#optional-tasks)
+  - [Required](#required)
+  - [Optional](#optional)
 - [Additional Resources on `Git`](#additional-resources-on-git)
 
 ## Lab story
@@ -75,27 +74,19 @@ By the end of this lab, you should be able to:
 
 ## Tasks
 
-### Setup (~1 hour)
+### Required
 
-First complete the [lab setup](./lab/setup.md).
+1. [Lab setup](./lab/setup.md).
+2. [Run the service](./lab/tasks/required/task-1.md)
+3. [Identify, report, and fix a bug](./lab/tasks/required/task-2.md)
+4. [Run the service using `Docker Compose`](./lab/tasks/required/task-3.md)
 
-### Required tasks (~2 hours)
+5. [Deploy the service to the VM](./lab/tasks/required/task-4.md)
 
-For all required tasks, you must follow the same [`Git workflow`](./lab/tasks/git-workflow.md).
+### Optional
 
-1. [Practice the `Git workflow`](./lab/tasks/required/task-0.md#practice-the-git-workflow) (~15 min)
-2. [Choose a product and study its architecture](./lab/tasks/required/task-1.md#choose-a-product-and-study-its-architecture) (~30 min)
-3. [Study tech roles involved in the chosen product](./lab/tasks/required/task-2.md#study-tech-roles-involved-in-the-chosen-product) (~30 min)
-4. [Compare your tech skills with the market needs](./lab/tasks/required/task-3.md#compare-your-tech-skills-with-the-market-needs) (~30 min)
-
-### Optional tasks
-
-Complete all optional tasks to leave up to 1 hour early (lab is 3 hours):
-
-1. [Resolve a merge conflict](./lab/tasks/optional/task-1.md#resolve-a-merge-conflict).
-2. [Add a CI check](./lab/tasks/optional/task-2.md#add-a-ci-check)
-3. [Create a release](./lab/tasks/optional/task-3.md#create-a-release)
-4. [Plan skill development](./lab/tasks/optional/task-4.md#plan-skill-development)
+1. [Implement the `/outcomes` endpoint](./lab/tasks/optional/task-1.md)
+2. [Make your VM a proxy to your partner's VM](./lab/tasks/optional/task-2.md)
 
 ## Additional Resources on `Git`
 
