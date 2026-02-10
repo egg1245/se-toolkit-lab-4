@@ -98,7 +98,7 @@
 
 Complete these steps:
 
-1. Go to your fork on `GitHub`.
+1. [Go to your fork](#go-to-your-fork).
 2. Go to `Settings`.
 3. Go to `Code and automation`.
 4. Go to `Rules`.
