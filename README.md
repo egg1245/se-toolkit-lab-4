@@ -1,4 +1,4 @@
-# Lab 2 — Understand, improve, and deploy a back end service
+# Lab 2 — Understand, improve, and deploy a web server
 
 In this lab, you'll do these things:
 
