@@ -59,16 +59,6 @@ After this lab, you should be able to say:
 >
 > I know how I can grow as an IT specialist.
 
-## Tasks overview
-
-```console
-□ Setup   — fork repo (repository), find a partner
-□ Task 0  — practice git workflow
-□ Task 1  — analyze a product's architecture
-□ Task 2  — map components to tech roles
-□ Task 3  — compare your skills to market demands
-```
-
 ## Tasks
 
 ### Setup (~30 min)
