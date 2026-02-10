@@ -3,6 +3,7 @@
 - [How `Git` works - text](#how-git-works---text)
 - [How `Git` works - videos](#how-git-works---videos)
 - [Practice `Git`](#practice-git)
+- [`.gitignore`](#gitignore)
 - [`GitHub flow`](#github-flow)
 - [`Conventional Commits`](#conventional-commits)
 
@@ -24,6 +25,12 @@
 ## Practice `Git`
 
 - Practice on [Learn Git Branching](https://learngitbranching.js.org/) (focus on merge/rebase and conflicts).
+
+## `.gitignore`
+
+The `.gitignore` file allows you to specify which files shouldn't be added to the repo.
+
+Example: [`.gitignore`](../../.gitignore)
 
 ## `GitHub flow`
 
