@@ -10,6 +10,9 @@
     - [Commands for the `Command Palette`](#commands-for-the-command-palette)
   - [Options and steps](#options-and-steps)
   - [Table of contents (ToC)](#table-of-contents-toc)
+    - [ToC for a document](#toc-for-a-document)
+    - [Skip section in the ToC using `HTML`](#skip-section-in-the-toc-using-html)
+    - [Skip sections in the ToC using `Markdown All in One`](#skip-sections-in-the-toc-using-markdown-all-in-one)
   - [Little ToC](#little-toc)
     - [Little ToC for options](#little-toc-for-options)
     - [Little ToC for steps](#little-toc-for-steps)
@@ -94,10 +97,28 @@ Example (task description):
 
 ### Table of contents (ToC)
 
+#### ToC for a document
+
 Insert a ToC right after the document title so that it's easy to navigate the document.
 
 1. [Run using the `Command Palette`](./lab/appendix/vs-code.md#run-a-command-using-the-command-palette):
    `Markdown All in One: Create Table of Contents`
+
+#### Skip section in the ToC using `HTML`
+
+If you want not to add a section to the ToC, use `HTML` tags for the title of that section.
+
+Example:
+
+```markdown
+<h2>Heading 2<h2>
+```
+
+#### Skip sections in the ToC using `Markdown All in One`
+
+1. Go to [`.vscode/settings.json`](./.vscode/settings.json).
+2. Edit the setting `"markdown.extension.toc.levels"`.
+3. Specify the min and max level of heading to include into the ToC.
 
 ### Little ToC
 
