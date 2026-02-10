@@ -43,7 +43,7 @@ Docs:
 
 Secrets are values that only specific people may know such as passwords, personal tokens, private keys, etc.
 
-Secrets are sometimes stored in [`.env` files](#env-files).
+Secrets are sometimes stored in [`.env` files](#env-file).
 
 ### Unencrypted secrets
 
@@ -55,7 +55,7 @@ For example, a password can be copied to enter a site.
 
 Don't store unencrypted secrets in the repo.
 
-Don't store in the repo files (e.g., [`.env` files](#env-files)) that contain unencrypted secrets.
+Don't store in the repo files (e.g., [`.env` files](#env-file)) that contain unencrypted secrets.
 
 If you add files containing secrets to the repo, bad people may steal the secrets from your repo and hack your app.
 
