@@ -6,7 +6,7 @@
 - [Learning advice](#learning-advice)
 - [Learning outcomes](#learning-outcomes)
 - [Tasks](#tasks)
-  - [Setup (~30 min)](#setup-30-min)
+  - [Setup (~1 hour)](#setup-1-hour)
   - [Required tasks (~2 hours)](#required-tasks-2-hours)
   - [Optional tasks](#optional-tasks)
 - [Additional Resources on `Git`](#additional-resources-on-git)
@@ -75,7 +75,7 @@ By the end of this lab, you should be able to:
 
 ## Tasks
 
-### Setup (~30 min)
+### Setup (~1 hour)
 
 First complete the [lab setup](./lab/setup.md).
 
