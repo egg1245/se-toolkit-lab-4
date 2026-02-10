@@ -14,7 +14,7 @@
 - [Clone the fork on your computer](#clone-the-fork-on-your-computer)
   - [Clone the fork using the `Terminal`](#clone-the-fork-using-the-terminal)
   - [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
-- [Open the repo in `VS Code`](#open-the-repo-in-vs-code)
+- [Open the cloned repo in `VS Code`](#open-the-cloned-repo-in-vs-code)
 - [Set up `VS Code` extensions](#set-up-vs-code-extensions)
 - [Reload `VS Code`](#reload-vs-code)
 - [Explore `VS Code` layout](#explore-vs-code-layout)
@@ -189,7 +189,7 @@ Clone the fork using any of the following methods:
 8. You should choose `software-engineering-toolkit` that you created before.
 9. Confirm the choice.
 
-## Open the repo in `VS Code`
+## Open the cloned repo in `VS Code`
 
 1. [Run using the `Command Palette`](../lab/appendix/vs-code.md#run-a-command-using-the-command-palette): `File: Open Folder...`.
 2. Choose the directory `lab-01-market-product-and-git` that is a clone of your fork.
