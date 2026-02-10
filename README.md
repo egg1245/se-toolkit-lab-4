@@ -1,4 +1,4 @@
-# Lab 1 – Product architecture, tech roles, and your skills
+# Lab 2 — Understand, improve, and deploy a back end service
 
 Questions:
 
