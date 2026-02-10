@@ -76,14 +76,12 @@ By the end of this lab, you should be able to:
 ### Required
 
 1. [Lab setup](./lab/setup.md).
-2. [Run the service](./lab/tasks/required/task-1.md)
+2. [Run the web server](./lab/tasks/required/task-1.md)
 3. [Identify, report, and fix a bug](./lab/tasks/required/task-2.md)
-4. [Run the service using `Docker Compose`](./lab/tasks/required/task-3.md)
-
-5. [Deploy the service to the VM](./lab/tasks/required/task-4.md)
+4. [Run the web server using `Docker Compose`](./lab/tasks/required/task-3.md)
+5. [Deploy the web server to the VM](./lab/tasks/required/task-4.md)
 
 ### Optional
 
 1. [Implement the `/outcomes` endpoint](./lab/tasks/optional/task-1.md)
 2. [Make your VM a proxy to your partner's VM](./lab/tasks/optional/task-2.md)
-
