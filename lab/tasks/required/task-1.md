@@ -18,7 +18,7 @@ Then, you can check whether the web server works before the web server is deploy
 - [Steps](#steps)
   - [1. Create an issue](#1-create-an-issue)
   - [2. Learn about environments](#2-learn-about-environments)
-  - [3. View the file `.env.no-docker.example`](#3-view-the-file-envno-dockerexample)
+  - [3. View the file `.env.example`](#3-view-the-file-envexample)
   - [4. Create the file `.env.secret`](#4-create-the-file-envsecret)
   - [5. View the file `.env.secret`](#5-view-the-file-envsecret)
   - [6. Use a free `$PORT`](#6-use-a-free-port)
@@ -45,16 +45,16 @@ Read the following sections:
 1. [Environment variables](../../appendix/environments.md#environment-variables)
 2. [`.env` file](../../appendix/environments.md#env-file)
 
-### 3. View the file `.env.no-docker.example`
+### 3. View the file `.env.example`
 
-1. [Open the file using the `Command Palette`](../../appendix/vs-code.md#open-a-file-using-the-command-palette): [`.env.no-docker.example`](../../../.env.no-docker.example).
+1. [Open the file using the `Command Palette`](../../appendix/vs-code.md#open-a-file-using-the-command-palette): [`.env.example`](../../../.env.example).
 
 ### 4. Create the file `.env.secret`
 
 1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
 
    ```terminal
-   cp .env.no-docker.example .env.secret
+   cp .env.example .env.secret
    ```
 
 ### 5. View the file `.env.secret`
@@ -75,7 +75,7 @@ Method 1:
 
 Method 2:
 
-1. [Open the file using the `Command Palette`](../../appendix/vs-code.md#open-a-file-using-the-command-palette): [`.env.secret`](../../../.env.no-docker.example).
+1. [Open the file using the `Command Palette`](../../appendix/vs-code.md#open-a-file-using-the-command-palette): [`.env.secret`](../../../.env.example).
 
 ### 6. Use a free `$PORT`
 
