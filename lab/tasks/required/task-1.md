@@ -170,7 +170,7 @@ Method 2:
 
 The server has stopped. Therefore, it should not respond to requests.
 
-[Check `/status`](#check-status) again to ensure that.
+[Check `/status`](#8-check-status) again to ensure that.
 
 You shouldn't see the response that you got before.
 
