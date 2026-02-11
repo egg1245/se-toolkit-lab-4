@@ -27,8 +27,8 @@ Then, you can check whether the web server works before the web server is deploy
   - [Check `/status` using `curl`](#check-status-using-curl)
 - [9. Stop the web server](#9-stop-the-web-server)
 - [10. Force stop the web server](#10-force-stop-the-web-server)
-- [Check `/status` again](#check-status-again)
-- [Write a comment for the issue](#write-a-comment-for-the-issue)
+- [11. Check `/status` again](#11-check-status-again)
+- [12. Write a comment for the issue](#12-write-a-comment-for-the-issue)
 - [Acceptance criteria](#acceptance-criteria)
 
 ## 1. Create an issue
@@ -166,7 +166,7 @@ Method 2:
 2. Confirm suggested actions.
 3. Rerun in the `Terminal` the command provided above until you see something like `Port 42000 is free`.
 
-## Check `/status` again
+## 11. Check `/status` again
 
 The server has stopped. Therefore, it should not respond to requests.
 
@@ -174,7 +174,7 @@ The server has stopped. Therefore, it should not respond to requests.
 
 You shouldn't see the response that you got before.
 
-## Write a comment for the issue
+## 12. Write a comment for the issue
 
 1. Go to the issue that you created for this task.
 2. Scroll down.
