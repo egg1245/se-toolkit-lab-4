@@ -51,7 +51,8 @@ Complete these steps to create a VM:
 11. `NEW PASSWORD`: Write the password.
 12. `CONFIRM`: Write the same password.
 13. `ADMINISTRATOR SSH KEY`:
-      1. Paste here the public key.
+      1. [Find the `SSH` key files](./ssh.md#find-the-ssh-key-files).
+      2. Paste here the public key.
 14. Note that the user's name on the VM is `root`.
 15. Click `->` to go to the page 3.
 16. Go to `NETWORK ADAPTER 1`.
