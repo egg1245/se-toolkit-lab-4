@@ -12,8 +12,8 @@
   - [9. Protect your `main` branch](#9-protect-your-main-branch)
   - [10. Install `Git`](#10-install-git)
   - [11. Install `VS Code`](#11-install-vs-code)
-  - [12. (Windows only) Set the default shell](#12-windows-only-set-the-default-shell)
-  - [13. Open the `Terminal`](#13-open-the-terminal)
+  - [12. (Optional, `Windows` only) Install WSL](#12-optional-windows-only-install-wsl)
+  - [13. (Windows only) Set the default shell](#13-windows-only-set-the-default-shell)
   - [14. Configure `Git`](#14-configure-git)
   - [15. Open `VS Code` in the `software-engineering-toolkit` directory](#15-open-vs-code-in-the-software-engineering-toolkit-directory)
   - [16. Copy your fork URL](#16-copy-your-fork-url)
@@ -143,18 +143,21 @@ Complete these steps:
 
 2. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
 
-### 12. (Windows only) Set the default shell
+### 12. (Optional, `Windows` only) Install WSL
 
-1. Go to [`.vscode/settings.json`](../.vscode/settings.json).
-2. If you have `WSL` installed: write there the [setting](https://code.visualstudio.com/docs/terminal/profiles#_wsl) for `WSL`.
-3. If you don't have `WSL` installed:
-   1. Find the line `// Uncomment to set Git Bash as the default shell.`.
-   2. Under that line, [uncomment](./appendix/vs-code.md#basic-layout) the `"terminal.integrated.defaultProfile.windows"` and `"terminal.integrated.profiles.windows"` settings.
+[Install WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
-### 13. Open the `Terminal`
+### 13. (Windows only) Set the default shell
 
-1. Open `VS Code`.
-2. [Open the Terminal](./appendix/vs-code.md#open-the-terminal).
+1. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
+   `Terminal: Select Default Profile`
+2. Select `WSL Bash` if available.
+3. Otherwise, select `Git Bash` if available.
+4. If none of them are available, ask the TA to help you.
+5. Otherwise, [open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
+6. You should see `bash` there:
+
+   <img alt="Terminal Bash" src="./images/appendix/vs-code/terminal-bash.png" style="width:400px"></img>
 
 ### 14. Configure `Git`
 
