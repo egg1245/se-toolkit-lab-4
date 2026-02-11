@@ -26,14 +26,14 @@
   - [21. Explore `VS Code` layout](#21-explore-vs-code-layout)
   - [22. Open `README.md`](#22-open-readmemd)
   - [23. Open `Markdown` preview](#23-open-markdown-preview)
-  - [24. Change the workspace settings](#24-change-the-workspace-settings)
-  - [25. Continue creating a VM](#25-continue-creating-a-vm)
+  - [24. Continue creating a VM](#24-continue-creating-a-vm)
 - [Optional steps](#optional-steps)
-  - [1. Set up a coding agent](#1-set-up-a-coding-agent)
-  - [2. Set up the shell prompt](#2-set-up-the-shell-prompt)
-  - [3. Customize the `Source Control`](#3-customize-the-source-control)
-  - [4. Get familiar with `GitLens`](#4-get-familiar-with-gitlens)
-  - [5. Create a label for tasks](#5-create-a-label-for-tasks)
+  - [1. Change the workspace settings](#1-change-the-workspace-settings)
+  - [2. Set up a coding agent](#2-set-up-a-coding-agent)
+  - [3. Set up the shell prompt](#3-set-up-the-shell-prompt)
+  - [4. Customize the `Source Control`](#4-customize-the-source-control)
+  - [5. Get familiar with `GitLens`](#5-get-familiar-with-gitlens)
+  - [6. Create a label for tasks](#6-create-a-label-for-tasks)
     - [Create the `task` label](#create-the-task-label)
     - [Add the label to issues](#add-the-label-to-issues)
     - [See all issues with the label](#see-all-issues-with-the-label)
@@ -299,12 +299,7 @@ Method 2:
 
    `Markdown: Open Preview to the Side`
 
-### 24. Change the workspace settings
-
-1. Go to the [workspace settings](./appendix/vs-code.md#workspace-settings).
-2. Change them as necessary.
-
-### 25. Continue creating a VM
+### 24. Continue creating a VM
 
 [Create a VM using the subscription](./appendix/vm.md#create-a-vm-using-the-subscription).
 
@@ -314,19 +309,25 @@ Method 2:
 
 These enhancements can make your life easier:
 
-- [1. Set up a coding agent](#1-set-up-a-coding-agent)
-- [2. Set up the shell prompt](#2-set-up-the-shell-prompt)
-- [3. Customize the `Source Control`](#3-customize-the-source-control)
-- [4. Get familiar with `GitLens`](#4-get-familiar-with-gitlens)
-- [5. Create a label for tasks](#5-create-a-label-for-tasks)
+- [1. Change the workspace settings](#1-change-the-workspace-settings)
+- [2. Set up a coding agent](#2-set-up-a-coding-agent)
+- [3. Set up the shell prompt](#3-set-up-the-shell-prompt)
+- [4. Customize the `Source Control`](#4-customize-the-source-control)
+- [5. Get familiar with `GitLens`](#5-get-familiar-with-gitlens)
+- [6. Create a label for tasks](#6-create-a-label-for-tasks)
 
-### 1. Set up a coding agent
+### 1. Change the workspace settings
+
+1. Go to the [workspace settings](./appendix/vs-code.md#workspace-settings).
+2. Change them as necessary.
+
+### 2. Set up a coding agent
 
 A coding agent can help you write code, explain concepts, and debug issues.
 
 See [Coding agents](./appendix/coding-agents.md).
 
-### 2. Set up the shell prompt
+### 3. Set up the shell prompt
 
 `Starship` shows your current `Git` branch, status, and other useful info directly in your [shell prompt](https://en.wikibooks.org/wiki/Guide_to_Unix/Explanations/Shell_Prompt) in almost any terminal, including the [`Terminal`](./appendix/vs-code.md#terminal).
 
@@ -336,7 +337,7 @@ Complete these steps:
 2. [Open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
 3. You should see something like `se-toolkit-lab-2 on main`.
 
-### 3. Customize the `Source Control`
+### 4. Customize the `Source Control`
 
 1. [Open the `Source Control`](./appendix/vs-code.md#open-the-source-control).
 2. Click three dots to the right of `SOURCE CONTROL`.
@@ -344,7 +345,7 @@ Complete these steps:
 
    <img alt="Changes and GitLens" src="./images/appendix/vs-code/source-control-allowed-views.png" style="width:400px"></img>
 
-### 4. Get familiar with `GitLens`
+### 5. Get familiar with `GitLens`
 
 [`GitLens`](./appendix/gitlens.md) helps you work with `Git` in `VS Code`.
 
@@ -355,7 +356,7 @@ Complete these steps:
 3. [Inspect the current branch](./appendix/gitlens.md#inspect-the-current-branch)
 4. [Inspect the remotes](./appendix/gitlens.md#inspect-the-remotes)
 
-### 5. Create a label for tasks
+### 6. Create a label for tasks
 
 [Labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) help you filter and organize issues.
 
