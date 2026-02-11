@@ -13,9 +13,9 @@
   - [10. Install `Git`](#10-install-git)
   - [11. Install `VS Code`](#11-install-vs-code)
   - [12. (Optional, `Windows` only) Install WSL](#12-optional-windows-only-install-wsl)
-  - [13. (Windows only) Set the default shell](#13-windows-only-set-the-default-shell)
-  - [14. Configure `Git`](#14-configure-git)
-  - [15. Open `VS Code` in the `software-engineering-toolkit` directory](#15-open-vs-code-in-the-software-engineering-toolkit-directory)
+  - [13. Open `VS Code` in the `software-engineering-toolkit` directory](#13-open-vs-code-in-the-software-engineering-toolkit-directory)
+  - [14. (Windows only) Set the default shell](#14-windows-only-set-the-default-shell)
+  - [15. Configure `Git`](#15-configure-git)
   - [16. Copy your fork URL](#16-copy-your-fork-url)
   - [17. Clone the fork on your computer](#17-clone-the-fork-on-your-computer)
     - [Clone the fork using the `Terminal`](#clone-the-fork-using-the-terminal)
@@ -147,7 +147,19 @@ Complete these steps:
 
 [Install WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
 
-### 13. (Windows only) Set the default shell
+### 13. Open `VS Code` in the `software-engineering-toolkit` directory
+
+1. On your computer, create somewhere a directory `software-engineering-toolkit` (e.g., on your `Desktop`).
+2. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
+   `File: Open Folder...`
+3. Find the `software-engineering-toolkit` directory that you created.
+4. Open this directory.
+5. `VS Code` should now open in that directory.
+6. [Open `Folders`](./appendix/vs-code.md#open-folders).
+7. Look at `FOLDERS`.
+8. You should see `SOFTWARE-ENGINEERING-TOOLKIT` there.
+
+### 14. (Windows only) Set the default shell
 
 1. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
    `Terminal: Select Default Profile`
@@ -159,7 +171,7 @@ Complete these steps:
 
    <img alt="Terminal Bash" src="./images/appendix/vs-code/terminal-bash.png" style="width:400px"></img>
 
-### 14. Configure `Git`
+### 15. Configure `Git`
 
 > [!IMPORTANT]
 > Replace `<your-name>` with a name and `<your-email>` with an email that you want to see in the commits.
@@ -180,18 +192,6 @@ Complete these steps:
      ```
 
      Example: `git config --global user.name 'johndoe@gmail.com'`
-
-### 15. Open `VS Code` in the `software-engineering-toolkit` directory
-
-1. On your computer, create somewhere a directory `software-engineering-toolkit` (e.g., on your `Desktop`).
-2. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
-   `File: Open Folder...`
-3. Find the `software-engineering-toolkit` directory that you created.
-4. Open this directory.
-5. `VS Code` should now open in that directory.
-6. [Open `Folders`](./appendix/vs-code.md#open-folders).
-7. Look at `FOLDERS`.
-8. You should see `SOFTWARE-ENGINEERING-TOOLKIT` there.
 
 ### 16. Copy your fork URL
 
