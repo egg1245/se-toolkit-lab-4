@@ -36,6 +36,7 @@
     - [Shortcut: Switch to the previous editor](#shortcut-switch-to-the-previous-editor)
     - [Shortcut: Search in the current editor](#shortcut-search-in-the-current-editor)
     - [Shortcut: Search in all files](#shortcut-search-in-all-files)
+    - [Shortcut: Toggle line comment](#shortcut-toggle-line-comment)
 - [Workspace settings](#workspace-settings)
   - [Change the workspace settings](#change-the-workspace-settings)
 
@@ -321,6 +322,10 @@ Keyboard shortcuts for various commands.
 #### Shortcut: Search in all files
 
 `Ctrl+Shift+F` (`Cmd+Shift+F` on `macOS`) - search in all files.
+
+#### Shortcut: Toggle line comment
+
+`Ctrl+/` (`Cmd+/` on `macOS`)
 
 ## Workspace settings
 
