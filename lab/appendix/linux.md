@@ -2,12 +2,7 @@
 
 ## Shell
 
-### `bash`
+## Port
 
 > [!NOTE]
-> On `Windows`, you can run `bash` commands using one of the following options:
->
-> - Using the `Git Bash`.
-> - Using the `WSL`.
-
-## Port
+> `Windows` and `macOS` also have ports.
