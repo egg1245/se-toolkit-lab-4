@@ -81,7 +81,7 @@ Complete these steps to create a VM:
 
 1. Connect your computer to the `Wi-Fi` network `UniversityStudent`.
 2. Open `VS Code`.
-3. [Run using the `Terminal`](./lab-1/lab/appendix/vs-code.md#run-a-command-using-the-terminal):
+3. [Run using the `Terminal`](./vs-code.md#run-a-command-using-the-terminal):
 
     ```terminal
     ssh -i path/to/the/key root@<your-vm-ip-address>
