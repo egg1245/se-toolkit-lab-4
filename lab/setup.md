@@ -335,7 +335,7 @@ Complete these steps:
 
 1. Install [`Starship`](https://github.com/starship/starship#-installation).
 2. [Open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
-3. You should see something like `se-toolkit-lab-2 on main`.
+3. You should see something similar to `se-toolkit-lab-2 on main`.
 
 ### 4. Customize the `Source Control`
 
