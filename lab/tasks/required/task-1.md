@@ -123,10 +123,10 @@ Method 2:
 
 <!-- TODO add check status using the /docs -->
 
-## Stop the web server
+## 8. Stop the web server
 
 1. [Switch to the old `Terminal`](../../appendix/vs-code.md#switch-to-another-terminal) where the web server runs.
-2. Run the key shortcut that you saw when running the server to stop the server.
+2. Press the key shortcut that you saw when running the server to stop the server.
 
 ## Check `/status` again
 
