@@ -1,4 +1,4 @@
-# Lab 2 — Understand, improve, and deploy a web server
+# Lab 2 — Backend - run locally, fix a bug, deploy on a server
 
 <h2>Table of contents</h2>
 
@@ -16,9 +16,7 @@ You were hired by a company that develops a novel e-learning system.
 
 The system recommends educational resources to students.
 
-You have joined a [back end](https://roadmap.sh/backend) team in that company.
-
-Your team is working on a read-only service called **Course Materials Service**.
+You joined a [back end](https://roadmap.sh/backend) team working on a service called **Course Materials Service**.
 
 The service is implemented using the [`FastAPI`](https://fastapi.tiangolo.com/) framework in [`Python`](https://www.python.org/).
 
@@ -28,32 +26,28 @@ For simplicity, the service uses data stored is [`JSON`](https://en.wikipedia.or
 
 A senior engineer explains your first assignment:
 
-> Before we give you bigger features, you need to show you can:
->
-> 1. Run our back end service on your machine.
+> 1. Run our service on your machine.
 > 2. Verify that it’s working: query the `/status` endpoint.
 > 3. Investigate and fix a bug in the `/items` endpoint.
-> 4. Deploy your updated service to a remote `Linux` server.
+> 4. Deploy the service to a remote `Linux` server.
 >
-> We expect that you'll communicate through issues and PRs and deliver a working deployment.
+> Communicate through issues and PRs and deliver a working deployment.
 
 ## Learning advice
 
-You need to read the lab tasks and docs to understand them. Do what you can by yourself.
+Read the tasks and complete them by yourself.
 
-When stuck or unsure, feel free to ask an LLM:
+When stuck or unsure, ask an LLM:
 
 > Give me directions on how to solve this task. I want to maximize learning.
 
-You can also ask LLMs to explain the logic behind tasks if you don't understand it. Example:
+> Why is this task important? What exactly do I need to do?
 
-> Why is this task important? What exactly do they want to teach me?
+Provide enough context by giving it the whole file, not one or two lines.
 
-Remember: Use LLMs as a tool to enhance your understanding, not replace it.
+Remember: Use the LLM to enhance your understanding, not replace it.
 
-Always critically evaluate the information provided by LLMs.
-
-Verify this information against credible sources such as official documentation, course materials, and what you observe in reality.
+Evaluate LLM answers critically, and verify them against credible sources such as official documentation, course materials, and what you observe in reality.
 
 ## Learning outcomes
 
@@ -71,6 +65,12 @@ By the end of this lab, you should be able to:
 - Submit a fix of the bug as a PR.
 - Deploy the fixed web server to a remote `Linux` virtual machine (VM).
 - Test the deployed web server.
+
+In simple words, you should be able to say:
+>
+> 1. I ran a backend server locally on my computer and it worked!
+> 2. I found and fixed a bug and the tests passed!
+> 3. I deployed the service on a remote server and made it available to others!
 
 ## Tasks
 
