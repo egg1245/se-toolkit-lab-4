@@ -2,9 +2,13 @@
 
 - [Docs design principles](#docs-design-principles)
   - [Instructions](#instructions)
+    - [Vendor instructions](#vendor-instructions)
     - [Fallback instructions](#fallback-instructions)
-    - [Compound instructions](#compound-instructions)
     - [Localize the instructions](#localize-the-instructions)
+    - [Instructions wording](#instructions-wording)
+      - [Split compound instructions](#split-compound-instructions)
+      - [Finish complete sentences with a `.`](#finish-complete-sentences-with-a-)
+        - [Use instructions wording consistently](#use-instructions-wording-consistently)
   - [Commands in `VS Code`](#commands-in-vs-code)
     - [Commands for the `Terminal`](#commands-for-the-terminal)
     - [Commands for the `Command Palette`](#commands-for-the-command-palette)
@@ -24,6 +28,8 @@
 
 ### Instructions
 
+#### Vendor instructions
+
 Vendor the instructions that aren't good enough anywhere else.
 
 #### Fallback instructions
@@ -34,9 +40,21 @@ One method to complete a step may not work.
 
 A student will be able to proceed if another method is available.
 
-#### Compound instructions
+#### Localize the instructions
 
-Split compound instructions.
+Provide instructions where they're easy to keep in mind.
+
+Example (task description):
+
+```markdown
+## 0. Follow the `Git Workflow`
+
+## 1. Create an issue
+```
+
+#### Instructions wording
+
+##### Split compound instructions
 
 Example of a compound instruction:
 
@@ -51,17 +69,21 @@ Example of a fixed instruction:
 2. Do B.
 ```
 
-#### Localize the instructions
+##### Finish complete sentences with a `.`
 
-Provide instructions where they're easy to keep in mind.
-
-Example (task description):
+Example:
 
 ```markdown
-## 0. Follow the `Git Workflow`
-
-## 1. Create an issue
+1. Do A.
+2. Do B.
 ```
+
+###### Use instructions wording consistently
+
+- Navigate somewhere: `Go to X.`
+- Click something: `Click X`.
+- Choose an option: `Use any of the following methods:` (note "following").
+- Complete all steps: `Complete the following steps:` (note "following").
 
 ### Commands in `VS Code`
 
