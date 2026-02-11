@@ -97,7 +97,8 @@ Method 2:
    1. It's probably the web server running if you tried running it before.
    2. You can safely [force stop it](#10-force-stop-the-web-server).
 4. Otherwise:
-   1. Go to the `.env.secret` file.
+   1. [Open the file using the `Command Palette`](../../appendix/vs-code.md#open-a-file-using-the-command-palette):
+      `.env.secret`
    2. Write another value for `PORT`, e.g., `41000`.
    3. Inspect what's running on the new `$PORT` (`41000`) as explained above.
 
