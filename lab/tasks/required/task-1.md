@@ -21,11 +21,11 @@ Then, you can check whether the web server works before the web server is deploy
 - [4. Create the file `.env.secret`](#4-create-the-file-envsecret)
 - [5. View the file `.env.secret`](#5-view-the-file-envsecret)
 - [6. Use a free `$PORT`](#6-use-a-free-port)
-- [6. Run the web server using `uv` and `poe`](#6-run-the-web-server-using-uv-and-poe)
-- [7. Check `/status`](#7-check-status)
+- [7. Run the web server using `uv` and `poe`](#7-run-the-web-server-using-uv-and-poe)
+- [8. Check `/status`](#8-check-status)
   - [Check `/status` using a browser](#check-status-using-a-browser)
   - [Check `/status` using `curl`](#check-status-using-curl)
-- [Stop the web server](#stop-the-web-server)
+- [9. Stop the web server](#9-stop-the-web-server)
 - [Check `/status` again](#check-status-again)
 - [Write a comment for the issue](#write-a-comment-for-the-issue)
 - [Acceptance criteria](#acceptance-criteria)
@@ -97,7 +97,7 @@ Method 2:
    2. Write another value for `PORT`, e.g., `41000`.
    3. Inspect what's running on the new `$PORT` (`41000`) as explained above.
 
-## 6. Run the web server using `uv` and `poe`
+## 7. Run the web server using `uv` and `poe`
 
 > [!NOTE]
 > [`poe`](https://poethepoet.natn.io/) can run tasks
@@ -114,7 +114,7 @@ Method 2:
 > [!NOTE]
 > You will see in the output a key shortcut to stop the server such as `Ctrl+C`.
 
-## 7. Check `/status`
+## 8. Check `/status`
 
 > [!NOTE]
 > `/status` is an [endpoint](../../appendix/web-development.md#endpoint) of the web server.
@@ -148,7 +148,7 @@ Method 2:
 
 <!-- TODO add check status using the /docs -->
 
-## 8. Stop the web server
+## 9. Stop the web server
 
 1. [Switch to the old `Terminal`](../../appendix/vs-code.md#switch-to-another-terminal) where the web server runs.
 2. Press the key shortcut that you saw when running the server to stop the server.
