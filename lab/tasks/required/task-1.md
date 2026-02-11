@@ -182,6 +182,8 @@ You shouldn't see the response that you got before.
 4. Write one of the responses that you got when the web server was running.
 5. Click `Close with comment`.
 
+---
+
 ## Acceptance criteria
 
 - [ ] Issue has the correct title
