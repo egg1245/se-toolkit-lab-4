@@ -3,7 +3,7 @@
 - [Docs design principles](#docs-design-principles)
   - [Instructions](#instructions)
     - [Vendor instructions](#vendor-instructions)
-    - [Fallback instructions](#fallback-instructions)
+    - [Provide fallback instructions](#provide-fallback-instructions)
     - [Localize the instructions](#localize-the-instructions)
     - [Instructions wording](#instructions-wording)
       - [Split compound instructions](#split-compound-instructions)
@@ -32,9 +32,7 @@
 
 Vendor the instructions that aren't good enough anywhere else.
 
-#### Fallback instructions
-
-Have fallback instructions.
+#### Provide fallback instructions
 
 One method to complete a step may not work.
 
