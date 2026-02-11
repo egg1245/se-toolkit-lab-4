@@ -1,5 +1,12 @@
 # `SSH`
 
+- [`SSH` and shells](#ssh-and-shells)
+- [Create a new `SSH` key (custom location)](#create-a-new-ssh-key-custom-location)
+- [Find the `SSH` key files](#find-the-ssh-key-files)
+- [Add host to the `SSH` config](#add-host-to-the-ssh-config)
+- [Start the `ssh-agent`](#start-the-ssh-agent)
+- [Connect to the VM](#connect-to-the-vm)
+
 ## `SSH` and shells
 
 `Secure Shell` (`SSH`) is a protocol used to securely connect to remote servers.
