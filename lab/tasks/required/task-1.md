@@ -127,6 +127,7 @@ Method 2:
 
 1. [Switch to the old `Terminal`](../../appendix/vs-code.md#switch-to-another-terminal) where the web server runs.
 2. Press the key shortcut that you saw when running the server to stop the server.
+3. You should see `INFO:     Waiting for application shutdown.`
 
 ## Check `/status` again
 
