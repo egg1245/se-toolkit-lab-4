@@ -26,6 +26,7 @@ Then, you can check whether the web server works before the web server is deploy
   - [Check `/status` using a browser](#check-status-using-a-browser)
   - [Check `/status` using `curl`](#check-status-using-curl)
 - [9. Stop the web server](#9-stop-the-web-server)
+- [10. Force stop the web server](#10-force-stop-the-web-server)
 - [Check `/status` again](#check-status-again)
 - [Write a comment for the issue](#write-a-comment-for-the-issue)
 - [Acceptance criteria](#acceptance-criteria)
@@ -91,7 +92,7 @@ Method 2:
 2. You should see something like `Port 42000 is free`.
 3. If you see `Process: python3`:
    1. It's probably the web server running if you tried running it before.
-   2. You can safely [force stop it](#9-force-stop-the-web-server).
+   2. You can safely [force stop it](#10-force-stop-the-web-server).
 4. Otherwise:
    1. Go to the `.env.secret` file.
    2. Write another value for `PORT`, e.g., `41000`.
@@ -153,6 +154,17 @@ Method 2:
 1. [Switch to the old `Terminal`](../../appendix/vs-code.md#switch-to-another-terminal) where the web server runs.
 2. Press the key shortcut that you saw when running the server to stop the server.
 3. You should see `INFO:     Waiting for application shutdown.`
+
+## 10. Force stop the web server
+
+1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+
+   ```terminal
+   uv run --env-file .env.secret bash -c 'kport kill $PORT'
+   ```
+
+2. Confirm suggested actions.
+3. Rerun in the `Terminal` the command provided above until you see something like `Port 42000 is free`.
 
 ## Check `/status` again
 
