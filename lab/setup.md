@@ -202,7 +202,7 @@ Clone the fork using any of the following methods:
 #### Clone the fork using the `Terminal`
 
 1. [Open the `Terminal`](./appendix/vs-code.md#open-the-terminal).
-2. You should see `software-engineering-toolkit` as your current directory.
+2. You should see `software-engineering-toolkit` as your [current working directory](./appendix/shell.md#current-working-directory).
 3. [Run using the `Terminal`](./appendix/vs-code.md#run-a-command-using-the-terminal):
 
    ```terminal
