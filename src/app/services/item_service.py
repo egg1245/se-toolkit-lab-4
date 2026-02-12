@@ -238,7 +238,7 @@ def get_item_by_id_dfs_recursive[T: Item](
                 case _:
                     pass
 
-    get_item_by_id_dfs_recursive_(items=items, item_id=item_id, order=order)
+    return get_item_by_id_dfs_recursive_(items=items, item_id=item_id, order=order)
 
 
 # ===
