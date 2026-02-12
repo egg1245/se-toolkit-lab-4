@@ -22,7 +22,7 @@ Then, you can check whether the web server works before the web server is deploy
   - [4. Create the file `.env.secret`](#4-create-the-file-envsecret)
   - [5. View the file `.env.secret`](#5-view-the-file-envsecret)
   - [6. Use a free `$PORT`](#6-use-a-free-port)
-  - [7. Run the web server using `uv` and `poe`](#7-run-the-web-server-using-uv-and-poe)
+  - [7. Run the web server](#7-run-the-web-server)
   - [8. Check `/status`](#8-check-status)
     - [Check `/status` using a browser](#check-status-using-a-browser)
     - [Check `/status` using `curl`](#check-status-using-curl)
@@ -102,7 +102,7 @@ Method 2:
    2. Write another value for `PORT`, e.g., `41000`.
    3. Inspect what's running on the new `$PORT` (`41000`) as explained above.
 
-### 7. Run the web server using `uv` and `poe`
+### 7. Run the web server
 
 > [!NOTE]
 > [`poe`](https://poethepoet.natn.io/) can run tasks
