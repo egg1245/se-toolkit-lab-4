@@ -14,6 +14,7 @@
   - [Open the `Command Palette`](#open-the-command-palette)
   - [Run a command using the `Command Palette`](#run-a-command-using-the-command-palette)
   - [Open a file using the `Command Palette`](#open-a-file-using-the-command-palette)
+  - [Select an option from a drop-down menu](#select-an-option-from-a-drop-down-menu)
 - [`VS Code Terminal`](#vs-code-terminal)
   - [Open the `VS Code Terminal`](#open-the-vs-code-terminal)
   - [Close the `VS Code Terminal`](#close-the-vs-code-terminal)
@@ -171,6 +172,17 @@ Actions:
 2. Start typing the name of the file.
 3. Select a file (move the cursor via `UpArrow` and `DownArrow` on your keyboard).
 4. Press `Enter`.
+
+### Select an option from a drop-down menu
+
+Method 1:
+
+1. Click the option.
+
+Method 2:
+
+1. Change the highlighted option using `UpArrow` and `DownArrow` on your keyboard.
+2. Press `Enter` to confirm the option.
 
 ## `VS Code Terminal`
 
