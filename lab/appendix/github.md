@@ -19,6 +19,7 @@
     - [Open the PR editor using `Pull requests`](#open-the-pr-editor-using-pull-requests)
     - [Open the PR editor using the branch list](#open-the-pr-editor-using-the-branch-list)
   - [Finish creating a PR](#finish-creating-a-pr)
+- [`GitHub Projects`](#github-projects)
 
 ## The `GitHub` site
 
@@ -134,3 +135,22 @@ If you see the `Compare & pull request` button, click it.
 5. Click `Create pull request`.
 
 <!-- TODO Click Markdown code block to copy -->
+
+## `GitHub Projects`
+
+<!-- TODO structure better and simplify -->
+
+`GitHub Projects` is a project management tool integrated directly into `GitHub` that helps you plan, track, and manage your work. With `GitHub Projects`, you can create boards to organize [issues](#issue), [pull requests](#pull-request-pr), and notes in a customizable workflow.
+
+Key features of `GitHub Projects` include:
+
+- **Boards**: Visual Kanban-style boards to track work items across different stages (e.g., To Do, In Progress, Done)
+- **Automation**: Built-in automation rules to move items between columns based on status changes
+- **Views**: Multiple view options including board, table, and roadmap views
+- **Integration**: Direct integration with issues and pull requests in your repositories
+- **Custom fields**: Ability to add custom fields to track additional information like priority, team, or estimates
+- **Templates**: Pre-built templates for common workflows like Agile, Scrum, or basic task tracking
+
+`GitHub Projects` can be scoped to a single repository or span multiple repositories, making it ideal for managing work across entire organizations or teams.
+
+You can use Projects to plan sprints, track bug fixes, manage feature development, or coordinate any other collaborative work.
