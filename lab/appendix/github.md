@@ -2,6 +2,7 @@
 
 <h2>Table of contents</h2>
 
+- [`GitHub flow`](#github-flow)
 - [The `GitHub` site](#the-github-site)
 - [Repository](#repository)
 - [Fork](#fork)
@@ -20,6 +21,13 @@
     - [Open the PR editor using the branch list](#open-the-pr-editor-using-the-branch-list)
   - [Finish creating a PR](#finish-creating-a-pr)
 - [`GitHub Projects`](#github-projects)
+
+## `GitHub flow`
+
+`GitHub` flow is a process for organizing the work on a repository.
+It can be used both by individual developers and teams.
+
+See [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow).
 
 ## The `GitHub` site
 
@@ -48,15 +56,16 @@ When you fork a repository on `GitHub`, you create a personal copy under your `G
 
 ## Create an issue
 
-1. Go to the repo on [`GitHub`](#the-github-site).
-2. Click `Issues`.
+1. Go to [`GitHub`](#the-github-site).
+2. Go to the repo where you want to create an issue.
+3. Click `Issues`.
 
    <img alt="GitHub Issues" src="../images/appendix/github/issues.png" style="width:400px"></img>
-3. Click `New Issue`.
-4. Click one of the suggested [issue forms](#issue-form).
-5. In the `Add a title` input field, edit the title.
-6. Fill out other input fields.
-7. Click `Create`.
+4. Click `New Issue`.
+5. Click one of the suggested [issue forms](#issue-form).
+6. In the `Add a title` input field, edit the title.
+7. Fill out other input fields.
+8. Click `Create`.
 
 ## Issue form
 
