@@ -2,6 +2,14 @@
 
 `Linux` is a family of operating systems commonly used for servers and virtual machines.
 
+- [`bash`](#bash)
+- [Users and permissions](#users-and-permissions)
+- [Create a non-root user](#create-a-non-root-user)
+- [Port](#port)
+  - [See listening TCP ports](#see-listening-tcp-ports)
+  - [Inspect a specific port](#inspect-a-specific-port)
+  - [Troubleshooting](#troubleshooting)
+
 ## `bash`
 
 Many setup and deployment commands are run in a shell, often `bash`.
