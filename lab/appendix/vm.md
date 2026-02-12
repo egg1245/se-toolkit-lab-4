@@ -1,5 +1,6 @@
 # VM
 
+- [What is a VM](#what-is-a-vm)
 - [Your VM](#your-vm)
 - [Create a VM](#create-a-vm)
   - [Create a subscription](#create-a-subscription)
@@ -8,6 +9,10 @@
 - [Get the `IP address` of the VM](#get-the-ip-address-of-the-vm)
 - [Connect to the VM](#connect-to-the-vm)
 - [Troubleshooting](#troubleshooting)
+
+## What is a VM
+
+<!-- TODO -->
 
 ## Your VM
 
