@@ -78,17 +78,19 @@ If you plan to log in via `SSH` as that user, copy `authorized_keys` to the new 
 A `port` is a numbered communication endpoint on a host.
 Web servers usually listen on specific TCP ports such as `80`, `443`, or custom ports like `42000`.
 
-See listening TCP ports:
+### See listening TCP ports
 
 ```terminal
 ss -ltn
 ```
 
-Inspect a specific port (example: `42000`):
+### Inspect a specific port
 
 ```terminal
 ss -ltn 'sport = :42000'
 ```
+
+### Troubleshooting
 
 If your service should be running but a request fails, verify both:
 
