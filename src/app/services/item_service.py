@@ -15,6 +15,8 @@ from app.models.item import Item, Course, Lab, Task, Step
 #
 # This module demonstrates the basics of functional programming.
 #
+# ---
+# 
 # Approaches used here help:
 # - improve [static analysis](https://en.wikipedia.org/wiki/Static_program_analysis) such as:
 #   - [static type checking](https://en.wikipedia.org/wiki/Type_system#Type_checking);
@@ -22,6 +24,8 @@ from app.models.item import Item, Course, Lab, Task, Step
 # - make the code testable and DRY;
 # - improve auto-completion based on the information about types.
 #
+# ---
+# 
 # Approach 1:
 #
 # We heavily rely on static typing.
@@ -39,6 +43,8 @@ from app.models.item import Item, Course, Lab, Task, Step
 # Running a type checker before running an extensively typed program
 # helps eliminate entire classes of problems that can happen at runtime.
 #
+# ---
+# 
 # Approach 2:
 #
 # This module follows the principles described in the article
@@ -51,6 +57,8 @@ from app.models.item import Item, Course, Lab, Task, Step
 # After that, we define impure functions that construct arguments for the pure
 # functions and cause side effects such as reading a file.
 #
+# ---
+# 
 # Approach 3:
 #
 # We use Python [generics](https://typing.python.org/en/latest/reference/generics.html)
@@ -61,6 +69,8 @@ from app.models.item import Item, Course, Lab, Task, Step
 # We also use generics to tell other developers where a function can
 # and where it can't be used with the help of the type checker.
 #
+# ---
+# 
 # Approach 4:
 #
 # We use the algebraic data type `Item` (see `src/app/models/item.py` for details)
