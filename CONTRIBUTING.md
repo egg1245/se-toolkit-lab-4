@@ -103,7 +103,7 @@ Example:
 - Write an instruction to run using the `Command Palette` as a link before each command that should be run using the `Command Palette`:
 
    ```markdown
-   1. [Run using the `Command Palette`](./lab/appendix/vs-code.md#run-a-command-using-the-terminal):
+   1. [Run using the `Command Palette`](./lab/appendix/vs-code.md#run-a-command-using-the-command-palette):
       `<command>`"
    ```
 
