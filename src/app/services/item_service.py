@@ -76,6 +76,7 @@ def find_by_id[T: Item](items: List[T], item_id: str) -> Optional[T]:
             return item
     return None
 
+
 # ===
 
 # Each of these functions uses `find_by_id`.
@@ -155,10 +156,20 @@ class FoundItem:
 def get_item_by_id_dfs_iterative(
     courses: List[Course], item_id: str, order: Order
 ) -> Optional[FoundItem]:
-    """Find an item by its id, searching through all courses and their nested items.
+    """Find an item by its id.
+
+    Searches through all courses and their nested items.
+
+    Uses depth-first search (DFS) in a specific order.
+
+    See:
+    - [Depth-first search](https://en.wikipedia.org/wiki/Tree_traversal#Depth-first_search)
+    - [Depth-first search example](https://en.wikipedia.org/wiki/Depth-first_search#Example)
 
     Args:
+        courses: a list of course info objects
         item_id: The unique identifier of the item to find.
+        order: order in which to search
 
     Returns:
         The FoundItem if found, None otherwise.
