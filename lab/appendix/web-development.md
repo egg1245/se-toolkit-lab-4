@@ -1,7 +1,23 @@
 # Web development
 
 - [Client-server architecture](#client-server-architecture)
+- [Protocol](#protocol)
+- [`HTTP`](#http)
+  - [`HTTP` request](#http-request)
+    - [Query parameter](#query-parameter)
+  - [`HTTP` response](#http-response)
+  - [`HTTP` response status code](#http-response-status-code)
+  - [Common `HTTP` response status codes](#common-http-response-status-codes)
+    - [`404` response status code](#404-response-status-code)
+- [API](#api)
 - [Endpoint](#endpoint)
+- [Send a `GET` query](#send-a-get-query)
+  - [Send a `GET` query using a browser](#send-a-get-query-using-a-browser)
+  - [Send a `GET` query using curl](#send-a-get-query-using-curl)
+- [Pretty-print a `JSON` response](#pretty-print-a-json-response)
+- [Pretty-print a `JSON` response using `jq`](#pretty-print-a-json-response-using-jq)
+  - [Pretty-print a `JSON` response using a browser](#pretty-print-a-json-response-using-a-browser)
+- [URL](#url)
 - [Service](#service)
 
 ## Client-server architecture
@@ -29,6 +45,24 @@ Common response parts:
 - Headers (metadata).
 - Body (often `JSON` in APIs).
 
+## Protocol
+
+## `HTTP`
+
+### `HTTP` request
+
+#### Query parameter
+
+### `HTTP` response
+
+### `HTTP` response status code
+
+### Common `HTTP` response status codes
+
+#### `404` response status code
+
+## API
+
 ## Endpoint
 
 An endpoint is a specific API entry point identified by:
@@ -46,6 +80,46 @@ Quick check with `curl`:
 ```terminal
 curl http://127.0.0.1:42000/status
 ```
+
+## Send a `GET` query
+
+### Send a `GET` query using a browser
+
+### Send a `GET` query using curl
+
+## Pretty-print a `JSON` response
+
+## Pretty-print a `JSON` response using `jq`
+
+1. [Install `jq`](./linux.md#install-jq) if not installed.
+2. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   <command-that-produces-json-response> | jq .
+   ```
+
+   [Pipe the output](./linux.md#pipe) to `jq`.
+
+Example:
+
+```terminal
+curl -s https://jsonplaceholder.typicode.com/todos/1 | jq .
+```
+
+### Pretty-print a `JSON` response using a browser
+
+`Chrome`:
+
+1. click `Pretty-print`.
+
+`Firefox`:
+
+1. Click `Raw Data`
+2. Clik `Pretty Print`
+
+<!-- TODO other browsers -->
+
+## URL
 
 ## Service
 
