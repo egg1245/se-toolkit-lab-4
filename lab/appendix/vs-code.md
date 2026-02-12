@@ -14,14 +14,16 @@
   - [Open the `Command Palette`](#open-the-command-palette)
   - [Run a command using the `Command Palette`](#run-a-command-using-the-command-palette)
   - [Open a file using the `Command Palette`](#open-a-file-using-the-command-palette)
-- [`Terminal`](#terminal)
-  - [Open the `Terminal`](#open-the-terminal)
-  - [Close the `Terminal`](#close-the-terminal)
-  - [Open a new `Terminal`](#open-a-new-terminal)
-  - [Copy text inside the `Terminal`](#copy-text-inside-the-terminal)
-  - [Paste text inside the `Terminal`](#paste-text-inside-the-terminal)
-  - [Run a command using the `Terminal`](#run-a-command-using-the-terminal)
+- [`VS Code Terminal`](#vs-code-terminal)
+  - [Open the `VS Code Terminal`](#open-the-vs-code-terminal)
+  - [Close the `VS Code Terminal`](#close-the-vs-code-terminal)
+  - [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal)
+  - [Switch to another `VS Code Terminal`](#switch-to-another-vs-code-terminal)
+  - [Copy text inside the `VS Code Terminal`](#copy-text-inside-the-vs-code-terminal)
+  - [Paste text inside the `VS Code Terminal`](#paste-text-inside-the-vs-code-terminal)
+  - [Run a command using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal)
 - [`Folders`](#folders)
+  - [Open folders](#open-folders)
   - [Open the `Folders`](#open-the-folders)
 - [`Source Control`](#source-control)
   - [Open the `Source Control`](#open-the-source-control)
@@ -39,6 +41,11 @@
     - [Shortcut: Toggle line comment](#shortcut-toggle-line-comment)
 - [Workspace settings](#workspace-settings)
   - [Change the workspace settings](#change-the-workspace-settings)
+- [Language server](#language-server)
+  - [Type on hover](#type-on-hover)
+  - [Docs on hover](#docs-on-hover)
+  - [Go to the definition](#go-to-the-definition)
+  - [Rename a symbol](#rename-a-symbol)
 
 > [!IMPORTANT]
 > The first [keyboard shortcut](#keyboard-shortcuts) is always for `Linux`.
@@ -50,22 +57,24 @@
 
 Default user interface (UI).
 
-- [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
-- [docs 2](https://code.visualstudio.com/docs/getstarted/tips-and-tricks)
-
-Slightly modified `Basic Layout` schema:
-
-![Basic Layout Schema](../images/vs-code-ui.drawio.svg)
+Docs:
 
 - [Basic layout](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
+- [Visual Studio Code tips and tricks](https://code.visualstudio.com/docs/getstarted/tips-and-tricks)
 - [UX Guidelines](https://code.visualstudio.com/api/ux-guidelines/overview)
+
+Schema that we use in docs:
+
+![Basic Layout Schema](../images/vs-code-ui.drawio.svg)
 
 ## `Custom Layout`
 
 Custom UI appearance.
 
-- [docs 1](https://www.youtube.com/watch?v=nORT3-kONgA)
-- [docs 2](https://code.visualstudio.com/docs/configure/custom-layout)
+Docs:
+
+- [Customizing VS Code's UI for Productivity](https://www.youtube.com/watch?v=nORT3-kONgA)
+- [Custom Layout](https://code.visualstudio.com/docs/configure/custom-layout)
 
 Actions:
 
@@ -81,19 +90,23 @@ Actions:
 
 Space where you can edit files. See [`Basic Layout`](#basic-layout).
 
-- [docs](https://code.visualstudio.com/docs/editing/codebasics)
+Docs:
+
+- [Basic editing](https://code.visualstudio.com/docs/editing/codebasics)
 
 ## `Activity Bar`
 
-Menus of extensions on a side of the [`Editor`](#editor). See [`Basic Layout`](#basic-layout).
+Menus of extensions on a side of the [`Editor`](#editor).
 
-- [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_basic-layout)
+See [`Basic Layout`](#basic-layout).
 
 ## `Primary Sidebar`
 
 Views on a side of the [`Editor`](#editor). See [`Basic Layout`](#basic-layout).
 
-- [docs](https://code.visualstudio.com/docs/configure/custom-layout#_primary-side-bar)
+Docs:
+
+- [Primary Side Bar](https://code.visualstudio.com/docs/configure/custom-layout#_primary-side-bar)
 
 Actions:
 
@@ -130,8 +143,10 @@ Quick actions buttons located above the [`Editor`](#editor).
 
 Run editor commands in `VS Code`.
 
-- [docs 1](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)
-- [docs 2](https://code.visualstudio.com/docs/getstarted/getting-started#_access-commands-with-the-command-palette)
+Docs:
+
+- [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette)
+- [Access commands with the Command Palette](https://code.visualstudio.com/docs/getstarted/getting-started#_access-commands-with-the-command-palette)
 
 Actions:
 
@@ -157,57 +172,96 @@ Actions:
 3. Select a file (move the cursor via `UpArrow` and `DownArrow` on your keyboard).
 4. Press `Enter`.
 
-## `Terminal`
+## `VS Code Terminal`
 
 Run terminal commands inside `VS Code`.
 
-- [docs](https://code.visualstudio.com/docs/terminal/getting-started)
+Docs:
+
+- [Getting started with the terminal](https://code.visualstudio.com/docs/terminal/getting-started)
 
 Actions:
 
-- [Open the `Terminal`](#open-the-terminal)
-- [Close the `Terminal`](#close-the-terminal)
-- [Open a new `Terminal`](#open-a-new-terminal)
-- [Copy text inside the `Terminal`](#copy-text-inside-the-terminal)
-- [Paste text inside the `Terminal`](#paste-text-inside-the-terminal)
-- [Run a command using the `Terminal`](#run-a-command-using-the-terminal)
+- [Open the `VS Code Terminal`](#open-the-vs-code-terminal)
+- [Close the `VS Code Terminal`](#close-the-vs-code-terminal)
+- [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal)
+- [Switch to another `VS Code Terminal`](#switch-to-another-vs-code-terminal)
+- [Copy text inside the `VS Code Terminal`](#copy-text-inside-the-vs-code-terminal)
+- [Paste text inside the `VS Code Terminal`](#paste-text-inside-the-vs-code-terminal)
+- [Run a command using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal)
 
-### Open the `Terminal`
-
-Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
-
-### Close the `Terminal`
+### Open the `VS Code Terminal`
 
 Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 
-### Open a new `Terminal`
+### Close the `VS Code Terminal`
 
-Press ```Ctrl+Shift+` ```
+Press ```Ctrl+` ``` (```Cmd+` ``` on `macOS`)
 
-### Copy text inside the `Terminal`
+### Open a new `VS Code Terminal`
+
+Use any of the following methods.
+
+Method 1:
+
+1. Press ```Ctrl+Shift+` ``` (```Cmd+Shift+` ``` on `macOS`).
+
+Method 2:
+
+1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
+2. Click the `+` icon.
+
+   <img alt="New Terminal" src="../images/appendix/vs-code/terminal-new-plus.png" style="width:400px"></img>
+
+### Switch to another `VS Code Terminal`
+
+Use any of the following methods:
+
+Method 1:
+
+1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
+2. Click a terminal tab in the terminal panel.
+
+    <img alt="Switch Terminal" src="../images/appendix/vs-code/terminal-panel-switch.png" style="width:400px"></img>
+
+Method 2:
+
+1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
+1. Press `Ctrl+PageDown` / `Ctrl+PageUp` (`Cmd+Shift+]` / `Cmd+Shift+[` on `macOS`).
+
+### Copy text inside the `VS Code Terminal`
 
 1. Select text.
 2. Press `Ctrl+Shift+C` (`Cmd+C` on `macOS`).
 
-### Paste text inside the `Terminal`
+### Paste text inside the `VS Code Terminal`
 
 `Ctrl+Shift+V` (`Cmd+V` on `macOS`, `Ctrl+V` on `Windows`)
 
-### Run a command using the `Terminal`
+### Run a command using the `VS Code Terminal`
 
-1. [Open the `Terminal`](#open-the-terminal).
-2. Write or [paste](#paste-text-inside-the-terminal) a command.
+1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
+2. Write or [paste](#paste-text-inside-the-vs-code-terminal) a command.
 3. Press `Enter`.
 
 ## `Folders`
 
 View the file tree.
 
-- [docs](https://code.visualstudio.com/docs/getstarted/userinterface#_explorer-view)
+See the [`Activity Bar`](#activity-bar).
+
+Docs:
+
+- [Explorer view](https://code.visualstudio.com/docs/getstarted/userinterface#_explorer-view)
 
 Actions:
 
+- [Open folders](#open-folders)
 - [Open the `Folders`](#open-the-folders)
+
+### Open folders
+
+See [Open the `Folders`](#open-the-folders).
 
 ### Open the `Folders`
 
@@ -218,7 +272,9 @@ Actions:
 
 Interact with `Git` via `VS Code` UI.
 
-- [docs](https://code.visualstudio.com/docs/sourcecontrol/overview)
+Docs:
+
+- [Source Control in VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview)
 
 Actions:
 
@@ -253,7 +309,9 @@ Method 2:
 
 Install extensions for `VS Code` from [`VS Code Marketplace`](https://marketplace.visualstudio.com/vscode) to enable new functionality.
 
-- [docs](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace)
+Docs:
+
+- [Extension Marketplace](https://code.visualstudio.com/docs/configure/extensions/extension-marketplace)
 
 Actions:
 
@@ -297,8 +355,10 @@ Method 2:
 
 Keyboard shortcuts for various commands.
 
-- [docs 1](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-reference)
-- [docs 2](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-editor)
+Docs:
+
+- [Keyboard Shortcuts reference](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-reference)
+- [Keyboard Shortcuts editor](https://code.visualstudio.com/docs/configure/keybindings#_keyboard-shortcuts-editor)
 
 ### Frequently used shortcuts
 
@@ -338,9 +398,11 @@ Keyboard shortcuts for various commands.
 
 `VS Code` settings for the workspace.
 
-- [docs](https://code.visualstudio.com/docs/editing/workspaces/workspaces)
-- [docs 1](https://code.visualstudio.com/docs/configure/settings#_workspace-settings)
-- [docs 2](https://code.visualstudio.com/docs/configure/settings#_settings-json-file)
+Docs:
+
+- [What is a VS Code workspace?](https://code.visualstudio.com/docs/editing/workspaces/workspaces)
+- [Workspace settings](https://code.visualstudio.com/docs/configure/settings#_workspace-settings)
+- [Settings JSON file](https://code.visualstudio.com/docs/configure/settings#_settings-json-file)
 
 Settings for this workspace are in [`.vscode/settings.json`](../../.vscode/settings.json).
 
@@ -351,3 +413,13 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 - [`files.autoSave`](https://code.visualstudio.com/docs/editing/codebasics#_save-auto-save) - Enabled to save your work if VS Code closes;
 - [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting) - Enabled to run formatters when you press `Ctrl+S` (or `Cmd+S` on `macOS`) to save code.
 - `Markdown` editor and preview [synchronization settings](https://code.visualstudio.com/docs/languages/markdown#_editor-and-preview-synchronization) - Disabled for smoother scrolling of the editor and the preview.
+
+## Language server
+
+### Type on hover
+
+### Docs on hover
+
+### Go to the definition
+
+### Rename a symbol

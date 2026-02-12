@@ -71,8 +71,10 @@ def find_by_id[T: Item](items: List[T], item_id: str) -> Optional[T]:
     Searches a list of items for a specific ID.
     Returns the item if found, otherwise None.
     """
-    # The pythonic way to find an item in a list
-    return next((item for item in items if item.id == item_id), None)
+    for item in items:
+        if item.id == item_id:
+            return item
+    return None
 
 
 # ===
@@ -114,6 +116,7 @@ def get_lab_by_path(
     course = get_course_by_path(courses=courses, course_id=course_id)
     if course is not None:
         return get_lab_by_id(course=course, lab_id=lab_id)
+    return None
 
 
 def get_task_by_path(
@@ -122,6 +125,7 @@ def get_task_by_path(
     lab = get_lab_by_path(courses=courses, course_id=course_id, lab_id=lab_id)
     if lab is not None:
         return get_task_by_id(lab=lab, task_id=task_id)
+    return None
 
 
 def get_step_by_path(
@@ -132,6 +136,7 @@ def get_step_by_path(
     )
     if task is not None:
         return get_step_by_id(task=task, step_id=step_id)
+    return None
 
 
 # ===
@@ -151,10 +156,20 @@ class FoundItem:
 def get_item_by_id_dfs_iterative(
     courses: List[Course], item_id: str, order: Order
 ) -> Optional[FoundItem]:
-    """Find an item by its id, searching through all courses and their nested items.
+    """Find an item by its id.
+
+    Searches through all courses and their nested items.
+
+    Uses depth-first search (DFS) in a specific order.
+
+    See:
+    - [Depth-first search](https://en.wikipedia.org/wiki/Tree_traversal#Depth-first_search)
+    - [Depth-first search example](https://en.wikipedia.org/wiki/Depth-first_search#Example)
 
     Args:
+        courses: a list of course info objects
         item_id: The unique identifier of the item to find.
+        order: order in which to search
 
     Returns:
         The FoundItem if found, None otherwise.
@@ -174,7 +189,7 @@ def get_item_by_id_dfs_iterative(
 
                     for task in lab.tasks:
                         counter += 1
-                        if task.id == item_id:
+                        if lab.id == item_id:
                             return FoundItem(task, counter)
 
                         for step in task.steps:
@@ -184,6 +199,7 @@ def get_item_by_id_dfs_iterative(
         case PostOrder():
             # TODO implement
             pass
+    return None
 
 
 # ===
@@ -237,8 +253,9 @@ def get_item_by_id_dfs_recursive[T: Item](
                         return FoundItem(item=item, visited_nodes=visited_nodes)
                 case _:
                     pass
+        return None
 
-    get_item_by_id_dfs_recursive_(items=items, item_id=item_id, order=order)
+    return get_item_by_id_dfs_recursive_(items=items, item_id=item_id, order=order)
 
 
 # ===

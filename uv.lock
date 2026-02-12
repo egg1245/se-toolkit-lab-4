@@ -63,7 +63,7 @@ wheels = [
 ]
 
 [[package]]
-name = "course-material-service"
+name = "course-materials-service"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

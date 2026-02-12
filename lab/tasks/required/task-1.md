@@ -22,10 +22,8 @@ Then, you can check whether the web server works before the web server is deploy
   - [4. Create the file `.env.secret`](#4-create-the-file-envsecret)
   - [5. View the file `.env.secret`](#5-view-the-file-envsecret)
   - [6. Use a free `$PORT`](#6-use-a-free-port)
-  - [7. Run the web server using `uv` and `poe`](#7-run-the-web-server-using-uv-and-poe)
+  - [7. Run the web server](#7-run-the-web-server)
   - [8. Check `/status`](#8-check-status)
-    - [Check `/status` using a browser](#check-status-using-a-browser)
-    - [Check `/status` using `curl`](#check-status-using-curl)
   - [9. Stop the web server](#9-stop-the-web-server)
   - [10. Force stop the web server](#10-force-stop-the-web-server)
   - [11. Check `/status` again](#11-check-status-again)
@@ -51,7 +49,7 @@ Read the following sections:
 
 ### 4. Create the file `.env.secret`
 
-1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    cp .env.example .env.secret
@@ -67,7 +65,7 @@ View the file using one of the following methods.
 
 Method 1:
 
-1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    cat .env.secret
@@ -86,7 +84,7 @@ Method 2:
 
 1. Inspect what's running on `$PORT`:
 
-   [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+   [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    uv run --env-file .env.secret bash -c 'kport inspect $PORT'
@@ -102,13 +100,13 @@ Method 2:
    2. Write another value for `PORT`, e.g., `41000`.
    3. Inspect what's running on the new `$PORT` (`41000`) as explained above.
 
-### 7. Run the web server using `uv` and `poe`
+### 7. Run the web server
 
 > [!NOTE]
 > [`poe`](https://poethepoet.natn.io/) can run tasks
 > specified in the [`pyproject.toml`](../../../pyproject.toml) in the `[tool.poe.tasks]` section.
 
-1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    uv run poe dev
@@ -124,51 +122,31 @@ Method 2:
 > [!NOTE]
 > `/status` is an [endpoint](../../appendix/web-development.md#endpoint) of the web server.
 
-#### Check `/status` using a browser
-
-1. Open in a browser: `http://127.0.0.1:42000/status`
-2. You should see the response from the web server like:
-
-    ```text
-    status: "ok"
-    service: "course-material"
-    ```
-
-<!-- TODO view JSON -->
-
-#### Check `/status` using `curl`
-
-1. [Open a new `Terminal`](../../appendix/vs-code.md#open-a-new-terminal).
-2. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
-
-    ```text
-    curl http://127.0.0.1:42000/status
-    ```
-
-3. You should see the `JSON` response from the web server:
-
-    ```json
-    {"status":"ok","service":"course-material"}
-    ```
+1. [Send a `GET` query](../../appendix/web-development.md#send-a-get-query)
+   to `http://127.0.0.1:42000/status`.
+2. [Pretty-print the `JSON` response](../../appendix/web-development.md#pretty-print-the-json-response).
 
 <!-- TODO add check status using the /docs -->
 
 ### 9. Stop the web server
 
-1. [Switch to the old `Terminal`](../../appendix/vs-code.md#switch-to-another-terminal) where the web server runs.
+1. [Switch to the old `VS Code Terminal`](../../appendix/vs-code.md#switch-to-another-terminal) where the web server runs.
 2. Press the key shortcut that you saw when running the server to stop the server.
 3. You should see `INFO:     Waiting for application shutdown.`
 
 ### 10. Force stop the web server
 
-1. [Run using the `Terminal`](../../appendix/vs-code.md#run-a-command-using-the-terminal):
+> [!NOTE]
+> Run if you see the `Address already in use` error after trying to run the web server.
+
+1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    uv run --env-file .env.secret bash -c 'kport kill $PORT'
    ```
 
 2. Confirm suggested actions.
-3. Rerun using the `Terminal` the command provided above until you see something like `Port 42000 is free`.
+3. Rerun the command provided above until you see something like `Port 42000 is free`.
 
 ### 11. Check `/status` again
 

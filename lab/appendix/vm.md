@@ -1,5 +1,6 @@
 # VM
 
+- [What is a VM](#what-is-a-vm)
 - [Your VM](#your-vm)
 - [Create a VM](#create-a-vm)
   - [Create a subscription](#create-a-subscription)
@@ -8,6 +9,10 @@
 - [Get the `IP address` of the VM](#get-the-ip-address-of-the-vm)
 - [Connect to the VM](#connect-to-the-vm)
 - [Troubleshooting](#troubleshooting)
+
+## What is a VM
+
+<!-- TODO -->
 
 ## Your VM
 
@@ -51,7 +56,8 @@ Complete these steps to create a VM:
 11. `NEW PASSWORD`: Write the password.
 12. `CONFIRM`: Write the same password.
 13. `ADMINISTRATOR SSH KEY`:
-      1. Paste here the public key.
+      1. [Find the `SSH` key files](./ssh.md#find-the-ssh-key-files).
+      2. Paste here the public key.
 14. Note that the user's name on the VM is `root`.
 15. Click `->` to go to the page 3.
 16. Go to `NETWORK ADAPTER 1`.
@@ -79,21 +85,33 @@ Complete these steps to create a VM:
 
 ## Connect to the VM
 
-1. Connect your computer to the `Wi-Fi` network `UniversityStudent`.
-2. Open `VS Code`.
-3. [Run using the `Terminal`](./vs-code.md#run-a-command-using-the-terminal):
-
-    ```terminal
-    ssh -i path/to/the/key root@<your-vm-ip-address>
-    
-    # example: ssh -i path/to/the/key root@10.93.24.98
-    ```
-
-<!-- TODO what should you see? -->
+1. [Add host to the `SSH` config](./ssh.md#add-host-to-the-ssh-config).
+2. Connect your computer to the `Wi-Fi` network `UniversityStudent`.
+3. Open `VS Code`.
+4. [Connect to the VM](./ssh.md#connect-to-the-vm).
+5. After successful connection, you should see:
+   1. The host fingerprint prompt (first connection only).
+   2. A remote shell prompt on the VM (for example, `root@<your-vm-name>:~#`).
+   3. If you use `Remote - SSH` in `VS Code`, the status bar should show that you are connected to a remote host.
 
 ## Troubleshooting
 
 If you can't connect:
 
 1. [Go to the VM page](#go-to-the-vm-page).
-2. Ask the TA to help and show them the VM page and your [`Terminal`](./vs-code.md#terminal).
+2. Verify the VM is in `Running` status.
+3. Verify the VM `IP address` has not changed.
+4. In your local terminal, test the SSH connection in verbose mode:
+
+   ```terminal
+   ssh -v se-toolkit-vm
+   ```
+
+5. If you get `Permission denied (publickey)`, check:
+   1. Your public key was added to the VM configuration.
+   2. `IdentityFile` in your SSH config points to the correct private key.
+   3. Your private key file permissions are correct (`chmod 600 ~/.ssh/se_toolkit_key` on Linux/macOS/WSL).
+6. Ask the TA to help and show them:
+   1. The VM page.
+   2. The output of `ssh -v se-toolkit-vm`.
+   3. Your [`VS Code Terminal`](./vs-code.md#terminal).

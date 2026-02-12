@@ -150,7 +150,7 @@
                             },
                             "values": {
                                 "command_hint": "curl http://127.0.0.1:8000/status",
-                                "expected_hint": "{\"status\":\"ok\",\"service\":\"course-material\"}"
+                                "expected_hint": "{\"status\":\"ok\",\"service\":\"course-materials\"}"
                             }
                         },
                         {

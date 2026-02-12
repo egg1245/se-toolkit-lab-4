@@ -3,14 +3,14 @@
 - [Docs design principles](#docs-design-principles)
   - [Instructions](#instructions)
     - [Vendor instructions](#vendor-instructions)
-    - [Fallback instructions](#fallback-instructions)
+    - [Provide fallback instructions](#provide-fallback-instructions)
     - [Localize the instructions](#localize-the-instructions)
     - [Instructions wording](#instructions-wording)
       - [Split compound instructions](#split-compound-instructions)
       - [Finish complete sentences with a `.`](#finish-complete-sentences-with-a-)
         - [Use instructions wording consistently](#use-instructions-wording-consistently)
   - [Commands in `VS Code`](#commands-in-vs-code)
-    - [Commands for the `Terminal`](#commands-for-the-terminal)
+    - [Commands for the `VS Code Terminal`](#commands-for-the-vs-code-terminal)
     - [Commands for the `Command Palette`](#commands-for-the-command-palette)
   - [Options and steps](#options-and-steps)
   - [Table of contents (ToC)](#table-of-contents-toc)
@@ -32,9 +32,7 @@
 
 Vendor the instructions that aren't good enough anywhere else.
 
-#### Fallback instructions
-
-Have fallback instructions.
+#### Provide fallback instructions
 
 One method to complete a step may not work.
 
@@ -87,13 +85,13 @@ Example:
 
 ### Commands in `VS Code`
 
-#### Commands for the `Terminal`
+#### Commands for the `VS Code Terminal`
 
-- Write each command for the `Terminal` in a multi-line code block with the type `terminal`.
-- Write an instruction to run in the `Terminal` as a link before each code block:
+- Write each command for the `VS Code Terminal` in a multi-line code block with the type `terminal`.
+- Write an instruction to run in the `VS Code Terminal` as a link before each code block:
 
   ~~~markdown
-  1. [Run using the `Terminal`](./lab/appendix/vs-code.md#run-a-command-using-the-terminal):
+  1. [Run using the `VS Code Terminal`](./lab/appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
   
      ```terminal
      <command>
@@ -105,7 +103,7 @@ Example:
 - Write an instruction to run using the `Command Palette` as a link before each command that should be run using the `Command Palette`:
 
    ```markdown
-   1. [Run using the `Command Palette`](./lab/appendix/vs-code.md#run-a-command-using-the-terminal):
+   1. [Run using the `Command Palette`](./lab/appendix/vs-code.md#run-a-command-using-the-command-palette):
       `<command>`"
    ```
 

@@ -1,5 +1,5 @@
 [project]
-name = "course-material-service"
+name = "course-materials-service"
 version = "0.1.0"
 description = "Course Materials Service"
 readme = "README.md"
@@ -21,6 +21,9 @@ dev = [
   "ty==0.0.13",
   "kport==3.1.1",
 ]
+
+[tool.ruff.lint]
+select = [ "RET503" ]
 
 [tool.poe.tasks]
 # Run server

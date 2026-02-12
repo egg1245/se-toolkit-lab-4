@@ -1,8 +1,197 @@
 # `Linux`
 
+- [What is `Linux`](#what-is-linux)
+- [Shell](#shell)
+  - [Check what shell is running](#check-what-shell-is-running)
+- [`Bash`](#bash)
+  - [`Bash` syntax basics](#bash-syntax-basics)
+    - [Run a command](#run-a-command)
+    - [Pipe the `stdout`](#pipe-the-stdout)
+- [Programs](#programs)
+  - [`jq`](#jq)
+- [Useful commands](#useful-commands)
+- [Groups](#groups)
+- [Users](#users)
+  - [The `root` user](#the-root-user)
+  - [Get my current user](#get-my-current-user)
+  - [Create a non-root user](#create-a-non-root-user)
+- [Permissions](#permissions)
+  - [The `sudo` command](#the-sudo-command)
+- [Host](#host)
+- [Port](#port)
+  - [System port](#system-port)
+  - [User port](#user-port)
+- [Inspect ports](#inspect-ports)
+  - [See listening TCP ports](#see-listening-tcp-ports)
+  - [Inspect a specific port](#inspect-a-specific-port)
+- [Troubleshooting](#troubleshooting)
+  - [Service is running but a request fails](#service-is-running-but-a-request-fails)
+
+## What is `Linux`
+
+`Linux` is a family of operating systems commonly used for servers and virtual machines.
+
 ## Shell
+
+An operating system shell is a computer program that provides relatively broad and direct access to the system on which it runs.
+[[source](https://en.wikipedia.org/wiki/Shell_(computing))]
+
+### Check what shell is running
+
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+    ```terminal
+    echo "$SHELL"
+    ```
+
+## `Bash`
+
+`Bash` (short for "Bourne Again SHell") is an interactive command interpreter and scripting language developed for `Unix`-like operating systems (e.g., [`Linux`](#linux)).
+[[source]]
+
+> [!NOTE]
+> `Bash` is the default login shell for `Ubuntu`.
+
+### `Bash` syntax basics
+
+#### Run a command
+
+```terminal
+<command> <arguments>
+```
+
+Example:
+
+```terminal
+ls .
+```
+
+#### Pipe the `stdout`
+
+```terminal
+<command 1> | <command 2>
+```
+
+## Programs
+
+### `jq`
+
+Install `jq`.
+
+## Useful commands
+
+These commands run programs:
+
+- `pwd` - show current directory.
+- `ls` - list files.
+- `cd <dir>` - go to a directory.
+- `cat <file>` - print file content.
+
+## Groups
+
+## Users
+
+Servers and VMs usually run multiple users.
+
+### The `root` user
+
+`root` is the administrator user.
+
+### Get my current user
+
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+    ```terminal
+    whoami
+    ```
+
+### Create a non-root user
+
+`root` is useful for initial setup, but daily work should be done with a regular user.
+
+For `Ubuntu`/Debian systems:
+
+1. Create a new user:
+
+   ```terminal
+   sudo adduser <username>
+   ```
+
+2. Allow the user to run administrative commands:
+
+   ```terminal
+   sudo usermod -aG sudo <username>
+   ```
+
+3. Switch to that user:
+
+    ```terminal
+    su - <username>
+    ```
+
+4. Verify:
+
+    ```terminal
+    whoami
+    id
+    ```
+
+If you plan to log in via `SSH` as that user, copy `authorized_keys` to the new user's home and fix permissions before logging out from `root`.
+
+## Permissions
+
+### The `sudo` command
+
+`sudo` runs a command with elevated permissions.
+
+```terminal
+sudo <command>
+```
+
+## Host
+
+<!-- TODO -->
 
 ## Port
 
+A [*network port*](https://en.wikipedia.org/wiki/Port_(computer_networking)) (or simply *port*) is a numbered communication endpoint on a [host](#host).
+
 > [!NOTE]
 > `Windows` and `macOS` also have ports.
+
+### System port
+
+The port numbers in the range from 0 to 1023 are the **well-known ports** or **system ports**.
+They are used by system processes that provide widely used types of network services.
+[[source](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers#Well-known_ports)]
+
+### User port
+
+A **user port** (or **registered port**) is a [network port](#port) designated for use with a certain protocol or application.
+[[source](https://en.wikipedia.org/wiki/Registered_port)]
+
+## Inspect ports
+
+- [See listening TCP ports](#see-listening-tcp-ports)
+- [Inspect a specific port](#inspect-a-specific-port)
+
+### See listening TCP ports
+
+```terminal
+ss -ltn
+```
+
+### Inspect a specific port
+
+```terminal
+ss -ltn 'sport = :42000'
+```
+
+## Troubleshooting
+
+### Service is running but a request fails
+
+Verify both:
+
+1. The process is listening on the expected port.
+2. You are using the correct host and port in your request.
