@@ -58,6 +58,10 @@ When you fork a repository on `GitHub`, you create a personal copy under your `G
    2. Click `<your-username>` to make you the repo owner.
    3. Click `Create fork`.
 
+### Fork URL
+
+The fork [URL](./web-development.md#url) should look like `https://github.com/<your-username>/se-toolkit-lab-2`.
+
 ## Issue
 
 A `GitHub` issue is a unit of work or discussion related to a `GitHub` [repository](#repository).
