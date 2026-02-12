@@ -136,6 +136,9 @@ Method 2:
 
 ### 10. Force stop the web server
 
+> [!NOTE]
+> Run if you see the `Address already in use` error after trying to run the web server.
+
 1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
