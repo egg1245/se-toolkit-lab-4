@@ -2,9 +2,14 @@
 
 - [What is `Linux`](#what-is-linux)
 - [Shell](#shell)
-  - [`Bash`](#bash)
   - [Check what shell is running](#check-what-shell-is-running)
-  - [Useful `bash` basics](#useful-bash-basics)
+- [`Bash`](#bash)
+  - [`Bash` syntax basics](#bash-syntax-basics)
+    - [Run a command](#run-a-command)
+    - [Pipe the `stdout`](#pipe-the-stdout)
+- [Programs](#programs)
+  - [`jq`](#jq)
+- [Useful commands](#useful-commands)
 - [Groups](#groups)
 - [Users](#users)
   - [The `root` user](#the-root-user)
@@ -31,14 +36,6 @@
 An operating system shell is a computer program that provides relatively broad and direct access to the system on which it runs.
 [[source](https://en.wikipedia.org/wiki/Shell_(computing))]
 
-### `Bash`
-
-`Bash` (short for "Bourne Again SHell") is an interactive command interpreter and scripting language developed for `Unix`-like operating systems (e.g., [`Linux`](#linux)).
-[[source]]
-
-> [!NOTE]
-> `Bash` is the default login shell for `Ubuntu`.
-
 ### Check what shell is running
 
 1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
@@ -47,7 +44,43 @@ An operating system shell is a computer program that provides relatively broad a
     echo "$SHELL"
     ```
 
-### Useful `bash` basics
+## `Bash`
+
+`Bash` (short for "Bourne Again SHell") is an interactive command interpreter and scripting language developed for `Unix`-like operating systems (e.g., [`Linux`](#linux)).
+[[source]]
+
+> [!NOTE]
+> `Bash` is the default login shell for `Ubuntu`.
+
+### `Bash` syntax basics
+
+#### Run a command
+
+```terminal
+<command> <arguments>
+```
+
+Example:
+
+```terminal
+ls .
+```
+
+#### Pipe the `stdout`
+
+```terminal
+<command 1> | <command 2>
+```
+
+## Programs
+
+### `jq`
+
+Install `jq`.
+
+## Useful commands
+
+These commands run programs:
 
 - `pwd` - show current directory.
 - `ls` - list files.
