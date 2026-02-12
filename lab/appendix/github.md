@@ -2,7 +2,6 @@
 
 <h2>Table of contents</h2>
 
-- [`GitHub flow`](#github-flow)
 - [The `GitHub` site](#the-github-site)
 - [Repository](#repository)
 - [Fork](#fork)
@@ -24,14 +23,8 @@
     - [Open the PR editor using `Pull requests`](#open-the-pr-editor-using-pull-requests)
     - [Open the PR editor using the branch list](#open-the-pr-editor-using-the-branch-list)
   - [Finish creating a PR](#finish-creating-a-pr)
+- [`GitHub flow`](#github-flow)
 - [`GitHub Projects`](#github-projects)
-
-## `GitHub flow`
-
-`GitHub` flow is a process for organizing the work on a repository.
-It can be used both by individual developers and teams.
-
-See [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow).
 
 ## The `GitHub` site
 
@@ -171,6 +164,13 @@ Create a PR to the `<repo-name>/<branch-name>`:
 5. Click `Create pull request`.
 
 <!-- TODO Click Markdown code block to copy -->
+
+## `GitHub flow`
+
+`GitHub` flow is a process for organizing the work on a repository.
+It can be used both by individual developers and teams.
+
+See [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow).
 
 ## `GitHub Projects`
 
