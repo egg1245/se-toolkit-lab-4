@@ -1,5 +1,5 @@
 [project]
-name = "course-material-service"
+name = "course-materials-service"
 version = "0.1.0"
 description = "Course Materials Service"
 readme = "README.md"

@@ -131,7 +131,7 @@ Method 2:
 
     ```text
     status: "ok"
-    service: "course-material"
+    service: "course-materials"
     ```
 
 <!-- TODO view JSON -->
@@ -148,7 +148,7 @@ Method 2:
 3. You should see the `JSON` response from the web server:
 
     ```json
-    {"status":"ok","service":"course-material"}
+    {"status":"ok","service":"course-materials"}
     ```
 
 <!-- TODO add check status using the /docs -->
