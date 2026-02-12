@@ -120,12 +120,10 @@ Examples of issue forms:
 
 ### Create a pull request
 
-Create a PR to the `<repo-name>/<branch-name>`.
+Create a PR to the `<repo-name>/<branch-name>`:
 
-Complete these steps:
-
-- [Open the PR editor using `GitHub`](#open-the-pr-editor-using-github)
-- [Finish creating a PR](#finish-creating-a-pr)
+1. [Open the PR editor using `GitHub`](#open-the-pr-editor-using-github)
+2. [Finish creating a PR](#finish-creating-a-pr)
 
 > [!TIP]
 > You can also [create a PR using  `GitHub Pull Requests` extension](https://code.visualstudio.com/docs/sourcecontrol/github#_creating-pull-requests).
