@@ -18,8 +18,9 @@ from typing import Optional, final
 # From the point of view of the data that we want to store
 # in these objects.
 
-class OrderBase():
+class OrderBase:
     short_name: str
+
 
 @final
 @dataclass(frozen=True)
@@ -32,10 +33,12 @@ class PreOrder(OrderBase):
 class PostOrder(OrderBase):
     short_name = "post"
 
+
 type Order = PreOrder | PostOrder
 
 
 # ==
+
 
 def parse_order(order: str) -> Optional[Order]:
     """
@@ -54,7 +57,7 @@ def parse_order(order: str) -> Optional[Order]:
 def parse_order_default(order: str, default: Order) -> Order:
     """
     Parse `Order` from a `str`.
-    
+
     Return the `default` value if couldn't parse.
     """
     if (parsed := parse_order(order)) is not None:

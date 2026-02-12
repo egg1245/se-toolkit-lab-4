@@ -23,22 +23,22 @@ from app.models.item import Item, Course, Lab, Task, Step
 # - improve auto-completion based on the information about types.
 #
 # Approach 1:
-# 
+#
 # We heavily rely on static typing.
-# 
-# We provide types almost everywhere to ensure each variable and function 
+#
+# We provide types almost everywhere to ensure each variable and function
 # has a known type other than `Any` or `Unknown`.
-# 
-# One can sometimes understand what a function does just by looking at 
+#
+# One can sometimes understand what a function does just by looking at
 # its name, argument names and their types, and the result type.
-# 
-# Unlike comments that can get obsolete, the documentation based on types 
+#
+# Unlike comments that can get obsolete, the documentation based on types
 # is usually always up to date.
 # Running a type checker helps ensure that the program is well-typed.
-# 
-# Running a type checker before running an extensively typed program 
+#
+# Running a type checker before running an extensively typed program
 # helps eliminate entire classes of problems that can happen at runtime.
-# 
+#
 # Approach 2:
 #
 # This module follows the principles described in the article
@@ -69,7 +69,7 @@ from app.models.item import Item, Course, Lab, Task, Step
 #
 # We also use the algebraic data type `Order` (see `src/app/models/order.py`)
 # to specify the two orders of the depth-first [tree traversal](https://en.wikipedia.org/wiki/Tree_traversal).
-# 
+#
 # ===
 
 # ===
@@ -85,7 +85,7 @@ from app.models.item import Item, Course, Lab, Task, Step
 # People will see an error before running the code.
 #
 # That's how one can communicate constraints using types.
-# 
+#
 # ===
 
 
@@ -108,7 +108,7 @@ def find_by_id[T: Item](items: List[T], item_id: str) -> Optional[T]:
 #
 # When `courses` has type `List[Course]`,
 # the argument of `find_by_id` called `items` also has the type `List[Course]`.
-# 
+#
 # ===
 
 
@@ -129,7 +129,7 @@ def get_step_by_id(task: Task, step_id: str) -> Optional[Step]:
 
 
 # ===
-# 
+#
 # ===
 
 
@@ -167,7 +167,7 @@ def get_step_by_path(
 
 
 # ===
-# 
+#
 # ===
 
 
@@ -232,7 +232,7 @@ def get_item_by_id_dfs_iterative(
 
 
 # ===
-# 
+#
 # ===
 
 
@@ -290,18 +290,18 @@ def get_item_by_id_dfs_recursive[T: Item](
 
 
 # ===
-# 
+#
 # `TypeAdapter` wraps another type and makes it look like `BaseModel`.
 # See [docs](https://docs.pydantic.dev/latest/concepts/type_adapter/)
-# 
+#
 # ===
 
 CoursesAdapter = TypeAdapter(type=List[Course])
 
 # ===
-# 
+#
 # These are impure functions that cause side effects such as reading a file.
-# 
+#
 # ===
 
 
