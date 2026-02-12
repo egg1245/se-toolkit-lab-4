@@ -19,7 +19,8 @@
 
 ## The `GitHub` site
 
-[URL](./web-development.md#url): <https://github.com>
+The `GitHub` site has this [URL](./web-development.md#url): <https://github.com>.
+
 
 ## Create an issue
 
