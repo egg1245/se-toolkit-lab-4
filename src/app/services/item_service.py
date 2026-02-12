@@ -71,9 +71,10 @@ def find_by_id[T: Item](items: List[T], item_id: str) -> Optional[T]:
     Searches a list of items for a specific ID.
     Returns the item if found, otherwise None.
     """
-    # The pythonic way to find an item in a list
-    return next((item for item in items if item.id == item_id), None)
-
+    for item in items:
+        if item.id == item_id:
+            return item
+    return None
 
 # ===
 
