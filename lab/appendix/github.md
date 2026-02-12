@@ -137,9 +137,8 @@ Create a PR to the `<repo-name>/<branch-name>`:
 
 #### Open the PR editor using a button
 
-Go to your fork on `GitHub`.
-
-If you see the `Compare & pull request` button, click it.
+1. Go to your [fork](#fork-url).
+2. If you see the `Compare & pull request` button, click it.
 
 #### Open the PR editor using `Pull requests`
 
