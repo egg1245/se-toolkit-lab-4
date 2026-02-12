@@ -39,13 +39,13 @@ A repository (or "repo") is a storage location for files that are version-contro
 
 A `GitHub` repository contains not only your project files but also additional collaborative features such as [issues](#issue) for tracking bugs and tasks, [pull requests](#pull-request-pr) for code review and merging changes, and [Projects](#github-projects) for organizing work.
 
-## Fork
+### Fork
 
 A fork is a copy of an original project repository that allows you to freely experiment with changes without affecting the original project repository.
 
 When you fork a repository on `GitHub`, you create a personal copy under your `GitHub` account where you can make modifications, test features, and propose changes back to the original repository through [pull requests](#pull-request-pr).
 
-## Fork a repo
+### Fork a repo
 
 1. Go to `GitHub`.
 2. Go to the repo that you want to fork.
