@@ -114,6 +114,7 @@ def get_lab_by_path(
     course = get_course_by_path(courses=courses, course_id=course_id)
     if course is not None:
         return get_lab_by_id(course=course, lab_id=lab_id)
+    return None
 
 
 def get_task_by_path(
@@ -122,6 +123,7 @@ def get_task_by_path(
     lab = get_lab_by_path(courses=courses, course_id=course_id, lab_id=lab_id)
     if lab is not None:
         return get_task_by_id(lab=lab, task_id=task_id)
+    return None
 
 
 def get_step_by_path(
@@ -132,6 +134,7 @@ def get_step_by_path(
     )
     if task is not None:
         return get_step_by_id(task=task, step_id=step_id)
+    return None
 
 
 # ===
@@ -184,6 +187,7 @@ def get_item_by_id_dfs_iterative(
         case PostOrder():
             # TODO implement
             pass
+    return None
 
 
 # ===
@@ -237,6 +241,7 @@ def get_item_by_id_dfs_recursive[T: Item](
                         return FoundItem(item=item, visited_nodes=visited_nodes)
                 case _:
                     pass
+        return None
 
     return get_item_by_id_dfs_recursive_(items=items, item_id=item_id, order=order)
 
