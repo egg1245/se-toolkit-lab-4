@@ -1,5 +1,6 @@
 <h1><code>Docker</code></h1>
 
+- [Image](#image)
 - [Container](#container)
 - [`Docker`](#docker)
   - [`docker run`](#docker-run)
@@ -10,7 +11,13 @@
   - [`docker compose -f`](#docker-compose--f)
   - [`docker compose --env-file`](#docker-compose---env-file)
 
+## Image
+
+<!-- TODO -->
+
 ## Container
+
+<!-- TODO reference image -->
 
 A container is an isolated runtime for an application and its dependencies.
 
