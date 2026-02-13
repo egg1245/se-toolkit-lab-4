@@ -7,9 +7,9 @@
   - [`HTTP` response](#http-response)
   - [`HTTP` response status code](#http-response-status-code)
   - [Common `HTTP` response status codes](#common-http-response-status-codes)
-- [Web server](#web-server)
-- [Web client](#web-client)
 - [Server and client](#server-and-client)
+  - [Web server](#web-server)
+  - [Web client](#web-client)
 - [Data format](#data-format)
   - [`JSON`](#json)
     - [`JSON` data types](#json-data-types)
@@ -58,9 +58,11 @@ Standard status codes include:
 - [`404` (Not Found)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404)
 - [`500` (Internal Server Error)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/500)
 
-## Web server
+## Server and client
 
-A web server is software that delivers content or services to users over the [Internet](./networks.md#internet) using a [protocol](#protocol).
+### Web server
+
+A web server is software that delivers content or services to [web clients](#web-client) over the [Internet](./networks.md#internet) using a [protocol](#protocol).
 
 > [!NOTE]
 > We refer to a web server as software only.
@@ -69,34 +71,11 @@ A web server is software that delivers content or services to users over the [In
 >
 > Example: [What is a web server](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server).
 
-## Web client
+### Web client
 
-A web client is software that requests and displays web content, such as browsers (`Chrome`, `Firefox`) or command-line tools ([`curl`](#send-a-get-query-using-curl)).
+A web client is software that requests content from a [web server](#web-server) and displays the received content.
 
-## Server and client
-
-In client-server architecture:
-
-- A **client** sends requests (browser, mobile app, `curl`).
-- A **server** receives requests, runs logic, and returns responses.
-
-```text
-Client (browser/curl)
-        |
-        | HTTP request (e.g., GET /status)
-        v
-Service (server app)
-        |
-        | HTTP response (e.g., 200 + JSON)
-        v
-Client (renders or prints result)
-```
-
-Common response parts:
-
-- Status code (`200`, `404`, `500`, etc.).
-- Headers (metadata).
-- Body (often `JSON` in APIs).
+Web clients include browsers (`Chrome`, `Firefox`) and command-line tools ([`curl`](#send-a-get-query-using-curl)).
 
 ## Data format
 
