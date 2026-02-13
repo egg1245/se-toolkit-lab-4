@@ -7,7 +7,8 @@
   - [`HTTP` response](#http-response)
   - [`HTTP` response status code](#http-response-status-code)
   - [Common `HTTP` response status codes](#common-http-response-status-codes)
-    - [`404` response status code](#404-response-status-code)
+- [Web server](#web-server)
+- [Web client](#web-client)
 - [Client-server architecture](#client-server-architecture)
 - [API](#api)
 - [Endpoint](#endpoint)
@@ -52,6 +53,20 @@ Standard status codes include:
 - [`404` (Not Found)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404)
 - [`500` (Internal Server Error)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/500)
 
+## Web server
+
+A web server is software that delivers content or services to users over the [Internet](./networks.md#internet) using a [protocol](#protocol).
+
+> [!NOTE]
+> We refer to a web server as software only.
+>
+> Other sources may refer to it as hardware too.
+>
+> Example: [What is a web server](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server).
+
+## Web client
+
+A web client is software that requests and displays web content, such as browsers (`Chrome`, `Firefox`) or command-line tools ([`curl`](#send-a-get-query-using-curl)).
 
 ## Client-server architecture
 
