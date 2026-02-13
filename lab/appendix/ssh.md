@@ -5,11 +5,12 @@
 - [`SSH` and shells](#ssh-and-shells)
 - [SSH daemon](#ssh-daemon)
 - [`ssh-agent`](#ssh-agent)
-- [Create a new `SSH` key](#create-a-new-ssh-key)
+- [Set up SSH](#set-up-ssh)
+  - [Create a new `SSH` key](#create-a-new-ssh-key)
 - [Find the `SSH` key files](#find-the-ssh-key-files)
-- [Add the host to the `SSH` config](#add-the-host-to-the-ssh-config)
-- [Start the `ssh-agent`](#start-the-ssh-agent)
-- [Verify the `SSH` setup](#verify-the-ssh-setup)
+  - [Add the host to the `SSH` config](#add-the-host-to-the-ssh-config)
+  - [Start the `ssh-agent`](#start-the-ssh-agent)
+  - [Verify the `SSH` setup](#verify-the-ssh-setup)
 - [Connect to the VM](#connect-to-the-vm)
 - [Common errors](#common-errors)
 
@@ -45,7 +46,7 @@ We'll use the `ed25519` algorithm, which is the modern standard for security and
   
    *Note:* If you set a passphrase, use `ssh-agent` to avoid retyping it on every connection.
 
-## Find the `SSH` key files
+### Find the `SSH` key files
 
 `SSH` keys are generated in pairs. You must know which file is which.
 
@@ -83,7 +84,7 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 > Never share the private key.
 > This is your secret identity.
 
-## Add the host to the `SSH` config
+### Add the host to the `SSH` config
 
 1. [Open using the `Command Palette` the file](./vs-code.md#open-a-file-using-the-command-palette):
    `~/.ssh/config`
@@ -102,7 +103,7 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
 3. Replace `<your-vm-ip-address>` with the [IP address of your VM](./vm.md#get-the-ip-address-of-the-vm).
 
-## Start the `ssh-agent`
+### Start the `ssh-agent`
 
 Use the method that matches your platform.
 
@@ -125,7 +126,7 @@ Linux / `macOS` / `WSL` / `Git Bash`:
    ssh-add $env:USERPROFILE\.ssh\se_toolkit_key
    ```
 
-## Verify the `SSH` setup
+### Verify the `SSH` setup
 
 1. Check that your key is loaded:
 
