@@ -10,6 +10,11 @@
 - [Web server](#web-server)
 - [Web client](#web-client)
 - [Server and client](#server-and-client)
+- [Data format](#data-format)
+  - [`JSON`](#json)
+    - [`JSON` data types](#json-data-types)
+    - [Example of `JSON` data](#example-of-json-data)
+  - [`Protobuf`](#protobuf)
 - [API](#api)
 - [Endpoint](#endpoint)
 - [Send a `GET` query](#send-a-get-query)
@@ -92,6 +97,37 @@ Common response parts:
 - Status code (`200`, `404`, `500`, etc.).
 - Headers (metadata).
 - Body (often `JSON` in APIs).
+
+## Data format
+
+### `JSON`
+
+`JSON` (`JavaScript Object Notation`) is a lightweight, text-based data interchange format that is easy for humans to read and write, and easy for machines to parse and generate.
+
+It is language-independent but derived from `JavaScript` and commonly used in web applications to transmit data between a [server and a client](#server-and-client).
+
+See [Learn `JSON` in Y minutes](https://learnxinyminutes.com/json/).
+
+#### `JSON` data types
+
+`JSON` supports basic data types like strings, numbers, booleans, arrays, and objects, making it ideal for representing structured data. Its simplicity and compatibility with most programming languages have made it the de facto standard for API responses and configuration files.
+
+#### Example of `JSON` data
+
+```json
+{
+  "name": "John Doe",
+  "age": 35,
+  "active": true,
+  "skills": ["Python", "JavaScript", "Go"]
+}
+```
+
+### `Protobuf`
+
+`Protobuf` (`Protocol Buffers`) is a binary serialization format developed by `Google` for structured data exchange between applications. It's a language-neutral, platform-neutral mechanism for serializing structured data, similar to `XML` or `JSON` but more compact and faster.
+
+`Protobuf` uses `.proto` files to define data structures, which are then compiled into language-specific classes for various programming languages. It's commonly used in microservices architectures and API communications where efficiency and schema evolution are important.
 
 ## API
 
