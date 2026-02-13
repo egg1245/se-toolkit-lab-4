@@ -3,6 +3,7 @@
 <h2>Table of contents</h2>
 
 - [The `GitHub` site](#the-github-site)
+- [`GitHub` username](#github-username)
 - [`<your-username>`](#your-username)
   - [Find `<your-username>`](#find-your-username)
 - [Repository](#repository)
@@ -33,15 +34,19 @@
 
 The `GitHub` site has this [URL](./web-development.md#url): <https://github.com>.
 
-## `<your-username>`
+## `GitHub` username
 
-We'll refer to your `GitHub` username as `<your-username>`.
+A `GitHub` username is a unique identifier of a user or an organization on [the `GitHub` site](#the-github-site).
 
 Example of a username: `johndoe`.
 
 Note that this username doesn't include `@`.
 
-`<your-username>` also doesn't include `@`.
+## `<your-username>`
+
+Assume `<your-username>` is your [`GitHub` username](#github-username).
+
+`<your-username>` doesn't include `@`.
 
 ### Find `<your-username>`
 
