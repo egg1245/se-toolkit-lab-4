@@ -19,7 +19,7 @@ Now you will deploy it to [your university VM](../../appendix/vm.md#your-vm) so 
 - [Steps](#steps)
   - [1. Create an issue](#1-create-an-issue)
   - [2. Connect to the VM](#2-connect-to-the-vm)
-  - [3. Clone the fork on the VM](#3-clone-the-fork-on-the-vm)
+  - [3. Clone your fork on the VM](#3-clone-your-fork-on-the-vm)
   - [4. Create the file `.env.docker.secret`](#4-create-the-file-envdockersecret)
   - [5. View the file `.env.docker.secret`](#5-view-the-file-envdockersecret)
   - [6. Run the web server using `Docker Compose`](#6-run-the-web-server-using-docker-compose)
