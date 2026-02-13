@@ -67,8 +67,9 @@
 
 ### 5. Go to your fork
 
-1. Go to your fork (a partial copy of the instructors' repo stored on `GitHub`).
-2. The URL of your fork should be like `https://github.com/<your-username>/se-toolkit-lab-2`.
+1. [Go to your fork](./appendix/github.md#go-to-your-fork).
+
+   The [URL](./appendix/web-development.md#url) of your fork should look like `https://github.com/<your-username>/se-toolkit-lab-2`.
 
 ### 6. Make your fork public
 
