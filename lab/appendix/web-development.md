@@ -9,7 +9,7 @@
   - [Common `HTTP` response status codes](#common-http-response-status-codes)
 - [Web server](#web-server)
 - [Web client](#web-client)
-- [Client-server architecture](#client-server-architecture)
+- [Server and client](#server-and-client)
 - [API](#api)
 - [Endpoint](#endpoint)
 - [Send a `GET` query](#send-a-get-query)
@@ -23,11 +23,11 @@
 
 ## Protocol
 
-A protocol is a set of rules that define how data is transmitted and received over a network. In web development, protocols govern communication between clients and servers.
+A protocol is a set of rules that define how data is transmitted and received over a network. In web development, protocols govern communication between [servers and clients](#server-and-client).
 
 ## `HTTP`
 
-`HTTP` (`HyperText Transfer Protocol`) is the foundation of data communication on the web. This [protocol](#protocol) defines how messages are formatted and transmitted between [clients and servers](#client-server-architecture).
+`HTTP` (`HyperText Transfer Protocol`) is the foundation of data communication on the web. This [protocol](#protocol) defines how messages are formatted and transmitted between [servers and clients](#server-and-client).
 
 ### `HTTP` request
 
@@ -68,7 +68,7 @@ A web server is software that delivers content or services to users over the [In
 
 A web client is software that requests and displays web content, such as browsers (`Chrome`, `Firefox`) or command-line tools ([`curl`](#send-a-get-query-using-curl)).
 
-## Client-server architecture
+## Server and client
 
 In client-server architecture:
 
