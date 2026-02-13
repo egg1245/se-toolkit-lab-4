@@ -3,10 +3,13 @@
 <h2>Table of contents</h2>
 
 - [The `GitHub` site](#the-github-site)
+- [`<your-username>`](#your-username)
+  - [Find `<your-username>`](#find-your-username)
 - [Repository](#repository)
 - [Fork](#fork)
   - [Fork a repo](#fork-a-repo)
-  - [Fork URL](#fork-url)
+  - [`<your-fork-url>`](#your-fork-url)
+  - [Go to your fork](#go-to-your-fork)
 - [Issue](#issue)
   - [Issue elements](#issue-elements)
   - [Who can create issues](#who-can-create-issues)
@@ -30,6 +33,22 @@
 
 The `GitHub` site has this [URL](./web-development.md#url): <https://github.com>.
 
+## `<your-username>`
+
+We'll refer to your `GitHub` username as `<your-username>`.
+
+Example of a username: `johndoe`.
+
+Note that this username doesn't include `@`.
+
+`<your-username>` also doesn't include `@`.
+
+### Find `<your-username>`
+
+1. Go to the [`GitHub` site](#the-github-site).
+2. Sign in if necessary.
+3. You'll see your username in the top left corner.
+
 ## Repository
 
 A repository (or "repo") is a storage location for files that are version-controlled using [`Git`](./git.md#what-is-git).
@@ -51,11 +70,19 @@ When you fork a repository on `GitHub`, you create a personal copy under your `G
    2. Click `<your-username>` to make you the repo owner.
    3. Click `Create fork`.
 
-### Fork URL
+### `<your-fork-url>`
 
-Assume the original repo [URL](./web-development.md#url) is `https://github.com/<repo-owner-username>/<repo-name>`.
+Assume the [URL](./web-development.md#url) of the [repo that you forked](#fork-a-repo) is `https://github.com/<repo-owner-username>/<repo-name>`.
 
 Then, your fork URL should look like `https://github.com/<your-username>/<repo-name>`.
+
+We'll refer to this URL as `<your-fork-url>`.
+
+Find [`<your-username>`](#your-username) if you don't know it.
+
+### Go to your fork
+
+1. Open [`<your-fork-url>`](#your-fork-url) in a browser.
 
 ## Issue
 
@@ -132,12 +159,12 @@ Create a PR to the `<repo-name>/<branch-name>`:
 
 #### Open the PR editor using a button
 
-1. Go to your [fork](#fork-url).
+1. [Go to your fork](#go-to-your-fork).
 2. If you see the `Compare & pull request` button, click it.
 
 #### Open the PR editor using `Pull requests`
 
-1. Go to your [fork](#fork-url).
+1. [Go to your fork](#go-to-your-fork).
 2. Click `Pull requests`.
 3. Click `New pull request`.
 4. Click `base repository: <repo-owner-username>/<repo-name>`.
@@ -150,7 +177,7 @@ Create a PR to the `<repo-name>/<branch-name>`:
 
 #### Open the PR editor using the branch list
 
-1. Go to your [fork](#fork-url).
+1. [Go to your fork](#go-to-your-fork).
 2. Click `main` under the repo name to view all branches.
 3. Click `<branch-name>` that you want to use for PR.
 4. You'll see the `Contribute` button if the branch has commits that aren't yet in the `main` branch.

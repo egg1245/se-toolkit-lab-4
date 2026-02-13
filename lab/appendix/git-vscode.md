@@ -1,5 +1,12 @@
 # `Git` in `VS Code`
 
+- [Switch to the `<branch-name>` branch](#switch-to-the-branch-name-branch)
+  - [Switch to the `<branch-name>` branch using the `VS Code Terminal`](#switch-to-the-branch-name-branch-using-the-vs-code-terminal)
+  - [Switch to the `<branch-name>` branch using `GitLens`](#switch-to-the-branch-name-branch-using-gitlens)
+- [Detect conflicts](#detect-conflicts)
+- [Pull changes from `origin/<branch-name>`](#pull-changes-from-originbranch-name)
+  - [Pull changes from `origin/<branch-name>` using the `VS Code Terminal`](#pull-changes-from-originbranch-name-using-the-vs-code-terminal)
+  - [Pull changes from `origin/<branch-name>` using `GitLens`](#pull-changes-from-originbranch-name-using-gitlens)
 - [Stage using the `Source Control`](#stage-using-the-source-control)
   - [Stage all changes in a specific file](#stage-all-changes-in-a-specific-file)
   - [Stage all changes in specific files](#stage-all-changes-in-specific-files)
@@ -18,6 +25,79 @@
 - [Push more commits](#push-more-commits)
   - [Push using the `VS Code Terminal`](#push-using-the-vs-code-terminal)
   - [Push using `GitLens`](#push-using-gitlens)
+- [Switch to a new branch](#switch-to-a-new-branch)
+  - [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
+  - [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
+  - [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
+
+## Switch to the `<branch-name>` branch
+
+- Method 1: [Switch to the `<branch-name>` branch using the `VS Code Terminal`](#switch-to-the-branch-name-branch-using-the-vs-code-terminal)
+- Method 2: [Switch to the `<branch-name>` branch using `GitLens`](#switch-to-the-branch-name-branch-using-gitlens)
+
+### Switch to the `<branch-name>` branch using the `VS Code Terminal`
+
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   git switch <branch name>
+   ```
+
+   Example:
+
+   ```terminal
+   git switch main
+   ```
+
+### Switch to the `<branch-name>` branch using `GitLens`
+
+1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
+   `GitLens: Git Switch to..`.
+2. [Select](./vs-code.md#select-an-option-from-a-list) the `<branch-name>` branch.
+
+## Detect conflicts
+
+It can happen that commits on your `origin/<branch-name>` are different from commits
+on the `<branch-name>` branch in your cloned repo on your computer.
+
+Check whether you have such conflicts:
+
+1. Look at the [`Status Bar`](../appendix/vs-code.md#status-bar).
+
+   <img alt="Commit Conflict" src="../images/appendix/vs-code/status-bar-commit-conflict.png" style="width:400px"></img>
+
+   You should see that there is a non-zero number of commits to pull from `origin/<branch-name>`.
+
+## Pull changes from `origin/<branch-name>`
+
+> [!NOTE]
+> `origin` is an alias for your fork on `GitHub` (see [Inspect remotes](./gitlens.md#inspect-remotes)).
+
+Pull changes from the `<branch-name>` branch in your fork on `GitHub`.
+
+We call that branch `origin/<branch-name>`.
+
+- Method 1: [Pull changes from `origin/<branch-name>` using the `VS Code Terminal`](#pull-changes-from-originbranch-name-using-the-vs-code-terminal)
+- Method 2: [Pull changes from `origin/<branch-name>` using `GitLens`](#pull-changes-from-originbranch-name-using-gitlens)
+
+### Pull changes from `origin/<branch-name>` using the `VS Code Terminal`
+
+1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   git pull origin <branch-name>
+   ```
+
+   Example:
+
+   ```terminal
+   git pull origin main
+   ```
+
+### Pull changes from `origin/<branch-name>` using `GitLens`
+
+1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
+   `GitLens: Pull`
 
 ## Stage using the `Source Control`
 
@@ -167,3 +247,49 @@ See [Undo commit on the current branch](./gitlens.md#undo-a-commit-on-the-curren
 2. Click `GITLENS`.
 3. Click the `Commits` icon.
 4. Click the `Push` icon to the right of `COMMITS`.
+
+## Switch to a new branch
+
+Create a new branch and switch to it:
+
+<!-- no toc -->
+- Method 1: [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
+- Method 2: [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
+- Method 3: [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
+
+> [!IMPORTANT]
+> Replace the `<branch-name>` with the actual branch name.
+
+### Switch to a new branch using `GitHub`
+
+1. [Go to your fork](./github.md#go-to-your-fork).
+2. [Create a branch](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue).
+3. Copy the command provided by `GitHub`.
+
+   It's looks like this:
+
+   ```terminal
+   git fetch origin
+   git checkout <branch-name>
+   ```
+
+4. [Run the copied command using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal).
+
+### Switch to a new branch using the `VS Code Terminal`
+
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+    ```terminal
+    git checkout -b <branch-name>
+    ```
+
+### Switch to a new branch using `GitLens`
+
+1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
+   `GitLens: Git Create Branch...`.
+2. [Select](./vs-code.md#select-an-option-from-a-list)
+   `main` as the base branch.
+3. Write `<branch-name>` to provide the new branch name.
+4. Press `Enter` to confirm.
+5. [Select](./vs-code.md#select-an-option-from-a-list)
+   `Create & Switch to Branch`.

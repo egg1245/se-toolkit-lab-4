@@ -18,7 +18,7 @@
   - [15. Install `uv`](#15-install-uv)
   - [15. Configure `Git`](#15-configure-git)
   - [16. Copy your fork URL](#16-copy-your-fork-url)
-  - [17. Clone the fork on your computer](#17-clone-the-fork-on-your-computer)
+  - [17. Clone the fork](#17-clone-the-fork)
     - [Clone the fork using the `VS Code Terminal`](#clone-the-fork-using-the-vs-code-terminal)
     - [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
   - [18. Open `VS Code` in the cloned repo directory](#18-open-vs-code-in-the-cloned-repo-directory)
@@ -57,29 +57,19 @@
 ### 3. Sign in on `GitHub`
 
 1. Sign in on [`GitHub`](https://github.com/).
-
-> [!NOTE]
-> We'll refer to your `GitHub` username as `<your-username>`.
->
-> Example of a username: `johndoe`.
->
-> Note that this username doesn't include `@`.
->
-> `<your-username>` also doesn't include `@`.
+2. [Find `<your-username>`](./appendix/github.md#find-your-username).
 
 ### 4. Fork the course instructors' repo
 
-1. Go to the course instructors' repo: <https://github.com/inno-se-toolkit/se-toolkit-lab-2>.
-2. [Fork] the course instructors' repo:
-   1. Click `Fork`.
-   2. Click `Choose an owner`.
-   3. Click `<your-username>` to make you the repo owner.
-   4. Click `Create fork`.
+1. [Fork](./appendix/github.md#fork-a-repo) the course instructors' repo.
+
+   The course instructors' repo [URL](./appendix/web-development.md#url) is <https://github.com/inno-se-toolkit/se-toolkit-lab-2>
 
 ### 5. Go to your fork
 
-1. Go to your fork (a partial copy of the instructors' repo stored on `GitHub`).
-2. The URL of your fork should be like `https://github.com/<your-username>/se-toolkit-lab-2`.
+1. [Go to your fork](./appendix/github.md#go-to-your-fork).
+
+   The [URL](./appendix/web-development.md#url) of your fork should look like `https://github.com/<your-username>/se-toolkit-lab-2`.
 
 ### 6. Make your fork public
 
@@ -198,16 +188,14 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 
 ### 16. Copy your fork URL
 
-1. Go to your fork on `Gitub`.
-2. Copy its [URL](https://en.wikipedia.org/wiki/URL).
+1. [Go to your fork](#5-go-to-your-fork).
+2. Copy [`<your-fork-url>`](./appendix/github.md#your-fork-url).
 3. It should look like `https://github.com/<your-username>/se-toolkit-lab-2`.
 
-### 17. Clone the fork on your computer
+### 17. Clone the fork
 
-Clone the fork using any of the following methods:
-
-- [Clone the fork using the `VS Code Terminal`](#clone-the-fork-using-the-vs-code-terminal)
-- [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
+- Method 1: [Clone the fork using the `VS Code Terminal`](#clone-the-fork-using-the-vs-code-terminal)
+- Method 2: [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
 
 #### Clone the fork using the `VS Code Terminal`
 
@@ -376,7 +364,7 @@ Complete these steps:
 
 #### Create the `task` label
 
-1. Go to your fork.
+1. [Go to your fork](#5-go-to-your-fork).
 2. Go to `Issues` -> `Labels`.
 3. Create a new label:
    1. Click `New label`.
@@ -385,12 +373,12 @@ Complete these steps:
 
 #### Add the label to issues
 
-1. Go to your fork.
+1. [Go to your fork](#5-go-to-your-fork).
 2. [Add](https://github.com/orgs/community/discussions/53473#discussioncomment-5697478) the `task` label to some of your issues.
 
 #### See all issues with the label
 
-1. Go to your fork.
+1. [Go to your fork](#5-go-to-your-fork).
 2. Go to `Issues`.
 3. If you don't see any `Open` issues, click `Closed`.
 4. Filter issues by the label:

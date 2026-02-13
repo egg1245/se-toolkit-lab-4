@@ -1,65 +1,130 @@
 # Web development
 
-- [Client-server architecture](#client-server-architecture)
+- [Web server and web client](#web-server-and-web-client)
+  - [Web server](#web-server)
+  - [Web client](#web-client)
 - [Protocol](#protocol)
 - [`HTTP`](#http)
+  - [Communication using `HTTP`](#communication-using-http)
   - [`HTTP` request](#http-request)
     - [Query parameter](#query-parameter)
   - [`HTTP` response](#http-response)
   - [`HTTP` response status code](#http-response-status-code)
   - [Common `HTTP` response status codes](#common-http-response-status-codes)
-    - [`404` response status code](#404-response-status-code)
+- [Data format](#data-format)
+  - [`JSON`](#json)
+    - [`JSON` data types](#json-data-types)
+    - [Example of `JSON` data](#example-of-json-data)
+  - [`Protobuf`](#protobuf)
 - [API](#api)
 - [Endpoint](#endpoint)
 - [Send a `GET` query](#send-a-get-query)
   - [Send a `GET` query using a browser](#send-a-get-query-using-a-browser)
   - [Send a `GET` query using curl](#send-a-get-query-using-curl)
 - [Pretty-print the `JSON` response](#pretty-print-the-json-response)
-- [Pretty-print the `JSON` response using `jq`](#pretty-print-the-json-response-using-jq)
+  - [Pretty-print the `JSON` response using `jq`](#pretty-print-the-json-response-using-jq)
   - [Pretty-print the `JSON` response using a browser](#pretty-print-the-json-response-using-a-browser)
 - [URL](#url)
 - [Service](#service)
 
-## Client-server architecture
+## Web server and web client
 
-In client-server architecture:
+### Web server
 
-- A **client** sends requests (browser, mobile app, `curl`).
-- A **server** receives requests, runs logic, and returns responses.
+A web server is software that delivers content or services to [web clients](#web-client) over the [Internet](./networks.md#internet) using a [protocol](#protocol).
 
-```text
-Client (browser/curl)
-        |
-        | HTTP request (e.g., GET /status)
-        v
-Service (server app)
-        |
-        | HTTP response (e.g., 200 + JSON)
-        v
-Client (renders or prints result)
-```
+> [!NOTE]
+> We refer to a web server as software only.
+>
+> Other sources may refer to it as hardware too.
+>
+> Example: [What is a web server](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server).
 
-Common response parts:
+### Web client
 
-- Status code (`200`, `404`, `500`, etc.).
-- Headers (metadata).
-- Body (often `JSON` in APIs).
+A web client is software that requests content from a [web server](#web-server) and displays the received content.
+
+Web clients include browsers (`Chrome`, `Firefox`) and command-line tools ([`curl`](#send-a-get-query-using-curl)).
 
 ## Protocol
 
+A protocol is a set of rules that define how data is transmitted and received over a network. In web development, protocols govern communication between [web servers and web clients](#web-server-and-web-client).
+
 ## `HTTP`
+
+`HTTP` (`HyperText Transfer Protocol`) is the foundation of data communication on the web. This [protocol](#protocol) defines how messages are formatted and transmitted between [web servers and web clients](#web-server-and-web-client).
+
+### Communication using `HTTP`
+
+The following diagram illustrates the communication between a [web client](#web-client) and [web server](#web-server) using the `HTTP` protocol:
+
+```mermaid
+sequenceDiagram
+    participant Client as Web Client (Browser/Curl)
+    participant Server as Web Server
+    
+    Client->>Server: HTTP Request (GET, POST, etc.)
+    activate Server
+    Server-->>Client: HTTP Response (200 OK, 404, etc.)
+    deactivate Server
+    
+    Note over Client,Server: Communication happens via HTTP protocol
+```
 
 ### `HTTP` request
 
+An `HTTP` request is a message sent by a client to a server asking for resources or to perform actions. It includes a method, headers, and optional body.
+
 #### Query parameter
+
+Query parameters are key-value pairs appended to a [URL](#url) after a `?` character, used to send data to the server with a request.
 
 ### `HTTP` response
 
+An `HTTP` response is the server's answer to an `HTTP` request, containing status information and requested content.
+
 ### `HTTP` response status code
+
+Status codes are three-digit numbers returned by servers indicating the result of a request (success, error, redirect, etc.).
 
 ### Common `HTTP` response status codes
 
-#### `404` response status code
+Standard status codes include:
+
+- [`200` (OK)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/200)
+- [`404` (Not Found)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404)
+- [`500` (Internal Server Error)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/500)
+
+## Data format
+
+### `JSON`
+
+`JSON` (`JavaScript Object Notation`) is a lightweight, text-based data interchange format that is easy for humans to read and write, and easy for machines to parse and generate.
+
+It is language-independent but derived from `JavaScript` and commonly used in web applications to transmit data between a [server and a client](#web-server-and-web-client).
+
+See [Learn `JSON` in Y minutes](https://learnxinyminutes.com/json/).
+
+#### `JSON` data types
+
+`JSON` supports basic data types like strings, numbers, booleans, arrays, and objects, making it ideal for representing structured data. Its simplicity and compatibility with most programming languages have made it the de facto standard for API responses and configuration files.
+
+#### Example of `JSON` data
+
+```json
+{
+  "name": "John Doe",
+  "age": 35,
+  "active": true,
+  "skills": ["Python", "JavaScript", "Go"]
+}
+```
+
+### `Protobuf`
+
+`Protobuf` (`Protocol Buffers`) is a binary serialization format developed by `Google` for structured data exchange between applications. It's a language-neutral, platform-neutral mechanism for serializing structured data, similar to `XML` or `JSON` but more compact and faster.
+
+`Protobuf` uses `.proto` files to define data structures, which are then compiled into language-specific classes for various programming languages. It's commonly used in microservices architectures and API communications where efficiency and schema evolution are important.
 
 ## API
 
@@ -89,7 +154,7 @@ curl http://127.0.0.1:42000/status
 
 ## Pretty-print the `JSON` response
 
-## Pretty-print the `JSON` response using `jq`
+### Pretty-print the `JSON` response using `jq`
 
 1. [Install `jq`](./linux.md#install-jq) if not installed.
 2. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):

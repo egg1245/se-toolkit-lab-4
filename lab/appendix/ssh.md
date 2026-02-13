@@ -1,6 +1,8 @@
 # `SSH`
 
 - [`SSH` and shells](#ssh-and-shells)
+- [SSH daemon](#ssh-daemon)
+- [`ssh-agent`](#ssh-agent)
 - [Create a new `SSH` key](#create-a-new-ssh-key)
 - [Find the `SSH` key files](#find-the-ssh-key-files)
 - [Add the host to the `SSH` config](#add-the-host-to-the-ssh-config)
@@ -16,6 +18,10 @@
 You can use it to connect to [your virtual machine](./vm.md#your-vm).
 
 Since you are using `Git Bash` (`Windows`), `WSL` (`Windows`), `Zsh` (`macOS`), or `Bash` (`Linux`), the commands below will work in your terminal without requiring `PowerShell` or GUI tools like `PuTTY`.
+
+## SSH daemon
+
+## `ssh-agent`
 
 ## Create a new `SSH` key
 
@@ -56,6 +62,20 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
    The file ending in `.pub` contains the public key.
 
    Another file contains the private key.
+
+3. View the content of the public key file:
+
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   cat ~/.ssh/se_toolkit_key.pub
+   ```
+
+   You should see something similar to this:
+
+   ```terminal
+   ssh-ed25519 AKdk38D3faWJnlFfalFJSKEFGG/vmLQ62Z+vpWCe5e/c2n37cnNc39N3c8qb7cBS+e3d se-toolkit-student
+   ```
 
 > [!IMPORTANT]
 > Never share the private key.

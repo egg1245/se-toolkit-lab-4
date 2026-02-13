@@ -15,18 +15,12 @@ Outline:
 
 - [Create a `Lab Task` issue](#create-a-lab-task-issue)
 - [Switch to the `main` branch](#switch-to-the-main-branch)
-  - [Switch to the `main` branch using the `VS Code Terminal`](#switch-to-the-main-branch-using-the-vs-code-terminal)
-  - [Switch to the `main` branch using `GitLens`](#switch-to-the-main-branch-using-gitlens)
+- [Detect conflicts](#detect-conflicts)
 - [Pull changes from `origin/main`](#pull-changes-from-originmain)
-  - [Pull changes from `origin/main` using the `VS Code Terminal`](#pull-changes-from-originmain-using-the-vs-code-terminal)
-  - [Pull changes from `origin/main` using `GitLens`](#pull-changes-from-originmain-using-gitlens)
-- [Resolve conflicts](#resolve-conflicts)
+- [Pull changes from `origin/main` and rebase](#pull-changes-from-originmain-and-rebase)
   - [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
   - [Resolve conflicts using `GitLens`](#resolve-conflicts-using-gitlens)
 - [Switch to a new branch](#switch-to-a-new-branch)
-  - [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
-  - [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
-  - [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
 - [Edit files](#edit-files)
 - [Commit](#commit)
 - [(Optional) Undo commits](#optional-undo-commits)
@@ -46,65 +40,30 @@ Outline:
 
 ## Switch to the `main` branch
 
-Go to `VS Code`.
+[Switch to the `main` branch](../appendix/git-vscode.md#switch-to-the-main-branch) in `VS Code`.
 
-Switch to the `main` branch using any of the following methods:
+## Detect conflicts
 
-- [Switch to the `main` branch using the `VS Code Terminal`](#switch-to-the-main-branch-using-the-vs-code-terminal)
-- [Switch to the `main` branch using `GitLens`](#switch-to-the-main-branch-using-gitlens)
-
-### Switch to the `main` branch using the `VS Code Terminal`
-
-1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   git switch main
-   ```
-
-### Switch to the `main` branch using `GitLens`
-
-1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
-   `GitLens: Git Switch to..`.
-2. [Select](../appendix/vs-code.md#select-an-option-from-a-list) the `main` branch.
+[Detect conflicts with the `origin/main`](../appendix/git-vscode.md#detect-conflicts).
 
 ## Pull changes from `origin/main`
 
-Pull changes from the `main` branch in your fork on `GitHub`.
+[Pull changes from the `main` branch in your fork on `GitHub`](../appendix/git-vscode.md#pull-changes-from-originbranch-name).
 
-We call that branch `origin/main`.
-
-### Pull changes from `origin/main` using the `VS Code Terminal`
-
-1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   git pull origin main
-   ```
-
-### Pull changes from `origin/main` using `GitLens`
-
-1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette): `GitLens: Pull`
-
-## Resolve conflicts
+## Pull changes from `origin/main` and rebase
 
 You may see some errors and messages about conflicts after pulling.
 
-It may happen that commits on your `origin/main` are different from commits on your local `main` branch in your cloned repo on your computer.
+You need to rebase your local commits in your local `<branch-name>` onto the commits from `origin/<branch-name>`.
 
-You can see that in the [`Status Bar`](../appendix/vs-code.md#status-bar).
+However, you can get conflicts if commits from `origin/<branch-name>` modified the same lines of text in files as your local commits but in a different way.
 
-<img alt="Commit Conflict" src="../images/appendix/vs-code/status-bar-commit-conflict.png" style="width:400px"></img>
+In this case, you should resolve conflicts.
 
-You need to pull commits from `origin/main` into your local `main`.
+Steps:
 
-These commits from `origin/main` will find a place somewhere among the commits on your local `main`.
-
-However, you can get conflicts if commits from `origin/main` modified the same lines of text in files as your local commits but in a different way.
-
-In this case, you should rebase your local branch and resolve conflicts:
-
-- [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
-- [Resolve conflicts using `GitLens`](#resolve-conflicts-using-gitlens)
+1. [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
+2. [Resolve conflicts using `GitLens`](#resolve-conflicts-using-gitlens)
 
 ### Pull and rebase using `GitLens`
 
@@ -137,49 +96,13 @@ Continue resolving conflicts if you see an error like this:
 
 ## Switch to a new branch
 
-Create a new branch and switch to it:
+[Create a new branch and switch to it](../appendix/git-vscode.md#switch-to-a-new-branch).
 
-<!-- no toc -->
-- Method 1: [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)
-- Method 2: [Switch to a new branch using the `VS Code Terminal`](#switch-to-a-new-branch-using-the-vs-code-terminal)
-- Method 3: [Switch to a new branch using `GitLens`](#switch-to-a-new-branch-using-gitlens)
-
-> [!IMPORTANT]
-> Replace the `<branch-name>` with the actual branch name.
-
-### Switch to a new branch using `GitHub`
-
-1. Go to your [fork](../appendix/github.md#fork-url).
-2. [Create a branch](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue).
-3. Copy the command provided by `GitHub`. It's something like:
-
-   ```terminal
-   git fetch origin
-   git checkout <branch-name>
-   ```
-
-4. [Run the copied command using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal).
-
-### Switch to a new branch using the `VS Code Terminal`
-
-1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-    ```terminal
-    git checkout -b <branch-name>
-    ```
-
-### Switch to a new branch using `GitLens`
-
-1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
-   `GitLens: Git Create Branch..`.
-2. [Select](../appendix/vs-code.md#select-an-option-from-a-list) `main` as the base branch.
-3. Write `<branch-name>` to provide the new branch name.
-4. Press `Enter` to confirm.
-5. [Select](../appendix/vs-code.md#select-an-option-from-a-list) `Create & Switch to Branch`.
+We'll refer to the name of this branch as `<branch-name>`.
 
 ## Edit files
 
-Edit files in the [`Editor`](../appendix/vs-code.md#editor) to produce changes.
+[Edit files](../appendix/vs-code.md#editor) using `VS Code` to produce changes.
 
 ## Commit
 
