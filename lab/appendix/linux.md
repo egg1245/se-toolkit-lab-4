@@ -9,8 +9,9 @@
     - [Run a command](#run-a-command)
     - [Pipe the `stdout`](#pipe-the-stdout)
 - [Program](#program)
-  - [`jq`](#jq)
-- [Useful commands](#useful-commands)
+  - [Useful programs](#useful-programs)
+- [Command](#command)
+  - [Useful commands](#useful-commands)
 - [Process](#process)
   - [PID](#pid)
 - [Groups](#groups)
@@ -89,11 +90,13 @@ It's a static entity stored on disk that becomes a [process](#process) when exec
 
 Programs can be compiled binaries, scripts, or other executable files that perform specific tasks when run by a user or system.
 
-### `jq`
+### Useful programs
 
-Install `jq`.
+See [Useful programs](./useful-programs.md).
 
-## Useful commands
+## Command
+
+### Useful commands
 
 These commands run programs:
 
@@ -108,7 +111,7 @@ A process is an instance of a running [program](#program).
 
 When you execute a program, the [operating system](./operating-system.md) creates a process that contains the program's code, memory space, variables, and system resources. Each process has a unique process ID (PID) and runs independently of other processes.
 
-Processes can be created, managed, and terminated using various Linux commands.
+Processes can be created, managed, and terminated using various [commands](#command).
 
 They form the basis of multitasking in the operating system.
 
