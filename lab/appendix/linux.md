@@ -11,6 +11,8 @@
 - [Programs](#programs)
   - [`jq`](#jq)
 - [Useful commands](#useful-commands)
+- [Process](#process)
+  - [PID](#pid)
 - [Groups](#groups)
 - [Users](#users)
   - [The `root` user](#the-root-user)
@@ -91,6 +93,24 @@ These commands run programs:
 - `ls` - list files.
 - `cd <dir>` - go to a directory.
 - `cat <file>` - print file content.
+
+## Process
+
+In `Linux`, a process is an instance of a running program.
+
+When you execute a program, the [operating system](./operating-system.md) creates a process that contains the program's code, memory space, variables, and system resources. Each process has a unique process ID (PID) and runs independently of other processes.
+
+Processes can be created, managed, and terminated using various Linux commands.
+
+They form the basis of multitasking in the operating system.
+
+### PID
+
+A PID (Process ID) is a unique numerical identifier assigned by the `Linux` operating system to each running process. PIDs help the operating system to track and manage individual processes.
+
+PIDs are used by various system commands to interact with specific processes, such as terminating them, checking their status, or monitoring their resource usage.
+
+PIDs let the operating system handle multitasking.
 
 ## Groups
 
