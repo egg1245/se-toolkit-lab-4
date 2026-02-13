@@ -140,17 +140,28 @@ Complete these steps:
 ### 14. (Windows only) Set the default shell
 
 1. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
-   `WSL: Reopen Folder in WSL`
-2. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
+   `WSL: Open Folder in WSL...`
+2. Click `Show Local`.
+3. Select a directory.
+4. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
    `Terminal: Select Default Profile`
-3. Select `WSL Bash` if available.
-4. If not available, check that you have [installed WSL](#12-optional-windows-only-install-wsl).
-5. Otherwise, [open the `VS Code Terminal`](./appendix/vs-code.md#open-the-vs-code-terminal).
-6. You should see `bash` there:
+5. Select either of these:
 
-   <img alt="Terminal Bash" src="./images/appendix/vs-code/terminal-bash.png" style="width:400px"></img>
+   - `Ubuntu (WSL)`
 
-<!-- TODO check how it looks like on windows -->
+     <img alt="Select Bash" src="./images/appendix/vs-code/terminal-default-profile-bash.png" style="width:400px"></img>
+
+   - `bash: bash`
+
+     <img alt="Select Bash" src="./images/appendix/vs-code/terminal-default-profile-bash.png" style="width:400px"></img>
+6. If not available, check that you have [installed WSL](#12-optional-windows-only-install-wsl).
+7. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   echo $SHELL
+   ```
+
+   You should see `/bin/bash`.
 
 ### 15. Install `uv`
 
