@@ -95,9 +95,8 @@ Title: `[Task] Deploy the web server to the VM`
    docker compose --env-file .env.docker.secret up --build -d
    ```
 
-> [!NOTE]
-> The `-d` flag runs the containers in the background (detached mode).
-> This is useful on a remote server because the containers keep running after you close the terminal.
+   **Note:** The `-d` flag runs the containers in the background (detached mode).
+   This is useful on a remote server because the containers keep running after you close the terminal.
 
 2. Check that the containers are running:
 
