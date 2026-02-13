@@ -364,7 +364,7 @@ Complete these steps:
 
 #### Create the `task` label
 
-1. Go to your fork.
+1. [Go to your fork](#5-go-to-your-fork).
 2. Go to `Issues` -> `Labels`.
 3. Create a new label:
    1. Click `New label`.
@@ -373,12 +373,12 @@ Complete these steps:
 
 #### Add the label to issues
 
-1. Go to your fork.
+1. [Go to your fork](#5-go-to-your-fork).
 2. [Add](https://github.com/orgs/community/discussions/53473#discussioncomment-5697478) the `task` label to some of your issues.
 
 #### See all issues with the label
 
-1. Go to your fork.
+1. [Go to your fork](#5-go-to-your-fork).
 2. Go to `Issues`.
 3. If you don't see any `Open` issues, click `Closed`.
 4. Filter issues by the label:
