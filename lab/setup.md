@@ -191,9 +191,10 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 
 ### 17. Clone your fork
 
-[Clone your fork](./appendix/git-vscode.md#clone-your-fork):
+[Clone your fork](./appendix/git-vscode.md#clone-the-repo):
 
 - Replace `<repo-url>` with [`<your-fork-url>`](./appendix/github.md#your-fork-url).
+- Replace `<repo-name>` with `se-toolkit-lab-2`.
 
 ### 18. Open `VS Code` in the cloned repo directory
 
