@@ -28,6 +28,7 @@
   - [Inspect ports](#inspect-ports)
     - [See listening TCP ports](#see-listening-tcp-ports)
     - [Inspect a specific port](#inspect-a-specific-port)
+  - [Service](#service)
 - [Troubleshooting](#troubleshooting)
   - [Service is running but a request fails](#service-is-running-but-a-request-fails)
 
@@ -220,6 +221,18 @@ ss -ltn
 ```terminal
 ss -ltn 'sport = :42000'
 ```
+
+### Service
+
+A service is a long-running [process](#process) that performs specific system functions or provides functionality to other processes and applications.
+
+Services typically start automatically during system boot and run in the background without direct user interaction. They can be managed using system service managers like `systemd`, `init`, or service scripts.
+
+Common examples include [web servers](./web-development.md), [database servers](./database.md#database-server) (`MySQL`/`PostgreSQL`), [SSH daemons](./ssh.md#ssh-daemon), and network services.
+
+Services often listen on specific ports to handle incoming requests.
+
+They form the backbone of system functionality and network communications.
 
 ## Troubleshooting
 
