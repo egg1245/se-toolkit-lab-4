@@ -5,6 +5,7 @@
   - [Web client](#web-client)
 - [Protocol](#protocol)
 - [`HTTP`](#http)
+  - [Communication using `HTTP`](#communication-using-http)
   - [`HTTP` request](#http-request)
     - [Query parameter](#query-parameter)
   - [`HTTP` response](#http-response)
@@ -52,6 +53,23 @@ A protocol is a set of rules that define how data is transmitted and received ov
 ## `HTTP`
 
 `HTTP` (`HyperText Transfer Protocol`) is the foundation of data communication on the web. This [protocol](#protocol) defines how messages are formatted and transmitted between [web servers and web clients](#web-server-and-web-client).
+
+### Communication using `HTTP`
+
+The following diagram illustrates the communication between a [web client](#web-client) and [web server](#web-server) using the `HTTP` protocol:
+
+```mermaid
+sequenceDiagram
+    participant Client as Web Client (Browser/Curl)
+    participant Server as Web Server
+    
+    Client->>Server: HTTP Request (GET, POST, etc.)
+    activate Server
+    Server-->>Client: HTTP Response (200 OK, 404, etc.)
+    deactivate Server
+    
+    Note over Client,Server: Communication happens via HTTP protocol
+```
 
 ### `HTTP` request
 
