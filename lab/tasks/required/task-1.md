@@ -73,7 +73,8 @@ Method 1:
 
 Method 2:
 
-1. [Open the file using the `Command Palette`](../../appendix/vs-code.md#open-a-file-using-the-command-palette): [`.env.secret`](../../../.env.example).
+1. [Open the file using the `Command Palette`](../../appendix/vs-code.md#open-a-file-using-the-command-palette):
+   `.env.secret`.
 
 ### 6. Use a free `$PORT`
 
