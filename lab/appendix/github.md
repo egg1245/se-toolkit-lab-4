@@ -9,6 +9,7 @@
 - [Fork](#fork)
   - [Fork a repo](#fork-a-repo)
   - [`<your-fork-url>`](#your-fork-url)
+  - [Go to your fork](#go-to-your-fork)
 - [Issue](#issue)
   - [Issue elements](#issue-elements)
   - [Who can create issues](#who-can-create-issues)
@@ -76,6 +77,10 @@ Assume the original repo [URL](./web-development.md#url) is `https://github.com/
 Then, your fork URL should look like `https://github.com/<your-username>/<repo-name>`.
 
 We'll refer to this URL as `<your-fork-url>`.
+
+### Go to your fork
+
+1. Open [`<your-fork-url>`](#your-fork-url) in a browser.
 
 ## Issue
 
@@ -152,12 +157,12 @@ Create a PR to the `<repo-name>/<branch-name>`:
 
 #### Open the PR editor using a button
 
-1. Go to your [fork](#fork-url).
+1. [Go to your fork](#go-to-your-fork).
 2. If you see the `Compare & pull request` button, click it.
 
 #### Open the PR editor using `Pull requests`
 
-1. Go to your [fork](#fork-url).
+1. [Go to your fork](#go-to-your-fork).
 2. Click `Pull requests`.
 3. Click `New pull request`.
 4. Click `base repository: <repo-owner-username>/<repo-name>`.
@@ -170,7 +175,7 @@ Create a PR to the `<repo-name>/<branch-name>`:
 
 #### Open the PR editor using the branch list
 
-1. Go to your [fork](#fork-url).
+1. [Go to your fork](#go-to-your-fork).
 2. Click `main` under the repo name to view all branches.
 3. Click `<branch-name>` that you want to use for PR.
 4. You'll see the `Contribute` button if the branch has commits that aren't yet in the `main` branch.
