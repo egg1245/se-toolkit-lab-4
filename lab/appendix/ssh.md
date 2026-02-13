@@ -7,7 +7,7 @@
 - [`ssh-agent`](#ssh-agent)
 - [Set up SSH](#set-up-ssh)
   - [Create a new `SSH` key](#create-a-new-ssh-key)
-- [Find the `SSH` key files](#find-the-ssh-key-files)
+  - [Find the `SSH` key files](#find-the-ssh-key-files)
   - [Add the host to the `SSH` config](#add-the-host-to-the-ssh-config)
   - [Start the `ssh-agent`](#start-the-ssh-agent)
   - [Verify the `SSH` setup](#verify-the-ssh-setup)
