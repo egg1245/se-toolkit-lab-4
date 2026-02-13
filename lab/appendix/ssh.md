@@ -26,7 +26,17 @@ Since you are using `Git Bash` (`Windows`), `WSL` (`Windows`), `Zsh` (`macOS`), 
 
 ## `ssh-agent`
 
-## Create a new `SSH` key
+## Set up SSH
+
+Steps:
+
+<!-- no toc -->
+1. [Create a new `SSH` key](#create-a-new-ssh-key)
+2. [Find the `SSH` key files](#find-the-ssh-key-files)
+3. [Add the host to the `SSH` config](#add-the-host-to-the-ssh-config)
+4. [Start the `ssh-agent`](#start-the-ssh-agent)
+
+### Create a new `SSH` key
 
 Generate a key pair: a **private key** (secret) and a **public key** (safe to share).
 
