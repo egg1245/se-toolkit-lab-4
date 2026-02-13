@@ -22,19 +22,36 @@
 
 ## Protocol
 
+A protocol is a set of rules that define how data is transmitted and received over a network. In web development, protocols govern communication between clients and servers.
+
 ## `HTTP`
+
+`HTTP` (`HyperText Transfer Protocol`) is the foundation of data communication on the web. This [protocol](#protocol) defines how messages are formatted and transmitted between [clients and servers](#client-server-architecture).
 
 ### `HTTP` request
 
+An `HTTP` request is a message sent by a client to a server asking for resources or to perform actions. It includes a method, headers, and optional body.
+
 #### Query parameter
+
+Query parameters are key-value pairs appended to a [URL](#url) after a `?` character, used to send data to the server with a request.
 
 ### `HTTP` response
 
+An `HTTP` response is the server's answer to an `HTTP` request, containing status information and requested content.
+
 ### `HTTP` response status code
+
+Status codes are three-digit numbers returned by servers indicating the result of a request (success, error, redirect, etc.).
 
 ### Common `HTTP` response status codes
 
-#### `404` response status code
+Standard status codes include:
+
+- [`200` (OK)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/200)
+- [`404` (Not Found)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404)
+- [`500` (Internal Server Error)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/500)
+
 
 ## Client-server architecture
 
