@@ -1,5 +1,6 @@
 # `Git`
 
+- [What is `Git`](#what-is-git)
 - [How `Git` works - text](#how-git-works---text)
 - [How `Git` works - videos](#how-git-works---videos)
 - [Merge conflict](#merge-conflict)
@@ -7,6 +8,8 @@
 - [`.gitignore`](#gitignore)
 - [`GitHub flow`](#github-flow)
 - [`Conventional Commits`](#conventional-commits)
+
+## What is `Git`
 
 ## How `Git` works - text
 

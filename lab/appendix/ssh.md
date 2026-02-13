@@ -1,6 +1,8 @@
 # `SSH`
 
 - [`SSH` and shells](#ssh-and-shells)
+- [SSH daemon](#ssh-daemon)
+- [`ssh-agent`](#ssh-agent)
 - [Create a new `SSH` key](#create-a-new-ssh-key)
 - [Find the `SSH` key files](#find-the-ssh-key-files)
 - [Add the host to the `SSH` config](#add-the-host-to-the-ssh-config)
@@ -16,6 +18,10 @@
 You can use it to connect to [your virtual machine](./vm.md#your-vm).
 
 Since you are using `Git Bash` (`Windows`), `WSL` (`Windows`), `Zsh` (`macOS`), or `Bash` (`Linux`), the commands below will work in your terminal without requiring `PowerShell` or GUI tools like `PuTTY`.
+
+## SSH daemon
+
+## `ssh-agent`
 
 ## Create a new `SSH` key
 
