@@ -71,6 +71,8 @@ The name must be unique among repositories of the repository owner.
 
 ### `<repo-url>`
 
+We use `<repo-url>` to refer to a repository [URL](./web-development.md#url).
+
 A repository URL is typically `https://github.com/<repo-owner-username>/<repo-name>` where:
 
 - `<repo-owner-username>` is the `GitHub` username of the [repo owner](#repository-owner);
