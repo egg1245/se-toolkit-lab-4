@@ -1,5 +1,8 @@
 # Web development
 
+- [Web server and web client](#web-server-and-web-client)
+  - [Web server](#web-server)
+  - [Web client](#web-client)
 - [Protocol](#protocol)
 - [`HTTP`](#http)
   - [`HTTP` request](#http-request)
@@ -7,9 +10,6 @@
   - [`HTTP` response](#http-response)
   - [`HTTP` response status code](#http-response-status-code)
   - [Common `HTTP` response status codes](#common-http-response-status-codes)
-- [Web server and web client](#web-server-and-web-client)
-  - [Web server](#web-server)
-  - [Web client](#web-client)
 - [Data format](#data-format)
   - [`JSON`](#json)
     - [`JSON` data types](#json-data-types)
@@ -25,6 +25,25 @@
   - [Pretty-print the `JSON` response using a browser](#pretty-print-the-json-response-using-a-browser)
 - [URL](#url)
 - [Service](#service)
+
+## Web server and web client
+
+### Web server
+
+A web server is software that delivers content or services to [web clients](#web-client) over the [Internet](./networks.md#internet) using a [protocol](#protocol).
+
+> [!NOTE]
+> We refer to a web server as software only.
+>
+> Other sources may refer to it as hardware too.
+>
+> Example: [What is a web server](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server).
+
+### Web client
+
+A web client is software that requests content from a [web server](#web-server) and displays the received content.
+
+Web clients include browsers (`Chrome`, `Firefox`) and command-line tools ([`curl`](#send-a-get-query-using-curl)).
 
 ## Protocol
 
@@ -57,25 +76,6 @@ Standard status codes include:
 - [`200` (OK)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/200)
 - [`404` (Not Found)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/404)
 - [`500` (Internal Server Error)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/500)
-
-## Web server and web client
-
-### Web server
-
-A web server is software that delivers content or services to [web clients](#web-client) over the [Internet](./networks.md#internet) using a [protocol](#protocol).
-
-> [!NOTE]
-> We refer to a web server as software only.
->
-> Other sources may refer to it as hardware too.
->
-> Example: [What is a web server](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server).
-
-### Web client
-
-A web client is software that requests content from a [web server](#web-server) and displays the received content.
-
-Web clients include browsers (`Chrome`, `Firefox`) and command-line tools ([`curl`](#send-a-get-query-using-curl)).
 
 ## Data format
 
