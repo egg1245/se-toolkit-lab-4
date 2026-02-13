@@ -78,6 +78,8 @@ Then, your fork URL should look like `https://github.com/<your-username>/<repo-n
 
 We'll refer to this URL as `<your-fork-url>`.
 
+Find [`<your-username>`](#your-username) if you don't know it.
+
 ### Go to your fork
 
 1. Open [`<your-fork-url>`](#your-fork-url) in a browser.
