@@ -47,6 +47,11 @@ Title: `[Task] Deploy the web server to the VM`
 
 2. You should see the remote shell prompt (e.g., `root@<your-vm-name>:~#`).
 
+> [!IMPORTANT]
+> Run all subsequent commands  (unless specified otherwise) in the shell where you see this prompt.
+>
+> This way, you'll run commands on the VM.
+
 ### 3. Clone your fork on the VM
 
 1. [Clone the repo using the `VS Code Terminal`](../../appendix/git-vscode.md#clone-the-repo-using-the-vs-code-terminal).
