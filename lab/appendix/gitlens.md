@@ -1,5 +1,7 @@
 # `GitLens`
 
+<h2>Table of contents</h2>
+
 - [What is `GitLens`](#what-is-gitlens)
 - [`GitLens` features](#gitlens-features)
 - [Open the `GITLENS` view](#open-the-gitlens-view)
