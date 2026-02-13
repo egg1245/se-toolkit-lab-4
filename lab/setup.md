@@ -194,10 +194,8 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 
 ### 17. Clone the fork
 
-Clone the fork using any of the following methods:
-
-- [Clone the fork using the `VS Code Terminal`](#clone-the-fork-using-the-vs-code-terminal)
-- [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
+- Method 1: [Clone the fork using the `VS Code Terminal`](#clone-the-fork-using-the-vs-code-terminal)
+- Method 2: [Clone the fork using the `Command Palette`](#clone-the-fork-using-the-command-palette)
 
 #### Clone the fork using the `VS Code Terminal`
 
