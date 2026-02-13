@@ -20,10 +20,11 @@
   - [16. Copy your fork URL](#16-copy-your-fork-url)
   - [17. Clone your fork](#17-clone-your-fork)
   - [18. Open `VS Code` in the cloned repo directory](#18-open-vs-code-in-the-cloned-repo-directory)
-  - [19. Continue creating a VM](#19-continue-creating-a-vm)
-  - [20. Install `Python` and dependencies](#20-install-python-and-dependencies)
-  - [21. Select the `Python` interpreter](#21-select-the-python-interpreter)
-  - [22. Check that `Python` works](#22-check-that-python-works)
+  - [19. Set up `SSH`](#19-set-up-ssh)
+  - [20. Continue creating a VM](#20-continue-creating-a-vm)
+  - [21. Install `Python` and dependencies](#21-install-python-and-dependencies)
+  - [22. Select the `Python` interpreter](#22-select-the-python-interpreter)
+  - [23. Check that `Python` works](#23-check-that-python-works)
 - [Optional steps](#optional-steps)
   - [1. Change the workspace settings](#1-change-the-workspace-settings)
   - [2. Set up a coding agent](#2-set-up-a-coding-agent)
@@ -216,11 +217,15 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 1. [Open `VS Code` in the `se-toolkit-lab-2` directory](./appendix/git-vscode.md#open-vs-code-in-the-directory).
 2. Close the `VS Code` that you [opened in the `software-engineering-toolkit` directory](#13-open-vs-code-in-the-software-engineering-toolkit-directory).
 
-### 19. Continue creating a VM
+### 19. Set up `SSH`
+
+1. [Set up `SSH`](./appendix/ssh.md#set-up-ssh).
+
+### 20. Continue creating a VM
 
 [Create a VM using the subscription](./appendix/vm.md#create-a-vm-using-the-subscription).
 
-### 20. Install `Python` and dependencies
+### 21. Install `Python` and dependencies
 
 1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -245,13 +250,13 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 >
 > This directory is managed by `uv`. You don't need to edit files in this directory manually.
 
-### 21. Select the `Python` interpreter
+### 22. Select the `Python` interpreter
 
 1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
    `Python: Select Interpreter`.
 2. Click `Recommended` to select the interpreter in `./.venv/bin/python`.
 
-### 22. Check that `Python` works
+### 23. Check that `Python` works
 
 1. [Open a new `VS Code Terminal`](./appendix/vs-code.md#open-a-new-terminal).
 2. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
