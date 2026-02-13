@@ -153,9 +153,11 @@ curl http://127.0.0.1:42000/status
 
 ### Send a `GET` query using a browser
 
-1. Open a browser.
-2. Paste the URL into the address bar (e.g., `http://127.0.0.1:42000/status`).
-3. Press `Enter`.
+1. Open the link in a browser: <http://127.0.0.1:42000/status>.
+
+> [!TIP]
+> [`FastAPI`](https://fastapi.tiangolo.com/) auto-generates interactive API documentation.
+> Open <http://127.0.0.1:42000/docs> to explore all available endpoints.
 
 ### Send a `GET` query using curl
 
