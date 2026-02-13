@@ -335,7 +335,7 @@ Create a new branch and switch to it:
 
 ### Switch to a new branch using `GitHub`
 
-1. [Go to your fork](./github.md#go-to-your-fork).
+1. [Go to the repo](./github.md#go-to-your-fork).
 2. [Create a branch](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-a-branch-for-an-issue).
 3. Copy the command provided by `GitHub`.
 
