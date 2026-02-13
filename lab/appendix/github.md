@@ -8,7 +8,7 @@
 - [Repository](#repository)
 - [Fork](#fork)
   - [Fork a repo](#fork-a-repo)
-  - [Fork URL](#fork-url)
+  - [`<your-fork-url>`](#your-fork-url)
 - [Issue](#issue)
   - [Issue elements](#issue-elements)
   - [Who can create issues](#who-can-create-issues)
@@ -69,7 +69,7 @@ When you fork a repository on `GitHub`, you create a personal copy under your `G
    2. Click `<your-username>` to make you the repo owner.
    3. Click `Create fork`.
 
-### Fork URL
+### `<your-fork-url>`
 
 Assume the original repo [URL](./web-development.md#url) is `https://github.com/<repo-owner-username>/<repo-name>`.
 
