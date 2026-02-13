@@ -104,7 +104,7 @@ These commands run programs:
 
 ## Process
 
-In `Linux`, a process is an instance of a running program.
+A process is an instance of a running [program](#program).
 
 When you execute a program, the [operating system](./operating-system.md) creates a process that contains the program's code, memory space, variables, and system resources. Each process has a unique process ID (PID) and runs independently of other processes.
 
@@ -205,7 +205,7 @@ A **user port** (or **registered port**) is a [network port](#port) designated f
 
 ### Listen on a port
 
-When a [process](#process) "listens on a port" in `Linux`, it means the process has bound itself to a specific network port number and is waiting for incoming network connections on that port.
+When a [process](#process) "listens on a port", it means the process has bound itself to a specific network port number and is waiting for incoming network connections on that port.
 
 The [operating system](./operating-system.md) allocates the port to that process, and any incoming network traffic directed to that port will be handled by the listening process.
 
