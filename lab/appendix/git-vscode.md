@@ -54,6 +54,8 @@
 6. You should see `<DIRECTORY-NAME>` there.
 
    Example: `SOFTWARE-ENGINEERING-TOOLKIT`
+7. (`Windows` only) [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
+   `WSL: Reopen Folder in WSL`
 
 ## Clone the repo
 

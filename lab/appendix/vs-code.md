@@ -291,21 +291,18 @@ Method 2:
 
 ### (`Windows` only) Set up running `VS Code` in `WSL`
 
-1. [Install the extension](./vs-code.md#extensions) [`ms-vscode-remote.remote-wsl`](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl).
+1. [Enable `WSL`](https://code.visualstudio.com/docs/remote/wsl-tutorial#_enable-wsl).
+2. Open `VS Code`.
+3. [Install the extension](./vs-code.md#extensions) [`ms-vscode-remote.remote-wsl`](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl).
 
    It lets you use `WSL` in `VS Code`.
-2. Complete these steps of the [tutorial](https://code.visualstudio.com/docs/remote/wsl-tutorial):
-   1. [Enable `WSL`](https://code.visualstudio.com/docs/remote/wsl-tutorial#_enable-wsl).
-   2. [Install a `Linux` distro](https://code.visualstudio.com/docs/remote/wsl-tutorial#_install-a-linux-distro).
-   3. Run using the current `WSL` terminal:
+4. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
-      ```terminal
-      mkdir helloWorld
-      cd helloWorld
-      ```
+   ```terminal
+   wsl --install -d Ubuntu-24.04
+   ```
 
-   4. [Run `VS Code` in `WSL`](https://code.visualstudio.com/docs/remote/wsl-tutorial#_run-in-wsl).
-   5. [End your `WSL` connection](https://code.visualstudio.com/docs/remote/wsl-tutorial#_ending-your-wsl-connection).
+5. Open `VS Code` again.
 
 ### (`Windows` only) Set the default shell for the `VS Code Terminal`
 
