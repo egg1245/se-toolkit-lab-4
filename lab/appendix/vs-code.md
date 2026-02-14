@@ -50,6 +50,7 @@
   - [Change the workspace settings](#change-the-workspace-settings)
 - [Common actions](#common-actions)
   - [(Windows only) Open the directory in `WSL`](#windows-only-open-the-directory-in-wsl)
+  - [Open the file](#open-the-file)
   - [Open the `Markdown` preview](#open-the-markdown-preview)
 - [Language server](#language-server)
   - [Type on hover](#type-on-hover)
@@ -528,6 +529,12 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 2. Click `Show Local`.
 3. Select the directory.
 4. [Check the current shell in the `VS Code Terminal`](#check-the-current-shell-in-the-vs-code-terminal).
+
+### Open the file
+
+Method 1: [Open the file using `Quick Open`](#open-the-file-using-quick-open)
+
+Method 2: [Open the file using the `Explorer`](#open-the-file-using-the-explorer)
 
 ### Open the `Markdown` preview
 
