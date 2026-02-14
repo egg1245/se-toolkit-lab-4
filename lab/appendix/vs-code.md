@@ -48,6 +48,7 @@
     - [Shortcut: Toggle line comment](#shortcut-toggle-line-comment)
 - [Workspace settings](#workspace-settings)
   - [Change the workspace settings](#change-the-workspace-settings)
+- [Common actions](#common-actions)
 - [Language server](#language-server)
   - [Type on hover](#type-on-hover)
   - [Docs on hover](#docs-on-hover)
@@ -516,6 +517,7 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 - [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting) - Enabled to run formatters when you press `Ctrl+S` (or `Cmd+S` on `macOS`) to save code.
 - `Markdown` editor and preview [synchronization settings](https://code.visualstudio.com/docs/languages/markdown#_editor-and-preview-synchronization) - Disabled for smoother scrolling of the editor and the preview.
 
+## Common actions
 ## Language server
 
 ### Type on hover
