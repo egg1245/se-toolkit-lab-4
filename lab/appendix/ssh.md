@@ -31,10 +31,11 @@ Since you are using `Git Bash` (`Windows`), `WSL` (`Windows`), `Zsh` (`macOS`), 
 Steps:
 
 <!-- no toc -->
-1. [Create a new `SSH` key](#create-a-new-ssh-key)
-2. [Find the `SSH` key files](#find-the-ssh-key-files)
-3. [Add the host to the `SSH` config](#add-the-host-to-the-ssh-config)
-4. [Start the `ssh-agent`](#start-the-ssh-agent)
+1. [Check your current shell](./vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
+2. [Create a new `SSH` key](#create-a-new-ssh-key)
+3. [Find the `SSH` key files](#find-the-ssh-key-files)
+4. [Add the host to the `SSH` config](#add-the-host-to-the-ssh-config)
+5. [Start the `ssh-agent`](#start-the-ssh-agent)
 
 ### Create a new `SSH` key
 
