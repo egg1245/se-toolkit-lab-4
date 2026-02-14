@@ -382,7 +382,11 @@ Method 1:
 
 1. Go to the [`Activity Bar`](#activity-bar).
 2. Click `Source Control`.
+
+   <img alt="Activity Bar - Source Control" src="../images/appendix/vs-code/activity-bar-source-control.png" style="width:100px"></img>
 3. Click `CHANGES` to uncollapse the view.
+
+   <img alt="Source Control - Changes" src="../images/appendix/vs-code/source-control-changes.png" style="width:100px"></img>
   
 Method 2:
 
@@ -395,6 +399,8 @@ Method 1:
 
 1. Go to the [`Activity Bar`](#activity-bar)
 2. Click `Source Control`.
+
+   <img alt="Explorer" src="../images/appendix/vs-code/activity-bar-source-control.png" style="width:100px"></img>
 
 Method 2:
 
