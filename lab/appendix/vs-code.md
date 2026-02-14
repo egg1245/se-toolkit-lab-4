@@ -49,6 +49,7 @@
 - [Workspace settings](#workspace-settings)
   - [Change the workspace settings](#change-the-workspace-settings)
 - [Common actions](#common-actions)
+  - [(Windows only) Open the directory in `WSL`](#windows-only-open-the-directory-in-wsl)
   - [Open the `Markdown` preview](#open-the-markdown-preview)
 - [Language server](#language-server)
   - [Type on hover](#type-on-hover)
@@ -519,6 +520,15 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 - `Markdown` editor and preview [synchronization settings](https://code.visualstudio.com/docs/languages/markdown#_editor-and-preview-synchronization) - Disabled for smoother scrolling of the editor and the preview.
 
 ## Common actions
+
+### (Windows only) Open the directory in `WSL`
+
+1. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
+   `WSL: Open Folder in WSL...`
+2. Click `Show Local`.
+3. Select the directory.
+4. [Check the current shell in the `VS Code Terminal`](#check-the-current-shell-in-the-vs-code-terminal).
+
 ### Open the `Markdown` preview
 
 > [!NOTE]
