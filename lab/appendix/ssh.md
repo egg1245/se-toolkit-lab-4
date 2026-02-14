@@ -20,8 +20,6 @@
 
 You can use it to connect to [your virtual machine](./vm.md#your-vm).
 
-Since you are using `Git Bash` (`Windows`), `WSL` (`Windows`), `Zsh` (`macOS`), or `Bash` (`Linux`), the commands below will work in your terminal without requiring `PowerShell` or GUI tools like `PuTTY`.
-
 ## SSH daemon
 
 ## `ssh-agent`
@@ -118,10 +116,6 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
 ### Start the `ssh-agent`
 
-Use the method that matches your platform.
-
-Linux / `macOS` / `WSL` / `Git Bash`:
-
 1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
@@ -141,23 +135,17 @@ Linux / `macOS` / `WSL` / `Git Bash`:
 
 ### Verify the `SSH` setup
 
-1. Check that your key is loaded:
-
-   Linux / `macOS` / `WSL` / `Git Bash`:
+1. [Open a new `VS Code Terminal`](./vs-code.md#open-a-new-vs-code-terminal).
+2. [Check the current shell in the `VS Code Terminal`](./vs-code.md#).
+3. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    ssh-add -l
    ```
 
-   `Windows PowerShell`:
+4. You should see your key fingerprint in the output.
 
-   ```powershell
-   ssh-add -l
-   ```
-
-2. You should see your key fingerprint in the output.
-
-3. If you see `The agent has no identities`, run the [start `ssh-agent` step](#start-the-ssh-agent) again.
+5. If you see `The agent has no identities`, run the [start `ssh-agent` step](#start-the-ssh-agent) again.
 
 ## Connect to the VM
 
