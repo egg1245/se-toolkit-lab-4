@@ -23,6 +23,11 @@
 
 You can use it to connect to [your virtual machine](./vm.md#your-vm).
 
+All commands below assume a Unix shell: `Bash` (`Linux`, `WSL`) or `Zsh` (`macOS`).
+
+> [!IMPORTANT]
+> **Windows users:** Use `WSL` (Windows Subsystem for Linux). Do not use `PowerShell`, `cmd.exe`, or `Git Bash` — the commands below are not guaranteed to work there.
+
 ## SSH daemon
 
 ## `ssh-agent`
@@ -124,16 +129,6 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
    ```terminal
    eval "$(ssh-agent -s)"
    ssh-add ~/.ssh/se_toolkit_key
-   ```
-
-`Windows PowerShell`:
-
-1. Run:
-
-   ```powershell
-   Get-Service ssh-agent | Set-Service -StartupType Automatic
-   Start-Service ssh-agent
-   ssh-add $env:USERPROFILE\.ssh\se_toolkit_key
    ```
 
 ### Verify the `SSH` setup
