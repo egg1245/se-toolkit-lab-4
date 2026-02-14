@@ -13,8 +13,7 @@
   - [4. Install programs](#4-install-programs)
     - [4.1. Install `VS Code`](#41-install-vs-code)
     - [4.2. Install `Git`](#42-install-git)
-    - [4.3. Install `uv`](#43-install-uv)
-    - [4.5. (Optional, `Windows` only) Install `Ubuntu` using WSL](#45-optional-windows-only-install-ubuntu-using-wsl)
+    - [4.3. (Optional, `Windows` only) Install `Ubuntu 24.04` using WSL](#43-optional-windows-only-install-ubuntu-2404-using-wsl)
   - [5. Open `VS Code` in the `software-engineering-toolkit` directory](#5-open-vs-code-in-the-software-engineering-toolkit-directory)
   - [6. Set up `Git`](#6-set-up-git)
     - [6.1 Check your `Git` config](#61-check-your-git-config)
@@ -26,6 +25,7 @@
   - [7. (`Windows` only) Set the default shell](#7-windows-only-set-the-default-shell)
   - [8. Continue creating a VM](#8-continue-creating-a-vm)
   - [9. Set up `Python` in `VS Code`](#9-set-up-python-in-vs-code)
+    - [4.3. Install `uv`](#43-install-uv)
     - [9.1. Install `Python` and dependencies](#91-install-python-and-dependencies)
     - [9.2. Select the `Python` interpreter](#92-select-the-python-interpreter)
     - [9.3. Check that `Python` works](#93-check-that-python-works)
@@ -130,18 +130,9 @@ Complete these steps:
 
 2. (Optional) [Learn more](../lab/appendix/git.md) about `Git`.
 
-#### 4.3. Install `uv`
+#### 4.3. (Optional, `Windows` only) Install `Ubuntu 24.04` using WSL
 
-> [!NOTE]
-> [`uv`](./appendix/python.md#uv) is a package manager for [`Python`](./appendix/python.md).
-
-Follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/) for your platform (`Windows`, `Linux`, `macOS`).
-
-[Run the command using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal).
-
-#### 4.5. (Optional, `Windows` only) Install `Ubuntu` using WSL
-
-1. Follow the [instructions](https://learn.microsoft.com/en-us/windows/wsl/install).
+1. [Set up running `VS Code` using `WSL`](./appendix/vs-code.md#windows-only-set-up-running-vs-code-in-wsl).
 
 ### 5. Open `VS Code` in the `software-engineering-toolkit` directory
 
@@ -228,6 +219,17 @@ Configure `Git` if you want to change the values that you saw while [checking yo
 2. [Create a VM using the subscription](./appendix/vm.md#create-a-vm-using-the-subscription).
 
 ### 9. Set up `Python` in `VS Code`
+
+#### 4.3. Install `uv`
+
+> [!NOTE]
+> [`uv`](./appendix/python.md#uv) is a package manager for [`Python`](./appendix/python.md).
+
+> ![IMPORTANT]
+
+1. Follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/).
+
+   If you use `Windows`, follow the instructions for `Linux`.
 
 #### 9.1. Install `Python` and dependencies
 
