@@ -15,7 +15,7 @@
 - [`Command Palette`](#command-palette)
   - [Open the `Command Palette`](#open-the-command-palette)
   - [Run a command using the `Command Palette`](#run-a-command-using-the-command-palette)
-  - [Open a file using the `Command Palette`](#open-a-file-using-the-command-palette)
+  - [Open a file using `Quick Open`](#open-a-file-using-quick-open)
   - [Select an option from a list](#select-an-option-from-a-list)
 - [`VS Code Terminal`](#vs-code-terminal)
   - [Open the `VS Code Terminal`](#open-the-vs-code-terminal)
@@ -155,7 +155,7 @@ Actions:
 
 - [Open the `Command Palette`](#open-the-command-palette)
 - [Run a command using the `Command Palette`](#run-a-command-using-the-command-palette)
-- [Open a file using the `Command Palette`](#open-a-file-using-the-command-palette)
+- [Open a file using `Quick Open`](#open-a-file-using-quick-open)
 
 ### Open the `Command Palette`
 
@@ -167,7 +167,7 @@ Actions:
 2. Start typing a command.
 3. [Select](#select-an-option-from-a-list) the necessary command.
 
-### Open a file using the `Command Palette`
+### Open a file using `Quick Open`
 
 1. Press `Ctrl+P` (`Cmd+P` on `macOS`).
 2. Start typing the name of the file.

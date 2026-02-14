@@ -46,7 +46,8 @@ Now you will configure environment variables specific to the deployment when usi
 
 ### 3. View the file `.env.docker.example`
 
-1. [Open the file using the `Command Palette`](../../appendix/vs-code.md#open-a-file-using-the-command-palette): [`.env.docker.example`](../../../.env.docker.example).
+1. [Open the file using `Quick Open`](../../appendix/vs-code.md#open-a-file-using-the-command-palette):
+   [`.env.docker.example`](../../../.env.docker.example).
 
 ### 4. Create the file `.env.docker.secret`
 
@@ -76,7 +77,7 @@ Method 1:
 
 Method 2:
 
-1. [Open the file using the `Command Palette`](../../appendix/vs-code.md#open-a-file-using-the-command-palette): [`.env.secret`](../../../.env.secret).
+1. [Open the file using `Quick Open`](../../appendix/vs-code.md#open-a-file-using-the-command-palette): [`.env.secret`](../../../.env.secret).
 
 ### Edit the file `.env.docker.secret`
 
