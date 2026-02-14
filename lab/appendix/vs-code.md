@@ -15,7 +15,7 @@
 - [`Command Palette`](#command-palette)
   - [Open the `Command Palette`](#open-the-command-palette)
   - [Run a command using the `Command Palette`](#run-a-command-using-the-command-palette)
-  - [Open a file using `Quick Open`](#open-a-file-using-quick-open)
+  - [Open the file using `Quick Open`](#open-the-file-using-quick-open)
   - [Select an option from a list](#select-an-option-from-a-list)
 - [`Panel Toolbar`](#panel-toolbar)
 - [`VS Code Terminal`](#vs-code-terminal)
@@ -29,7 +29,7 @@
   - [Run a command using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal)
 - [`Explorer`](#explorer)
   - [Open the `Explorer`](#open-the-explorer)
-  - [Open a file using the `Explorer`](#open-a-file-using-the-explorer)
+  - [Open the file using the `Explorer`](#open-the-file-using-the-explorer)
 - [`Source Control`](#source-control)
   - [Open the `Source Control`](#open-the-source-control)
   - [Close the `Source Control`](#close-the-source-control)
@@ -157,7 +157,7 @@ Actions:
 
 - [Open the `Command Palette`](#open-the-command-palette)
 - [Run a command using the `Command Palette`](#run-a-command-using-the-command-palette)
-- [Open a file using `Quick Open`](#open-a-file-using-quick-open)
+- [Open the file using `Quick Open`](#open-the-file-using-quick-open)
 
 ### Open the `Command Palette`
 
@@ -169,7 +169,7 @@ Actions:
 2. Start typing a command.
 3. [Select](#select-an-option-from-a-list) the necessary command.
 
-### Open a file using `Quick Open`
+### Open the file using `Quick Open`
 
 1. Press `Ctrl+P` (`Cmd+P` on `macOS`).
 2. Start typing the name of the file.
@@ -298,7 +298,7 @@ Docs:
 Actions:
 
 - [Open the `Explorer`](#open-the-explorer)
-- [Open a file using the `Explorer`](#open-a-file-using-the-explorer)
+- [Open the file using the `Explorer`](#open-the-file-using-the-explorer)
 
 ### Open the `Explorer`
 
@@ -307,7 +307,7 @@ Actions:
 
    <img alt="Explorer" src="../images/appendix/vs-code/activity-bar-explorer.png" style="width:100px"></img>
 
-### Open a file using the `Explorer`
+### Open the file using the `Explorer`
 
 1. [Open the `Explorer`](#open-the-explorer).
 2. Search for the file in the file tree.
