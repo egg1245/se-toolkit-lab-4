@@ -98,7 +98,7 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 
 ### Add the host to the `SSH` config
 
-1. [Open the file using `Quick Open`](./vs-code.md#open-a-file-using-the-command-palette):
+1. [Open the file](./vs-code.md#open-the-file):
    `~/.ssh/config`
 
 2. Add this text at the end of the file.
