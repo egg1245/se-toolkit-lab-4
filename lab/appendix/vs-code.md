@@ -404,7 +404,8 @@ Method 1:
 
 Method 2:
 
-1. Press `Ctrl+B` (`Cmd+B` on `macOS`)
+1. Click outside of the [`Editor`](#editor).
+2. Press `Ctrl+B` (`Cmd+B` on `macOS`).
 
 ## `Extensions`
 
