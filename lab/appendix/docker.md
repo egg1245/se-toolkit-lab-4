@@ -4,7 +4,7 @@
 
 - [Image](#image)
 - [Container](#container)
-- [`Docker`](#docker)
+- [What is `Docker`](#what-is-docker)
   - [`docker run`](#docker-run)
   - [`docker ps`](#docker-ps)
 - [`Docker Compose`](#docker-compose)
@@ -29,9 +29,9 @@ Why containers are useful:
 - Dependencies are packaged with the app.
 - Multiple services can run side-by-side with explicit ports and networks.
 
-## `Docker`
+## What is `Docker`
 
-`Docker` is a platform for building and running containers.
+`Docker` is a platform for building and running [containers](#container).
 
 ### `docker run`
 

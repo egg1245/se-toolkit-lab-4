@@ -15,8 +15,9 @@
 - [`Command Palette`](#command-palette)
   - [Open the `Command Palette`](#open-the-command-palette)
   - [Run a command using the `Command Palette`](#run-a-command-using-the-command-palette)
-  - [Open a file using the `Command Palette`](#open-a-file-using-the-command-palette)
+  - [Open the file using `Quick Open`](#open-the-file-using-quick-open)
   - [Select an option from a list](#select-an-option-from-a-list)
+- [`Panel Toolbar`](#panel-toolbar)
 - [`VS Code Terminal`](#vs-code-terminal)
   - [Open the `VS Code Terminal`](#open-the-vs-code-terminal)
   - [Close the `VS Code Terminal`](#close-the-vs-code-terminal)
@@ -24,10 +25,13 @@
   - [Switch to another `VS Code Terminal`](#switch-to-another-vs-code-terminal)
   - [Copy text inside the `VS Code Terminal`](#copy-text-inside-the-vs-code-terminal)
   - [Paste text inside the `VS Code Terminal`](#paste-text-inside-the-vs-code-terminal)
+  - [Check the current shell in the `VS Code Terminal`](#check-the-current-shell-in-the-vs-code-terminal)
+  - [(`Windows` only) Set up running `VS Code` in `WSL`](#windows-only-set-up-running-vs-code-in-wsl)
+  - [(`Windows` only) Set the default shell for the `VS Code Terminal`](#windows-only-set-the-default-shell-for-the-vs-code-terminal)
   - [Run a command using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal)
-- [`Folders`](#folders)
-  - [Open folders](#open-folders)
-  - [Open the `Folders`](#open-the-folders)
+- [`Explorer`](#explorer)
+  - [Open the `Explorer`](#open-the-explorer)
+  - [Open the file using the `Explorer`](#open-the-file-using-the-explorer)
 - [`Source Control`](#source-control)
   - [Open the `Source Control`](#open-the-source-control)
   - [Close the `Source Control`](#close-the-source-control)
@@ -44,6 +48,10 @@
     - [Shortcut: Toggle line comment](#shortcut-toggle-line-comment)
 - [Workspace settings](#workspace-settings)
   - [Change the workspace settings](#change-the-workspace-settings)
+- [Common actions](#common-actions)
+  - [(Windows only) Open the directory in `WSL`](#windows-only-open-the-directory-in-wsl)
+  - [Open the file](#open-the-file)
+  - [Open the `Markdown` preview](#open-the-markdown-preview)
 - [Language server](#language-server)
   - [Type on hover](#type-on-hover)
   - [Docs on hover](#docs-on-hover)
@@ -91,7 +99,9 @@ Actions:
 
 ## `Editor`
 
-Space where you can edit files. See [`Basic Layout`](#basic-layout).
+Space where you can edit files.
+
+Location: see [`Basic Layout`](#basic-layout).
 
 Docs:
 
@@ -101,7 +111,7 @@ Docs:
 
 Menus of extensions on a side of the [`Editor`](#editor).
 
-See [`Basic Layout`](#basic-layout).
+Location: see [`Basic Layout`](#basic-layout).
 
 ## `Primary Sidebar`
 
@@ -155,7 +165,7 @@ Actions:
 
 - [Open the `Command Palette`](#open-the-command-palette)
 - [Run a command using the `Command Palette`](#run-a-command-using-the-command-palette)
-- [Open a file using the `Command Palette`](#open-a-file-using-the-command-palette)
+- [Open the file using `Quick Open`](#open-the-file-using-quick-open)
 
 ### Open the `Command Palette`
 
@@ -167,7 +177,7 @@ Actions:
 2. Start typing a command.
 3. [Select](#select-an-option-from-a-list) the necessary command.
 
-### Open a file using the `Command Palette`
+### Open the file using `Quick Open`
 
 1. Press `Ctrl+P` (`Cmd+P` on `macOS`).
 2. Start typing the name of the file.
@@ -183,6 +193,20 @@ Method 2:
 
 1. Change the highlighted option using `UpArrow` and `DownArrow` on your keyboard.
 2. Press `Enter` to confirm the option.
+
+## `Panel Toolbar`
+
+Switch between panels.
+
+Location: see [`Basic Layout`](#basic-layout).
+
+Left side with tabs:
+
+<img alt="Panel Toolbar Left" src="../images/appendix/vs-code/panel-toolbar-left.png" style="width:400px"></img>
+
+Right side (depends on the current tab; this one is for the `VS Code Terminal`):
+
+<img alt="Panel Toolbar Right" src="../images/appendix/vs-code/panel-toolbar-left.png" style="width:400px"></img>
 
 ## `VS Code Terminal`
 
@@ -250,17 +274,78 @@ Method 2:
 
 `Ctrl+Shift+V` (`Cmd+V` on `macOS`, `Ctrl+V` on `Windows`)
 
+### Check the current shell in the `VS Code Terminal`
+
+1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal)
+2. Look at the [`Panel Toolbar`](#panel-toolbar).
+
+   <img alt="Current Terminal Shell" src="../images/appendix/vs-code/terminal-single-current-shell-bash.png" style="width:400px"></img>
+
+   You should see on:
+   - `Windows`: `bash` or `WSL`;
+
+     If you see something else, [set the default shell](#windows-only-set-the-default-shell-for-the-vs-code-terminal).
+   - `macOS`: `zsh` or `bash`;
+   - `Linux`: `bash`, `fish`, `zsh`, or another shell name.
+
+### (`Windows` only) Set up running `VS Code` in `WSL`
+
+1. [Install recommended extensions](#install-recommended-extensions).
+
+   They include the [`ms-vscode-remote.remote-wsl`](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) extension that lets you use `WSL` in `VS Code`.
+1. Complete these steps of the [tutorial](https://code.visualstudio.com/docs/remote/wsl-tutorial):
+   1. [Enable `WSL`](https://code.visualstudio.com/docs/remote/wsl-tutorial#_enable-wsl).
+   2. [Install a `Linux` distro](https://code.visualstudio.com/docs/remote/wsl-tutorial#_install-a-linux-distro).
+   3. Run using the current `WSL` terminal:
+
+      ```terminal
+      mkdir helloWorld
+      cd helloWorld
+      ```
+
+   4. [Run `VS Code` in `WSL`](https://code.visualstudio.com/docs/remote/wsl-tutorial#_run-in-wsl).
+   5. [End your `WSL` connection](https://code.visualstudio.com/docs/remote/wsl-tutorial#_ending-your-wsl-connection).
+
+### (`Windows` only) Set the default shell for the `VS Code Terminal`
+
+1. Make sure you can [run `VS Code` in WSL](#windows-only-set-up-running-vs-code-in-wsl).
+2. [Run using the `Command Palette`](#run-a-command-using-the-command-palette):
+   `Terminal: Select Default Profile`.
+3. There can be the following cases.
+
+   - Case 1 (bad): You don't have the recommended extensions installed.
+
+     <img alt="Terminal Default Profile Bad Options" src="../images/appendix/vs-code/command-palette-default-terminal-profile-bad-options.png" style="width:400px"></img>
+
+     Return to the first step and make sure you can [run `VS Code` in WSL](#windows-only-set-up-running-vs-code-in-wsl).
+   - Case 2 (good): You're running `VS Code` outside `WSL`.
+
+     <img alt="Terminal Default Profile Outside WSL" src="../images/appendix/vs-code/command-palette-default-terminal-profile-outside-wsl-wsl.png" style="width:400px"></img>
+
+     [Select](#select-an-option-from-a-list) `Ubuntu (WSL)` or another option with `WSL` in the name.
+
+     **Note:** [`Ubuntu`](./linux.md#ubuntu) is a [`Linux` distro](./linux.md#ubuntu).
+
+   - Case 3 (the best): You're running `VS Code` inside `WSL`. You've probably [opened the directory inside `WSL`](#open-the-directory-in-wsl). This is the best case.
+
+     <img alt="Terminal Default Profile Outside WSL" src="../images/appendix/vs-code/command-palette-default-terminal-profile-inside-wsl-bash.png" style="width:400px"></img>
+
+     [Select](#select-an-option-from-a-list) `bash`.
+4. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
+5. Close all tabs in the `VS Code Terminal`.
+6. [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal).
+
 ### Run a command using the `VS Code Terminal`
 
 1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
 2. Write or [paste](#paste-text-inside-the-vs-code-terminal) a command.
 3. Press `Enter`.
 
-## `Folders`
+## `Explorer`
 
 View the file tree.
 
-See the [`Activity Bar`](#activity-bar).
+Location: [`Activity Bar`](#activity-bar).
 
 Docs:
 
@@ -268,17 +353,21 @@ Docs:
 
 Actions:
 
-- [Open folders](#open-folders)
-- [Open the `Folders`](#open-the-folders)
+- [Open the `Explorer`](#open-the-explorer)
+- [Open the file using the `Explorer`](#open-the-file-using-the-explorer)
 
-### Open folders
-
-See [Open the `Folders`](#open-the-folders).
-
-### Open the `Folders`
+### Open the `Explorer`
 
 1. Go to the [`Activity Bar`](#activity-bar).
-2. Click `Folders`.
+2. Click the `Explorer` icon.
+
+   <img alt="Explorer" src="../images/appendix/vs-code/activity-bar-explorer.png" style="width:100px"></img>
+
+### Open the file using the `Explorer`
+
+1. [Open the `Explorer`](#open-the-explorer).
+2. Search for the file in the file tree.
+3. Click it.
 
 ## `Source Control`
 
@@ -299,7 +388,11 @@ Method 1:
 
 1. Go to the [`Activity Bar`](#activity-bar).
 2. Click `Source Control`.
+
+   <img alt="Activity Bar - Source Control" src="../images/appendix/vs-code/activity-bar-source-control.png" style="width:100px"></img>
 3. Click `CHANGES` to uncollapse the view.
+
+   <img alt="Source Control - Changes" src="../images/appendix/vs-code/source-control-changes.png" style="width:100px"></img>
   
 Method 2:
 
@@ -313,9 +406,12 @@ Method 1:
 1. Go to the [`Activity Bar`](#activity-bar)
 2. Click `Source Control`.
 
+   <img alt="Explorer" src="../images/appendix/vs-code/activity-bar-source-control.png" style="width:100px"></img>
+
 Method 2:
 
-1. Press `Ctrl+B` (`Cmd+B` on `macOS`)
+1. Click outside of the [`Editor`](#editor).
+2. Press `Ctrl+B` (`Cmd+B` on `macOS`).
 
 ## `Extensions`
 
@@ -425,6 +521,38 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 - [`files.autoSave`](https://code.visualstudio.com/docs/editing/codebasics#_save-auto-save) - Enabled to save your work if VS Code closes;
 - [`editor.formatOnSave`](https://code.visualstudio.com/docs/editing/codebasics#_formatting) - Enabled to run formatters when you press `Ctrl+S` (or `Cmd+S` on `macOS`) to save code.
 - `Markdown` editor and preview [synchronization settings](https://code.visualstudio.com/docs/languages/markdown#_editor-and-preview-synchronization) - Disabled for smoother scrolling of the editor and the preview.
+
+## Common actions
+
+### (Windows only) Open the directory in `WSL`
+
+1. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
+   `WSL: Open Folder in WSL...`
+2. Click `Show Local`.
+3. Select the directory.
+4. [Check the current shell in the `VS Code Terminal`](#check-the-current-shell-in-the-vs-code-terminal).
+
+### Open the file
+
+Method 1: [Open the file using `Quick Open`](#open-the-file-using-quick-open)
+
+Method 2: [Open the file using the `Explorer`](#open-the-file-using-the-explorer)
+
+### Open the `Markdown` preview
+
+> [!NOTE]
+> See [`Markdown`](./file-formats.md#markdown).
+
+Method 1:
+
+1. Go to the [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar).
+2. Click `Open Preview to the Side`.
+
+Method 2:
+
+1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
+
+  `Markdown: Open Preview to the Side`
 
 ## Language server
 

@@ -20,10 +20,11 @@
   - [16. Copy your fork URL](#16-copy-your-fork-url)
   - [17. Clone your fork](#17-clone-your-fork)
   - [18. Open `VS Code` in the cloned repo directory](#18-open-vs-code-in-the-cloned-repo-directory)
-  - [19. Continue creating a VM](#19-continue-creating-a-vm)
-  - [20. Install `Python` and dependencies](#20-install-python-and-dependencies)
-  - [21. Select the `Python` interpreter](#21-select-the-python-interpreter)
-  - [22. Check that `Python` works](#22-check-that-python-works)
+  - [19. Set up `SSH`](#19-set-up-ssh)
+  - [20. Continue creating a VM](#20-continue-creating-a-vm)
+  - [21. Install `Python` and dependencies](#21-install-python-and-dependencies)
+  - [22. Select the `Python` interpreter](#22-select-the-python-interpreter)
+  - [23. Check that `Python` works](#23-check-that-python-works)
 - [Optional steps](#optional-steps)
   - [1. Change the workspace settings](#1-change-the-workspace-settings)
   - [2. Set up a coding agent](#2-set-up-a-coding-agent)
@@ -139,20 +140,12 @@ Complete these steps:
 
 ### 14. (Windows only) Set the default shell
 
-1. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
-   `WSL: Reopen Folder in WSL`
-2. [Run using the `Command Palette`](./appendix/vs-code.md#command-palette):
-   `Terminal: Select Default Profile`
-3. Select `WSL Bash` if available.
-4. If not available, check that you have [installed WSL](#12-optional-windows-only-install-wsl).
-5. Otherwise, [open the `VS Code Terminal`](./appendix/vs-code.md#open-the-vs-code-terminal).
-6. You should see `bash` there:
-
-   <img alt="Terminal Bash" src="./images/appendix/vs-code/terminal-bash.png" style="width:400px"></img>
-
-<!-- TODO check how it looks like on windows -->
+1. [Set the default shell](./appendix/vs-code.md#windows-only-set-the-default-shell-for-the-vs-code-terminal).
 
 ### 15. Install `uv`
+
+> [!NOTE]
+> [`uv`](./appendix/python.md#uv) is a package manager for [`Python`](./appendix/python.md).
 
 Follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/) for your platform (`Windows`, `Linux`, `macOS`).
 
@@ -202,11 +195,15 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 1. [Open `VS Code` in the `se-toolkit-lab-2` directory](./appendix/git-vscode.md#open-vs-code-in-the-directory).
 2. Close the `VS Code` that you [opened in the `software-engineering-toolkit` directory](#13-open-vs-code-in-the-software-engineering-toolkit-directory).
 
-### 19. Continue creating a VM
+### 19. Set up `SSH`
+
+1. [Set up `SSH`](./appendix/ssh.md#set-up-ssh).
+
+### 20. Continue creating a VM
 
 [Create a VM using the subscription](./appendix/vm.md#create-a-vm-using-the-subscription).
 
-### 20. Install `Python` and dependencies
+### 21. Install `Python` and dependencies
 
 1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -231,13 +228,13 @@ Follow the [installation instructions](https://docs.astral.sh/uv/getting-started
 >
 > This directory is managed by `uv`. You don't need to edit files in this directory manually.
 
-### 21. Select the `Python` interpreter
+### 22. Select the `Python` interpreter
 
 1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
    `Python: Select Interpreter`.
 2. Click `Recommended` to select the interpreter in `./.venv/bin/python`.
 
-### 22. Check that `Python` works
+### 23. Check that `Python` works
 
 1. [Open a new `VS Code Terminal`](./appendix/vs-code.md#open-a-new-terminal).
 2. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
@@ -361,33 +358,6 @@ If you want to view `README.md` in `VS Code` instead of on `GitHub`:
 3. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
    `Developer: Reload Window`.
 4. Look at the [`Basic Layout`](./appendix/vs-code.md#basic-layout).
-5. Open [`README.md`](../README.md) using any of the following methods.
-
-   Method 1:
-
-   1. [Open the file using the `Command Palette`](./appendix/vs-code.md#open-a-file-using-the-command-palette).
-
-   Method 2:
-
-   1. [Open `Folders`](./appendix/vs-code.md#open-the-folders).
-   2. Click `README.md`.
-
-6. Open the [`Markdown` preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) using any of the following methods.
-
-   > [!NOTE]
-   > `Markdown` is a [markup language](https://en.wikipedia.org/wiki/Markup_language).
-   >
-   > `Markdown` gets translated into [`HTML`](https://en.wikipedia.org/wiki/HTML).
-   >
-   > You see the rendered `HTML` when you open a preview in `VS Code` or on `GitHub`.
-
-   Method 1:
-
-   1. Go to the [`Editor Toolbar`](./appendix/vs-code.md#editor-toolbar).
-   2. Click `Open Preview to the Side`.
-
-   Method 2:
-
-   1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
-
-      `Markdown: Open Preview to the Side`
+5. [Open the file](./appendix/vs-code.md#open-the-file):
+   `README.md`.
+6. [Open the `Markdown` preview](./appendix/vs-code.md#open-the-markdown-preview).

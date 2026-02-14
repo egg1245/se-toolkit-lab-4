@@ -71,7 +71,8 @@ When you rebase, your local commits are placed on top of the commits from `origi
 
 1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
    `GitLens: Pull`
-2. [Select](../appendix/vs-code.md#select-an-option-from-a-list) `Pull with Rebase` (e.g., using `UpArrow` and `DownArrow` on your keyboard).
+2. [Select](../appendix/vs-code.md#select-an-option-from-a-list)
+   `Pull with Rebase`.
 3. You're done if `GitLens` doesn't show any error.
 
 ### Resolve conflicts using `GitLens`

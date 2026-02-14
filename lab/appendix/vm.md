@@ -18,11 +18,11 @@
 
 ## Your VM
 
-The university provides you a virtual machine (VM) for labs and home experiments.
+The university provides you a virtual machine (VM) for labs and home experiments for the duration of the `Software Engineering Toolkit` course.
 
-The VM is based on the `Ubuntu 24.04.4 LTS` distribution of [`Linux`](./linux.md).
+You probably won't have access to the VMs after the course finishes.
 
-See [VM image](./vm-image.md) for more information about your VM.
+See [VM image](./vm-info.md) for the information about your VM.
 
 ## Create a VM
 
@@ -92,7 +92,7 @@ Complete these steps to create a VM:
 
 ## Connect to the VM
 
-1. [Add host to the `SSH` config](./ssh.md#add-host-to-the-ssh-config).
+1. [Add host to the `SSH` config](./ssh.md#add-the-host-to-the-ssh-config).
 2. Connect your computer to the `Wi-Fi` network `UniversityStudent`.
 3. Open `VS Code`.
 4. [Connect to the VM](./ssh.md#connect-to-the-vm).
