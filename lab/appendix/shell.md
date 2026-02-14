@@ -29,11 +29,11 @@ A path points to a location in the filesystem.
 
 ### Absolute path
 
-Starts from [root](#root-) or [home](#home-).
+Starts from the [root directory](#root-directory-) or the [home directory](#home-directory-).
 
 Examples:
 
-1. `/home`
+1. `/home/johndoe/Desktop`
 2. `/nix/store`
 
 ### Relative path
@@ -45,11 +45,11 @@ Examples:
 - `src/app`
 - `./docs`
 
-### Root (`/`)
+### Root directory (`/`)
 
 [Absolute path](#absolute-path) for the root of the file system.
 
-### Home (`~`)
+### Home directory (`~`)
 
 Shortcut for the [absolute path](#absolute-path) for the [user](./linux.md#users) home directory.
 
