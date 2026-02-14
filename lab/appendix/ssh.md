@@ -42,6 +42,8 @@ Generate a key pair: a **private key** (secret) and a **public key** (safe to sh
 
 We'll use the `ed25519` algorithm, which is the modern standard for security and performance.
 
+Steps:
+
 1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
