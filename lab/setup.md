@@ -272,7 +272,7 @@ Configure `Git` if you want to change the values that you saw while [checking yo
 3. The output should be similar to this:
 
    ```terminal
-   Python 3.12.12
+   Python 3.14.2
    ```
 
 > [!NOTE]
