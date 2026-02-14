@@ -8,9 +8,9 @@
 - [Set up SSH](#set-up-ssh)
   - [Create a new `SSH` key](#create-a-new-ssh-key)
   - [Find the `SSH` key files](#find-the-ssh-key-files)
-  - [Add the host to the `SSH` config](#add-the-host-to-the-ssh-config)
   - [Start the `ssh-agent`](#start-the-ssh-agent)
   - [Verify the `SSH` setup](#verify-the-ssh-setup)
+- [Add the host to `SSH`](#add-the-host-to-ssh)
 - [Connect to the VM](#connect-to-the-vm)
 - [Common errors](#common-errors)
   - [`Permission denied (publickey)`](#permission-denied-publickey)
@@ -40,8 +40,8 @@ Steps:
 1. [Check your current shell](./vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 2. [Create a new `SSH` key](#create-a-new-ssh-key)
 3. [Find the `SSH` key files](#find-the-ssh-key-files)
-4. [Add the host to the `SSH` config](#add-the-host-to-the-ssh-config)
-5. [Start the `ssh-agent`](#start-the-ssh-agent)
+4. [Start the `ssh-agent`](#start-the-ssh-agent)
+5. [Verify the `SSH` setup](#verify-the-ssh-setup)
 
 ### Create a new `SSH` key
 
@@ -103,25 +103,6 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 > Never share the private key.
 > This is your secret identity.
 
-### Add the host to the `SSH` config
-
-1. [Open the file](./vs-code.md#open-the-file):
-   `~/.ssh/config`
-
-2. Add this text at the end of the file.
-
-   ```text
-
-   Host se-toolkit-vm
-      HostName <your-vm-ip-address>
-      User root
-      IdentityFile ~/.ssh/se_toolkit_key
-      AddKeysToAgent yes
-      UseKeychain yes
-   ```
-
-3. Replace `<your-vm-ip-address>` with the [IP address of your VM](./vm.md#get-the-ip-address-of-the-vm).
-
 ### Start the `ssh-agent`
 
 1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
@@ -144,6 +125,39 @@ Because you used a custom name, your keys are named `se_toolkit_key` (private) a
 4. You should see your key fingerprint in the output.
 
 5. If you see `The agent has no identities`, run the [start `ssh-agent` step](#start-the-ssh-agent) again.
+
+## Add the host to `SSH`
+
+1. Make sure you have [set up `SSH`](#set-up-ssh).
+1. [Open the file](./vs-code.md#open-the-file):
+   `~/.ssh/config`
+
+1. Add this text at the end of the file.
+
+   - `Linux`, `Windows`:
+
+     ```text
+  
+     Host se-toolkit-vm
+        HostName <your-vm-ip-address>
+        User root
+        IdentityFile ~/.ssh/se_toolkit_key
+        AddKeysToAgent yes
+     ```
+
+   - `macOS`:
+
+     ```text
+  
+     Host se-toolkit-vm
+        HostName <your-vm-ip-address>
+        User root
+        IdentityFile ~/.ssh/se_toolkit_key
+        AddKeysToAgent yes
+        UseKeychain yes
+     ```
+
+1. Replace `<your-vm-ip-address>` with the [IP address of your VM](./vm.md#get-the-ip-address-of-the-vm).
 
 ## Connect to the VM
 
