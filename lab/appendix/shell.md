@@ -23,6 +23,8 @@ It provides a Unix-like shell environment on Windows.
 `zsh` is the default shell on modern `macOS` and is also common on Linux.
 Most `bash` commands in this course work in `zsh` as well.
 
+## Shell prompt
+
 ## Path
 
 A path points to a location in the filesystem.
