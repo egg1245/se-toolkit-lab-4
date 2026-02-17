@@ -160,7 +160,7 @@ Complete these steps:
 
    ```terminal
    user.name=John Doe
-   user.email=haskell@gmail.com
+   user.email=inno-se-toolkit@gmail.com
    ```
 
 #### 6.2 Configure `Git`
@@ -185,7 +185,7 @@ Configure `Git` if you want to change the values that you saw while [checking yo
      git config --global user.email '<your-email>'
      ```
 
-     Example: `git config --global user.name 'haskell@gmail.com'`
+     Example: `git config --global user.name 'inno-se-toolkit@gmail.com'`
 
 ### 6. Open your cloned fork in `VS Code`
 

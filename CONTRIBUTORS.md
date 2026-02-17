@@ -3,10 +3,10 @@
 Students who contributed changes to this repository:
 
 <!--
-haskell is an example of a GitHub username.
+inno-se-toolkit is an example of a GitHub username.
 
-Replace @haskell with @<your-github-username> where 
+Replace @inno-se-toolkit with @<your-github-username> where 
 <your-github-username> is your GitHub username.
 -->
 
-- @haskell
+- @inno-se-toolkit
