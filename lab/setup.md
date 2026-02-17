@@ -61,7 +61,7 @@
 #### 3.1. Sign in on `GitHub`
 
 1. Sign in on [`GitHub`](https://github.com/).
-2. [Find `<your-username>`](./appendix/github.md#find-your-username).
+2. [Find `<your-github-username>`](./appendix/github.md#find-your-github-username).
 
 #### 3.2. Fork the course instructors' repo
 
@@ -73,7 +73,7 @@
 
 1. [Go to your fork](./appendix/github.md#go-to-your-fork).
 
-   The [URL](./appendix/web-development.md#url) of your fork should look like `https://github.com/<your-username>/se-toolkit-lab-2`.
+   The [URL](./appendix/web-development.md#url) of your fork should look like `https://github.com/<your-github-username>/se-toolkit-lab-2`.
 
 #### 3.4. Enable issues
 
@@ -194,7 +194,7 @@ Configure `Git` if you want to change the values that you saw while [checking yo
 1. [Go to your fork](#33-go-to-your-fork).
 2. Copy [`<your-fork-url>`](./appendix/github.md#your-fork-url).
 
-   It should look like `https://github.com/<your-username>/se-toolkit-lab-2`.
+   It should look like `https://github.com/<your-github-username>/se-toolkit-lab-2`.
 
 > [!NOTE]
 > Here, the `<repo-name>` is `se-toolkit-lab-2`.

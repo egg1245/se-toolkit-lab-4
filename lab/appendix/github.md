@@ -4,8 +4,8 @@
 
 - [The `GitHub` site](#the-github-site)
 - [`GitHub` username](#github-username)
-- [`<your-username>`](#your-username)
-  - [Find `<your-username>`](#find-your-username)
+- [`<your-github-username>`](#your-github-username)
+  - [Find `<your-github-username>`](#find-your-github-username)
 - [Repository](#repository)
   - [`<repo-name>`](#repo-name)
   - [`<repo-url>`](#repo-url)
@@ -46,13 +46,13 @@ Example of a username: `haskell`.
 
 Note that this username doesn't include `@`.
 
-## `<your-username>`
+## `<your-github-username>`
 
-Assume `<your-username>` is your [`GitHub` username](#github-username).
+Assume `<your-github-username>` is your [`GitHub` username](#github-username).
 
-`<your-username>` doesn't include `@`.
+`<your-github-username>` doesn't include `@`.
 
-### Find `<your-username>`
+### Find `<your-github-username>`
 
 1. Go to the [`GitHub` site](#the-github-site).
 2. Sign in if necessary.
@@ -74,9 +74,9 @@ The name must be unique among repositories of the repository owner.
 
 We use `<repo-url>` to refer to a repository [URL](./web-development.md#url).
 
-A repository URL is typically `https://github.com/<repo-owner-username>/<repo-name>` where:
+A repository URL is typically `https://github.com/<repo-owner-github-username>/<repo-name>` where:
 
-- `<repo-owner-username>` is the [repo owner](#repository-owner) `GitHub` username;
+- `<repo-owner-github-username>` is the [repo owner](#repository-owner) `GitHub` username;
 - `<repo-name>` is the name of the repository.
 
 ### Make your repository public
@@ -87,7 +87,7 @@ A repository URL is typically `https://github.com/<repo-owner-username>/<repo-na
 
 Repository owner is an account where the repo is currently stored.
 
-We use `<repo-owner-username>` to refer to the [`GitHub` username](#github-username) of the repository owner.
+We use `<repo-owner-github-username>` to refer to the [`GitHub` username](#github-username) of the repository owner.
 
 ## Fork
 
@@ -101,18 +101,18 @@ When you fork a repository on `GitHub`, you create a personal copy under your `G
 2. Go to the repo that you want to fork.
 3. Click `Fork`.
    1. Click `Choose an owner`.
-   2. Click `<your-username>` to make you the repo owner.
+   2. Click `<your-github-username>` to make you the repo owner.
    3. Click `Create fork`.
 
 ### `<your-fork-url>`
 
-Assume the [URL](./web-development.md#url) of the [repo that you forked](#fork-a-repo) is `https://github.com/<repo-owner-username>/<repo-name>`.
+Assume the [URL](./web-development.md#url) of the [repo that you forked](#fork-a-repo) is `https://github.com/<repo-owner-github-username>/<repo-name>`.
 
-Then, your fork URL should look like `https://github.com/<your-username>/<repo-name>`.
+Then, your fork URL should look like `https://github.com/<your-github-username>/<repo-name>`.
 
 We'll refer to this URL as `<your-fork-url>`.
 
-Find [`<your-username>`](#your-username) if you don't know it.
+Find [`<your-github-username>`](#your-github-username) if you don't know it.
 
 ### Go to your fork
 
@@ -201,8 +201,8 @@ Create a PR to the `<repo-name>/<branch-name>`:
 1. [Go to your fork](#go-to-your-fork).
 2. Click `Pull requests`.
 3. Click `New pull request`.
-4. Click `base repository: <repo-owner-username>/<repo-name>`.
-5. Click `<your-username>/<repo-name>` to select the [base repo](#base-repo).
+4. Click `base repository: <repo-owner-github-username>/<repo-name>`.
+5. Click `<your-github-username>/<repo-name>` to select the [base repo](#base-repo).
 6. The PR will be created in your repo.
 7. Click `base: main`.
 8. Click a branch to select the [base branch](#base-branch).
