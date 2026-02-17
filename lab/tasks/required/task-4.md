@@ -221,7 +221,7 @@ Use any of the following methods:
 
 ### 12. Configure the firewall
 
-1. Run on the VM:
+1. Allow the SSH port:
 
    ```terminal
    ufw allow 22
