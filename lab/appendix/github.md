@@ -35,6 +35,10 @@
   - [Create a label](#create-a-label)
   - [Add a label to issues](#add-a-label-to-issues)
   - [See all issues with a label](#see-all-issues-with-a-label)
+- [Settings](#settings)
+  - [Enable issues](#enable-issues)
+  - [Add a collaborator](#add-a-collaborator)
+  - [Protect a branch](#protect-a-branch)
 - [`GitHub flow`](#github-flow)
 - [`GitHub Projects`](#github-projects)
 
@@ -260,6 +264,43 @@ A [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track
    2. In the `Filter labels` input area, write `<label-name>`.
    3. Click the suggested label.
 5. You should see all issues that have the `<label-name>` label.
+
+## Settings
+
+### Enable issues
+
+1. [Go to your fork](#go-to-your-fork).
+2. Go to `Settings` -> `General` -> `Features`.
+3. Check the box near `Issues`.
+
+### Add a collaborator
+
+1. [Go to your fork](#go-to-your-fork).
+2. Go to `Settings` -> `Collaborators` -> `Add people`.
+3. Add the person as a collaborator.
+4. Make sure the collaborator has accepted the invitation sent to their email.
+
+### Protect a branch
+
+1. [Go to your fork](#go-to-your-fork).
+2. Go to `Settings`.
+3. Go to `Code and automation`.
+4. Go to `Rules`.
+5. Go to `Rulesets`.
+6. Go to `New ruleset`.
+7. Go to `Add branch ruleset`.
+8. Set:
+
+   1. `Ruleset Name`: `push`
+   2. `Enforcement status`: `Active`
+   3. `Target branches` -> `Add target` -> `Include default branch`
+   4. Rules:
+      - [x] `Restrict deletions`
+      - [x] `Require a pull request before merging`:
+         - `Required approvals`: `1`
+         - `Require conversation resolution before merging`
+         - `Allowed merge methods`: `Merge`.
+      - [x] Block force pushes
 
 ## `GitHub flow`
 
