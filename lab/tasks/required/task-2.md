@@ -21,18 +21,20 @@ Your job is to enable the endpoint, discover the bugs, and fix them.
   - [2. Examine the database using `PgAdmin`](#2-examine-the-database-using-pgadmin)
   - [3. Uncomment the router registration](#3-uncomment-the-router-registration)
   - [4. Uncomment the endpoint code](#4-uncomment-the-endpoint-code)
-  - [5. Restart the services](#5-restart-the-services)
-  - [6. Try `GET /interactions`](#6-try-get-interactions)
-  - [7. Read the error](#7-read-the-error)
-  - [8. Trace the bug](#8-trace-the-bug)
-  - [9. Fix Bug 1: rename `timestamp` to `created_at`](#9-fix-bug-1-rename-timestamp-to-created_at)
-  - [10. Verify `GET /interactions` works](#10-verify-get-interactions-works)
-  - [11. Try `GET /interactions?item_id=2`](#11-try-get-interactionsitem_id2)
-  - [12. Compare with the database](#12-compare-with-the-database)
-  - [13. Find Bug 2 in the code](#13-find-bug-2-in-the-code)
-  - [14. Fix Bug 2: filter by `item_id`](#14-fix-bug-2-filter-by-item_id)
-  - [15. Commit the fixes](#15-commit-the-fixes)
-  - [16. Finish the task](#16-finish-the-task)
+  - [5. Commit: enable the interactions endpoint](#5-commit-enable-the-interactions-endpoint)
+  - [6. Restart the services](#6-restart-the-services)
+  - [7. Try `GET /interactions`](#7-try-get-interactions)
+  - [8. Read the error](#8-read-the-error)
+  - [9. Trace the bug](#9-trace-the-bug)
+  - [10. Fix Bug 1: rename `timestamp` to `created_at`](#10-fix-bug-1-rename-timestamp-to-created_at)
+  - [11. Verify `GET /interactions` works](#11-verify-get-interactions-works)
+  - [12. Commit Bug 1 fix](#12-commit-bug-1-fix)
+  - [13. Try `GET /interactions?item_id=2`](#13-try-get-interactionsitem_id2)
+  - [14. Compare with the database](#14-compare-with-the-database)
+  - [15. Find Bug 2 in the code](#15-find-bug-2-in-the-code)
+  - [16. Fix Bug 2: filter by `item_id`](#16-fix-bug-2-filter-by-item_id)
+  - [17. Commit Bug 2 fix](#17-commit-bug-2-fix)
+  - [18. Finish the task](#18-finish-the-task)
 - [Acceptance criteria](#acceptance-criteria)
 
 ## Steps
@@ -106,7 +108,17 @@ Title: `[Task] Enable and debug the interactions endpoint`
        return interactions
    ```
 
-### 5. Restart the services
+### 5. Commit: enable the interactions endpoint
+
+1. [Commit](../git-workflow.md#commit) your changes.
+
+   Use the following commit message:
+
+   ```text
+   feat: enable the interactions endpoint
+   ```
+
+### 6. Restart the services
 
 1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -117,7 +129,7 @@ Title: `[Task] Enable and debug the interactions endpoint`
 > [!TIP]
 > If the services are still running, press `Ctrl+C` first to stop them, then run the command above.
 
-### 6. Try `GET /interactions`
+### 7. Try `GET /interactions`
 
 1. Open `Swagger UI` at `http://127.0.0.1:42001/docs`.
 2. [Authorize](./task-1.md#6-authorize-in-swagger-ui) with the API key.
@@ -126,13 +138,13 @@ Title: `[Task] Enable and debug the interactions endpoint`
 5. Click `Execute`.
 6. Observe the response: you should see a `500` Internal Server Error.
 
-### 7. Read the error
+### 8. Read the error
 
 1. Look at the error response in `Swagger UI`.
 2. Look at the application logs in the terminal where `Docker Compose` is running.
 3. The error mentions a missing or mismatched field: `timestamp`.
 
-### 8. Trace the bug
+### 9. Trace the bug
 
 1. [Open the file](../../appendix/vs-code.md#open-the-file):
    [`src/app/models/interaction.py`](../../../src/app/models/interaction.py).
@@ -152,7 +164,7 @@ Title: `[Task] Enable and debug the interactions endpoint`
 5. The `InteractionLog` class (the database model) has `created_at`, but the `InteractionModel` class (the response schema) has `timestamp`.
 6. This mismatch causes the error.
 
-### 9. Fix Bug 1: rename `timestamp` to `created_at`
+### 10. Fix Bug 1: rename `timestamp` to `created_at`
 
 1. In [`src/app/models/interaction.py`](../../../src/app/models/interaction.py), change the `InteractionModel` class:
 
@@ -176,14 +188,24 @@ The field name in the response schema (`InteractionModel`) must match the field 
 
 </details>
 
-### 10. Verify `GET /interactions` works
+### 11. Verify `GET /interactions` works
 
-1. Restart the services ([Step 5](#5-restart-the-services)).
+1. Restart the services ([Step 6](#6-restart-the-services)).
 2. Open `Swagger UI` and [authorize](./task-1.md#6-authorize-in-swagger-ui).
 3. Try `GET /interactions`.
 4. Observe: you should see a `200` status code with interaction data.
 
-### 11. Try `GET /interactions?item_id=2`
+### 12. Commit Bug 1 fix
+
+1. [Commit](../git-workflow.md#commit) your changes.
+
+   Use the following commit message:
+
+   ```text
+   fix: rename timestamp to created_at in InteractionModel
+   ```
+
+### 13. Try `GET /interactions?item_id=2`
 
 1. In `Swagger UI`, expand the `GET /interactions` endpoint.
 2. Click `Try it out`.
@@ -191,7 +213,7 @@ The field name in the response schema (`InteractionModel`) must match the field 
 4. Click `Execute`.
 5. Note the results that are returned.
 
-### 12. Compare with the database
+### 14. Compare with the database
 
 1. [Open `PgAdmin`](../../appendix/pgadmin.md#open-pgadmin).
 2. [Run a query](../../appendix/pgadmin.md#run-a-query) on the `interaction_logs` table:
@@ -203,7 +225,7 @@ The field name in the response schema (`InteractionModel`) must match the field 
 3. Compare the query results with the response from `Swagger UI`.
 4. Notice that the results don't match — the API returns different interactions than what the database query shows.
 
-### 13. Find Bug 2 in the code
+### 15. Find Bug 2 in the code
 
 1. [Open the file](../../appendix/vs-code.md#open-the-file):
    [`src/app/routers/interactions.py`](../../../src/app/routers/interactions.py).
@@ -222,7 +244,7 @@ The query parameter is called `item_id`, so the filter should compare `i.item_id
 
 </details>
 
-### 14. Fix Bug 2: filter by `item_id`
+### 16. Fix Bug 2: filter by `item_id`
 
 1. In [`src/app/routers/interactions.py`](../../../src/app/routers/interactions.py), change the filtering line:
 
@@ -239,29 +261,23 @@ The query parameter is called `item_id`, so the filter should compare `i.item_id
    ```
 
 2. Save the file.
-3. Restart the services ([Step 5](#5-restart-the-services)).
+3. Restart the services ([Step 6](#6-restart-the-services)).
 4. Verify in `Swagger UI` that `GET /interactions?item_id=2` now returns the correct results matching the database query.
 
-### 15. Commit the fixes
+### 17. Commit Bug 2 fix
 
-Commit each bug fix separately.
+1. [Commit](../git-workflow.md#commit) your changes.
 
-1. [Commit](../git-workflow.md#commit) the first fix with the message:
-
-   ```text
-   fix: rename timestamp to created_at in InteractionModel
-   ```
-
-2. [Commit](../git-workflow.md#commit) the second fix with the message:
+   Use the following commit message:
 
    ```text
    fix: filter interactions by item_id instead of learner_id
    ```
 
 > [!IMPORTANT]
-> Each bug fix must be a **separate commit**. Do not combine them into one.
+> Each fix must be a **separate commit**. Do not combine them into one.
 
-### 16. Finish the task
+### 18. Finish the task
 
 1. [Create a PR](../git-workflow.md#create-a-pr-to-main-in-your-fork) with your fixes.
 2. [Get a PR review](../git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
@@ -273,6 +289,6 @@ Commit each bug fix separately.
 - [ ] Issue has the correct title.
 - [ ] `GET /interactions` returns interaction data.
 - [ ] `GET /interactions?item_id=2` returns only interactions for item 2.
-- [ ] Each bug fix is a separate commit.
+- [ ] Each fix is a separate commit.
 - [ ] PR is approved.
 - [ ] PR is merged.
