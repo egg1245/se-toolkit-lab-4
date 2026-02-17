@@ -56,23 +56,9 @@ Title: `[Task] Set up CI with GitHub Actions`
    1. Checks out the repository.
    2. Installs `uv`.
    3. Installs dependencies using `uv sync`.
-   4. Runs the linter:
-
-      ```terminal
-      uv run poe lint
-      ```
-
-   5. Runs the type checker:
-
-      ```terminal
-      uv run poe typecheck
-      ```
-
-   6. Runs the tests:
-
-      ```terminal
-      uv run poe test
-      ```
+   4. Runs the linter (`uv run poe lint`).
+   5. Runs the type checker (`uv run poe typecheck`).
+   6. Runs the tests (`uv run poe test`).
 
 > [!TIP]
 > Use the `astral-sh/setup-uv` action to install `uv` in the CI environment.
@@ -98,7 +84,7 @@ Title: `[Task] Set up CI with GitHub Actions`
 
 ### 7. Finish the task
 
-1. [Get a PR review](../git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
+1. [Get a PR review](../git-workflow.md#get-a-pr-review) on the PR you created in [Step 5](#5-push-and-verify) and complete the subsequent steps in the `Git workflow`.
 
 ---
 
