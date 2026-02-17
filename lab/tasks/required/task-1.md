@@ -49,11 +49,11 @@ Title: `[Task] Explore the API`
 > If you already started the services during the setup, they should still be running.
 > You can skip this step.
 
-[Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
-```terminal
-docker compose --env-file .env.docker.secret up --build
-```
+   ```terminal
+   docker compose --env-file .env.docker.secret up --build
+   ```
 
 ### 3. Open `Swagger UI`
 
@@ -168,7 +168,7 @@ docker compose --env-file .env.docker.secret up --build
 
 ### 13. Commit the questionnaire
 
-1. [Commit your change using the `Source Control`](../../tasks/git-workflow.md#commit-using-source-control).
+1. [Commit](../git-workflow.md#commit) your changes.
 
    Use the following commit message:
 
@@ -178,8 +178,8 @@ docker compose --env-file .env.docker.secret up --build
 
 ### 14. Finish the task
 
-1. [Create a PR](../../tasks/git-workflow.md#create-a-pr) with your questionnaire.
-2. [Get a PR review](../../tasks/git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
+1. [Create a PR](../git-workflow.md#create-a-pr-to-main-in-your-fork) with your questionnaire.
+2. [Get a PR review](../git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
 
 ---
 

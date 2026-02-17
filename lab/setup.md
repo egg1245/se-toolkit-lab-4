@@ -125,13 +125,13 @@ Complete these steps:
 
 1. Install [`VS Code`](https://code.visualstudio.com/) if not installed.
 
-2. (Optional) [Learn more](../lab/appendix/vs-code.md) about `VS Code`.
+2. (Optional) [Learn more](./appendix/vs-code.md) about `VS Code`.
 
 #### 4.2. Install `Git`
 
 1. [Install `Git`](https://git-scm.com/install/) if not installed.
 
-2. (Optional) [Learn more](../lab/appendix/git.md) about `Git`.
+2. (Optional) [Learn more](./appendix/git.md) about `Git`.
 
 #### 4.3. Install `Docker`
 

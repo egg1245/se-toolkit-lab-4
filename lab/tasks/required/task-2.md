@@ -261,13 +261,13 @@ The query parameter is called `item_id`, so the filter should compare `i.item_id
 
 Commit each bug fix separately.
 
-1. [Commit](../../tasks/git-workflow.md#commit-using-source-control) the first fix with the message:
+1. [Commit](../git-workflow.md#commit) the first fix with the message:
 
    ```text
    fix: rename timestamp to created_at in InteractionModel
    ```
 
-2. [Commit](../../tasks/git-workflow.md#commit-using-source-control) the second fix with the message:
+2. [Commit](../git-workflow.md#commit) the second fix with the message:
 
    ```text
    fix: filter interactions by item_id instead of learner_id
@@ -278,8 +278,8 @@ Commit each bug fix separately.
 
 ### 16. Finish the task
 
-1. [Create a PR](../../tasks/git-workflow.md#create-a-pr) with your fixes.
-2. [Get a PR review](../../tasks/git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
+1. [Create a PR](../git-workflow.md#create-a-pr-to-main-in-your-fork) with your fixes.
+2. [Get a PR review](../git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
 
 ---
 

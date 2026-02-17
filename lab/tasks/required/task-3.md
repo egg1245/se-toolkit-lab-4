@@ -160,7 +160,7 @@ async def get_learners(
 
 #### 3.6. Commit Part A
 
-1. [Commit your change using the `Source Control`](../../tasks/git-workflow.md#commit-using-source-control).
+1. [Commit your change using the `Source Control`](../git-workflow.md#commit).
 
    Use the following commit message:
 
@@ -214,7 +214,7 @@ async def post_learner(
 
 #### 4.3. Commit Part B
 
-1. [Commit your change using the `Source Control`](../../tasks/git-workflow.md#commit-using-source-control).
+1. [Commit your change using the `Source Control`](../git-workflow.md#commit).
 
    Use the following commit message:
 
@@ -227,8 +227,8 @@ async def post_learner(
 
 ### 5. Finish the task
 
-1. [Create a PR](../../tasks/git-workflow.md#create-a-pr) with your implementation.
-2. [Get a PR review](../../tasks/git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
+1. [Create a PR](../git-workflow.md#create-a-pr-to-main-in-your-fork) with your implementation.
+2. [Get a PR review](../git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
 
 ---
 

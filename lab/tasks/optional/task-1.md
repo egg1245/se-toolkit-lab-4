@@ -18,28 +18,31 @@ You will add an `outcomes` table, create the corresponding Pydantic models, impl
 
 <h4>Table of contents</h4>
 
-- [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
-- [1. Create an issue](#1-create-an-issue)
-- [2. Study the reference implementation](#2-study-the-reference-implementation)
-- [3. Modify the database](#3-modify-the-database)
-- [4. Add Pydantic models](#4-add-pydantic-models)
-- [5. Add database functions](#5-add-database-functions)
-- [6. Add the router](#6-add-the-router)
-- [7. Register the router](#7-register-the-router)
-- [8. Add tests](#8-add-tests)
-- [9. Run the tests](#9-run-the-tests)
-- [10. Finish the task](#10-finish-the-task)
+- [Steps](#steps)
+  - [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
+  - [1. Create a `Lab Task` issue](#1-create-a-lab-task-issue)
+  - [2. Study the reference implementation](#2-study-the-reference-implementation)
+  - [3. Modify the database](#3-modify-the-database)
+  - [4. Add Pydantic models](#4-add-pydantic-models)
+  - [5. Add database functions](#5-add-database-functions)
+  - [6. Add the router](#6-add-the-router)
+  - [7. Register the router](#7-register-the-router)
+  - [8. Add tests](#8-add-tests)
+  - [9. Run the tests](#9-run-the-tests)
+  - [10. Finish the task](#10-finish-the-task)
 - [Acceptance criteria](#acceptance-criteria)
 
-## 0. Follow the `Git workflow`
+## Steps
+
+### 0. Follow the `Git workflow`
 
 Follow the [`Git workflow`](../git-workflow.md) to complete this task.
 
-## 1. Create an issue
+### 1. Create a `Lab Task` issue
 
-Title: `[Task] Implement the /outcomes endpoint`.
+Title: `[Task] Implement the /outcomes endpoint`
 
-## 2. Study the reference implementation
+### 2. Study the reference implementation
 
 Study how the `items` endpoint is implemented:
 
@@ -52,7 +55,7 @@ Study how the `items` endpoint is implemented:
 > [!TIP]
 > Use the `items` implementation as a template for every step below.
 
-## 3. Modify the database
+### 3. Modify the database
 
 1. Add an `outcomes` table to the database schema.
 2. The table should contain at least:
@@ -62,20 +65,20 @@ Study how the `items` endpoint is implemented:
    - `status` (e.g., `passed`, `failed`, `in_progress`).
    - `created_at` (timestamp).
 
-## 4. Add Pydantic models
+### 4. Add Pydantic models
 
 1. Create Pydantic models for the `/outcomes` endpoint:
    - A model for creating an outcome.
    - A model for the outcome response.
 
-## 5. Add database functions
+### 5. Add database functions
 
 1. Implement CRUD functions for the `outcomes` table:
    - Create an outcome.
    - Get all outcomes.
    - Get an outcome by ID.
 
-## 6. Add the router
+### 6. Add the router
 
 1. Create a new router file for the `/outcomes` endpoint.
 2. Implement the following endpoints:
@@ -83,11 +86,11 @@ Study how the `items` endpoint is implemented:
    - `GET /outcomes` — list all outcomes.
    - `GET /outcomes/{outcome_id}` — get a single outcome by ID.
 
-## 7. Register the router
+### 7. Register the router
 
 1. Register the new router in the main application file so the endpoints are available.
 
-## 8. Add tests
+### 8. Add tests
 
 1. Write tests for the new endpoints.
 2. Test at least:
@@ -96,7 +99,7 @@ Study how the `items` endpoint is implemented:
    - Getting an outcome by ID.
    - Getting a non-existent outcome (should return `404`).
 
-## 9. Run the tests
+### 9. Run the tests
 
 1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -106,11 +109,11 @@ Study how the `items` endpoint is implemented:
 
 2. All tests should pass.
 
-## 10. Finish the task
+### 10. Finish the task
 
 1. Commit your changes.
-2. [Create a PR](../../tasks/git-workflow.md#create-a-pr) with your implementation.
-3. [Get a PR review](../../tasks/git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
+2. [Create a PR](../git-workflow.md#create-a-pr-to-main-in-your-fork) with your implementation.
+3. [Get a PR review](../git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
 
 ---
 
