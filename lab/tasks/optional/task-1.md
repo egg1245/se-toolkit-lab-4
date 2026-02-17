@@ -46,18 +46,17 @@ Title: `[Task] Implement the /outcomes endpoint`
 
 Study how the `items` endpoint is implemented:
 
-1. Database schema (the `items` table).
-2. Pydantic models for request and response bodies.
-3. Database functions (CRUD operations).
-4. Router with endpoint definitions.
-5. Tests.
+1. Database schema: [`src/app/data/init.sql`](../../../src/app/data/init.sql) (the `items` table).
+2. Pydantic models: [`src/app/models/item.py`](../../../src/app/models/item.py).
+3. Database functions: [`src/app/db/items.py`](../../../src/app/db/items.py).
+4. Router: [`src/app/routers/items.py`](../../../src/app/routers/items.py).
 
 > [!TIP]
 > Use the `items` implementation as a template for every step below.
 
 ### 3. Modify the database
 
-1. Add an `outcomes` table to the database schema.
+1. Add an `outcomes` table to [`src/app/data/init.sql`](../../../src/app/data/init.sql).
 2. The table should contain at least:
    - `id` (primary key).
    - `learner_id` (foreign key to `learners`).
@@ -67,20 +66,20 @@ Study how the `items` endpoint is implemented:
 
 ### 4. Add Pydantic models
 
-1. Create Pydantic models for the `/outcomes` endpoint:
-   - A model for creating an outcome.
-   - A model for the outcome response.
+1. Create a new file `src/app/models/outcome.py` with Pydantic models for the `/outcomes` endpoint:
+   - A model for creating an outcome (see `ItemCreate` in [`src/app/models/item.py`](../../../src/app/models/item.py)).
+   - A model for the outcome response (see `Item` in [`src/app/models/item.py`](../../../src/app/models/item.py)).
 
 ### 5. Add database functions
 
-1. Implement CRUD functions for the `outcomes` table:
+1. Create a new file `src/app/db/outcomes.py` with CRUD functions for the `outcomes` table (see [`src/app/db/items.py`](../../../src/app/db/items.py)):
    - Create an outcome.
    - Get all outcomes.
    - Get an outcome by ID.
 
 ### 6. Add the router
 
-1. Create a new router file for the `/outcomes` endpoint.
+1. Create a new file `src/app/routers/outcomes.py` (see [`src/app/routers/items.py`](../../../src/app/routers/items.py)).
 2. Implement the following endpoints:
    - `POST /outcomes` — create a new outcome.
    - `GET /outcomes` — list all outcomes.
@@ -88,7 +87,7 @@ Study how the `items` endpoint is implemented:
 
 ### 7. Register the router
 
-1. Register the new router in the main application file so the endpoints are available.
+1. Register the new router in [`src/app/main.py`](../../../src/app/main.py) so the endpoints are available.
 
 ### 8. Add tests
 
@@ -111,7 +110,14 @@ Study how the `items` endpoint is implemented:
 
 ### 10. Finish the task
 
-1. Commit your changes.
+1. [Commit](../git-workflow.md#commit) your changes.
+
+   Use the following commit message:
+
+   ```text
+   feat: implement /outcomes endpoint
+   ```
+
 2. [Create a PR](../git-workflow.md#create-a-pr-to-main-in-your-fork) with your implementation.
 3. [Get a PR review](../git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
 
