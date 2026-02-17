@@ -13,11 +13,11 @@
   - [4. Install programs](#4-install-programs)
     - [4.1. Install `VS Code`](#41-install-vs-code)
     - [4.2. Install `Git`](#42-install-git)
-    - [4.3. (Optional, `Windows` only) Install `Ubuntu 24.04` using WSL](#43-optional-windows-only-install-ubuntu-2404-using-wsl)
-  - [5. Open in `VS Code` the `software-engineering-toolkit` directory](#5-open-in-vs-code-the-software-engineering-toolkit-directory)
-  - [6. Set up `Git`](#6-set-up-git)
-    - [6.1 Check your `Git` config](#61-check-your-git-config)
-    - [6.2 Configure `Git`](#62-configure-git)
+    - [4.3. Install `Docker`](#43-install-docker)
+    - [4.4. (Optional, `Windows` only) Install `Ubuntu 24.04` using WSL](#44-optional-windows-only-install-ubuntu-2404-using-wsl)
+  - [5. Set up `Git`](#5-set-up-git)
+    - [5.1. Check your `Git` config](#51-check-your-git-config)
+    - [5.2. Configure `Git`](#52-configure-git)
   - [6. Open your cloned fork in `VS Code`](#6-open-your-cloned-fork-in-vs-code)
     - [6.1. Copy your fork `URL`](#61-copy-your-fork-url)
     - [6.2. Clone your fork](#62-clone-your-fork)
@@ -25,10 +25,13 @@
   - [7. (`Windows` only) Set the default shell](#7-windows-only-set-the-default-shell)
   - [8. Continue creating a VM](#8-continue-creating-a-vm)
   - [9. Set up `Python` in `VS Code`](#9-set-up-python-in-vs-code)
-    - [4.3. Install `uv`](#43-install-uv)
-    - [9.1. Install `Python` and dependencies](#91-install-python-and-dependencies)
-    - [9.2. Select the `Python` interpreter](#92-select-the-python-interpreter)
-    - [9.3. Check that `Python` works](#93-check-that-python-works)
+    - [9.1. Install `uv`](#91-install-uv)
+    - [9.2. Install `Python` and dependencies](#92-install-python-and-dependencies)
+    - [9.3. Select the `Python` interpreter](#93-select-the-python-interpreter)
+    - [9.4. Check that `Python` works](#94-check-that-python-works)
+  - [10. Set up the `Docker` environment](#10-set-up-the-docker-environment)
+  - [11. Start the services](#11-start-the-services)
+  - [12. Open `PgAdmin`](#12-open-pgadmin)
 - [Optional steps](#optional-steps)
   - [1. Set up a coding agent](#1-set-up-a-coding-agent)
   - [2. Set up the shell prompt](#2-set-up-the-shell-prompt)
@@ -38,7 +41,7 @@
     - [Create the `task` label](#create-the-task-label)
     - [Add the label to issues](#add-the-label-to-issues)
     - [See all issues with the label](#see-all-issues-with-the-label)
-  - [7. View `README.md` in `VS Code`](#7-view-readmemd-in-vs-code)
+  - [6. View `README.md` in `VS Code`](#6-view-readmemd-in-vs-code)
 
 ## Steps
 
@@ -130,25 +133,19 @@ Complete these steps:
 
 2. (Optional) [Learn more](../lab/appendix/git.md) about `Git`.
 
-#### 4.3. (Optional, `Windows` only) Install `Ubuntu 24.04` using WSL
+#### 4.3. Install `Docker`
+
+1. [Install `Docker`](./appendix/docker.md#install-docker) if not installed.
+
+2. (Optional) [Learn more](./appendix/docker.md) about `Docker`.
+
+#### 4.4. (Optional, `Windows` only) Install `Ubuntu 24.04` using WSL
 
 1. [Set up running `VS Code` using `WSL`](./appendix/vs-code.md#windows-only-set-up-running-vs-code-in-wsl).
 
-### 5. Open in `VS Code` the `software-engineering-toolkit` directory
+### 5. Set up `Git`
 
-1. Inside the `Desktop` [directory](./appendix/file-system.md#directory),
-   create the directory `software-engineering-toolkit`.
-
-   Skip this step if this directory exists.
-
-2. [Open in `VS Code` the directory](./appendix/git-vscode.md#open-in-vs-code-the-directory):
-   `software-engineering-toolkit`.
-
-3. [Check the current shell in the `VS Code Terminal`](./appendix/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
-
-### 6. Set up `Git`
-
-#### 6.1 Check your `Git` config
+#### 5.1. Check your `Git` config
 
 1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -163,9 +160,9 @@ Complete these steps:
    user.email=inno-se-toolkit@gmail.com
    ```
 
-#### 6.2 Configure `Git`
+#### 5.2. Configure `Git`
 
-Configure `Git` if you want to change the values that you saw while [checking your `Git` config](#61-check-your-git-config).
+Configure `Git` if you want to change the values that you saw while [checking your `Git` config](#51-check-your-git-config).
 
 > [!IMPORTANT]
 > Replace `<your-name>` with a name and `<your-email>` with an email that you want to see in the commits.
@@ -185,7 +182,7 @@ Configure `Git` if you want to change the values that you saw while [checking yo
      git config --global user.email '<your-email>'
      ```
 
-     Example: `git config --global user.name 'inno-se-toolkit@gmail.com'`
+     Example: `git config --global user.email 'inno-se-toolkit@gmail.com'`
 
 ### 6. Open your cloned fork in `VS Code`
 
@@ -211,7 +208,6 @@ Configure `Git` if you want to change the values that you saw while [checking yo
 1. [Open in `VS Code` the directory](./appendix/git-vscode.md#open-in-vs-code-the-directory):
    `se-toolkit-lab-3`.
 2. [Install recommended extensions](./appendix/vs-code.md#install-recommended-extensions).
-3. Close the `VS Code` where you [opened the `software-engineering-toolkit` directory](#5-open-in-vs-code-the-software-engineering-toolkit-directory).
 
 ### 7. (`Windows` only) Set the default shell
 
@@ -224,18 +220,16 @@ Configure `Git` if you want to change the values that you saw while [checking yo
 
 ### 9. Set up `Python` in `VS Code`
 
-#### 4.3. Install `uv`
+#### 9.1. Install `uv`
 
 > [!NOTE]
 > [`uv`](./appendix/python.md#uv) is a package manager for [`Python`](./appendix/python.md).
-
-> ![IMPORTANT]
 
 1. Follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/).
 
    If you use `Windows`, follow the instructions for `Linux`.
 
-#### 9.1. Install `Python` and dependencies
+#### 9.2. Install `Python` and dependencies
 
 1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -260,13 +254,13 @@ Configure `Git` if you want to change the values that you saw while [checking yo
 >
 > This directory is managed by `uv`. You don't need to edit files in this directory manually.
 
-#### 9.2. Select the `Python` interpreter
+#### 9.3. Select the `Python` interpreter
 
 1. [Run using the `Command Palette`](./appendix/vs-code.md#run-a-command-using-the-command-palette):
    `Python: Select Interpreter`.
 2. Click `Recommended` to select the interpreter in `./.venv/bin/python`.
 
-#### 9.3. Check that `Python` works
+#### 9.4. Check that `Python` works
 
 1. [Open a new `VS Code Terminal`](./appendix/vs-code.md#open-a-new-terminal).
 2. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
@@ -283,6 +277,74 @@ Configure `Git` if you want to change the values that you saw while [checking yo
 
 > [!NOTE]
 > The `Python` version for this project is specified in the [`pyproject.toml`](../pyproject.toml) file using the `requires-python` setting.
+
+### 10. Set up the `Docker` environment
+
+1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   cp .env.docker.example .env.docker.secret
+   ```
+
+> [!NOTE]
+> The `.env.docker.secret` file contains environment variables for the `Docker` containers.
+>
+> It was added to [`.gitignore`](../.gitignore) because you may specify there
+> [secrets](./appendix/environments.md#secrets) such as the API key or the address of your VM.
+
+> [!TIP]
+> No edits are needed for local development. The default values in `.env.docker.example` work out of the box.
+
+### 11. Start the services
+
+1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   docker compose --env-file .env.docker.secret up --build
+   ```
+
+2. Wait for the services to start. You should see log output from the `app`, `postgres`, `pgadmin`, and `caddy` containers.
+
+3. Verify that the API is running by opening in a browser: <http://127.0.0.1:42001/docs>.
+
+4. You should see the `Swagger UI` page with the API documentation.
+
+> [!NOTE]
+> [`Docker Compose`](./appendix/docker.md#docker-compose) reads environment variables from `.env.docker.secret`
+> and uses them to configure the containers defined in [`docker-compose.yml`](../docker-compose.yml).
+
+> [!TIP]
+> To stop the services, press `Ctrl+C` in the terminal where they are running.
+> Alternatively, run `docker compose down` in a new terminal.
+
+### 12. Open `PgAdmin`
+
+1. Open in a browser: <http://127.0.0.1:5050>.
+
+2. Log in with:
+   - Email: `admin@example.com`
+   - Password: `admin`
+
+3. Add a new server connection:
+   1. Right-click `Servers` -> `Register` -> `Server...`.
+   2. In the `General` tab:
+      - `Name`: `lab3`
+   3. In the `Connection` tab:
+      - `Host name/address`: `postgres`
+      - `Port`: `5432`
+      - `Username`: `postgres`
+      - `Password`: `postgres`
+   4. Click `Save`.
+
+4. Navigate to `Servers` -> `lab3` -> `Databases` -> `lab3` -> `Schemas` -> `public` -> `Tables`.
+
+5. Verify that the following tables exist and contain data:
+   - `items`
+   - `learners`
+   - `interaction_logs`
+
+> [!TIP]
+> To view the data in a table, right-click the table and select `View/Edit Data` -> `All Rows`.
 
 ---
 
@@ -371,7 +433,7 @@ Complete these steps:
    3. Click the suggested label.
 5. You should see all issues that have the `task` label.
 
-### 7. View `README.md` in `VS Code`
+### 6. View `README.md` in `VS Code`
 
 If you want to view `README.md` in `VS Code` instead of on `GitHub`:
 

@@ -1,4 +1,4 @@
-# Identify, report, and fix a bug
+# Enable and debug a broken endpoint
 
 <h4>Time</h4>
 
@@ -6,35 +6,33 @@
 
 <h4>Purpose</h4>
 
-Learn to identify a bug using tests, document it using a `GitHub` issue, and deliver a fix using the `Git workflow`.
+Learn to debug a broken endpoint by tracing code and examining the database using `PgAdmin`.
 
 <h4>Context</h4>
 
-The web server has a bug in one of its [endpoints](../../appendix/web-development.md#endpoint).
-The tests catch this bug.
-Your job is to run the tests, understand the failure, find the root cause in the source code, and fix it.
+The `/interactions` endpoint code exists but is commented out. It contains two bugs: a schema-database mismatch and a logic error.
+Your job is to enable the endpoint, discover the bugs, and fix them.
 
 <h4>Table of contents</h4>
 
 - [Steps](#steps)
   - [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
   - [1. Create a `Lab Task` issue](#1-create-a-lab-task-issue)
-  - [2. Run the web server](#2-run-the-web-server)
-  - [3. Run the tests](#3-run-the-tests)
-  - [4. Create a bug report issue](#4-create-a-bug-report-issue)
-  - [5. Read the test output](#5-read-the-test-output)
-  - [6. Find the test code](#6-find-the-test-code)
-  - [7. Inspect the test code](#7-inspect-the-test-code)
-  - [8. Understand the response](#8-understand-the-response)
-  - [9. Determine the endpoint](#9-determine-the-endpoint)
-  - [10. Find the code for that endpoint](#10-find-the-code-for-that-endpoint)
-  - [11. Inspect the `get_item` function](#11-inspect-the-get_item-function)
-  - [12. Inspect the `get_item_by_id` function](#12-inspect-the-get_item_by_id-function)
-  - [13. Inspect the `get_item_by_id_dfs_iterative` function](#13-inspect-the-get_item_by_id_dfs_iterative-function)
-  - [14. Find the bug](#14-find-the-bug)
-  - [15. Fix the bug](#15-fix-the-bug)
-  - [16. Commit the change](#16-commit-the-change)
-  - [17. Finish the task](#17-finish-the-task)
+  - [2. Examine the database using `PgAdmin`](#2-examine-the-database-using-pgadmin)
+  - [3. Uncomment the router registration](#3-uncomment-the-router-registration)
+  - [4. Uncomment the endpoint code](#4-uncomment-the-endpoint-code)
+  - [5. Restart the services](#5-restart-the-services)
+  - [6. Try `GET /interactions`](#6-try-get-interactions)
+  - [7. Read the error](#7-read-the-error)
+  - [8. Trace the bug](#8-trace-the-bug)
+  - [9. Fix Bug 1: rename `timestamp` to `created_at`](#9-fix-bug-1-rename-timestamp-to-created_at)
+  - [10. Verify `GET /interactions` works](#10-verify-get-interactions-works)
+  - [11. Try `GET /interactions?item_id=2`](#11-try-get-interactionsitem_id2)
+  - [12. Compare with the database](#12-compare-with-the-database)
+  - [13. Find Bug 2 in the code](#13-find-bug-2-in-the-code)
+  - [14. Fix Bug 2: filter by `item_id`](#14-fix-bug-2-filter-by-item_id)
+  - [15. Commit the fixes](#15-commit-the-fixes)
+  - [16. Finish the task](#16-finish-the-task)
 - [Acceptance criteria](#acceptance-criteria)
 
 ## Steps
@@ -45,216 +43,251 @@ Follow the [`Git workflow`](../git-workflow.md) to complete this task.
 
 ### 1. Create a `Lab Task` issue
 
-Title: `[Task] Identify, report, and fix a bug`.
+Title: `[Task] Enable and debug the interactions endpoint`
 
-### 2. Run the web server
+### 2. Examine the database using `PgAdmin`
 
-1. [Run the web server](./task-1.md#7-run-the-web-server).
-2. [Send a `GET` query](../../appendix/web-development.md#send-a-get-query)
-   to [`http://127.0.0.1:42000/items/item/lab-02-run-local-venv`](http://127.0.0.1:42000/items/item/lab-02-run-local-venv).
-3. [Pretty-print the `JSON` response](../../appendix/web-development.md#pretty-print-a-json-response).
-
-### 3. Run the tests
+1. Open `PgAdmin` in a browser: `http://127.0.0.1:5050`.
+2. Log in with:
+   - Email: `admin@example.com`
+   - Password: `admin`
+3. Add a new server connection:
+   1. Right-click `Servers` -> `Register` -> `Server...`
+   2. In the `General` tab, set `Name` to `lab3`.
+   3. In the `Connection` tab, set:
+      - `Host name/address`: `postgres`
+      - `Port`: `5432`
+      - `Username`: the value of `POSTGRES_USER` from `.env.docker.secret` (default: `postgres`).
+      - `Password`: the value of `POSTGRES_PASSWORD` from `.env.docker.secret` (default: `postgres`).
+   4. Click `Save`.
+4. Navigate to `Servers` -> `lab3` -> `Databases` -> `lab3` -> `Schemas` -> `public` -> `Tables`.
+5. Find the `interaction_logs` table.
+6. Right-click `interaction_logs` -> `Properties` -> `Columns`.
+7. Note the column names: `id`, `learner_id`, `item_id`, `kind`, `created_at`.
 
 > [!NOTE]
-> [`pytest`](https://docs.pytest.org/) is a testing framework for `Python`.
->
-> The tests are in the [`tests/`](../../../tests/) directory.
+> Pay attention to the column name `created_at`. You will need it later.
 
-1. [Open a new `VS Code Terminal`](../../appendix/vs-code.md#open-a-new-vs-code-terminal).
-2. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+### 3. Uncomment the router registration
 
-   ```terminal
-   uv run poe test
-   ```
-
-3. You should see that one of the tests **fails**.
-
-### 4. Create a bug report issue
-
-1. [Create a `Bug Report` issue](../../appendix/github.md#create-an-issue).
-2. Describe what you did, what you expected to see and what you got.
-
-### 5. Read the test output
-
-1. Look at the test output in the [`VS Code Terminal`](../../appendix/vs-code.md#vs-code-terminal).
-2. Look at the `short test summary info`.
-3. You should see `FAILED tests/test_items.py::test_get_item_1 - assert 404 == 200`.
-
-   This line means the following:
-   - The test failed (`FAILED`).
-   - The test is in the file [`tests/test_items.py`](../../../tests/test_items.py).
-   - The name of the failing test is `test_get_item_1`.
-   - The [assert](../../appendix/testing.md#assert-statements) that failed is `404 == 200`.
-
-### 6. Find the test code
-
-1. Go to [`tests/test_items.py`](../../../tests/test_items.py).
-2. Go to the function `test_get_item_1`.
-3. Go to the helper function `get_task_by_id` called by `test_get_item_1`.
-
-### 7. Inspect the test code
-
-1. The test makes a request to the web server [endpoint](../../appendix/web-development.md#endpoint) (`client.get(<endpoint>)`).
-2. The test asserts that the [response status code](../../appendix/web-development.md#http-response-status-code) is `200`.
-3. The web server, however, returns the `404` [response status code](../../appendix/web-development.md#http-response-status-code).
-4. Hence, the assert fails.
-
-### 8. Understand the response
-
-1. Read about the [`404` response status code](../../appendix/web-development.md#404-response-status-code).
-2. This code means that the web server couldn't find the requested resource.
-
-### 9. Determine the endpoint
-
-1. The request is to the endpoint `/items/item/{task_id}`.
-
-   This endpoint should return a task information by the `task_id`.
-
-   **Note:** The [query parameter](../../appendix/web-development.md#query-parameter) `?order={order}` doesn't matter if the web server can't find the endpoint.
-
-### 10. Find the code for that endpoint
-
-1. Go to [`src/app/routers/items.py`](../../../src/app/routers/items.py).
-2. Go to the function `get_item`.
-
-### 11. Inspect the `get_item` function
-
-1. Look at the last line of the function `get_item`:
+1. [Open the file](../../appendix/vs-code.md#open-the-file):
+   [`src/app/main.py`](../../../src/app/main.py).
+2. Uncomment the import line:
 
    ```python
-   raise HTTPException(status_code=404, detail="Item not found")
+   from app.routers import interactions
    ```
 
-   This line is executed if the function didn't return any value before.
-
-   The response of the web server was `404`.
-
-   This means that this line was executed.
-
-2. Look at the line where the `item` variable gets a value:
+3. Uncomment the router registration block:
 
    ```python
-   item = get_item_by_id(item_id, order=order_parsed)
+   app.include_router(
+       interactions.router,
+       prefix="/interactions",
+       tags=["interactions"],
+       dependencies=[Depends(verify_api_key)],
+   )
    ```
 
-   The function `get_item_by_id` searches for an item in a given order.
+### 4. Uncomment the endpoint code
 
-3. Look at where `get_item` can return:
+1. [Open the file](../../appendix/vs-code.md#open-the-file):
+   [`src/app/routers/interactions.py`](../../../src/app/routers/interactions.py).
+2. Uncomment the import lines:
 
    ```python
-   if item is not None:
-      return item
+   from fastapi import Depends
+   from sqlmodel.ext.asyncio.session import AsyncSession
+
+   from app.database import get_session
+   from app.db.interactions import read_interactions
+   from app.models.interaction import InteractionModel
    ```
 
-   Since the function didn't return, the value of `item` was `None`.
-
-   This means that the function `get_item_by_id` returned `None`.
-
-### 12. Inspect the `get_item_by_id` function
-
-1. [Hover over the `get_item_by_id` function name to see its type](../../appendix/vs-code.md#type-on-hover):
-
-   <img alt="Type on Hover" src="../../images/appendix/vs-code/hover-type.png" style="width:400px"></img>
-
-   The  `-> (FoundItem | None)` means that the function returns either a `FoundItem` or `None`.
-
-2. [Go to the `get_item_by_id` function definition](../../appendix/vs-code.md#go-to-the-definition).
-
-3. Inspect the `courses` variable:
+3. Uncomment the endpoint function:
 
    ```python
-   courses: list[Course] = read_courses()
+   @router.get("/", response_model=list[InteractionModel])
+   async def get_interactions(
+       item_id: int | None = None,
+       session: AsyncSession = Depends(get_session),
+   ):
+       """Get all interactions, optionally filtered by item."""
+       interactions = await read_interactions(session)
+       if item_id is not None:
+           interactions = [i for i in interactions if i.learner_id == item_id]
+       return interactions
    ```
 
-   The variable `courses` contains a list of objects of the class `Course`.
+### 5. Restart the services
 
-   This list is produced by the call of to the function `read_courses()`.
+[Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
-   Assume for now that the `read_courses()` correctly reads all available data
-   from the [`course_items.json`](../../../src/app/data/course_items.json) `JSON` document.
+```terminal
+docker compose --env-file .env.docker.secret up --build
+```
 
-4. Inspect the `return` statement:
+> [!TIP]
+> If the services are still running, press `Ctrl+C` first to stop them, then run the command above.
+
+### 6. Try `GET /interactions`
+
+1. Open `Swagger UI` at `http://127.0.0.1:42001/docs`.
+2. [Authorize](./task-1.md#6-authorize-in-swagger-ui) with the API key.
+3. Expand the `GET /interactions` endpoint.
+4. Click `Try it out`.
+5. Click `Execute`.
+6. Observe the response: you should see a `500` Internal Server Error.
+
+### 7. Read the error
+
+1. Look at the error response in `Swagger UI`.
+2. Look at the application logs in the terminal where `Docker Compose` is running.
+3. The error mentions a missing or mismatched field: `timestamp`.
+
+### 8. Trace the bug
+
+1. [Open the file](../../appendix/vs-code.md#open-the-file):
+   [`src/app/models/interaction.py`](../../../src/app/models/interaction.py).
+2. Look at the `InteractionModel` class (the response schema):
 
    ```python
-   return get_item_by_id_dfs_iterative(courses=courses, item_id=item_id, order=order)
+   class InteractionModel(SQLModel):
+       id: int
+       learner_id: int
+       item_id: int
+       kind: str
+       timestamp: datetime
    ```
 
-   The function `get_item_by_id` returns the result of the call to the function `get_item_by_id_dfs_iterative`.
+3. The response schema has a field called `timestamp`.
+4. Recall from [Step 2](#2-examine-the-database-using-pgadmin): the database table `interaction_logs` has a column called `created_at`, not `timestamp`.
+5. The `InteractionLog` class (the database model) has `created_at`, but the `InteractionModel` class (the response schema) has `timestamp`.
+6. This mismatch causes the error.
 
-   Since the `get_item_by_id` returned `None`, the `get_item_by_id_dfs_iterative` should also have returned `None`.
+### 9. Fix Bug 1: rename `timestamp` to `created_at`
 
-### 13. Inspect the `get_item_by_id_dfs_iterative` function
+1. In [`src/app/models/interaction.py`](../../../src/app/models/interaction.py), change the `InteractionModel` class:
 
-1. [Go to the definition](../../appendix/vs-code.md#go-to-the-definition) of `get_item_by_id_dfs_iterative`.
-2. Study the function [docstring](../../appendix/python.md#docstring).
-3. [Hover over the `get_item_by_id_dfs_iterative` function name to see the docs](../../appendix/vs-code.md#docs-on-hover).
-4. The function uses the [depth-first search](https://en.wikipedia.org/wiki/Tree_traversal#Depth-first_search) to find an item.
-
-### 14. Find the bug
-
-1. Try to find the bug in the function.
-
-   As [mentioned before](#9-determine-the-endpoint), the function can't find a task by the `item_id`.
-
-2. <details><summary>Click to open a hint</summary>
-
-   The bug can be here:
+   **Before:**
 
    ```python
-   for task in lab.tasks:
-      counter += 1
-      if lab.id == item_id:
-            return FoundItem(task, counter)
+   timestamp: datetime
    ```
 
-   </details>
+   **After:**
 
-3. <details><summary>Click to open the solution</summary>
+   ```python
+   created_at: datetime
+   ```
 
-   The problem is in the `if`-condition.
+2. Save the file.
 
-   It never checks that the `task.id == item_id`.
+<details><summary>Hint: what to look for</summary>
 
-   Therefore, the function can never find a task by its id.
+The field name in the response schema (`InteractionModel`) must match the field name in the database model (`InteractionLog`). The database column is `created_at`, so the response schema must also use `created_at`.
 
-   </details>
+</details>
 
-### 15. Fix the bug
+### 10. Verify `GET /interactions` works
 
-1. Write the correct code.
-2. [Run the tests](#3-run-the-tests) again to see that all tests pass.
+1. Restart the services ([Step 5](#5-restart-the-services)).
+2. Open `Swagger UI` and [authorize](./task-1.md#6-authorize-in-swagger-ui).
+3. Try `GET /interactions`.
+4. Observe: you should see a `200` status code with interaction data.
 
-### 16. Commit the change
+### 11. Try `GET /interactions?item_id=2`
 
-1. [Commit your change using the `Source Control`](../../tasks/git-workflow.md#commit-using-source-control).
+1. In `Swagger UI`, expand the `GET /interactions` endpoint.
+2. Click `Try it out`.
+3. Enter `2` in the `item_id` field.
+4. Click `Execute`.
+5. Note the results that are returned.
 
-   Use a multi-line message:
+### 12. Compare with the database
+
+1. Open `PgAdmin` at `http://127.0.0.1:5050`.
+2. Navigate to the `interaction_logs` table.
+3. Open the query tool: right-click the `lab3` database -> `Query Tool`.
+4. Run the following query:
+
+   ```sql
+   SELECT * FROM interaction_logs WHERE item_id = 2;
+   ```
+
+5. Compare the query results with the response from `Swagger UI`.
+6. Notice that the results don't match — the API returns different interactions than what the database query shows.
+
+### 13. Find Bug 2 in the code
+
+1. [Open the file](../../appendix/vs-code.md#open-the-file):
+   [`src/app/routers/interactions.py`](../../../src/app/routers/interactions.py).
+2. Look at the filtering code:
+
+   ```python
+   interactions = [i for i in interactions if i.learner_id == item_id]
+   ```
+
+3. The code filters by `i.learner_id` instead of `i.item_id`.
+4. This means the endpoint returns interactions for a specific **learner**, not for a specific **item**.
+
+<details><summary>Hint: what to look for</summary>
+
+The query parameter is called `item_id`, so the filter should compare `i.item_id == item_id`, not `i.learner_id == item_id`.
+
+</details>
+
+### 14. Fix Bug 2: filter by `item_id`
+
+1. In [`src/app/routers/interactions.py`](../../../src/app/routers/interactions.py), change the filtering line:
+
+   **Before:**
+
+   ```python
+   interactions = [i for i in interactions if i.learner_id == item_id]
+   ```
+
+   **After:**
+
+   ```python
+   interactions = [i for i in interactions if i.item_id == item_id]
+   ```
+
+2. Save the file.
+3. Restart the services ([Step 5](#5-restart-the-services)).
+4. Verify in `Swagger UI` that `GET /interactions?item_id=2` now returns the correct results matching the database query.
+
+### 15. Commit the fixes
+
+Commit each bug fix separately.
+
+1. [Commit](../../tasks/git-workflow.md#commit-using-source-control) the first fix with the message:
 
    ```text
-   fix: bug in the dfs logic
-   
-   - task.id was never checked
+   fix: rename timestamp to created_at in InteractionModel
    ```
 
-### 17. Finish the task
+2. [Commit](../../tasks/git-workflow.md#commit-using-source-control) the second fix with the message:
 
-1. [Create a PR](../../tasks/git-workflow.md#create-a-pr) with your fix.
+   ```text
+   fix: filter interactions by item_id instead of learner_id
+   ```
 
-   **Note:** the PR closes the `Bug Report` issue, not the `Lab Task` issue.
+> [!IMPORTANT]
+> Each bug fix must be a **separate commit**. Do not combine them into one.
 
-   Keep that in mind when editing the `- Closes #<issue-number>` line.
-2. Provide a link to the `Bug Report` in the `Lab Task` issue.
-3. [Get a PR review](../../tasks/git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
+### 16. Finish the task
+
+1. [Create a PR](../../tasks/git-workflow.md#create-a-pr) with your fixes.
+2. [Get a PR review](../../tasks/git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
 
 ---
 
 ## Acceptance criteria
 
-- [ ] `Lab Task` issue description has a link to the `Bug Report` issue.
-- [ ] `Bug Report` issue has a `bug` label.
-- [ ] The fix branch has a commit with the [specified message](#16-commit-the-change).
-- [ ] All tests pass after the fix.
-- [ ] PR is linked to the bug report issue.
+- [ ] Issue has the correct title.
+- [ ] `GET /interactions` returns interaction data.
+- [ ] `GET /interactions?item_id=2` returns only interactions for item 2.
+- [ ] Each bug fix is a separate commit.
 - [ ] PR is approved.
 - [ ] PR is merged.
