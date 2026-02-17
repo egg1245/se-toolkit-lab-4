@@ -152,10 +152,13 @@ Title: `[Task] Explore the API`
    > [!TIP]
    > If the services are still running, press `Ctrl+C` first to stop them, then run the command above.
 
-4. Go back to `Swagger UI` and try `GET /items`.
-5. Observe: the old key no longer works (you get a `401` Unauthorized error).
-6. Click `Authorize` again, enter the new key (`my-new-secret-key`), and try `GET /items`.
-7. Observe: the new key works (you get a `200` response).
+4. Go back to `Swagger UI`.
+5. Try `GET /items`.
+6. Observe: the old key no longer works (you get a `401` Unauthorized error).
+7. Click `Authorize` again.
+8. Enter the new key (`my-new-secret-key`).
+9. Try `GET /items`.
+10. Observe: the new key works (you get a `200` response).
 
 > [!IMPORTANT]
 > After you are done, change the `API_TOKEN` back to `my-secret-api-key` so that subsequent tasks work with the default value.
