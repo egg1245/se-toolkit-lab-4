@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    devshell.url = "github:numtide/devshell";
+    devshell.url = "github:deemp/devshell";
     flake-parts.url = "github:hercules-ci/flake-parts";
     systems.url = "github:nix-systems/default";
   };
@@ -17,14 +17,15 @@
         { pkgs, ... }:
         {
           devshells.default = {
-            packages = [ pkgs.markdown-link-check ];
-            commands = [
-              {
-                name = "check-links";
-                command = "${pkgs.lib.getExe pkgs.markdown-link-check} -i node_modules -i .git .";
-                help = "Check all markdown links";
-              }
-            ];
+            commandGroups = {
+              docs = [
+                {
+                  name = "find-broken-links";
+                  command = "${pkgs.lib.getExe pkgs.markdown-link-check} -i .venv -i .git -q .";
+                  help = "Find all broken links in all Markdown files";
+                }
+              ];
+            };
           };
         };
     };
