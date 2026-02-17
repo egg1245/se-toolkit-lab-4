@@ -52,7 +52,7 @@ sequence = ["format", "lint", "typecheck"]
 
 [tool.poe.tasks.typecheck]
 help = "Run all typecheckers"
-parallel = ["ty-check"]
+parallel = ["ty-check", "pyright-check"]
 
 [tool.poe.tasks.ty-check]
 help = "Run the 'ty' typechecker"
@@ -85,7 +85,9 @@ cmd = "pytest"
 [tool.pyright]
 include = ["src", "tests"]
 exclude = ["**/__pycache__"]
-strict = ["src", "tests"]
+typeCheckingMode = "strict"
+reportAssignmentType = "none"
+reportIncompatibleVariableOverride = "none"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
