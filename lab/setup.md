@@ -14,24 +14,25 @@
     - [4.1. Install `VS Code`](#41-install-vs-code)
     - [4.2. Install `Git`](#42-install-git)
     - [4.3. Install `Docker`](#43-install-docker)
-    - [4.4. (Optional, `Windows` only) Install `Ubuntu 24.04` using WSL](#44-optional-windows-only-install-ubuntu-2404-using-wsl)
-  - [5. Set up `Git`](#5-set-up-git)
-    - [5.1. Check your `Git` config](#51-check-your-git-config)
-    - [5.2. Configure `Git`](#52-configure-git)
-  - [6. Open your cloned fork in `VS Code`](#6-open-your-cloned-fork-in-vs-code)
-    - [6.1. Copy your fork `URL`](#61-copy-your-fork-url)
-    - [6.2. Clone your fork](#62-clone-your-fork)
-    - [6.3. Open the cloned repo in `VS Code`](#63-open-the-cloned-repo-in-vs-code)
-  - [7. (`Windows` only) Set the default shell](#7-windows-only-set-the-default-shell)
-  - [8. Continue creating a VM](#8-continue-creating-a-vm)
-  - [9. Set up `Python` in `VS Code`](#9-set-up-python-in-vs-code)
-    - [9.1. Install `uv`](#91-install-uv)
-    - [9.2. Install `Python` and dependencies](#92-install-python-and-dependencies)
-    - [9.3. Select the `Python` interpreter](#93-select-the-python-interpreter)
-    - [9.4. Check that `Python` works](#94-check-that-python-works)
-  - [10. Set up the `Docker` environment](#10-set-up-the-docker-environment)
-  - [11. Start the services](#11-start-the-services)
-  - [12. Open `PgAdmin`](#12-open-pgadmin)
+    - [4.4. (`Windows` only) Install `Ubuntu 24.04` using WSL](#44-windows-only-install-ubuntu-2404-using-wsl)
+  - [5. Open in `VS Code` the `software-engineering-toolkit` directory](#5-open-in-vs-code-the-software-engineering-toolkit-directory)
+  - [6. Set up `Git`](#6-set-up-git)
+    - [6.1. Check your `Git` config](#61-check-your-git-config)
+    - [6.2. Configure `Git`](#62-configure-git)
+  - [7. Clone your fork and open it in `VS Code`](#7-clone-your-fork-and-open-it-in-vs-code)
+    - [7.1. Copy your fork `URL`](#71-copy-your-fork-url)
+    - [7.2. Clone your fork](#72-clone-your-fork)
+    - [7.3. Open the cloned repo in `VS Code`](#73-open-the-cloned-repo-in-vs-code)
+  - [8. (`Windows` only) Set the default shell](#8-windows-only-set-the-default-shell)
+  - [9. Continue creating a VM](#9-continue-creating-a-vm)
+  - [10. Set up `Python` in `VS Code`](#10-set-up-python-in-vs-code)
+    - [10.1. Install `uv`](#101-install-uv)
+    - [10.2. Install `Python` and dependencies](#102-install-python-and-dependencies)
+    - [10.3. Select the `Python` interpreter](#103-select-the-python-interpreter)
+    - [10.4. Check that `Python` works](#104-check-that-python-works)
+  - [11. Set up the `Docker` environment](#11-set-up-the-docker-environment)
+  - [12. Start the services](#12-start-the-services)
+  - [13. Open `PgAdmin`](#13-open-pgadmin)
 - [Optional steps](#optional-steps)
   - [1. Set up a coding agent](#1-set-up-a-coding-agent)
   - [2. Set up the shell prompt](#2-set-up-the-shell-prompt)
@@ -113,23 +114,34 @@
 
 2. (Optional) [Learn more](./appendix/docker.md) about `Docker`.
 
-#### 4.4. (Optional, `Windows` only) Install `Ubuntu 24.04` using WSL
+#### 4.4. (`Windows` only) Install `Ubuntu 24.04` using WSL
 
-1. [Set up running `VS Code` using `WSL`](./appendix/vs-code.md#windows-only-set-up-running-vs-code-in-wsl).
+1. [Check the current shell in the `VS Code Terminal`](./appendix/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
+2. [Set up running `VS Code` using `WSL`](./appendix/vs-code.md#windows-only-set-up-running-vs-code-in-wsl) if the shell is not `bash` or `zsh`.
 
-### 5. Set up `Git`
+### 5. Open in `VS Code` the `software-engineering-toolkit` directory
 
-#### 5.1. Check your `Git` config
+1. Inside the [`Desktop` directory](./appendix/file-system.md#desktop-directory),
+   create the directory `software-engineering-toolkit`.
+
+   Skip this step if this directory exists.
+
+2. [Open in `VS Code` the directory](./appendix/git-vscode.md#open-in-vs-code-the-directory):
+   `software-engineering-toolkit`.
+
+### 6. Set up `Git`
+
+#### 6.1. Check your `Git` config
 
 1. [Check your Git config](./appendix/git.md#check-your-git-config).
 
-#### 5.2. Configure `Git`
+#### 6.2. Configure `Git`
 
-[Configure Git](./appendix/git.md#configure-git) if you want to change the values that you saw while [checking your `Git` config](#51-check-your-git-config).
+[Configure Git](./appendix/git.md#configure-git) if you want to change the values that you saw while [checking your `Git` config](#61-check-your-git-config).
 
-### 6. Open your cloned fork in `VS Code`
+### 7. Clone your fork and open it in `VS Code`
 
-#### 6.1. Copy your fork `URL`
+#### 7.1. Copy your fork `URL`
 
 1. [Go to your fork](#33-go-to-your-fork).
 2. Copy [`<your-fork-url>`](./appendix/github.md#your-fork-url).
@@ -139,50 +151,51 @@
 > [!NOTE]
 > Here, the `<repo-name>` is `se-toolkit-lab-3`.
 
-#### 6.2. Clone your fork
+#### 7.2. Clone your fork
 
 1. [Clone your fork](./appendix/git-vscode.md#clone-the-repo):
 
    - Replace `<repo-url>` with [`<your-fork-url>`](./appendix/github.md#your-fork-url).
    - Replace `<repo-name>` with `se-toolkit-lab-3`.
 
-#### 6.3. Open the cloned repo in `VS Code`
+#### 7.3. Open the cloned repo in `VS Code`
 
 1. [Open in `VS Code` the directory](./appendix/git-vscode.md#open-in-vs-code-the-directory):
    `se-toolkit-lab-3`.
 2. [Install recommended extensions](./appendix/vs-code.md#install-recommended-extensions).
 
-### 7. (`Windows` only) Set the default shell
+### 8. (`Windows` only) Set the default shell
 
-1. [Set the default shell](./appendix/vs-code.md#windows-only-set-the-default-shell-for-the-vs-code-terminal).
+1. [Check the current shell in the `VS Code Terminal`](./appendix/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
+2. [Set the default shell](./appendix/vs-code.md#windows-only-set-the-default-shell-for-the-vs-code-terminal) if the shell is not `bash` or `zsh`.
 
-### 8. Continue creating a VM
+### 9. Continue creating a VM
 
 1. [Set up `SSH`](./appendix/ssh.md#set-up-ssh).
 2. [Create a VM using the subscription](./appendix/vm.md#create-a-vm-using-the-subscription).
 
-### 9. Set up `Python` in `VS Code`
+### 10. Set up `Python` in `VS Code`
 
-#### 9.1. Install `uv`
+#### 10.1. Install `uv`
 
 > [!NOTE]
 > [`uv`](./appendix/python.md#uv) is a package manager for [`Python`](./appendix/python.md).
 
 1. [Install `uv`](./appendix/python.md#install-uv).
 
-#### 9.2. Install `Python` and dependencies
+#### 10.2. Install `Python` and dependencies
 
 1. [Install `Python` and dependencies](./appendix/python.md#install-python-and-dependencies).
 
-#### 9.3. Select the `Python` interpreter
+#### 10.3. Select the `Python` interpreter
 
 1. [Select the `Python` interpreter](./appendix/python.md#select-the-python-interpreter).
 
-#### 9.4. Check that `Python` works
+#### 10.4. Check that `Python` works
 
 1. [Check that `Python` works](./appendix/python.md#check-that-python-works).
 
-### 10. Set up the `Docker` environment
+### 11. Set up the `Docker` environment
 
 1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -199,7 +212,7 @@
 > [!TIP]
 > No edits are needed for local development. The default values in [`.env.docker.example`](../.env.docker.example) work out of the box.
 
-### 11. Start the services
+### 12. Start the services
 
 1. [Run using the `VS Code Terminal`](./appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -213,7 +226,7 @@
    > The database is initialized from [`src/app/data/init.sql`](../src/app/data/init.sql) only on the **first** start of the `PostgreSQL` container.
    > If you need to re-initialize the database (e.g., after pulling upstream changes to `init.sql`), see [Resetting the database](./appendix/database.md#resetting-the-database).
 
-3. Verify that the API is running by opening in a browser: <http://127.0.0.1:42001/docs>.
+3. Open in a browser: <http://127.0.0.1:42001/docs>.
 
 4. You should see the `Swagger UI` page with the API documentation.
 
@@ -225,7 +238,7 @@
    > To stop the services, press `Ctrl+C` in the terminal where they are running.
    > Alternatively, run `docker compose down` in a new terminal.
 
-### 12. Open `PgAdmin`
+### 13. Open `PgAdmin`
 
 1. [Open `PgAdmin`](./appendix/pgadmin.md#open-pgadmin).
 2. [Add a server in `PgAdmin`](./appendix/pgadmin.md#add-a-server-in-pgadmin).

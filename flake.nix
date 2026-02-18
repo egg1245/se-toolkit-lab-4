@@ -21,7 +21,15 @@
               docs = [
                 {
                   name = "find-broken-links";
-                  command = "${pkgs.lib.getExe pkgs.markdown-link-check} -i .venv -i .git -q .";
+                  command = ''
+                    ${pkgs.lib.getExe pkgs.lychee} \
+                      --offline \
+                      --no-progress \
+                      --exclude-path '.venv' \
+                      --exclude-path '.direnv' \
+                      --root-dir . \
+                      '**/*.md'
+                  '';
                   help = "Find all broken links in all Markdown files";
                 }
               ];

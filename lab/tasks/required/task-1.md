@@ -149,8 +149,7 @@ Title: `[Task] Explore the API`
    docker compose --env-file .env.docker.secret up --build
    ```
 
-   > [!TIP]
-   > If the services are still running, press `Ctrl+C` first to stop them, then run the command above.
+   > **Tip:** If the services are still running, press `Ctrl+C` first to stop them, then run the command above.
 
 4. Go back to `Swagger UI`.
 5. Try `GET /items`.
