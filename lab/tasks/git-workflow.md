@@ -123,7 +123,7 @@ We'll refer to the name of this branch as `<branch-name>`.
 
 ## Create a PR to `main` in your fork
 
-[Create a PR](../appendix/github.md#create-a-pr) replacing:
+[Create a PR](../appendix/github.md#create-a-pull-request) replacing:
 
 - `<repo-owner-github-username>` with `inno-se-toolkit`;
 - `<repo-name>` with `se-toolkit-lab-3`;
