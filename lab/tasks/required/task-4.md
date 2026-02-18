@@ -114,8 +114,7 @@ Use any of the following methods:
    API_TOKEN=my-production-secret-key-2025
    ```
 
-   > [!IMPORTANT]
-   > Do not use the default value `my-secret-api-key` in production. Choose a strong, unique key.
+   > **Important:** Do not use the default value `my-secret-api-key` in production. Choose a strong, unique key.
 
 3. Save the file and exit (`Ctrl+O`, `Enter`, `Ctrl+X`).
 
@@ -135,8 +134,7 @@ Use any of the following methods:
    docker compose --env-file .env.docker.secret up --build -d
    ```
 
-   > [!NOTE]
-   > The `-d` flag runs the containers in the background (detached mode).
+   > **Note:** The `-d` flag runs the containers in the background (detached mode).
    > This is useful on a remote server because the containers keep running after you close the terminal.
 
 2. Check that the containers are running:
@@ -287,8 +285,7 @@ Use any of the following methods:
    PermitRootLogin no
    ```
 
-   > [!TIP]
-   > If the line is commented out (starts with `#`), uncomment it by removing the `#`.
+   > **Tip:** If the line is commented out (starts with `#`), uncomment it by removing the `#`.
 
 3. Save the file and exit (`Ctrl+O`, `Enter`, `Ctrl+X`).
 
@@ -310,8 +307,7 @@ Use any of the following methods:
    PasswordAuthentication no
    ```
 
-   > [!TIP]
-   > If the line is commented out (starts with `#`), uncomment it by removing the `#`.
+   > **Tip:** If the line is commented out (starts with `#`), uncomment it by removing the `#`.
 
 3. Save the file and exit (`Ctrl+O`, `Enter`, `Ctrl+X`).
 
