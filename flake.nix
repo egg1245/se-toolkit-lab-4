@@ -32,6 +32,14 @@
                   '';
                   help = "Find all broken links in all Markdown files";
                 }
+                {
+                  name = "lint-docs";
+                  command = ''
+                    ${pkgs.lib.getExe pkgs.markdownlint-cli2} \
+                      '**/*.md' '#.direnv' '#.venv'
+                  '';
+                  help = "Lint all Markdown files";
+                }
               ];
             };
           };
