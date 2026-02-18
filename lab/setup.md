@@ -14,11 +14,11 @@
     - [4.1. Install `VS Code`](#41-install-vs-code)
     - [4.2. Install `Git`](#42-install-git)
     - [4.3. Install `Docker`](#43-install-docker)
-    - [4.4. (Optional, `Windows` only) Install `Ubuntu 24.04` using WSL](#44-optional-windows-only-install-ubuntu-2404-using-wsl)
+    - [4.4. (`Windows` only) Install `Ubuntu 24.04` using WSL](#44-windows-only-install-ubuntu-2404-using-wsl)
   - [5. Set up `Git`](#5-set-up-git)
     - [5.1. Check your `Git` config](#51-check-your-git-config)
     - [5.2. Configure `Git`](#52-configure-git)
-  - [6. Open your cloned fork in `VS Code`](#6-open-your-cloned-fork-in-vs-code)
+  - [6. Clone your fork and open it in `VS Code`](#6-clone-your-fork-and-open-it-in-vs-code)
     - [6.1. Copy your fork `URL`](#61-copy-your-fork-url)
     - [6.2. Clone your fork](#62-clone-your-fork)
     - [6.3. Open the cloned repo in `VS Code`](#63-open-the-cloned-repo-in-vs-code)
@@ -113,9 +113,10 @@
 
 2. (Optional) [Learn more](./appendix/docker.md) about `Docker`.
 
-#### 4.4. (Optional, `Windows` only) Install `Ubuntu 24.04` using WSL
+#### 4.4. (`Windows` only) Install `Ubuntu 24.04` using WSL
 
-1. [Set up running `VS Code` using `WSL`](./appendix/vs-code.md#windows-only-set-up-running-vs-code-in-wsl).
+1. [Check the current shell in the `VS Code Terminal`](./appendix/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
+2. [Set up running `VS Code` using `WSL`](./appendix/vs-code.md#windows-only-set-up-running-vs-code-in-wsl) if the shell is not `bash` or `zsh`.
 
 ### 5. Set up `Git`
 
@@ -127,7 +128,7 @@
 
 [Configure Git](./appendix/git.md#configure-git) if you want to change the values that you saw while [checking your `Git` config](#51-check-your-git-config).
 
-### 6. Open your cloned fork in `VS Code`
+### 6. Clone your fork and open it in `VS Code`
 
 #### 6.1. Copy your fork `URL`
 
@@ -154,7 +155,8 @@
 
 ### 7. (`Windows` only) Set the default shell
 
-1. [Set the default shell](./appendix/vs-code.md#windows-only-set-the-default-shell-for-the-vs-code-terminal).
+1. [Check the current shell in the `VS Code Terminal`](./appendix/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
+2. [Set the default shell](./appendix/vs-code.md#windows-only-set-the-default-shell-for-the-vs-code-terminal) if the shell is not `bash` or `zsh`.
 
 ### 8. Continue creating a VM
 
