@@ -260,11 +260,11 @@
 
 These enhancements can make your life easier:
 
-- [1. Set up a coding agent](#1-set-up-a-coding-agent)
-- [2. Set up the shell prompt](#2-set-up-the-shell-prompt)
-- [3. Customize the `Source Control`](#3-customize-the-source-control)
-- [4. Get familiar with `GitLens`](#4-get-familiar-with-gitlens)
-- [5. Create a label for tasks](#5-create-a-label-for-tasks)
+- [1. Set up a coding agent](#21-set-up-a-coding-agent)
+- [2. Set up the shell prompt](#22-set-up-the-shell-prompt)
+- [3. Customize the `Source Control`](#23-customize-the-source-control)
+- [4. Get familiar with `GitLens`](#24-get-familiar-with-gitlens)
+- [5. Create a label for tasks](#25-create-a-label-for-tasks)
 
 ### 2.1. Set up a coding agent
 
