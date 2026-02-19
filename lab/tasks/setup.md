@@ -69,7 +69,7 @@
 
 #### 1.3.2. (NEW) Fork the course instructors' repo
 
-1. [Fork](./appendix/github.md#fork-a-repo) the course instructors' repo.
+1. [Fork the course instructors' repo](./appendix/github.md#fork-a-repo).
 
    The course instructors' repo [URL](./appendix/web-development.md#url) is <https://github.com/inno-se-toolkit/se-toolkit-lab-3>
 
