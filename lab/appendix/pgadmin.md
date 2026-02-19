@@ -2,11 +2,14 @@
 
 <h2>Table of contents</h2>
 
+- [What is `pgAdmin`](#what-is-pgadmin)
 - [Open `pgAdmin`](#open-pgadmin)
 - [Add a server in `pgAdmin`](#add-a-server-in-pgadmin)
 - [Browse tables](#browse-tables)
 - [Inspect columns](#inspect-columns)
 - [Run a query](#run-a-query)
+
+## What is `pgAdmin`
 
 `pgAdmin` is a web-based graphical tool for managing `PostgreSQL` databases.
 
