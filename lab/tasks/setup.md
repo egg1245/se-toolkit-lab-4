@@ -19,7 +19,7 @@
   - [1.6. Set up `Git`](#16-set-up-git)
     - [1.6.1. Check your `Git` config](#161-check-your-git-config)
     - [1.6.2. Configure `Git`](#162-configure-git)
-  - [1.7. Clone your fork and open it in `VS Code`](#17-clone-your-fork-and-open-it-in-vs-code)
+  - [1.7. (NEW) Clone your fork and open it in `VS Code`](#17-new-clone-your-fork-and-open-it-in-vs-code)
     - [1.7.1. (NEW) Copy your fork `URL`](#171-new-copy-your-fork-url)
     - [1.7.2. (NEW) Clone your fork](#172-new-clone-your-fork)
     - [1.7.3. (NEW) Open the cloned repo in `VS Code`](#173-new-open-the-cloned-repo-in-vs-code)
@@ -142,7 +142,7 @@
 
 [Configure Git](../appendix/git.md#configure-git) if you want to change the values that you saw while [checking your `Git` config](#161-check-your-git-config).
 
-### 1.7. Clone your fork and open it in `VS Code`
+### 1.7. (NEW) Clone your fork and open it in `VS Code`
 
 #### 1.7.1. (NEW) Copy your fork `URL`
 
