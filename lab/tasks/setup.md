@@ -35,8 +35,8 @@
     - [1.11.2. (NEW) Start the services](#1112-new-start-the-services)
     - [1.11.3. 1.13 (NEW) Open the `Swagger UI`](#1113-113-new-open-the-swagger-ui)
     - [1.11.4. (NEW) Open `pgAdmin`](#1114-new-open-pgadmin)
-  - [1.12. 1.14 (NEW) Open a new terminal](#112-114-new-open-a-new-terminal)
-  - [1.13. 1.14 (NEW) (Optional) Stop the services](#113-114-new-optional-stop-the-services)
+  - [1.12. (NEW) Open a new terminal](#112-new-open-a-new-terminal)
+  - [1.13. (NEW) (Optional) Stop the services](#113-new-optional-stop-the-services)
 - [2. Optional steps](#2-optional-steps)
   - [2.1. Set up a coding agent](#21-set-up-a-coding-agent)
   - [2.2. Set up the shell prompt](#22-set-up-the-shell-prompt)
@@ -272,11 +272,11 @@
 > [!TIP]
 > To view the data in a table, right-click the table and select `View/Edit Data` -> `All Rows`.
 
-### 1.12. 1.14 (NEW) Open a new terminal
+### 1.12. (NEW) Open a new terminal
 
 1. [Open a new `VS Code Terminal`](../appendix/vs-code.md#open-a-new-vs-code-terminal).
 
-### 1.13. 1.14 (NEW) (Optional) Stop the services
+### 1.13. (NEW) (Optional) Stop the services
 
 1. [Check that the current directory is `se-toolkit-lab-3`](../appendix/shell.md#check-the-current-directory-is-directory-name).
 2. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
