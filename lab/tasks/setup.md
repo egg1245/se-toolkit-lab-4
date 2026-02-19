@@ -56,7 +56,7 @@
 ### 1.2. Start creating a VM
 
 > [!NOTE]
-> Skip this step if you have already connected a VM.
+> Skip this step if you can [connect to your VM](./appendix/vm.md#connect-to-the-vm).
 
 [Create a subscription](./appendix/vm.md#create-a-subscription) to be able to create a VM.
 
