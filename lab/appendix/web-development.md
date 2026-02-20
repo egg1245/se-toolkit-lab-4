@@ -6,6 +6,7 @@
   - [Web server](#web-server)
   - [Web client](#web-client)
 - [Protocol](#protocol)
+- [`HTTP`](./http.md)
 - [Data format](#data-format)
   - [`JSON`](#json)
     - [`JSON` data types](#json-data-types)
@@ -13,6 +14,7 @@
   - [`Protobuf`](#protobuf)
 - [REST API](#rest-api)
 - [API](#api)
+  - [`<api-token>`](#api-token)
 - [`Swagger UI`](#swagger-ui)
   - [Open `Swagger UI`](#open-swagger-ui)
   - [Authorize in `Swagger UI`](#authorize-in-swagger-ui)
@@ -118,6 +120,10 @@ Docs:
 
 - [An introduction to APIs: A comprehensive guide](https://zapier.com/blog/api/)
 
+### `<api-token>`
+
+The value that you use to authenticate in the API.
+
 ## `Swagger UI`
 
 `Swagger UI` is an interactive web page that lets you explore and test a REST API.
@@ -140,7 +146,7 @@ If the API requires authentication:
 
 1. [Open `Swagger UI`](#open-swagger-ui).
 2. Click the `Authorize` button (lock icon at the top right).
-3. In the `Value` field, enter the API key.
+3. In the `Value` field, enter the [`<api-token>`](#api-token).
 4. Click `Authorize`.
 5. Click `Close`.
 
