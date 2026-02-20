@@ -353,7 +353,7 @@ See [Coding agents](../appendix/coding-agents.md).
 
 ### 2.2. Set up the shell prompt
 
-`Starship` shows your current `Git` branch, status, and other useful info directly in your [shell prompt](../appendix/shell.md#shell-prompt) in almost any terminal, including the [`VS Code Terminal`](../appendix/vs-code.md#terminal).
+`Starship` shows your current `Git` branch, status, and other useful info directly in your [shell prompt](../appendix/shell.md#shell-prompt) in almost any terminal, including the [`VS Code Terminal`](../appendix/vs-code.md#vs-code-terminal).
 
 Complete these steps:
 
