@@ -43,7 +43,6 @@
 - [Keyboard shortcuts](#keyboard-shortcuts)
   - [Frequently used shortcuts](#frequently-used-shortcuts)
     - [Shortcut: `Go back`](#shortcut-go-back)
-      - [Set shortcut for Go back](#set-shortcut-for-go-back)
     - [Shortcut: Switch to the previous editor](#shortcut-switch-to-the-previous-editor)
     - [Shortcut: Search in the current editor](#shortcut-search-in-the-current-editor)
     - [Shortcut: Search in all files](#shortcut-search-in-all-files)
@@ -495,12 +494,10 @@ Docs:
 
 `Ctrl+Alt+-` (`Ctrl+-` on `macOS`)
 
-##### Set shortcut for Go back
+You can [set another shortcut](#set-a-shortcut):
 
-1. [Set a shortcut](#set-a-shortcut)
-    - `<command-name>` is `Go Back`
-
-    <img alt="Status Bar (left)" src="../images/appendix/vs-code/command-palette-go-back.png" style="width:400px"></img>
+- `<command-name>` is `Go Back`;
+- Get the `Alt+-` shortcut by typing `Alt`, then `-`.
 
 #### Shortcut: Switch to the previous editor
 

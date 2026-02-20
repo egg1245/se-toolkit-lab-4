@@ -45,7 +45,7 @@ Title: `[Task] Explore the API`
 
 ### 2. Start the services
 
-1. [Stop the services](../setup.md#114-new-stop-the-services).
+1. [Stop the services](../setup.md#115-new-stop-the-services).
 2. [Open a new `VS Code Terminal`](../setup.md#112-new-open-a-new-terminal).
 3. Start the `postgres` service:
 
