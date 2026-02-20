@@ -23,6 +23,7 @@
                   name = "find-broken-links";
                   command = ''
                     ${pkgs.lib.getExe pkgs.lychee} \
+                      --include-fragments \
                       --offline \
                       --no-progress \
                       --exclude-path '.venv' \
