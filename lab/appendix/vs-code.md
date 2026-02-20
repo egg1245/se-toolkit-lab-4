@@ -304,14 +304,18 @@ Method 2:
    wsl --install -d Ubuntu-24.04
    ```
 
+   **Note:** [`Ubuntu`](./linux.md#ubuntu) is a [`Linux` distro](./linux.md#ubuntu).
+
 5. Open `VS Code` again.
 
 ### (`Windows` only) Set the default shell for the `VS Code Terminal`
 
 1. Make sure you can [run `VS Code` in WSL](#windows-only-set-up-running-vs-code-in-wsl).
-2. [Run using the `Command Palette`](#run-a-command-using-the-command-palette):
+2. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
+   `WSL: Reopen Folder in WSL`.
+3. [Run using the `Command Palette`](#run-a-command-using-the-command-palette):
    `Terminal: Select Default Profile`.
-3. There can be the following cases.
+4. There can be the following cases.
 
    - Case 1 (bad): You don't have the recommended extensions installed.
 
@@ -322,18 +326,16 @@ Method 2:
 
      <img alt="Terminal Default Profile Outside WSL" src="../images/appendix/vs-code/command-palette-default-terminal-profile-outside-wsl-wsl.png" style="width:400px"></img>
 
-     [Select](#select-an-option-from-a-list) `Ubuntu (WSL)` or another option with `WSL` in the name.
-
-     **Note:** [`Ubuntu`](./linux.md#ubuntu) is a [`Linux` distro](./linux.md#ubuntu).
+     Follow the instructions for [setting the default shell](#windows-only-set-the-default-shell-for-the-vs-code-terminal) again.
 
    - Case 3 (the best): You're running `VS Code` inside `WSL`. You've probably [opened the directory inside `WSL`](#windows-only-open-the-directory-in-wsl). This is the best case.
 
      <img alt="Terminal Default Profile Outside WSL" src="../images/appendix/vs-code/command-palette-default-terminal-profile-bash.png" style="width:400px"></img>
 
      [Select](#select-an-option-from-a-list) `bash`.
-4. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
-5. Close all tabs in the `VS Code Terminal`.
-6. [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal).
+5. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
+6. Close all tabs in the `VS Code Terminal`.
+7. [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal).
 
 ### Run a command using the `VS Code Terminal`
 
