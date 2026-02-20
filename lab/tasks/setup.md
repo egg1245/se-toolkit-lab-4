@@ -42,12 +42,13 @@
     - [1.14.2. (NEW) Set up `pgAdmin`](#1142-new-set-up-pgadmin)
   - [1.15. (NEW) Stop the services](#115-new-stop-the-services)
 - [2. Optional steps](#2-optional-steps)
-  - [2.1. Set up a coding agent](#21-set-up-a-coding-agent)
-  - [2.2. Set up the shell prompt](#22-set-up-the-shell-prompt)
-  - [2.3. Customize the `Source Control`](#23-customize-the-source-control)
-  - [2.4. Get familiar with `GitLens`](#24-get-familiar-with-gitlens)
-  - [2.5. Create a label for tasks](#25-create-a-label-for-tasks)
-  - [2.6. View `Markdown` files in `VS Code`](#26-view-markdown-files-in-vs-code)
+  - [2.1. (NEW) Learn to go back after clicking a link](#21-new-learn-to-go-back-after-clicking-a-link)
+  - [2.2. Set up a coding agent](#22-set-up-a-coding-agent)
+  - [2.3. Set up the shell prompt](#23-set-up-the-shell-prompt)
+  - [2.4. Customize the `Source Control`](#24-customize-the-source-control)
+  - [2.5. Get familiar with `GitLens`](#25-get-familiar-with-gitlens)
+  - [2.6. Create a label for tasks](#26-create-a-label-for-tasks)
+  - [2.7. View `Markdown` files in `VS Code`](#27-view-markdown-files-in-vs-code)
 
 ## 1. Required steps
 
@@ -334,13 +335,23 @@
 
 These enhancements can make your life easier:
 
-- [1. Set up a coding agent](#21-set-up-a-coding-agent)
-- [2. Set up the shell prompt](#22-set-up-the-shell-prompt)
-- [3. Customize the `Source Control`](#23-customize-the-source-control)
-- [4. Get familiar with `GitLens`](#24-get-familiar-with-gitlens)
-- [5. Create a label for tasks](#25-create-a-label-for-tasks)
+- [(NEW)Learn to go back after clicking a link](#21-new-learn-to-go-back-after-clicking-a-link)
+- [Set up a coding agent](#22-set-up-a-coding-agent)
+- [Set up the shell prompt](#23-set-up-the-shell-prompt)
+- [Customize the `Source Control`](#24-customize-the-source-control)
+- [Get familiar with `GitLens`](#25-get-familiar-with-gitlens)
+- [Create a label for tasks](#26-create-a-label-for-tasks)
 
-### 2.1. Set up a coding agent
+### 2.1. (NEW) Learn to go back after clicking a link
+
+> [!NOTE]
+
+- `VS Code` - see the [shortcut](../appendix/vs-code.md#shortcut-go-back)
+- Browsers:
+  - `Firefox`: `Alt+ArrowLeft`
+  - Other browsers: google
+
+### 2.2. Set up a coding agent
 
 A coding agent can help you write code, explain concepts, and debug issues.
 
@@ -351,7 +362,7 @@ See [Coding agents](../appendix/coding-agents.md).
   <img alt="Qwen response" src="../images/tasks/setup/qwen-response.png" style="width:300px">
 </div>
 
-### 2.2. Set up the shell prompt
+### 2.3. Set up the shell prompt
 
 `Starship` shows your current `Git` branch, status, and other useful info directly in your [shell prompt](../appendix/shell.md#shell-prompt) in almost any terminal, including the [`VS Code Terminal`](../appendix/vs-code.md#vs-code-terminal).
 
@@ -364,7 +375,7 @@ Complete these steps:
 
    <img alt="Starship in the VS Code Terminal" src="../images/appendix/starship/terminal-prompt.png" style="width:400px"></img>
 
-### 2.3. Customize the `Source Control`
+### 2.4. Customize the `Source Control`
 
 1. [Open the `Source Control`](../appendix/vs-code.md#open-the-source-control).
 2. Click three dots to the right of `SOURCE CONTROL`.
@@ -372,7 +383,7 @@ Complete these steps:
 
    <img alt="Changes and GitLens" src="../images/appendix/vs-code/source-control-allowed-views.png" style="width:400px"></img>
 
-### 2.4. Get familiar with `GitLens`
+### 2.5. Get familiar with `GitLens`
 
 [`GitLens`](../appendix/gitlens.md) helps you work with `Git` in `VS Code`.
 
@@ -383,7 +394,7 @@ Complete these steps:
 3. [Inspect the current branch](../appendix/gitlens.md#inspect-the-current-branch)
 4. [Inspect the remotes](../appendix/gitlens.md#inspect-the-remotes)
 
-### 2.5. Create a label for tasks
+### 2.6. Create a label for tasks
 
 [Labels](../appendix/github.md#label) help you filter and organize issues.
 
@@ -398,7 +409,7 @@ Complete these steps:
 2. [Add the label to issues](../appendix/github.md#add-a-label-to-issues).
 3. [See all issues with the label](../appendix/github.md#see-all-issues-with-a-label).
 
-### 2.6. View `Markdown` files in `VS Code`
+### 2.7. View `Markdown` files in `VS Code`
 
 If you want to view [`README.md`](../../README.md) and other `Markdown` files in `VS Code` instead of on `GitHub`:
 
