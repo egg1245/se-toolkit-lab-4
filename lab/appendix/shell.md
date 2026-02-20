@@ -57,7 +57,35 @@ Most `bash` commands in this course work in `zsh` as well.
 
 ## Shell prompt
 
+The shell prompt is the text the shell displays before each command, indicating it is ready to accept input.
+It typically shows the current user, machine name, and working directory.
+
+A typical `bash` prompt looks like:
+
+```terminal
+username@hostname:~/directory$
+```
+
+> [!NOTE]
+> The `$` at the end indicates a regular user.
+> A `#` indicates the root (admin) user.
+
 ## Shell command
+
+A shell command is text you type at the [shell prompt](#shell-prompt) and execute by pressing `Enter`.
+It consists of a command name, optionally followed by arguments and flags.
+
+```terminal
+<command> [flags] [arguments]
+```
+
+Example:
+
+```terminal
+ls -a .
+```
+
+Here `ls` is the command, `-a` is a flag (include hidden files), and `.` is the argument (the current directory).
 
 ## Current working directory
 
