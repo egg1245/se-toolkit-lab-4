@@ -40,7 +40,7 @@
   - [1.13. (NEW) Set up the services](#113-new-set-up-the-services)
     - [1.13.1. (NEW) Open `Swagger UI`](#1131-new-open-swagger-ui)
     - [1.13.2. (NEW) Set up `pgAdmin`](#1132-new-set-up-pgadmin)
-  - [1.14. (NEW) (Optional) Stop the services](#114-new-optional-stop-the-services)
+  - [1.14. (NEW) Stop the services](#114-new-stop-the-services)
 - [2. Optional steps](#2-optional-steps)
   - [2.1. Set up a coding agent](#21-set-up-a-coding-agent)
   - [2.2. Set up the shell prompt](#22-set-up-the-shell-prompt)
@@ -134,7 +134,7 @@
 
 1. [Install `Docker`](../appendix/docker.md#install-docker) if not installed.
 
-2. (Optional) [Learn more](../appendix/docker.md) about `Docker`.
+2. (Optional) [Learn more](../appendix/docker.md#what-is-docker) about `Docker`.
 
 #### 1.4.4. (`Windows` only) Install `Ubuntu 24.04` using WSL
 
@@ -319,7 +319,7 @@
 > [!TIP]
 > To view the data in a table, right-click the table and select `View/Edit Data` -> `All Rows`.
 
-### 1.14. (NEW) (Optional) Stop the services
+### 1.14. (NEW) Stop the services
 
 1. [Check that the current directory is `se-toolkit-lab-3`](../appendix/shell.md#check-the-current-directory-is-directory-name).
 2. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
