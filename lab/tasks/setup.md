@@ -27,16 +27,20 @@
   - [1.9. Continue creating a VM](#19-continue-creating-a-vm)
   - [1.10. Set up `Python` in `VS Code`](#110-set-up-python-in-vs-code)
     - [1.10.1. Install `uv`](#1101-install-uv)
-    - [1.10.2. Install `Python` and dependencies](#1102-install-python-and-dependencies)
-    - [1.10.3. Select the `Python` interpreter](#1103-select-the-python-interpreter)
-    - [1.10.4. Check that `Python` works](#1104-check-that-python-works)
-  - [1.11. Run and check services](#111-run-and-check-services)
+    - [1.10.2. (NEW) Install `Python` and dependencies](#1102-new-install-python-and-dependencies)
+    - [1.10.3. (NEW) Select the `Python` interpreter](#1103-new-select-the-python-interpreter)
+    - [1.10.4. (NEW) Check that `Python` works](#1104-new-check-that-python-works)
+  - [1.11. (NEW) Start the services](#111-new-start-the-services)
     - [1.11.1. (NEW) Set up the `Docker` environment](#1111-new-set-up-the-docker-environment)
-    - [1.11.2. (NEW) Start the services](#1112-new-start-the-services)
-    - [1.11.3. 1.13 (NEW) Open the `Swagger UI`](#1113-113-new-open-the-swagger-ui)
-    - [1.11.4. (NEW) Open `pgAdmin`](#1114-new-open-pgadmin)
+    - [1.11.2. (NEW) Start the services using `Docker Compose`](#1112-new-start-the-services-using-docker-compose)
   - [1.12. (NEW) Open a new terminal](#112-new-open-a-new-terminal)
-  - [1.13. (NEW) (Optional) Stop the services](#113-new-optional-stop-the-services)
+  - [1.13. (NEW) Observe containers and services](#113-new-observe-containers-and-services)
+    - [1.13.1. (NEW) List running containers](#1131-new-list-running-containers)
+    - [1.13.2. (NEW) See logs of the running services](#1132-new-see-logs-of-the-running-services)
+  - [1.13. (NEW) Set up the services](#113-new-set-up-the-services)
+    - [1.13.1. (NEW) Open `Swagger UI`](#1131-new-open-swagger-ui)
+    - [1.13.2. (NEW) Set up `pgAdmin`](#1132-new-set-up-pgadmin)
+  - [1.14. (NEW) Stop the services](#114-new-stop-the-services)
 - [2. Optional steps](#2-optional-steps)
   - [2.1. Set up a coding agent](#21-set-up-a-coding-agent)
   - [2.2. Set up the shell prompt](#22-set-up-the-shell-prompt)
@@ -130,7 +134,7 @@
 
 1. [Install `Docker`](../appendix/docker.md#install-docker) if not installed.
 
-2. (Optional) [Learn more](../appendix/docker.md) about `Docker`.
+2. (Optional) [Learn more](../appendix/docker.md#what-is-docker) about `Docker`.
 
 #### 1.4.4. (`Windows` only) Install `Ubuntu 24.04` using WSL
 
@@ -200,19 +204,27 @@
 
 1. [Install `uv`](../appendix/python.md#install-uv).
 
-#### 1.10.2. Install `Python` and dependencies
+#### 1.10.2. (NEW) Install `Python` and dependencies
+
+> [!NOTE]
+> The dependencies have been updated in this project version.
 
 1. [Install `Python` and dependencies](../appendix/python.md#install-python-and-dependencies).
 
-#### 1.10.3. Select the `Python` interpreter
+#### 1.10.3. (NEW) Select the `Python` interpreter
 
 1. [Select the `Python` interpreter](../appendix/python.md#select-the-python-interpreter).
 
-#### 1.10.4. Check that `Python` works
+#### 1.10.4. (NEW) Check that `Python` works
 
 1. [Check that `Python` works](../appendix/python.md#check-that-python-works).
 
-### 1.11. Run and check services
+### 1.11. (NEW) Start the services
+
+> [!NOTE]
+> A [service](../appendix/docker.md#service) in [`Docker Compose`](../appendix/docker-compose.md) defines how to run a [container](../appendix/docker.md#container).
+>
+> `Docker Compose` lets you start multiple containers at once.
 
 #### 1.11.1. (NEW) Set up the `Docker` environment
 
@@ -225,14 +237,14 @@
 > [!NOTE]
 > The `.env.docker.secret` file contains environment variables for the `Docker` containers.
 >
-> It was added to [`.gitignore`](../.gitignore) because you may specify there
+> It was added to [`.gitignore`](../../.gitignore) because you may specify there
 > [secrets](../appendix/environments.md#secrets) such as the API key or the address of your VM.
 
 > [!TIP]
 > No edits are needed for local development.
-> The default values in [`.env.docker.example`](../.env.docker.example) work out of the box.
+> The default values in [`.env.docker.example`](../../.env.docker.example) work out of the box.
 
-#### 1.11.2. (NEW) Start the services
+#### 1.11.2. (NEW) Start the services using `Docker Compose`
 
 1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
@@ -242,7 +254,7 @@
 
    > **NOTE**
    >
-   > [`Docker Compose`](../appendix/docker.md#docker-compose) reads environment variables from `.env.docker.secret`
+   > [`Docker Compose`](../appendix/docker-compose.md) reads environment variables from `.env.docker.secret`
    > and uses them to configure the containers defined in [`docker-compose.yml`](../../docker-compose.yml).
 
 2. Wait for the services to start. You should see log output from the `app`, `postgres`, `pgadmin`, and `caddy` containers.
@@ -253,13 +265,48 @@
    >
    > If you need to re-initialize the database (e.g., after pulling upstream changes to `init.sql`), see [Resetting the database](../appendix/database.md#resetting-the-database).
 
-#### 1.11.3. 1.13 (NEW) Open the `Swagger UI`
+### 1.12. (NEW) Open a new terminal
+
+1. [Open a new `VS Code Terminal`](../appendix/vs-code.md#open-a-new-vs-code-terminal).
+
+### 1.13. (NEW) Observe containers and services
+
+#### 1.13.1. (NEW) List running containers
+
+1. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   docker compose --env-file .env.docker.secret ps
+   ```
+
+#### 1.13.2. (NEW) See logs of the running services
+
+1. See logs for all services:
+
+   [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   docker compose --env-file .env.docker.secret logs
+   ```
+
+2. [See logs for a specific service](../appendix/docker-compose.md#docker-compose-logs-for-a-specific-service):
+
+   ```terminal
+   docker compose --env-file .env.docker.secret logs postgres
+   ```
+
+### 1.13. (NEW) Set up the services
+
+#### 1.13.1. (NEW) Open `Swagger UI`
 
 1. Open in a browser: <http://127.0.0.1:42001/docs>.
 
    You should see the [`Swagger UI`](../appendix/swagger.md#swagger-ui) page with the [API](../appendix/web-development.md#api) documentation.
 
-#### 1.11.4. (NEW) Open `pgAdmin`
+#### 1.13.2. (NEW) Set up `pgAdmin`
+
+> [!NOTE]
+> [`pgAdmin`](../appendix/pgadmin.md#what-is-pgadmin) takes 2-3 minutes to start after you have [started the services](#111-new-start-the-services).
 
 1. [Open `pgAdmin`](../appendix/pgadmin.md#open-pgadmin).
 2. [Add a server in `pgAdmin`](../appendix/pgadmin.md#add-a-server-in-pgadmin).
@@ -272,11 +319,7 @@
 > [!TIP]
 > To view the data in a table, right-click the table and select `View/Edit Data` -> `All Rows`.
 
-### 1.12. (NEW) Open a new terminal
-
-1. [Open a new `VS Code Terminal`](../appendix/vs-code.md#open-a-new-vs-code-terminal).
-
-### 1.13. (NEW) (Optional) Stop the services
+### 1.14. (NEW) Stop the services
 
 1. [Check that the current directory is `se-toolkit-lab-3`](../appendix/shell.md#check-the-current-directory-is-directory-name).
 2. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
@@ -303,13 +346,14 @@ A coding agent can help you write code, explain concepts, and debug issues.
 
 See [Coding agents](../appendix/coding-agents.md).
 
-<img alt="Qwen request" src="../images/tasks/setup/qwen-request.png" style="width:300px"></img>
-
-<img alt="Qwen response" src="../images/tasks/setup/qwen-response.png" style="width:300px"></img>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+  <img alt="Qwen request" src="../images/tasks/setup/qwen-request.png" style="width:300px">
+  <img alt="Qwen response" src="../images/tasks/setup/qwen-response.png" style="width:300px">
+</div>
 
 ### 2.2. Set up the shell prompt
 
-`Starship` shows your current `Git` branch, status, and other useful info directly in your [shell prompt](../appendix/shell.md#shell-prompt) in almost any terminal, including the [`VS Code Terminal`](../appendix/vs-code.md#terminal).
+`Starship` shows your current `Git` branch, status, and other useful info directly in your [shell prompt](../appendix/shell.md#shell-prompt) in almost any terminal, including the [`VS Code Terminal`](../appendix/vs-code.md#vs-code-terminal).
 
 Complete these steps:
 
@@ -346,7 +390,7 @@ Complete these steps:
 With a `task` label, you can see in one view all issues created for lab tasks.
 
 > [!TIP]
-> If you create the `task` label before creating issues, your issues will have this label automatically as configured in the [issue form](../.github/ISSUE_TEMPLATE/01-task.yml).
+> If you create the `task` label before creating issues, your issues will have this label automatically as configured in the [issue form](../../.github/ISSUE_TEMPLATE/01-task.yml).
 
 Complete these steps:
 
@@ -356,9 +400,9 @@ Complete these steps:
 
 ### 2.6. View `Markdown` files in `VS Code`
 
-If you want to view `README.md` and other `Markdown` files in `VS Code` instead of on `GitHub`:
+If you want to view [`README.md`](../../README.md) and other `Markdown` files in `VS Code` instead of on `GitHub`:
 
 1. [Install recommended `VS Code` extensions](../appendix/vs-code.md#install-recommended-extensions).
 2. [Open the file](../appendix/vs-code.md#open-the-file):
-   [`README.md`](../README.md).
+   [`README.md`](../../README.md).
 3. [Open the `Markdown` preview](../appendix/vs-code.md#open-the-markdown-preview).

@@ -9,11 +9,7 @@
   - [`docker run`](#docker-run)
   - [`docker ps`](#docker-ps)
 - [`Docker Compose`](#docker-compose)
-  - [`docker compose up`](#docker-compose-up)
-  - [`docker compose down`](#docker-compose-down)
-  - [`docker compose -f`](#docker-compose--f)
-  - [`docker compose --env-file`](#docker-compose---env-file)
-  - [`docker compose down -v`](#docker-compose-down--v)
+  - [Service](#service)
 - [Volumes](#volumes)
 - [Health checks](#health-checks)
 
@@ -23,7 +19,10 @@
 
 ## Container
 
-<!-- TODO reference image -->
+<!-- TODO define dependencies -->
+<!-- TODO define runtime -->
+<!-- TODO define isolated -->
+<!-- TODO provide link to definitions web page -->
 
 A container is an isolated runtime for an application and its dependencies.
 
@@ -32,6 +31,26 @@ Why containers are useful:
 - The app runs consistently across machines.
 - Dependencies are packaged with the app.
 - Multiple services can run side-by-side with explicit ports and networks.
+
+Example of how containers fit together:
+
+```text
+-------------------- Docker host --------------------
+|                                                     |
+|  ------------ container ------------               |
+|  | Linux userspace runtime         |               |
+|  | app/service process             |               |
+|  ----------------------------------               |
+|                                                     |
+|  ------------ container ------------               |
+|  | Linux userspace runtime         |               |
+|  | another app/service process     |               |
+|  ----------------------------------               |
+|                                                     |
+-------------------------------------------------------
+```
+
+<!-- TODO image -->
 
 ## Install `Docker`
 
@@ -75,75 +94,13 @@ docker ps -a
 
 `Docker Compose` runs multi-container apps from a `docker-compose.yml` file.
 
-Example of how containers fit together:
+See [`Docker Compose`](./docker-compose.md) for the full list of commands.
 
-```text
--------------------- Docker host --------------------
-|                                                     |
-|  ------------ container ------------               |
-|  | Linux userspace runtime         |               |
-|  | app/service process             |               |
-|  ----------------------------------               |
-|                                                     |
-|  ------------ container ------------               |
-|  | Linux userspace runtime         |               |
-|  | another app/service process     |               |
-|  ----------------------------------               |
-|                                                     |
--------------------------------------------------------
-```
+### Service
 
-### `docker compose up`
+A service is a named entry under the `services:` key in `docker-compose.yml`. It defines how to build or pull an [image](#image) and run it as a [container](#container).
 
-Start services:
-
-```terminal
-docker compose up
-```
-
-Build images and start services:
-
-```terminal
-docker compose up --build
-```
-
-### `docker compose down`
-
-Stop and remove resources created by `up`:
-
-```terminal
-docker compose down
-```
-
-### `docker compose -f`
-
-Use a specific compose file:
-
-```terminal
-docker compose -f docker-compose.prod.yml up -d
-```
-
-### `docker compose --env-file`
-
-Load environment variables from a specific file:
-
-```terminal
-docker compose --env-file .env.docker.secret up --build
-```
-
-This is useful when you need different settings for local/dev/test/prod environments.
-
-### `docker compose down -v`
-
-Stop services and remove volumes (including database data):
-
-```terminal
-docker compose --env-file .env.docker.secret down -v
-```
-
-> [!IMPORTANT]
-> The `-v` flag removes named volumes. This deletes all data stored in the database.
-> Use this when you want to reset the database to its initial state.
+For example, this project defines four services in [`docker-compose.yml`](../../docker-compose.yml): `app`, `postgres`, `pgadmin`, and `caddy`.
 
 ## Volumes
 

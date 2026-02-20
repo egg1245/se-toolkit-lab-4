@@ -10,7 +10,7 @@ Learn to explore an API using `Swagger UI` and authenticate with an API key.
 
 <h4>Context</h4>
 
-The service is running. Only `items` endpoints are active — `/interactions` and `/learners` don't exist yet.
+The service is running. Only `items` endpoints are active — `/interactions` and `/learners` aren't enabled yet.
 You will explore the API using `Swagger UI`, discover the API key mechanism, and observe how the service responds to different requests.
 
 <h4>Table of contents</h4>
@@ -23,7 +23,7 @@ You will explore the API using `Swagger UI`, discover the API key mechanism, and
   - [4. Try `GET /items` without authentication](#4-try-get-items-without-authentication)
   - [5. Find the `API_TOKEN` value](#5-find-the-api_token-value)
   - [6. Authorize in `Swagger UI`](#6-authorize-in-swagger-ui)
-  - [7. Try `GET /items` with authentication](#7-try-get-items-with-authentication)
+  - [7. Try `GET /items` with authorization](#7-try-get-items-with-authorization)
   - [8. Try `GET /items/{item_id}`](#8-try-get-itemsitem_id)
   - [9. Try `POST /items`](#9-try-post-items)
   - [10. Try `PUT /items/{item_id}`](#10-try-put-itemsitem_id)
@@ -45,52 +45,80 @@ Title: `[Task] Explore the API`
 
 ### 2. Start the services
 
-> [!NOTE]
-> If you already started the services during the setup, they should still be running.
-> You can skip this step.
+1. [Stop the services](../setup.md#114-new-stop-the-services).
+2. [Open a new `VS Code Terminal`](../setup.md#112-new-open-a-new-terminal).
+3. Start the `postgres` service:
 
-1. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+   [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
-   docker compose --env-file .env.docker.secret up --build
+   docker compose --env-file .env.docker.secret up postgres --build
    ```
+
+4. [Open a new `VS Code Terminal`](../setup.md#112-new-open-a-new-terminal).
+5. Start the `app` service:
+
+   [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   docker compose --env-file .env.docker.secret up app --build
+   ```
+
+6. [Open a new `VS Code Terminal`](../setup.md#112-new-open-a-new-terminal).
 
 ### 3. Open `Swagger UI`
 
-1. Open in a browser: `http://127.0.0.1:42001/docs`.
-2. You should see the auto-generated API documentation with the available endpoints.
+1. Open in a browser: <http://127.0.0.1:42001/docs>.
+2. You should see the auto-generated API documentation with the available [endpoints](../../appendix/web-development.md#endpoint).
+
+   <img alt="Swagger UI" src="../../images/tasks/required/task-1/swagger-ui.png" style="width:400px">
 
 ### 4. Try `GET /items` without authentication
 
-1. In `Swagger UI`, expand the `GET /items` endpoint.
+1. In the `Swagger UI`, expand (click) the `GET /items` endpoint.
+
+   <img alt="Swagger UI" src="../../images/tasks/required/task-1/swagger-ui-items.png" style="width:400px">
+
+   > **Note:**
+   >
+   > The `Responses` section contains the description of possible responses of the endpoint.
 2. Click `Try it out`.
 3. Click `Execute`.
-4. Observe the response: you should see a `403` Forbidden error.
+4. Observe the `Server response`:
+
+   - The [`401`](../../appendix/http.md#401-unauthorized) status code.
+   - The `Details` should be `Error: Unauthorized`.
 
 > [!NOTE]
-> The `403` response means the server rejected your request because you did not provide an API key.
-> The service uses the `Authorization: Bearer <token>` header for authentication.
+> The `401` response means the server rejected your request because you haven't [authorized](../../appendix/web-development.md#authorize-in-swagger-ui) using an API key.
+>
+> The service uses the `Authorization: Bearer <token>` [header](../../appendix/http.md) for authentication.
 
 ### 5. Find the `API_TOKEN` value
 
 1. [Open the file](../../appendix/vs-code.md#open-the-file):
    `.env.docker.secret`.
 2. Find the `API_TOKEN` variable.
-3. The default value is `my-secret-api-key`.
+
+   We'll refer to its value as [`<api-token>`](../../appendix/web-development.md#api-token).
+
+   The default value is `my-secret-api-key`.
 
 ### 6. Authorize in `Swagger UI`
 
 1. In `Swagger UI`, click the `Authorize` button (the lock icon at the top).
-2. In the `Value` field, enter: `my-secret-api-key`.
+2. In the `Value` field, enter the [`<api-token>`](../../appendix/web-development.md#api-token) that you [found](#5-find-the-api_token-value).
 3. Click `Authorize`.
 4. Click `Close`.
 
-### 7. Try `GET /items` with authentication
+### 7. Try `GET /items` with authorization
 
 1. In `Swagger UI`, expand the `GET /items` endpoint.
 2. Click `Try it out`.
 3. Click `Execute`.
-4. Observe the response: you should see a `200` status code with a list of items.
+4. Observe the `Server response`:
+   - The [`200`](../../appendix/http.md#200-ok) status code;
+   - The `Response body` with a list of items.
 
 ### 8. Try `GET /items/{item_id}`
 
@@ -98,73 +126,91 @@ Title: `[Task] Explore the API`
 2. Click `Try it out`.
 3. Enter `1` as the `item_id`.
 4. Click `Execute`.
-5. Observe the response: you should see a `200` status code with the item data.
+5. Observe the `Server response`:
+   - The [`200`](../../appendix/http.md#200-ok) status code;
+   - The `Response body` with the item data.
+
+   <img alt="Get item by id - 200" src="../../images/tasks/required/task-1/get-item-by-id-200.png" style="width:400px">
 6. Try entering `999` as the `item_id`.
 7. Click `Execute`.
-8. Observe the response: you should see a `404` Not Found error.
+8. Observe the `Server response`:
+   - you should see the [`404` (Not Found)](../../appendix/http.md#404-not-found) error.
 
 ### 9. Try `POST /items`
 
 1. In `Swagger UI`, expand the `POST /items` endpoint.
-2. Click `Try it out`.
-3. Enter a request body, for example:
+2. Click `Try it out` to make a request with the default body.
+3. Observe the `Server response`:
+   - The [`422` (Unprocessable Content)](../../appendix/http.md#422-unprocessable-entity) error.
+4. Enter another request body as [`JSON`](../../appendix/file-formats.md#json), for example:
 
    ```json
    {
-     "title": "My New Item",
-     "description": "A test item."
+     "type": "step",
+     "parent_id": 5,
+     "title": "Try POST /items using Swagger",
+     "description": "Open Swagger in browser and execute POST /items"
    }
    ```
 
-4. Click `Execute`.
-5. Observe the response: you should see a `201` Created status code with the newly created item.
+   **NOTE:** `"parent_id": 5` means that the parent item of this step is the task with the `"id"` equal to `5` (created in the [`init.sql`](../../../src/app/data/init.sql)).
+
+5. Click `Execute`.
+6. Observe the `Server response`:
+   - The [`201` (Created)](../../appendix/http.md#201-created) response status code;
+   - The `Response body` with the newly created item data in `JSON` format.
 
 ### 10. Try `PUT /items/{item_id}`
 
 1. In `Swagger UI`, expand the `PUT /items/{item_id}` endpoint.
 2. Click `Try it out`.
 3. Enter the `item_id` of the item you just created.
-4. Enter a request body with updated values, for example:
+4. Enter a request body with updated values in `JSON` format, for example:
 
    ```json
    {
-     "title": "Updated Item",
-     "description": "An updated description."
+     "title": "Execute `POST /items` using Swagger",
+     "description": "1. Open Swagger in a browser.\n2. Execute POST /items."
    }
    ```
 
 5. Click `Execute`.
-6. Observe the response: you should see a `200` status code with the updated item data.
+6. Observe the `Server response`:
+   - The [`200`](../../appendix/http.md#200-ok) status code.
+   - The `Response body` with the updated item data.
 
 ### 11. Change the `API_TOKEN`
 
 1. [Open the file](../../appendix/vs-code.md#open-the-file):
    `.env.docker.secret`.
 2. Change the `API_TOKEN` value to something different, for example: `my-new-secret-key`.
-3. Restart the services:
+3. Stop the `app` service:
 
    [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
-   docker compose --env-file .env.docker.secret up --build
+   docker compose --env-file .env.docker.secret down app
    ```
 
-   > **Tip:** If the services are still running, press `Ctrl+C` first to stop them, then run the command above.
+4. Start the `app` service:
 
-4. Go back to `Swagger UI`.
-5. Try `GET /items`.
-6. Observe: the old key no longer works (you get a `401` Unauthorized error).
+   [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   docker compose --env-file .env.docker.secret up app --build
+   ```
+
+5. Go back to `Swagger UI`.
+6. Try `GET /items`.
+7. Observe: the old key no longer works (you get a `401` Unauthorized error).
 
    > **Note:** This is `401`, not `403`. In step 4 you sent no `Authorization` header at all, so the server returned `403`.
    > Here, `Swagger UI` is still sending the old key as `Authorization: Bearer <old-key>` — the header is present, but the token is wrong, so the server returns `401` instead.
 
-7. Click `Authorize` again.
-8. Enter the new key (`my-new-secret-key`).
-9. Try `GET /items`.
-10. Observe: the new key works (you get a `200` response).
-
-> [!IMPORTANT]
-> After you are done, change the `API_TOKEN` back to `my-secret-api-key` so that subsequent tasks work with the default value.
+8. Click `Authorize` again.
+9. Enter the new key (`my-new-secret-key`).
+10. Try `GET /items`.
+11. Observe: the new key works (you get a `200` response).
 
 ### 12. Fill in the questionnaire
 

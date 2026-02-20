@@ -21,12 +21,24 @@ Docs:
 
 ## Open `pgAdmin`
 
-1. Open <http://127.0.0.1:5050> in a browser.
+> [!NOTE]
+> The default values are defined in [`.env.docker.example`](../../.env.docker.example).
+>
+> The actual values are in `.env.docker.secret`.
+
+1. Open <http://127.0.0.1:42003> in a browser.
 2. Log in with the credentials from `.env.docker.secret`:
    - Email: the value of `PGADMIN_EMAIL` (default: `admin@example.com`).
    - Password: the value of `PGADMIN_PASSWORD` (default: `admin`).
 
 ## Add a server in `pgAdmin`
+
+> [!NOTE]
+> The default values are defined in [`.env.docker.example`](../../.env.docker.example).
+>
+> The actual values are in `.env.docker.secret`.
+
+<!-- TODO specify postgres port -->
 
 1. [Open `pgAdmin`](#open-pgadmin).
 2. Right-click `Servers` in the left panel.
@@ -34,7 +46,7 @@ Docs:
 4. In the `General` tab:
    - Name: `lab3`.
 5. In the `Connection` tab:
-   - Host name/address: `postgres`.
+   - Host name/address: `postgres` (the [service](./docker.md#service) name defined in [`docker-compose.yml`](../../docker-compose.yml)).
    - Port: `5432`.
    - Maintenance database: the value of `POSTGRES_DB` (default: `lab3`).
    - Username: the value of `POSTGRES_USER` (default: `postgres`).

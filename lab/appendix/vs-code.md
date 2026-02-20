@@ -42,7 +42,8 @@
   - [Install recommended `Extensions`](#install-recommended-extensions)
 - [Keyboard shortcuts](#keyboard-shortcuts)
   - [Frequently used shortcuts](#frequently-used-shortcuts)
-    - [Shortcut: Go back](#shortcut-go-back)
+    - [Shortcut: `Go back`](#shortcut-go-back)
+      - [Set shortcut for Go back](#set-shortcut-for-go-back)
     - [Shortcut: Switch to the previous editor](#shortcut-switch-to-the-previous-editor)
     - [Shortcut: Search in the current editor](#shortcut-search-in-the-current-editor)
     - [Shortcut: Search in all files](#shortcut-search-in-all-files)
@@ -284,11 +285,10 @@ Method 2:
    <img alt="Current Terminal Shell" src="../images/appendix/vs-code/terminal-single-current-shell-bash.png" style="width:400px"></img>
 
    You should see on:
-   - `Windows`: `bash` or `WSL`;
+   - `Windows`: `bash`;
 
      If you see something else, [set the default shell](#windows-only-set-the-default-shell-for-the-vs-code-terminal).
-   - `macOS`: `zsh` or `bash`;
-   - `Linux`: `bash`, `fish`, `zsh`, or another shell name.
+   - `macOS`, `Linux`: `zsh`, `bash`, or another [shell](./shell.md#shell-variants) name;
 
 ### (`Windows` only) Set up running `VS Code` in `WSL`
 
@@ -304,14 +304,18 @@ Method 2:
    wsl --install -d Ubuntu-24.04
    ```
 
+   **Note:** [`Ubuntu`](./linux.md#ubuntu) is a [`Linux` distro](./linux.md#ubuntu).
+
 5. Open `VS Code` again.
 
 ### (`Windows` only) Set the default shell for the `VS Code Terminal`
 
 1. Make sure you can [run `VS Code` in WSL](#windows-only-set-up-running-vs-code-in-wsl).
-2. [Run using the `Command Palette`](#run-a-command-using-the-command-palette):
+2. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
+   `WSL: Reopen Folder in WSL`.
+3. [Run using the `Command Palette`](#run-a-command-using-the-command-palette):
    `Terminal: Select Default Profile`.
-3. There can be the following cases.
+4. There can be the following cases.
 
    - Case 1 (bad): You don't have the recommended extensions installed.
 
@@ -322,18 +326,16 @@ Method 2:
 
      <img alt="Terminal Default Profile Outside WSL" src="../images/appendix/vs-code/command-palette-default-terminal-profile-outside-wsl-wsl.png" style="width:400px"></img>
 
-     [Select](#select-an-option-from-a-list) `Ubuntu (WSL)` or another option with `WSL` in the name.
-
-     **Note:** [`Ubuntu`](./linux.md#ubuntu) is a [`Linux` distro](./linux.md#ubuntu).
+     Follow the instructions for [setting the default shell](#windows-only-set-the-default-shell-for-the-vs-code-terminal) again.
 
    - Case 3 (the best): You're running `VS Code` inside `WSL`. You've probably [opened the directory inside `WSL`](#windows-only-open-the-directory-in-wsl). This is the best case.
 
      <img alt="Terminal Default Profile Outside WSL" src="../images/appendix/vs-code/command-palette-default-terminal-profile-bash.png" style="width:400px"></img>
 
      [Select](#select-an-option-from-a-list) `bash`.
-4. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
-5. Close all tabs in the `VS Code Terminal`.
-6. [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal).
+5. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
+6. Close all tabs in the `VS Code Terminal`.
+7. [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal).
 
 ### Run a command using the `VS Code Terminal`
 
@@ -489,9 +491,16 @@ Docs:
 - [Search in all files](#shortcut-search-in-all-files)
 - [Toggle line comment](#shortcut-toggle-line-comment)
 
-#### Shortcut: Go back
+#### Shortcut: `Go back`
 
-`Alt+-` (`Ctrl+-` on `macOS`)
+`Ctrl+Alt+-` (`Ctrl+-` on `macOS`)
+
+##### Set shortcut for Go back
+
+1. [Set a shortcut](#set-a-shortcut)
+    - `<command-name>` is `Go Back`
+
+    <img alt="Status Bar (left)" src="../images/appendix/vs-code/command-palette-go-back.png" style="width:400px"></img>
 
 #### Shortcut: Switch to the previous editor
 
@@ -521,7 +530,7 @@ Docs:
 1. [Run using the `Command Palette`](#run-a-command-using-the-command-palette):
    `Preferences: Open Keyboard Shortcuts`.
 2. Write the keybinding name.
-3. In the `Command column`, find the necessary command.
+3. In the `Command column`, find the `<command-name>`.
 4. Double-click the row with that command.
 5. Type the shortcut.
 6. (Optional) Press `Esc` to reset the input.
@@ -565,13 +574,14 @@ Method 2: [Open the file using `Quick Open`](#open-the-file-using-quick-open)
 
 Method 3: Open the file using `VS Code`:
 
-1. [Run using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal):
+1. [Open a new `VS Code Terminal`](#open-a-new-vs-code-terminal) if something is running in your current `VS Code Terminal`.
+2. [Run using the `VS Code Terminal`](#run-a-command-using-the-vs-code-terminal):
 
   ```terminal
   code <file-path>
   ```
   
-  See [`<file-path>`](./shell.md#file-path).
+  See [`<file-path>`](./file-system.md#file-path).
 
 ### Open the `Markdown` preview
 

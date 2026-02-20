@@ -7,6 +7,7 @@
 - [IP address](#ip-address)
 - [Host](#host)
   - [Remote host](#remote-host)
+  - [`localhost`](#localhost)
 
 ## What is a network
 
@@ -17,3 +18,5 @@
 ## Host
 
 ### Remote host
+
+### `localhost`

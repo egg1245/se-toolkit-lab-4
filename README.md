@@ -1,5 +1,9 @@
 # Lab 3 — REST API, Database, and Security
 
+> [!CAUTION]
+> The lab is UNDER CONSTRUCTION!!
+> Instructions may change.
+
 <h2>Table of contents</h2>
 
 - [Lab story](#lab-story)

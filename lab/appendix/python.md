@@ -2,6 +2,9 @@
 
 <h2>Table of contents</h2>
 
+- [Syntax](#syntax)
+- [Documentation](#documentation)
+  - [Docstring](#docstring)
 - [Package managers](#package-managers)
   - [`uv`](#uv)
     - [Install `uv`](#install-uv)
@@ -9,6 +12,11 @@
 - [Select the `Python` interpreter](#select-the-python-interpreter)
 - [Check that `Python` works](#check-that-python-works)
 - [Testing](#testing)
+  - [`pytest`](#pytest)
+  - [The `assert` statement](#the-assert-statement)
+- [Dynamic analysis](#dynamic-analysis)
+- [Static analysis](#static-analysis)
+- [`Pylance`](#pylance)
 
 ## Syntax
 
@@ -24,9 +32,10 @@
 
 #### Install `uv`
 
+1. [Check the current shell in the `VS Code Terminal`](./vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 1. Follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/).
 
-   If you use `Windows`, follow the instructions for `Linux`.
+   If you use `Windows`, follow the instructions for `macOS and Linux`.
 
 #### Install `Python` and dependencies
 
