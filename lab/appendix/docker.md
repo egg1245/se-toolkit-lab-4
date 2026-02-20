@@ -10,11 +10,6 @@
   - [`docker ps`](#docker-ps)
 - [`Docker Compose`](#docker-compose)
   - [Service](#service)
-  - [`docker compose up`](#docker-compose-up)
-  - [`docker compose down`](#docker-compose-down)
-  - [`docker compose -f`](#docker-compose--f)
-  - [`docker compose --env-file`](#docker-compose---env-file)
-  - [`docker compose down -v`](#docker-compose-down--v)
 - [Volumes](#volumes)
 - [Health checks](#health-checks)
 
@@ -99,63 +94,13 @@ docker ps -a
 
 `Docker Compose` runs multi-container apps from a `docker-compose.yml` file.
 
+See [`Docker Compose`](./docker-compose.md) for the full list of commands.
+
 ### Service
 
 A service is a named entry under the `services:` key in `docker-compose.yml`. It defines how to build or pull an [image](#image) and run it as a [container](#container).
 
 For example, this project defines four services in [`docker-compose.yml`](../../docker-compose.yml): `app`, `postgres`, `pgadmin`, and `caddy`.
-
-### `docker compose up`
-
-Start services:
-
-```terminal
-docker compose up
-```
-
-Build images and start services:
-
-```terminal
-docker compose up --build
-```
-
-### `docker compose down`
-
-Stop and remove resources created by `up`:
-
-```terminal
-docker compose down
-```
-
-### `docker compose -f`
-
-Use a specific compose file:
-
-```terminal
-docker compose -f docker-compose.prod.yml up -d
-```
-
-### `docker compose --env-file`
-
-Load environment variables from a specific file:
-
-```terminal
-docker compose --env-file .env.docker.secret up --build
-```
-
-This is useful when you need different settings for local/dev/test/prod environments.
-
-### `docker compose down -v`
-
-Stop services and remove volumes (including database data):
-
-```terminal
-docker compose --env-file .env.docker.secret down -v
-```
-
-> [!IMPORTANT]
-> The `-v` flag removes named volumes. This deletes all data stored in the database.
-> Use this when you want to reset the database to its initial state.
 
 ## Volumes
 

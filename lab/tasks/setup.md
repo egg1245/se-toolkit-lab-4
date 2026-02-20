@@ -222,7 +222,7 @@
 ### 1.11. (NEW) Start the services
 
 > [!NOTE]
-> A [service](../appendix/docker.md#service) in [`Docker Compose`](../appendix/docker.md#docker-compose) defines how to run a [container](../appendix/docker.md#container).
+> A [service](../appendix/docker.md#service) in [`Docker Compose`](../appendix/docker-compose.md) defines how to run a [container](../appendix/docker.md#container).
 >
 > `Docker Compose` lets you start multiple containers at once.
 
@@ -254,7 +254,7 @@
 
    > **NOTE**
    >
-   > [`Docker Compose`](../appendix/docker.md#docker-compose) reads environment variables from `.env.docker.secret`
+   > [`Docker Compose`](../appendix/docker-compose.md) reads environment variables from `.env.docker.secret`
    > and uses them to configure the containers defined in [`docker-compose.yml`](../../docker-compose.yml).
 
 2. Wait for the services to start. You should see log output from the `app`, `postgres`, `pgadmin`, and `caddy` containers.
@@ -289,7 +289,7 @@
    docker compose --env-file .env.docker.secret logs
    ```
 
-2. [See logs for a specific service](TODO link to the appendix):
+2. [See logs for a specific service](../appendix/docker-compose.md#docker-compose-logs-for-a-specific-service):
 
    ```terminal
    docker compose --env-file .env.docker.secret logs postgres
