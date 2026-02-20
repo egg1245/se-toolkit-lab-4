@@ -37,10 +37,10 @@
   - [1.13. (NEW) Observe containers and services](#113-new-observe-containers-and-services)
     - [1.13.1. (NEW) List running containers](#1131-new-list-running-containers)
     - [1.13.2. (NEW) See logs of the running services](#1132-new-see-logs-of-the-running-services)
-  - [1.13. (NEW) Set up the services](#113-new-set-up-the-services)
-    - [1.13.1. (NEW) Open `Swagger UI`](#1131-new-open-swagger-ui)
-    - [1.13.2. (NEW) Set up `pgAdmin`](#1132-new-set-up-pgadmin)
-  - [1.14. (NEW) Stop the services](#114-new-stop-the-services)
+  - [1.14. (NEW) Set up the services](#114-new-set-up-the-services)
+    - [1.14.1. (NEW) Open `Swagger UI`](#1141-new-open-swagger-ui)
+    - [1.14.2. (NEW) Set up `pgAdmin`](#1142-new-set-up-pgadmin)
+  - [1.15. (NEW) Stop the services](#115-new-stop-the-services)
 - [2. Optional steps](#2-optional-steps)
   - [2.1. Set up a coding agent](#21-set-up-a-coding-agent)
   - [2.2. Set up the shell prompt](#22-set-up-the-shell-prompt)
@@ -295,15 +295,15 @@
    docker compose --env-file .env.docker.secret logs postgres
    ```
 
-### 1.13. (NEW) Set up the services
+### 1.14. (NEW) Set up the services
 
-#### 1.13.1. (NEW) Open `Swagger UI`
+#### 1.14.1. (NEW) Open `Swagger UI`
 
 1. Open in a browser: <http://127.0.0.1:42001/docs>.
 
    You should see the [`Swagger UI`](../appendix/swagger.md#swagger-ui) page with the [API](../appendix/web-development.md#api) documentation.
 
-#### 1.13.2. (NEW) Set up `pgAdmin`
+#### 1.14.2. (NEW) Set up `pgAdmin`
 
 > [!NOTE]
 > [`pgAdmin`](../appendix/pgadmin.md#what-is-pgadmin) takes 2-3 minutes to start after you have [started the services](#111-new-start-the-services).
@@ -319,7 +319,7 @@
 > [!TIP]
 > To view the data in a table, right-click the table and select `View/Edit Data` -> `All Rows`.
 
-### 1.14. (NEW) Stop the services
+### 1.15. (NEW) Stop the services
 
 1. [Check that the current directory is `se-toolkit-lab-3`](../appendix/shell.md#check-the-current-directory-is-directory-name).
 2. [Run using the `VS Code Terminal`](../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
