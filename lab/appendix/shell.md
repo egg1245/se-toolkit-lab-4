@@ -16,10 +16,6 @@
   - [Navigate directories](#navigate-directories)
 - [Useful commands](#useful-commands)
   - [Check what shell is running](#check-what-shell-is-running)
-- [`Bash`](#bash-1)
-  - [`Bash` syntax basics](#bash-syntax-basics)
-    - [Run a command](#run-a-command)
-    - [Pipe the `stdout`](#pipe-the-stdout)
 
 ## What is shell
 
@@ -48,6 +44,8 @@ It reads login-specific configuration files such as `~/.bash_profile` or `~/.pro
 
 > [!NOTE]
 > On `Windows`, you must to [open a directory in `WSL`](./vs-code.md#windows-only-open-the-directory-in-wsl) to run `bash`.
+
+See also: [`Bash`](./bash.md).
 
 ### `Git Bash` (`Windows`)
 
@@ -142,25 +140,3 @@ These commands run programs:
     ```terminal
     echo "$SHELL"
     ```
-
-## `Bash`
-
-### `Bash` syntax basics
-
-#### Run a command
-
-```terminal
-<command> <arguments>
-```
-
-Example:
-
-```terminal
-ls .
-```
-
-#### Pipe the `stdout`
-
-```terminal
-<command 1> | <command 2>
-```
