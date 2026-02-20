@@ -49,7 +49,7 @@ Title: `[Task] Enable and debug the interactions endpoint`
 
 ### 1.3. Restart the services
 
-1. [Stop the running services](../setup.md#114-new-stop-the-services).
+1. [Stop the running services](../setup.md#115-new-stop-the-services).
 2. [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
@@ -61,7 +61,7 @@ Title: `[Task] Enable and debug the interactions endpoint`
 
 ### 1.4. Examine the database using `pgAdmin`
 
-1. Make sure you have [set up `pgAdmin`](../setup.md#1132-new-set-up-pgadmin).
+1. Make sure you have [set up `pgAdmin`](../setup.md#1142-new-set-up-pgadmin).
 2. [Inspect columns](../../appendix/pgadmin.md#inspect-columns) of the `interaction_logs` table.
 3. Note the column names: `id`, `learner_id`, `item_id`, `kind`, `created_at`.
 
