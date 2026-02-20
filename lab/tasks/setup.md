@@ -344,9 +344,10 @@ A coding agent can help you write code, explain concepts, and debug issues.
 
 See [Coding agents](../appendix/coding-agents.md).
 
-<img alt="Qwen request" src="../images/tasks/setup/qwen-request.png" style="width:300px"></img>
-
-<img alt="Qwen response" src="../images/tasks/setup/qwen-response.png" style="width:300px"></img>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+  <img alt="Qwen request" src="../images/tasks/setup/qwen-request.png" style="width:300px">
+  <img alt="Qwen response" src="../images/tasks/setup/qwen-response.png" style="width:300px">
+</div>
 
 ### 2.2. Set up the shell prompt
 
