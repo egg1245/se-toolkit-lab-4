@@ -222,7 +222,10 @@
 ### 1.11. (NEW) Start the services
 
 > [!NOTE]
-> TODO: briefly explain what services and containers are, provide links to appendix
+> A [service](../appendix/web-development.md#service) is an application that performs a focused responsibility.
+> Each service runs in its own [container](../appendix/docker.md#container) — an isolated runtime with its own dependencies.
+>
+> [`Docker Compose`](../appendix/docker.md#docker-compose) lets you start multiple containers at once.
 
 #### 1.11.1. (NEW) Set up the `Docker` environment
 
