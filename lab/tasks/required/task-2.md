@@ -21,7 +21,7 @@ Your job is to enable the endpoint, discover the bugs, and fix them.
   - [1.2. Create a `Lab Task` issue](#12-create-a-lab-task-issue)
   - [1.3. Restart the services](#13-restart-the-services)
   - [1.4. Examine the database using `pgAdmin`](#14-examine-the-database-using-pgadmin)
-  - [1.5. Enable the interactions endpoint](#15-enable-the-interactions-endpoint)
+  - [1.5. Enable the `/interactions` endpoint](#15-enable-the-interactions-endpoint)
   - [1.6. Restart the services](#16-restart-the-services)
   - [1.7. Try `GET /interactions`](#17-try-get-interactions)
   - [1.8. Read the error](#18-read-the-error)
@@ -68,7 +68,7 @@ Title: `[Task] Enable and debug the interactions endpoint`
 > [!NOTE]
 > Pay attention to the column name `created_at`. You will need it later.
 
-### 1.5. Enable the interactions endpoint
+### 1.5. Enable the `/interactions` endpoint
 
 1. [Open the file](../../appendix/vs-code.md#open-the-file):
    `.env.docker.secret`.
