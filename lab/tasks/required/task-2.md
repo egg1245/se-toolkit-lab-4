@@ -139,7 +139,8 @@ Title: `[Task] Enable and debug the interactions endpoint`
    ```
 
 3. The response schema has a field called `timestamp`.
-4. Recall from [Step 2](#14-examine-the-database-using-pgadmin): the database table `interaction_logs` has a column called `created_at`, not `timestamp`.
+4. [Recall](#14-examine-the-database-using-pgadmin) that
+   the database table `interaction_logs` has a column called `created_at`, not `timestamp`.
 5. The `InteractionLog` class (the database model) has `created_at`, but the `InteractionModel` class (the response schema) has `timestamp`.
 6. This mismatch causes the error.
 
@@ -169,7 +170,7 @@ The field name in the response schema (`InteractionModel`) must match the field 
 
 ### 1.11. Verify `GET /interactions` works
 
-1. Restart the services ([Step 4](#13-restart-the-services)).
+1. [Restart the services](#16-restart-the-services).
 2. Open `Swagger UI` and [authorize](./task-1.md#6-authorize-in-swagger-ui).
 3. Try `GET /interactions`.
 4. Observe: you should see a `200` status code with interaction data.
@@ -240,7 +241,7 @@ The query parameter is called `item_id`, so the filter should compare `i.item_id
    ```
 
 2. Save the file.
-3. Restart the services ([Step 4](#13-restart-the-services)).
+3. [Restart the services](#16-restart-the-services).
 4. Verify in `Swagger UI` that `GET /interactions?item_id=2` now returns the correct results matching the database query.
 
 ### 1.17. Commit Bug 2 fix
