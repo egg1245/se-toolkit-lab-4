@@ -24,9 +24,10 @@
 
 #### Install `uv`
 
+1. [Check the current shell in the `VS Code Terminal`](./vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 1. Follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/).
 
-   If you use `Windows`, follow the instructions for `Linux`.
+   If you use `Windows`, follow the instructions for `macOS and Linux`.
 
 #### Install `Python` and dependencies
 
