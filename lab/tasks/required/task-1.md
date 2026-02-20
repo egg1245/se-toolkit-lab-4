@@ -84,9 +84,9 @@ Title: `[Task] Explore the API`
    > The `Responses` section contains the description of possible responses of the endpoint.
 2. Click `Try it out`.
 3. Click `Execute`.
-4. Observe the response:
+4. Observe the `Server response`:
 
-   - The [response status code](../../appendix/web-development.md#http-response-status-code) should be [`401`](../../appendix/http.md#401).
+   - The [`401`](../../appendix/http.md#401-unauthorized) status code.
    - The `Details` should be `Error: Unauthorized`.
 
 > [!NOTE]
@@ -116,7 +116,9 @@ Title: `[Task] Explore the API`
 1. In `Swagger UI`, expand the `GET /items` endpoint.
 2. Click `Try it out`.
 3. Click `Execute`.
-4. Observe the response: you should see a `200` status code with a list of items.
+4. Observe the `Server response`:
+   - The [`200`](../../appendix/http.md#200-ok) status code;
+   - The `Response body` with a list of items.
 
 ### 8. Try `GET /items/{item_id}`
 
@@ -124,20 +126,22 @@ Title: `[Task] Explore the API`
 2. Click `Try it out`.
 3. Enter `1` as the `item_id`.
 4. Click `Execute`.
-5. Observe the response:
-   - The [`200` (OK)](../../appendix/http.md#200-ok) status code
-   - The item data in the `Response body` field.
+5. Observe the `Server response`:
+   - The [`200`](../../appendix/http.md#200-ok) status code;
+   - The `Response body` with the item data.
 
    <img alt="Get item by id - 200" src="../../images/tasks/required/task-1/get-item-by-id-200.png" style="width:400px">
 6. Try entering `999` as the `item_id`.
 7. Click `Execute`.
-8. Observe the response: you should see the [`404` (Not Found)](../../appendix/http.md#404-not-found) error.
+8. Observe the `Server response`:
+   - you should see the [`404` (Not Found)](../../appendix/http.md#404-not-found) error.
 
 ### 9. Try `POST /items`
 
 1. In `Swagger UI`, expand the `POST /items` endpoint.
 2. Click `Try it out` to make a request with the default body.
-3. Observe the response: the [`422` (Unprocessable Content)](../../appendix/http.md#422-unprocessable-entity) error.
+3. Observe the `Server response`:
+   - The [`422` (Unprocessable Content)](../../appendix/http.md#422-unprocessable-entity) error.
 4. Enter another request body as [`JSON`](../../appendix/file-formats.md#json), for example:
 
    ```json
@@ -152,9 +156,9 @@ Title: `[Task] Explore the API`
    **NOTE:** `"parent_id": 5` means that the parent item of this step is the task with the `"id"` equal to `5` (created in the [`init.sql`](../../../src/app/data/init.sql)).
 
 5. Click `Execute`.
-6. Observe the response:
-   - The [`201` (Created)](../../appendix/http.md#201-created) status code;
-   - The newly created item in the `Response body` field.
+6. Observe the `Server response`:
+   - The [`201` (Created)](../../appendix/http.md#201-created) response status code;
+   - The `Response body` with the newly created item data in `JSON` format.
 
 ### 10. Try `PUT /items/{item_id}`
 
@@ -171,7 +175,9 @@ Title: `[Task] Explore the API`
    ```
 
 5. Click `Execute`.
-6. Observe the response: you should see a `200` status code with the updated item data.
+6. Observe the `Server response`:
+   - The [`200`](../../appendix/http.md#200-ok) status code.
+   - The `Response body` with the updated item data.
 
 ### 11. Change the `API_TOKEN`
 
