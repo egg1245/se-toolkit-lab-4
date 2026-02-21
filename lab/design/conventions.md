@@ -358,7 +358,7 @@ Don't provide a little ToC when all lists of items are short.
 ### 4.7. Table of contents
 
 - Insert a ToC right after the document title.
-- Use `Markdown All in One: Create Table of Contents` in VS Code.
+- `Markdown All in One` generates and updates the ToC automatically from your headings. Write sections first, then let the extension generate the ToC. Fix any anchor indices (e.g., step numbers) in the ToC afterwards if needed.
 - To skip a section from the ToC, use HTML tags for the title: `<h2>Heading</h2>`.
 - To control which heading levels appear in the ToC, edit `"markdown.extension.toc.levels"` in [`.vscode/settings.json`](#9-vs-code-settings-vscodesettingsjson).
 
