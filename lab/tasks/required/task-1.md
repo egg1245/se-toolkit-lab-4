@@ -95,7 +95,7 @@ Title: `[Task] Explore the API`
    - The `Details` should be `Error: Unauthorized`.
 
 > [!NOTE]
-> The `401` response means the server rejected your request because you haven't [authorized](../../appendix/web-development.md#authorize-in-swagger-ui) using an API key.
+> The `401` response means the server rejected your request because you haven't [authenticated](../../appendix/swagger.md#authorize-in-swagger-ui) using an API key.
 >
 > The service uses the `Authorization: Bearer <token>` [header](../../appendix/http.md) for authentication.
 
@@ -211,7 +211,7 @@ Title: `[Task] Explore the API`
 6. Try `GET /items`.
 7. Observe: the old key no longer works (you get a `401` Unauthorized error).
 
-   **Note:** This is `401`, not `403`. In step [1.4.1](#141-try-get-items-without-authentication) you sent no `Authorization` header at all, so the server returned `403`. Here, `Swagger UI` is still sending the old key as `Authorization: Bearer <old-key>` — the header is present, but the token is wrong, so the server returns `401` instead.
+   **Note:** This is `401`, not `403`. In step [1.4.1](#141-try-get-items-without-authentication) you sent no `Authorization` header at all, so the server returned `401`. Here, `Swagger UI` is still sending the old key as `Authorization: Bearer <old-key>` — the header is present, but the token is wrong, so the server returns `401` instead.
 
 8. Click `Authorize` again.
 9. Enter the new key (`my-new-secret-key`).
