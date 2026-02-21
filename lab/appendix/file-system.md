@@ -42,7 +42,7 @@ Example: `README.md` has the file name `README.md`.
 ### Extension
 
 The extension is the suffix after the last `.` in the file name.
-It indicates the file type or format.
+It indicates the file type or [format](./file-formats.md).
 
 Example: `README.md` has the extension `.md`.
 
