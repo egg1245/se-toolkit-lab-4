@@ -12,6 +12,7 @@
 - [Detect conflicts](#detect-conflicts)
 - [Resolve a merge conflict](#resolve-a-merge-conflict)
   - [Resolve a merge conflict using `VS Code`](#resolve-a-merge-conflict-using-vs-code)
+  - [Resolve a merge conflict using `GitLens`](#resolve-a-merge-conflict-using-gitlens)
   - [Resolve a merge conflict using the `VS Code Terminal`](#resolve-a-merge-conflict-using-the-vs-code-terminal)
 - [Pull changes from `origin/<branch-name>`](#pull-changes-from-originbranch-name)
   - [Pull changes from `origin/<branch-name>` using the `VS Code Terminal`](#pull-changes-from-originbranch-name-using-the-vs-code-terminal)
@@ -149,6 +150,7 @@ Check whether you have such conflicts:
 Resolve a [merge conflict](./git.md#merge-conflict) using any of the following methods:
 
 - [Resolve a merge conflict using `VS Code`](#resolve-a-merge-conflict-using-vs-code)
+- [Resolve a merge conflict using `GitLens`](#resolve-a-merge-conflict-using-gitlens)
 - [Resolve a merge conflict using the `VS Code Terminal`](#resolve-a-merge-conflict-using-the-vs-code-terminal)
 
 ### Resolve a merge conflict using `VS Code`
@@ -176,6 +178,27 @@ Resolve a [merge conflict](./git.md#merge-conflict) using any of the following m
 Docs:
 
 - [Merge conflicts in `VS Code`](https://code.visualstudio.com/docs/sourcecontrol/overview#_merge-conflicts)
+
+### Resolve a merge conflict using `GitLens`
+
+If you see a pull error like the one below, resolve the conflicts:
+
+<img alt="Pull Error" src="../images/appendix/gitlens/pull-error.png" style="width:400px"></img>
+
+For each conflicting file, complete the following steps:
+
+1. [Open the `Source Control`](./vs-code.md#open-the-source-control).
+2. Go to `Merge Changes`.
+3. Click a conflicting file.
+4. Click `Resolve in Merge Editor`.
+5. Accept the changes that you want to keep.
+6. Click `Complete Merge`.
+7. [Open the `Source Control`](./vs-code.md#open-the-source-control).
+8. Click `Continue`.
+
+> [!NOTE]
+> If there are more conflicts, `VS Code` shows `Merging (1/3)` or `Rebasing (1/3)` (or similar).
+> Repeat the steps above for each remaining conflict.
 
 ### Resolve a merge conflict using the `VS Code Terminal`
 
