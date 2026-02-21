@@ -58,7 +58,22 @@ When confused, start with `git status` and read it carefully before running the 
 
 ## Merge conflict
 
-<!-- TODO -->
+A merge conflict occurs when two branches modify the same lines in a file and `Git` cannot automatically decide which version to keep.
+Conflicts happen during `git merge` or `git pull`.
+
+`Git` marks conflicting sections with conflict markers:
+
+```text
+<<<<<<< HEAD
+Your changes on the current branch.
+=======
+Changes from the other branch.
+>>>>>>> other-branch
+```
+
+To resolve a conflict: choose which version to keep (or combine them), then remove all conflict markers, and commit the result.
+
+See [Resolve a merge conflict](./git-vscode.md#resolve-a-merge-conflict).
 
 ## Practice `Git`
 

@@ -10,6 +10,9 @@
   - [Switch to the `<branch-name>` branch using the `VS Code Terminal`](#switch-to-the-branch-name-branch-using-the-vs-code-terminal)
   - [Switch to the `<branch-name>` branch using `GitLens`](#switch-to-the-branch-name-branch-using-gitlens)
 - [Detect conflicts](#detect-conflicts)
+- [Resolve a merge conflict](#resolve-a-merge-conflict)
+  - [Resolve a merge conflict using `VS Code`](#resolve-a-merge-conflict-using-vs-code)
+  - [Resolve a merge conflict using the `VS Code Terminal`](#resolve-a-merge-conflict-using-the-vs-code-terminal)
 - [Pull changes from `origin/<branch-name>`](#pull-changes-from-originbranch-name)
   - [Pull changes from `origin/<branch-name>` using the `VS Code Terminal`](#pull-changes-from-originbranch-name-using-the-vs-code-terminal)
   - [Pull changes from `origin/<branch-name>` using `GitLens`](#pull-changes-from-originbranch-name-using-gitlens)
@@ -140,6 +143,65 @@ Check whether you have such conflicts:
    <img alt="Commit Conflict" src="../images/appendix/vs-code/status-bar-commit-conflict.png" style="width:400px"></img>
 
    You should see that there is a non-zero number of commits to pull from `origin/<branch-name>`.
+
+## Resolve a merge conflict
+
+Resolve a [merge conflict](./git.md#merge-conflict) using any of the following methods:
+
+- [Resolve a merge conflict using `VS Code`](#resolve-a-merge-conflict-using-vs-code)
+- [Resolve a merge conflict using the `VS Code Terminal`](#resolve-a-merge-conflict-using-the-vs-code-terminal)
+
+### Resolve a merge conflict using `VS Code`
+
+`VS Code` has a built-in merge conflict editor.
+
+1. Open a file with conflicts.
+2. Use the inline options that appear above the conflict markers:
+   - `Accept Current Change` — keep your branch's version.
+   - `Accept Incoming Change` — keep the other branch's version.
+   - `Accept Both Changes` — keep both versions.
+3. Save the file.
+4. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   git add <file-path>
+   ```
+
+5. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   git merge --continue
+   ```
+
+Docs:
+
+- [Merge conflicts in `VS Code`](https://code.visualstudio.com/docs/sourcecontrol/overview#_merge-conflicts)
+
+### Resolve a merge conflict using the `VS Code Terminal`
+
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   git status
+   ```
+
+   Files with conflicts are listed under `Unmerged paths`.
+
+2. Open each conflicted file.
+3. Find the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`).
+4. Edit the file to keep the correct content.
+5. Remove all conflict markers from the file.
+6. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   git add <file-path>
+   ```
+
+7. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   git merge --continue
+   ```
 
 ## Pull changes from `origin/<branch-name>`
 
