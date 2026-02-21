@@ -5,11 +5,27 @@
 - [What is a file format?](#what-is-a-file-format)
 - [Common file formats](#common-file-formats)
   - [`Markdown`](#markdown)
+    - [`Markdown` docs](#markdown-docs)
   - [`JSON`](#json)
+    - [`JSON` docs](#json-docs)
+    - [`JSON` example](#json-example)
+    - [`JSON` in this project](#json-in-this-project)
   - [`TOML`](#toml)
+    - [`TOML` docs](#toml-docs)
+    - [`TOML` example](#toml-example)
+    - [`TOML` in this project](#toml-in-this-project)
   - [`YAML`](#yaml)
+    - [`YAML` docs](#yaml-docs)
+    - [`YAML` example](#yaml-example)
+    - [`YAML` in this project](#yaml-in-this-project)
   - [`.env`](#env)
+    - [`.env` docs](#env-docs)
+    - [`.env` example](#env-example)
+    - [`.env` in this project](#env-in-this-project)
   - [`Python`](#python)
+    - [`Python` docs](#python-docs)
+    - [`Python` example](#python-example)
+    - [`Python` in this project](#python-in-this-project)
 
 ## What is a file format?
 
@@ -27,7 +43,7 @@ The [file extension](./file-system.md#extension) (e.g., [`.json`](#json), [`.tom
 
 You see the rendered `HTML` when you [open the `Markdown` preview](./vs-code.md#open-the-markdown-preview) in `VS Code` or view a `Markdown` file on `GitHub`.
 
-Docs:
+#### `Markdown` docs
 
 - [Learn Markdown in Y minutes](https://learnxinyminutes.com/docs/markdown/)
 
@@ -35,12 +51,12 @@ Docs:
 
 `JSON` (JavaScript Object Notation) is a human-readable text format for structured data.
 
-Docs:
+#### `JSON` docs
 
 - [JSON.org](https://www.json.org/)
 - [Learn JSON in Y minutes](https://learnxinyminutes.com/docs/json/)
 
-Example:
+#### `JSON` example
 
 ```json
 {
@@ -50,7 +66,7 @@ Example:
 }
 ```
 
-In this project, `JSON` is used for:
+#### `JSON` in this project
 
 - [`.vscode/settings.json`](../../.vscode/settings.json) — `VS Code` editor settings.
 - [`HTTP`](./http.md) request and response bodies when calling the `API`.
@@ -59,12 +75,12 @@ In this project, `JSON` is used for:
 
 `TOML` (Tom's Obvious, Minimal Language) is a configuration file format designed to be minimal and easy to read.
 
-Docs:
+#### `TOML` docs
 
 - [TOML documentation](https://toml.io/)
 - [Learn TOML in Y minutes](https://learnxinyminutes.com/docs/toml/)
 
-Example:
+#### `TOML` example
 
 ```toml
 [project]
@@ -76,18 +92,20 @@ host = "localhost"
 port = 8080
 ```
 
-In this project, `TOML` is used for [`pyproject.toml`](../../pyproject.toml) — the [`Python`](./python.md) project configuration file.
+#### `TOML` in this project
+
+[`pyproject.toml`](../../pyproject.toml) — the [`Python`](./python.md) project configuration file.
 
 ### `YAML`
 
 `YAML` (YAML Ain't Markup Language) is a human-readable data serialization format commonly used for configuration files.
 
-Docs:
+#### `YAML` docs
 
 - [YAML specification](https://yaml.org/)
 - [Learn YAML in Y minutes](https://learnxinyminutes.com/docs/yaml/)
 
-Example:
+#### `YAML` example
 
 ```yaml
 name: my-app
@@ -98,7 +116,7 @@ server:
   port: 8080
 ```
 
-In this project, `YAML` is used for:
+#### `YAML` in this project
 
 - [`.github/workflows/`](../../.github/workflows/) — `GitHub Actions` workflow files.
 - [`docker-compose.yml`](../../docker-compose.yml) — [`Docker Compose`](./docker-compose.md) service definitions.
@@ -107,11 +125,11 @@ In this project, `YAML` is used for:
 
 `.env` files store [environment variables](./environments.md) as key-value pairs, one per line.
 
-Docs:
+#### `.env` docs
 
 - [Dotenv File Format](https://hexdocs.pm/dotenvy/dotenv-file-format.html)
 
-Example:
+#### `.env` example
 
 ```shell
 DEBUG=false
@@ -119,21 +137,25 @@ PORT=8080
 SECRET_KEY=changeme
 ```
 
-In this project, `.env` files are used for local and `Docker` environment configuration.
+#### `.env` in this project
+
+Used for local and `Docker` environment configuration.
 
 ### `Python`
 
 `.py` files contain [`Python`](./python.md) source code.
 
-Docs:
+#### `Python` docs
 
 - [Learn Python in Y minutes](https://learnxinyminutes.com/docs/python/)
 
-Example:
+#### `Python` example
 
 ```python
 def greet(name: str) -> str:
     return f"Hello, {name}!"
 ```
 
-In this project, `.py` files are used for the application code and tests.
+#### `Python` in this project
+
+Used for the application code and tests.
