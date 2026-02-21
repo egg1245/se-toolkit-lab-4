@@ -51,7 +51,7 @@ Title: `[Task] Explore the API`
 #### 1.3.1. Start the services
 
 1. [Stop the services](../setup.md#115-new-stop-the-services).
-2. [Open a new `VS Code Terminal`](../setup.md#112-new-open-a-new-terminal).
+2. [Open a new `VS Code Terminal`](../../appendix/vs-code.md#open-a-new-vs-code-terminal).
 3. Start the `postgres` service:
 
    [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
@@ -60,7 +60,7 @@ Title: `[Task] Explore the API`
    docker compose --env-file .env.docker.secret up postgres --build
    ```
 
-4. [Open a new `VS Code Terminal`](../setup.md#112-new-open-a-new-terminal).
+4. [Open a new `VS Code Terminal`](../../appendix/vs-code.md#open-a-new-vs-code-terminal).
 5. Start the `app` service:
 
    [Run using the `VS Code Terminal`](../../appendix/vs-code.md#run-a-command-using-the-vs-code-terminal):
@@ -69,7 +69,7 @@ Title: `[Task] Explore the API`
    docker compose --env-file .env.docker.secret up app --build
    ```
 
-6. [Open a new `VS Code Terminal`](../setup.md#112-new-open-a-new-terminal).
+6. [Open a new `VS Code Terminal`](../../appendix/vs-code.md#open-a-new-vs-code-terminal).
 
 #### 1.3.2. Open `Swagger UI`
 
