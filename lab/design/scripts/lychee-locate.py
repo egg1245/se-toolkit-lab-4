@@ -42,7 +42,7 @@ def _display_url(url: str) -> str:
     return url
 
 
-def find_location(filepath: str, url: str) -> tuple[int, int] | None:
+def find_location(filepath: str, url: str) -> tuple[int, int, str] | None:
     # lychee normalizes relative file links to absolute file:// URLs.
     # Reconstruct a searchable pattern from just the basename + fragment.
     if url.startswith("file://"):
@@ -63,7 +63,8 @@ def find_location(filepath: str, url: str) -> tuple[int, int] | None:
                     prefix_match = re.search(r'(?:\.\.?/)+$', line[:start])
                     if prefix_match:
                         start = prefix_match.start()
-                    return i, start + 1
+                    raw_link = line[start:m.end()].rstrip()
+                    return i, start + 1, raw_link
     except (OSError, UnicodeDecodeError):
         pass
     return None
@@ -88,8 +89,12 @@ for filepath, errors in data.error_map.items():
     for error in errors:
         loc = find_location(filepath, error.url)
         location = f"{relpath}:{loc[0]}:{loc[1]}" if loc else str(relpath)
+        if loc and error.url.startswith("file://"):
+            display_link = loc[2]
+        else:
+            display_link = _display_url(error.url)
         print(
-            f"{_c('1', location)}: {_c('1;31', '[ERROR]')} {_c('36', _display_url(error.url))}"
+            f"{_c('1', location)}: {_c('1;31', '[ERROR]')} {_c('36', display_link)}"
         )
         print(f"  {_c('2', error.status.text)}")
 
