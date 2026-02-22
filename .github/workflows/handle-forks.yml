@@ -39,7 +39,7 @@ jobs:
               owner,
               repo,
               issue_number: number,
-              body: "Please make PRs in your fork, not this repo."
+              body: "Please create a new PR and choose your fork as the base repo. You've made a PR to the instructors' repo."
             });
             
             // Close the pull request
