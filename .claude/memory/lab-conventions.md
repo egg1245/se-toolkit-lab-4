@@ -2,6 +2,8 @@
 
 Source of truth: `lab/design/conventions.md`
 
+Read conventions before editing any task or appendix file, but NOT for files under `lab/lab-design/` (internal design notes).
+
 ## Task document structure (§3)
 
 ```
