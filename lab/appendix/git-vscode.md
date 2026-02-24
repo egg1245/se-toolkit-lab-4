@@ -17,6 +17,9 @@
 - [Pull changes from `origin/<branch-name>`](#pull-changes-from-originbranch-name)
   - [Pull changes from `origin/<branch-name>` using the `VS Code Terminal`](#pull-changes-from-originbranch-name-using-the-vs-code-terminal)
   - [Pull changes from `origin/<branch-name>` using `GitLens`](#pull-changes-from-originbranch-name-using-gitlens)
+- [Pull changes from `origin/<branch-name>` and rebase](#pull-changes-from-originbranch-name-and-rebase)
+  - [Pull and rebase using the `VS Code Terminal`](#pull-and-rebase-using-the-vs-code-terminal)
+  - [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
 - [Stage using the `Source Control`](#stage-using-the-source-control)
   - [Stage all changes in a specific file](#stage-all-changes-in-a-specific-file)
   - [Stage all changes in specific files](#stage-all-changes-in-specific-files)
@@ -260,6 +263,34 @@ We call that branch `origin/<branch-name>`.
 
 1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
    `GitLens: Pull`
+
+## Pull changes from `origin/<branch-name>` and rebase
+
+<!-- no toc -->
+- Method 1: [Pull and rebase using the `VS Code Terminal`](#pull-and-rebase-using-the-vs-code-terminal)
+- Method 2: [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
+
+### Pull and rebase using the `VS Code Terminal`
+
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   git pull --rebase origin <branch-name>
+   ```
+
+   Example:
+
+   ```terminal
+   git pull --rebase origin main
+   ```
+
+### Pull and rebase using `GitLens`
+
+1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
+   `GitLens: Pull`
+2. [Select](./vs-code.md#select-an-option-from-a-list)
+   `Pull with Rebase`.
+3. If `GitLens` does not show any error, the rebase is complete.
 
 ## Stage using the `Source Control`
 
