@@ -15,6 +15,7 @@
     - [1.4.2. Install `Git`](#142-install-git)
     - [1.4.3. Install `Docker`](#143-install-docker)
     - [1.4.4. (`Windows` only) Install `Ubuntu 24.04` using WSL](#144-windows-only-install-ubuntu-2404-using-wsl)
+    - [1.4.5. (NEW) Install `Nix`](#145-new-install-nix)
   - [1.5. (NEW) Open in `VS Code` the `software-engineering-toolkit` directory](#15-new-open-in-vs-code-the-software-engineering-toolkit-directory)
   - [1.6. Set up `Git`](#16-set-up-git)
     - [1.6.1. Check your `Git` config](#161-check-your-git-config)
@@ -144,6 +145,12 @@
 
 1. [Check the current shell in the `VS Code Terminal`](../../wiki/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 2. [Set up running `VS Code` using `WSL`](../../wiki/vs-code.md#windows-only-set-up-running-vs-code-in-wsl) if the shell is not `bash` or `zsh`.
+
+#### 1.4.5. (NEW) Install `Nix`
+
+1. [Install `Nix`](../../wiki/nix.md#install-nix) if not installed.
+
+2. (Optional) [Learn more](../../wiki/nix.md#what-is-nix) about `Nix`.
 
 ### 1.5. (NEW) Open in `VS Code` the `software-engineering-toolkit` directory
 
