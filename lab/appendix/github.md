@@ -240,6 +240,8 @@ Create a PR from the `<repo-name>/<branch-name>` to `<repo-name>/main`:
 1. Write the PR title.
 2. Write the PR description.
 3. [Link the PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to the issue, e.g. `Closes #<issue-number>`.
+
+   **Note:** linking an issue works only for PRs that have the repo [default branch](#default-branch) as the [base branch](#base-branch).
 4. Check the boxes under the PR description.
 5. Click `Create pull request`.
 
