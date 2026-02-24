@@ -11,8 +11,8 @@ class InteractionLog(SQLModel, table=True):
     __tablename__ = "interaction_logs"
 
     id: int | None = Field(default=None, primary_key=True)
-    learner_id: int
-    item_id: int
+    learner_id: int = Field(foreign_key="learners.id")
+    item_id: int = Field(foreign_key="items.id")
     kind: str
     created_at: datetime | None = Field(default=None)
 
@@ -24,4 +24,4 @@ class InteractionModel(SQLModel):
     learner_id: int
     item_id: int
     kind: str
-    timestamp: datetime  # BUG: should be 'created_at' to match the database column
+    created_at: datetime
