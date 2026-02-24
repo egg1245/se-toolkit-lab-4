@@ -76,9 +76,9 @@ A `GitHub` repository contains not only project files but also additional collab
 
 ### `<repo-name>`
 
-A repository name.
+A [repository](#repository) name.
 
-The name must be unique among repositories of the repository owner.
+The name must be unique among repositories of the [repository owner](#repository-owner).
 
 ### `<repo-url>`
 
