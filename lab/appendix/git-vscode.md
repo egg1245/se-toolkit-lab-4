@@ -17,6 +17,9 @@
 - [Pull changes from `origin/<branch-name>`](#pull-changes-from-originbranch-name)
   - [Pull changes from `origin/<branch-name>` using the `VS Code Terminal`](#pull-changes-from-originbranch-name-using-the-vs-code-terminal)
   - [Pull changes from `origin/<branch-name>` using `GitLens`](#pull-changes-from-originbranch-name-using-gitlens)
+- [Pull changes from `origin/<branch-name>` and rebase](#pull-changes-from-originbranch-name-and-rebase)
+  - [Pull and rebase using the `VS Code Terminal`](#pull-and-rebase-using-the-vs-code-terminal)
+  - [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
 - [Stage using the `Source Control`](#stage-using-the-source-control)
   - [Stage all changes in a specific file](#stage-all-changes-in-a-specific-file)
   - [Stage all changes in specific files](#stage-all-changes-in-specific-files)
@@ -67,6 +70,7 @@
 >
 > The [`<repo-name>`](./github.md#repo-name) is the repo name.
 
+<!-- no toc -->
 - Method 1: [Clone the repo using the `VS Code Terminal`](#clone-the-repo-using-the-vs-code-terminal)
 - Method 2: [Clone the repo using the `Command Palette`](#clone-the-repo-using-the-command-palette)
 
@@ -109,6 +113,7 @@
 
 ## Switch to the `<branch-name>` branch
 
+<!-- no toc -->
 - Method 1: [Switch to the `<branch-name>` branch using the `VS Code Terminal`](#switch-to-the-branch-name-branch-using-the-vs-code-terminal)
 - Method 2: [Switch to the `<branch-name>` branch using `GitLens`](#switch-to-the-branch-name-branch-using-gitlens)
 
@@ -147,11 +152,12 @@ Check whether you have such conflicts:
 
 ## Resolve a merge conflict
 
-Resolve a [merge conflict](./git.md#merge-conflict) using any of the following methods:
+Resolve a [merge conflict](./git.md#merge-conflict).
 
-- [Resolve a merge conflict using `VS Code`](#resolve-a-merge-conflict-using-vs-code)
-- [Resolve a merge conflict using `GitLens`](#resolve-a-merge-conflict-using-gitlens)
-- [Resolve a merge conflict using the `VS Code Terminal`](#resolve-a-merge-conflict-using-the-vs-code-terminal)
+<!-- no toc -->
+- Method 1: [Resolve a merge conflict using `VS Code`](#resolve-a-merge-conflict-using-vs-code)
+- Method 2: [Resolve a merge conflict using `GitLens`](#resolve-a-merge-conflict-using-gitlens)
+- Method 3: [Resolve a merge conflict using the `VS Code Terminal`](#resolve-a-merge-conflict-using-the-vs-code-terminal)
 
 ### Resolve a merge conflict using `VS Code`
 
@@ -235,6 +241,7 @@ Pull changes from the `<branch-name>` branch in your fork on `GitHub`.
 
 We call that branch `origin/<branch-name>`.
 
+<!-- no toc -->
 - Method 1: [Pull changes from `origin/<branch-name>` using the `VS Code Terminal`](#pull-changes-from-originbranch-name-using-the-vs-code-terminal)
 - Method 2: [Pull changes from `origin/<branch-name>` using `GitLens`](#pull-changes-from-originbranch-name-using-gitlens)
 
@@ -256,6 +263,34 @@ We call that branch `origin/<branch-name>`.
 
 1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
    `GitLens: Pull`
+
+## Pull changes from `origin/<branch-name>` and rebase
+
+<!-- no toc -->
+- Method 1: [Pull and rebase using the `VS Code Terminal`](#pull-and-rebase-using-the-vs-code-terminal)
+- Method 2: [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
+
+### Pull and rebase using the `VS Code Terminal`
+
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   git pull --rebase origin <branch-name>
+   ```
+
+   Example:
+
+   ```terminal
+   git pull --rebase origin main
+   ```
+
+### Pull and rebase using `GitLens`
+
+1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
+   `GitLens: Pull`
+2. [Select](./vs-code.md#select-an-option-from-a-list)
+   `Pull with Rebase`.
+3. If `GitLens` does not show any error, the rebase is complete.
 
 ## Stage using the `Source Control`
 
@@ -296,13 +331,10 @@ We call that branch `origin/<branch-name>`.
 > - `feat:` — additions (e.g., new feature)
 > - `docs:` — documentation changes
 
-Use any of the following methods:
-
 <!-- no toc -->
-- [Commit changes](#commit-changes)
-  - [Commit using the `VS Code Terminal`](#commit-using-the-vs-code-terminal)
-  - [Commit using `Source Control`](#commit-using-source-control)
-    - [Commit staged changes](#commit-staged-changes)
+- Method 1: [Commit using the `VS Code Terminal`](#commit-using-the-vs-code-terminal)
+- Method 2: [Commit using `Source Control`](#commit-using-source-control)
+  - [Commit staged changes](#commit-staged-changes)
 
 ### Commit using the `VS Code Terminal`
 
@@ -326,13 +358,12 @@ Use any of the following methods:
 2. Go to `Changes`.
 3. Hover over a file name.
 4. Click `+` to stage the file.
-5. Write a commit message, e.g., `docs: add architecture diagram`.
-6. Click `Commit`.
+5. [Commit staged changes](#commit-staged-changes)
 
 #### Commit staged changes
 
 1. [Open the `Source Control`](./vs-code.md#open-the-source-control).
-2. Write a commit message.
+2. Write a [commit message](./git.md#commit-message).
 3. Click `Commit`.
 
 ## Undo commits
@@ -340,12 +371,9 @@ Use any of the following methods:
 > [!NOTE]
 > There can appear a merge [conflict](./git.md#merge-conflict) when you try to undo.
 
-Undo commits using any of the following methods:
-
 <!-- no toc -->
-- [Undo commits](#undo-commits)
-  - [Undo commits using the `VS Code Terminal`](#undo-commits-using-the-vs-code-terminal)
-  - [Undo commits using `GitLens`](#undo-commits-using-gitlens)
+- Method 1: [Undo commits using the `VS Code Terminal`](#undo-commits-using-the-vs-code-terminal)
+- Method 2: [Undo commits using `GitLens`](#undo-commits-using-gitlens)
 
 ### Undo commits using the `VS Code Terminal`
 
@@ -409,8 +437,6 @@ See [Undo commit on the current branch](./gitlens.md#undo-a-commit-on-the-curren
 4. Click the `Push` icon to the right of `COMMITS`.
 
 ## Switch to a new branch
-
-Create a new branch and switch to it:
 
 <!-- no toc -->
 - Method 1: [Switch to a new branch using `GitHub`](#switch-to-a-new-branch-using-github)

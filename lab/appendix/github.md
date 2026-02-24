@@ -11,6 +11,7 @@
   - [`<repo-url>`](#repo-url)
   - [Make your repository public](#make-your-repository-public)
 - [Repository owner](#repository-owner)
+  - [`<repo-owner-github-username>`](#repo-owner-github-username)
 - [Fork](#fork)
   - [Fork a repo](#fork-a-repo)
   - [`<your-fork-url>`](#your-fork-url)
@@ -23,6 +24,7 @@
 - [Pull request](#pull-request)
   - [Base repo](#base-repo)
   - [Head repo](#head-repo)
+  - [Default branch](#default-branch)
   - [Base branch](#base-branch)
   - [Pull request branch](#pull-request-branch)
   - [Create a pull request](#create-a-pull-request)
@@ -76,17 +78,18 @@ A `GitHub` repository contains not only project files but also additional collab
 
 ### `<repo-name>`
 
-A repository name.
+A [repository](#repository) name.
 
-The name must be unique among repositories of the repository owner.
+The name must be unique among repositories of the [repository owner](#repository-owner).
 
 ### `<repo-url>`
 
 We use `<repo-url>` to refer to a repository [URL](./web-development.md#url).
 
-A repository URL is typically `https://github.com/<repo-owner-github-username>/<repo-name>` where:
+A repository URL is typically `https://github.com/<repo-owner-github-username>/<repo-name>`.
+Placeholder values:
 
-- `<repo-owner-github-username>` is the [repo owner](#repository-owner) `GitHub` username;
+- See [`<repo-owner-github-username>`](#repo-owner-github-username).
 - `<repo-name>` is the name of the repository.
 
 ### Make your repository public
@@ -97,7 +100,9 @@ A repository URL is typically `https://github.com/<repo-owner-github-username>/<
 
 Repository owner is an account where the repo is currently stored.
 
-We use `<repo-owner-github-username>` to refer to the [`GitHub` username](#github-username) of the repository owner.
+### `<repo-owner-github-username>`
+
+[`GitHub` username](#github-username) of the [repository owner](#repository-owner).
 
 ## Fork
 
@@ -180,13 +185,15 @@ Examples of issue forms:
 
 ### Head repo
 
+### Default branch
+
 ### Base branch
 
 ### Pull request branch
 
 ### Create a pull request
 
-Create a PR to the `<repo-name>/<branch-name>`:
+Create a PR from the `<repo-name>/<branch-name>` to `<repo-name>/main`:
 
 1. [Open the PR editor using `GitHub`](#open-the-pr-editor-using-github)
 2. [Finish creating a PR](#finish-creating-a-pr)
@@ -232,7 +239,9 @@ Create a PR to the `<repo-name>/<branch-name>`:
 
 1. Write the PR title.
 2. Write the PR description.
-3. [Link the PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to the issue, e.g. `Closes #<issue number>`.
+3. [Link the PR](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) to the issue, e.g. `Closes #<issue-number>`.
+
+   **Note:** linking an issue works only for PRs that have the repo [default branch](#default-branch) as the [base branch](#base-branch).
 4. Check the boxes under the PR description.
 5. Click `Create pull request`.
 

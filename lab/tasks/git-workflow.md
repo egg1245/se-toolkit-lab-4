@@ -13,21 +13,19 @@ The following diagram shows this workflow in the context of repositories:
 
 Outline:
 
-<!-- no toc -->
 - [Create a `Lab Task` issue](#create-a-lab-task-issue)
 - [Switch to the `main` branch](#switch-to-the-main-branch)
 - [Detect conflicts](#detect-conflicts)
 - [Pull changes from `origin/main`](#pull-changes-from-originmain)
 - [Pull changes from `origin/main` and rebase](#pull-changes-from-originmain-and-rebase)
-  - [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens)
-  - [Resolve conflicts using `GitLens`](#resolve-conflicts-using-gitlens)
 - [Switch to a new branch](#switch-to-a-new-branch)
+  - [`<task-branch-name>`](#task-branch-name)
 - [Edit files](#edit-files)
 - [Commit](#commit)
 - [(Optional) Undo commits](#optional-undo-commits)
 - [Publish the branch](#publish-the-branch)
 - [Push more commits](#push-more-commits)
-- [Create a PR to `main` in your fork](#create-a-pr-to-main-in-your-fork)
+- [Create a PR to the `main` branch in your fork](#create-a-pr-to-the-main-branch-in-your-fork)
 - [Get a PR review](#get-a-pr-review)
   - [PR review rules](#pr-review-rules)
     - [As a PR reviewer](#as-a-pr-reviewer)
@@ -59,26 +57,16 @@ Rebasing places your local commits on top of the commits from `origin/main`. Con
 
 Complete the following steps:
 
-1. [Pull and rebase using `GitLens`](#pull-and-rebase-using-gitlens).
-2. [Resolve conflicts using `GitLens`](#resolve-conflicts-using-gitlens) (only if conflicts occur).
-
-### Pull and rebase using `GitLens`
-
-1. [Run using the `Command Palette`](../appendix/vs-code.md#run-a-command-using-the-command-palette):
-   `GitLens: Pull`
-2. [Select](../appendix/vs-code.md#select-an-option-from-a-list)
-   `Pull with Rebase`.
-3. If `GitLens` does not show any error, the rebase is complete.
-
-### Resolve conflicts using `GitLens`
-
-[Resolve a merge conflict using `GitLens`](../appendix/git-vscode.md#resolve-a-merge-conflict-using-gitlens).
+1. [Pull and rebase from `origin/main`](../appendix/git-vscode.md#pull-and-rebase-from-originbranch-name).
+2. If conflicts occur, [resolve them](../appendix/git-vscode.md#resolve-a-merge-conflict).
 
 ## Switch to a new branch
 
 [Create a new branch and switch to it](../appendix/git-vscode.md#switch-to-a-new-branch).
 
-The name of this branch is referred to as `<branch-name>` throughout the docs.
+### `<task-branch-name>`
+
+We'll refer to the new branch as `<task-branch-name>`.
 
 ## Edit files
 
@@ -86,7 +74,7 @@ The name of this branch is referred to as `<branch-name>` throughout the docs.
 
 ## Commit
 
-[Commit changes](../appendix/git-vscode.md#commit-changes) to the `<branch-name>` to complete the task.
+[Commit changes](../appendix/git-vscode.md#commit-changes) to the [`<task-branch-name>`](#task-branch-name) to complete the task.
 
 ## (Optional) Undo commits
 
@@ -100,14 +88,15 @@ The name of this branch is referred to as `<branch-name>` throughout the docs.
 
 [Push more commits](../appendix/git-vscode.md#push-more-commits) to the published branch if necessary.
 
-## Create a PR to `main` in your fork
+## Create a PR to the `main` branch in your fork
 
-[Create a PR](../appendix/github.md#create-a-pull-request) replacing:
+[Create a PR](../appendix/github.md#create-a-pull-request) from the branch [`<task-branch-name>`](#task-branch-name) to the branch `<main>`.
+Placeholder values:
 
-- `<repo-owner-github-username>` with `inno-se-toolkit`;
-- `<repo-name>` with `se-toolkit-lab-3`;
-- `<your-github-username>` with your `GitHub` username;
-- `<branch-name>` with the name of the branch that you want to merge in the PR.
+- `<repo-name>` is `se-toolkit-lab-3`.
+- `<branch-name>` is `<task-branch-name>`.
+- [`<repo-owner-github-username>`] is `inno-se-toolkit`.
+- [`<your-github-username>`](../appendix/github.md#your-github-username) is your `GitHub` username.
 
 ## Get a PR review
 
