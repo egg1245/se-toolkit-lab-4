@@ -12,7 +12,7 @@ from sqlmodel import Field, SQLModel
 # Database models
 # ===
 #
-# These [`SQLModel`](https://sqlmodel.tiangolo.com/) classes map to the `items`
+# These [`SQLModel`](https://sqlmodel.tiangolo.com/) classes map to the `item`
 # PostgreSQL table. `SQLModel` combines SQLAlchemy (database ORM) with
 # Pydantic (data validation) in a single class hierarchy.
 #
@@ -26,11 +26,11 @@ from sqlmodel import Field, SQLModel
 class ItemRecord(SQLModel, table=True):
     """A row in the items table."""
 
-    __tablename__ = "items"
+    __tablename__ = "item"
 
     id: int | None = Field(default=None, primary_key=True)
     type: str = "step"
-    parent_id: int | None = Field(default=None, foreign_key="items.id")
+    parent_id: int | None = Field(default=None, foreign_key="item.id")
     title: str
     description: str = ""
     attributes: dict[str, Any] = Field(

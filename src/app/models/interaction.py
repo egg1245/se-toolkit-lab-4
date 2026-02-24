@@ -8,11 +8,11 @@ from sqlmodel import Field, SQLModel
 class InteractionLog(SQLModel, table=True):
     """An interaction log entry in the database."""
 
-    __tablename__ = "interaction_logs"
+    __tablename__ = "interacts"
 
     id: int | None = Field(default=None, primary_key=True)
-    learner_id: int = Field(foreign_key="learners.id")
-    item_id: int = Field(foreign_key="items.id")
+    learner_id: int = Field(foreign_key="learner.id")
+    item_id: int = Field(foreign_key="item.id")
     kind: str
     created_at: datetime | None = Field(default=None)
 
