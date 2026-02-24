@@ -1,243 +1,195 @@
-# Implement the learners endpoint
+# Add Front-end
 
 <h4>Time</h4>
 
-~40-50 min
+~50 min
 
 <h4>Purpose</h4>
 
-Learn to implement a new endpoint using an existing one as a reference.
+Understand the difference between a dev server and production static files, and use an AI agent to modify front-end code.
 
 <h4>Context</h4>
 
-The `/learners` endpoint doesn't exist yet. Placeholder templates are provided in the code.
-The database functions for learners (`read_learners`, `create_learner`) are already implemented.
-You will implement the endpoint layer by studying the `items` reference implementation and filling in the placeholders.
+The back-end API is running on the VM. You will add a front-end that connects to it.
+First you will run it locally with a dev server (fast iteration, hot reload).
+Then you will build and deploy a production version (static files served by `Caddy`).
+Finally, you will use an AI agent to add a new feature to the front-end.
 
 <h4>Table of contents</h4>
 
-- [Steps](#steps)
-  - [0. Follow the `Git workflow`](#0-follow-the-git-workflow)
-  - [1. Create a `Lab Task` issue](#1-create-a-lab-task-issue)
-  - [2. Study the reference implementation](#2-study-the-reference-implementation)
-  - [3. Part A: Implement the `GET` endpoint](#3-part-a-implement-the-get-endpoint)
-    - [3.1. Enable the learners endpoint](#31-enable-the-learners-endpoint)
-    - [3.2. Uncomment the imports](#32-uncomment-the-imports)
-    - [3.3. Uncomment and fill in the `GET` placeholder](#33-uncomment-and-fill-in-the-get-placeholder)
-    - [3.4. Restart and verify](#34-restart-and-verify)
-    - [3.5. Verify the query parameter](#35-verify-the-query-parameter)
-    - [3.6. Commit Part A](#36-commit-part-a)
-  - [4. Part B: Implement the `POST` endpoint](#4-part-b-implement-the-post-endpoint)
-    - [4.1. Uncomment and fill in the `POST` placeholder](#41-uncomment-and-fill-in-the-post-placeholder)
-    - [4.2. Restart and verify](#42-restart-and-verify)
-    - [4.3. Commit Part B](#43-commit-part-b)
-  - [5. Finish the task](#5-finish-the-task)
-- [Acceptance criteria](#acceptance-criteria)
+- [1. Steps](#1-steps)
+  - [1.1. Follow the `Git workflow`](#11-follow-the-git-workflow)
+  - [1.2. Create a `Lab Task` issue](#12-create-a-lab-task-issue)
+  - [1.3. Part A: Dev version](#13-part-a-dev-version)
+    - [1.3.1. Run the dev server](#131-run-the-dev-server)
+    - [1.3.2. Edit a source file and observe hot reload](#132-edit-a-source-file-and-observe-hot-reload)
+  - [1.4. Part B: Prod version](#14-part-b-prod-version)
+    - [1.4.1. Build the production bundle](#141-build-the-production-bundle)
+    - [1.4.2. Copy the `dist/` folder to the VM](#142-copy-the-dist-folder-to-the-vm)
+    - [1.4.3. Configure `Caddy`](#143-configure-caddy)
+    - [1.4.4. Verify in the browser](#144-verify-in-the-browser)
+  - [1.5. Part C: Modify the front-end with an AI agent](#15-part-c-modify-the-front-end-with-an-ai-agent)
+    - [1.5.1. Add a column using the AI agent](#151-add-a-column-using-the-ai-agent)
+    - [1.5.2. Verify in the dev server](#152-verify-in-the-dev-server)
+    - [1.5.3. Deploy the change to the VM](#153-deploy-the-change-to-the-vm)
+  - [1.6. Finish the task](#16-finish-the-task)
+- [2. Acceptance criteria](#2-acceptance-criteria)
 
-## Steps
+## 1. Steps
 
-### 0. Follow the `Git workflow`
+### 1.1. Follow the `Git workflow`
 
 Follow the [`Git workflow`](../../../wiki/git-workflow.md) to complete this task.
 
-### 1. Create a `Lab Task` issue
+### 1.2. Create a `Lab Task` issue
 
-Title: `[Task] Implement the learners endpoint`
+Title: `[Task] Add Front-end`
 
-### 2. Study the reference implementation
+### 1.3. Part A: Dev version
 
-Before writing any code, study the existing `items` implementation to understand the pattern.
+> [!NOTE]
+> A dev server serves the front-end with hot reload: the browser updates automatically when you save a file.
+> This is for local development only — it is not meant to be deployed to production.
 
-1. [Open the file](../../../wiki/vs-code.md#open-the-file):
-   [`src/app/routers/items.py`](../../../src/app/routers/items.py).
-2. Study the `GET /` endpoint:
-   - What decorator is used? (`@router.get`)
-   - What is the `response_model`?
-   - What parameters does the function accept?
-   - What database function does it call?
-3. Study the `POST /` endpoint:
-   - What decorator is used? (`@router.post`)
-   - What is the `status_code`?
-   - What is the request body schema?
-   - What database function does it call?
-4. [Open the file](../../../wiki/vs-code.md#open-the-file):
-   [`src/app/db/items.py`](../../../src/app/db/items.py).
-5. Study the `read_items` and `create_item` functions.
-6. [Open the file](../../../wiki/vs-code.md#open-the-file):
-   [`src/app/db/learners.py`](../../../src/app/db/learners.py).
-7. Study the `read_learners` and `create_learner` functions.
-8. Notice that `read_learners` accepts an optional `enrolled_after` parameter for filtering.
+#### 1.3.1. Run the dev server
 
-### 3. Part A: Implement the `GET` endpoint
+1. [Open a new `VS Code Terminal`](../../../wiki/vs-code.md#open-a-new-vs-code-terminal).
+2. Navigate to the front-end project directory.
 
-#### 3.1. Enable the learners endpoint
+   <!-- TODO: add path to front-end directory once finalized -->
 
-1. [Open the file](../../../wiki/vs-code.md#open-the-file):
-   `.env.docker.secret`.
-2. Change:
-
-   ```text
-   ENABLE_LEARNERS=false
-   ```
-
-   to:
-
-   ```text
-   ENABLE_LEARNERS=true
-   ```
-
-3. Save the file.
-
-> **Note:** `.env.docker.secret` is listed in `.gitignore` and will not be committed.
-> The flag tells the application to register the `/learners` route at startup.
-
-#### 3.2. Uncomment the imports
-
-1. [Open the file](../../../wiki/vs-code.md#open-the-file):
-   [`src/app/routers/learners.py`](../../../src/app/routers/learners.py).
-2. Uncomment the import lines at the top of the file:
-
-   ```python
-   from datetime import datetime
-
-   from fastapi import Depends
-   from sqlmodel.ext.asyncio.session import AsyncSession
-
-   from app.database import get_session
-   from app.db.learners import read_learners, create_learner
-   from app.models.learner import Learner, LearnerCreate
-   ```
-
-#### 3.3. Uncomment and fill in the `GET` placeholder
-
-1. In [`src/app/routers/learners.py`](../../../src/app/routers/learners.py), find the `PART A: GET endpoint` section.
-2. Uncomment the placeholder code.
-3. Replace each `<placeholder>` with the correct value.
-
-> [!TIP]
-> Use the `items` `GET` endpoint as a reference. The learners `GET` endpoint follows the same pattern but:
->
-> - Uses `Learner` instead of `Item`.
-> - Uses `read_learners` instead of `read_items`.
-> - Has an `enrolled_after` query parameter of type `datetime | None` instead of no query parameter.
-
-<details><summary>Hint: what the completed code looks like</summary>
-
-```python
-@router.get("/", response_model=list[Learner])
-async def get_learners(
-    enrolled_after: datetime | None = None,
-    session: AsyncSession = Depends(get_session),
-):
-    """Get all learners, optionally filtered by enrollment date."""
-    return await read_learners(session, enrolled_after)
-```
-
-</details>
-
-#### 3.4. Restart and verify
-
-1. Restart the services:
-
-   [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+3. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
-   docker compose --env-file .env.docker.secret up --build
+   npm run dev
    ```
 
-2. Open `Swagger UI` at `http://127.0.0.1:42001/docs`.
-3. [Authorize in `Swagger UI`](./task-1.md#143-authorize-in-swagger-ui) using the API key.
-4. Try `GET /learners`.
-5. Observe: you should see a `200` status code with a list of all learners.
+4. Open the URL shown in the terminal output in a browser.
 
-#### 3.5. Verify the query parameter
+   The output should be similar to this:
 
-1. In `Swagger UI`, expand the `GET /learners` endpoint.
-2. Click `Try it out`.
-3. Enter `2025-10-01` in the `enrolled_after` field.
-4. Click `Execute`.
-5. Observe: the response should contain only Diana and Eve (learners enrolled on or after `2025-10-01`).
+   ```terminal
+   Local: http://localhost:5173/
+   ```
 
-#### 3.6. Commit Part A
+5. Verify that the front-end loads and displays data from the API.
 
-1. [Commit your change using the `Source Control`](../../../wiki/git-workflow.md#commit).
+#### 1.3.2. Edit a source file and observe hot reload
+
+1. [Open the file](../../../wiki/vs-code.md#open-the-file) <!-- TODO: add path to a front-end source file once finalized -->.
+2. Make a small visible change, for example change a heading text.
+3. Save the file.
+4. Observe that the browser updates automatically without a page refresh.
+
+### 1.4. Part B: Prod version
+
+> [!NOTE]
+> A production build compiles the front-end into a `dist/` folder of static [HTML](../../../wiki/web-development.md#html), [CSS](../../../wiki/web-development.md#css), and [JavaScript](../../../wiki/web-development.md#javascript) files.
+> These files are copied to the VM and served by `Caddy` — the same model as uploading to a [CDN](../../../wiki/web-development.md#cdn).
+
+#### 1.4.1. Build the production bundle
+
+1. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   npm run build
+   ```
+
+2. Verify that a `dist/` folder was created.
+
+#### 1.4.2. Copy the `dist/` folder to the VM
+
+1. Copy the `dist/` folder to the VM.
+
+   Method 1: use [`scp`](../../../wiki/ssh.md#scp):
+
+   ```terminal
+   scp -r dist/ <vm-user>@<vm-host>:/var/www/frontend/
+   ```
+
+   Method 2: use `rsync`:
+
+   ```terminal
+   rsync -av dist/ <vm-user>@<vm-host>:/var/www/frontend/
+   ```
+
+#### 1.4.3. Configure `Caddy`
+
+1. [Connect to your VM](../../../wiki/vm.md#connect-to-the-vm).
+2. Edit the [`Caddyfile`](../../../wiki/caddy.md) on the VM to serve the static files.
+
+   Add the following block to the `Caddyfile`:
+
+   ```text
+   <!-- TODO: provide a working Caddyfile snippet that serves dist/ as static files -->
+   ```
+
+3. Reload `Caddy`:
+
+   ```terminal
+   sudo systemctl reload caddy
+   ```
+
+#### 1.4.4. Verify in the browser
+
+1. Open the front-end URL in a browser: `<frontend-url>`
+2. Verify that the front-end loads and displays data from the API.
+
+### 1.5. Part C: Modify the front-end with an AI agent
+
+> [!NOTE]
+> The AI agent can read all front-end source files and find the right component to modify.
+> Your job is to give a clear prompt and verify the result.
+
+#### 1.5.1. Add a column using the AI agent
+
+1. Open the AI agent in the front-end project directory.
+2. Give it this prompt:
+
+   > "Add a `<!-- TODO: <COLUMN_NAME> -->` column to the data table. The API already returns this field. Add it to the table header and display the value in each row."
+
+3. Wait for the agent to make the changes.
+
+#### 1.5.2. Verify in the dev server
+
+1. Check that the dev server is still running (or restart it with `npm run dev`).
+2. Open the front-end in the browser.
+3. Verify that the new column appears in the table.
+
+> [!NOTE]
+> The dev server picks up the changes automatically — no rebuild is needed.
+
+#### 1.5.3. Deploy the change to the VM
+
+1. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   npm run build
+   ```
+
+2. Copy the updated `dist/` folder to the VM using the [same method as in Part B](#142-copy-the-dist-folder-to-the-vm).
+3. Open the front-end URL in the browser and verify the new column appears in the production build.
+
+### 1.6. Finish the task
+
+1. [Commit](../../../wiki/git-workflow.md#commit) your changes.
 
    Use the following commit message:
 
    ```text
-   feat: implement GET /learners endpoint
+   feat: add <!-- TODO: <COLUMN_NAME> --> column to the front-end table
    ```
 
-### 4. Part B: Implement the `POST` endpoint
-
-#### 4.1. Uncomment and fill in the `POST` placeholder
-
-1. In [`src/app/routers/learners.py`](../../../src/app/routers/learners.py), find the `PART B: POST endpoint` section.
-2. Uncomment the placeholder code.
-3. Replace each `<placeholder>` with the correct value.
-
-> [!TIP]
-> Use the `items` `POST` endpoint as a reference. The learners `POST` endpoint follows the same pattern but:
->
-> - Uses `Learner` and `LearnerCreate` instead of `ItemRecord` and `ItemCreate`.
-> - Uses `create_learner` instead of `create_item`.
-> - Passes `name` and `email` instead of `title` and `description`.
-
-<details><summary>Hint: what the completed code looks like</summary>
-
-```python
-@router.post("/", response_model=Learner, status_code=201)
-async def post_learner(
-    body: LearnerCreate,
-    session: AsyncSession = Depends(get_session),
-):
-    """Create a new learner."""
-    return await create_learner(session, name=body.name, email=body.email)
-```
-
-</details>
-
-#### 4.2. Restart and verify
-
-1. Restart the services ([Step 3.4](#34-restart-and-verify)).
-2. Open `Swagger UI` and [authorize](./task-1.md#143-authorize-in-swagger-ui).
-3. Try `POST /learners` with a request body:
-
-   ```json
-   {
-     "name": "Frank Castle",
-     "email": "frank@example.com"
-   }
-   ```
-
-4. Observe: you should see a `201` Created status code with the newly created learner.
-
-#### 4.3. Commit Part B
-
-1. [Commit your change using the `Source Control`](../../../wiki/git-workflow.md#commit).
-
-   Use the following commit message:
-
-   ```text
-   feat: implement POST /learners endpoint
-   ```
-
-> [!IMPORTANT]
-> Part A and Part B must be **separate commits**. Do not combine them into one.
-
-### 5. Finish the task
-
-1. [Create a PR](../../../wiki/git-workflow.md#create-a-pr-to-the-main-branch-in-your-fork) with your implementation.
-2. [Get a PR review](../../../wiki/git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
+2. [Create a PR](../../../wiki/git-workflow.md#create-a-pr-to-the-main-branch-in-your-fork) with your changes.
+3. [Get a PR review](../../../wiki/git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
 
 ---
 
-## Acceptance criteria
+## 2. Acceptance criteria
 
 - [ ] Issue has the correct title.
-- [ ] `GET /learners` returns learner data.
-- [ ] `GET /learners?enrolled_after=2025-10-01` returns only learners enrolled after that date.
-- [ ] `POST /learners` creates a new learner and returns `201`.
-- [ ] Part A and Part B are separate commits.
+- [ ] The front-end runs locally with `npm run dev`.
+- [ ] The production build is deployed on the VM and served by `Caddy`.
+- [ ] The `<!-- TODO: <COLUMN_NAME> -->` column appears in the data table in both the dev and production builds.
 - [ ] PR is approved.
 - [ ] PR is merged.
