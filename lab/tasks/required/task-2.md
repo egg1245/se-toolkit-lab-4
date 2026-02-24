@@ -1,40 +1,42 @@
-# Enable and debug a broken endpoint
+# Back-end Testing
 
 <h4>Time</h4>
 
-~40-50 min
+~75 min
 
 <h4>Purpose</h4>
 
-Learn to debug a broken endpoint by tracing code and examining the database using `pgAdmin`.
+Write unit and end-to-end tests, diagnose bugs from failing test output, and use an AI agent to generate additional test cases.
 
 <h4>Context</h4>
 
-The `/interactions` endpoint code exists but is disabled by a feature flag. It contains two bugs: a schema-database mismatch and a logic error.
-
-Your job is to enable the endpoint, discover the bugs, and fix them.
+The back-end contains intentional bugs at specific boundary values.
+You will discover and fix them by writing tests, then use an AI agent to generate additional coverage.
 
 <h4>Table of contents</h4>
 
 - [1. Steps](#1-steps)
   - [1.1. Follow the `Git workflow`](#11-follow-the-git-workflow)
   - [1.2. Create a `Lab Task` issue](#12-create-a-lab-task-issue)
-  - [1.3. Restart the services](#13-restart-the-services)
-  - [1.4. Examine the database using `pgAdmin`](#14-examine-the-database-using-pgadmin)
-  - [1.5. Enable the `/interactions` endpoint](#15-enable-the-interactions-endpoint)
-  - [1.6. Restart the services](#16-restart-the-services)
-  - [1.7. Try `GET /interactions`](#17-try-get-interactions)
-  - [1.8. Read the error](#18-read-the-error)
-  - [1.9. Trace the bug](#19-trace-the-bug)
-  - [1.10. Fix Bug 1: rename `timestamp` to `created_at`](#110-fix-bug-1-rename-timestamp-to-created_at)
-  - [1.11. Verify `GET /interactions` works](#111-verify-get-interactions-works)
-  - [1.12. Commit Bug 1 fix](#112-commit-bug-1-fix)
-  - [1.13. Try `GET /interactions?item_id=2`](#113-try-get-interactionsitem_id2)
-  - [1.14. Compare with the database](#114-compare-with-the-database)
-  - [1.15. Find Bug 2 in the code](#115-find-bug-2-in-the-code)
-  - [1.16. Fix Bug 2: filter by `item_id`](#116-fix-bug-2-filter-by-item_id)
-  - [1.17. Commit Bug 2 fix](#117-commit-bug-2-fix)
-  - [1.18. Finish the task](#118-finish-the-task)
+  - [1.3. Part A: Run unit tests locally](#13-part-a-run-unit-tests-locally)
+    - [1.3.1. Run existing unit tests](#131-run-existing-unit-tests)
+    - [1.3.2. Add a new unit test](#132-add-a-new-unit-test)
+    - [1.3.3. Fix the bug](#133-fix-the-bug)
+    - [1.3.4. Rerun unit tests](#134-rerun-unit-tests)
+    - [1.3.5. Commit the fix](#135-commit-the-fix)
+  - [1.4. Part B: Run end-to-end tests remotely](#14-part-b-run-end-to-end-tests-remotely)
+    - [1.4.1. Redeploy the fixed version](#141-redeploy-the-fixed-version)
+    - [1.4.2. Run existing end-to-end tests](#142-run-existing-end-to-end-tests)
+    - [1.4.3. Add two end-to-end tests](#143-add-two-end-to-end-tests)
+    - [1.4.4. Fix the bug](#144-fix-the-bug)
+    - [1.4.5. Redeploy and rerun](#145-redeploy-and-rerun)
+    - [1.4.6. Commit the fix](#146-commit-the-fix)
+  - [1.5. Part C: Generate tests with an AI agent](#15-part-c-generate-tests-with-an-ai-agent)
+    - [1.5.1. Generate tests](#151-generate-tests)
+    - [1.5.2. Review and curate the tests](#152-review-and-curate-the-tests)
+    - [1.5.3. Run the full test suite](#153-run-the-full-test-suite)
+    - [1.5.4. Commit the curated tests](#154-commit-the-curated-tests)
+  - [1.6. Finish the task](#16-finish-the-task)
 - [2. Acceptance criteria](#2-acceptance-criteria)
 
 ## 1. Steps
@@ -45,225 +47,235 @@ Follow the [`Git workflow`](../../../wiki/git-workflow.md) to complete this task
 
 ### 1.2. Create a `Lab Task` issue
 
-Title: `[Task] Enable and debug the interactions endpoint`
+Title: `[Task] Back-end Testing`
 
-### 1.3. Restart the services
+### 1.3. Part A: Run unit tests locally
 
-1. [Stop the running services](../setup.md#115-new-stop-the-services).
+> [!NOTE]
+> Unit tests do not require a running server. They test individual functions in isolation.
+
+#### 1.3.1. Run existing unit tests
+
+1. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   uv run poe test
+   ```
+
+2. All existing tests should pass.
+
+   The output should be similar to this:
+
+   ```terminal
+   ===================== N passed in X.XXs =====================
+   ```
+
+#### 1.3.2. Add a new unit test
+
+<!-- TODO: specify the exact boundary-value case and the test file path once the seed code is finalized -->
+
+1. [Open the file](../../../wiki/vs-code.md#open-the-file):
+   [`tests/unit/<test-file>.py`](../../../tests/).
+2. Add a new unit test that targets the following boundary-value case:
+
+   `<!-- TODO: describe the boundary-value case -->`
+
+3. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   uv run poe test
+   ```
+
+4. Observe that the new test fails.
+
+   The output should be similar to this:
+
+   ```terminal
+   FAILED tests/unit/<test-file>.py::<test-name> - <assertion error>
+   ```
+
+   This line means the following:
+   - The test failed (`FAILED`).
+   - The test is in the file `tests/unit/<test-file>.py`.
+   - The name of the failing test is `<test-name>`.
+   - The failed assertion is `<assertion error>`.
+
+#### 1.3.3. Fix the bug
+
+<!-- TODO: describe the bug location and fix -->
+
+1. [Open the file](../../../wiki/vs-code.md#open-the-file) that contains the bug.
+2. Fix the bug.
+
+<details><summary>Click to open a hint</summary>
+
+<!-- TODO: hint — explain the bug in plain English without concrete examples -->
+
+</details>
+
+<details><summary>Click to open the solution</summary>
+
+<!-- TODO: solution — show the before/after code diff -->
+
+</details>
+
+#### 1.3.4. Rerun unit tests
+
+1. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   uv run poe test
+   ```
+
+2. All tests should pass.
+
+#### 1.3.5. Commit the fix
+
+1. [Commit](../../../wiki/git-workflow.md#commit) your changes.
+
+   Use the following commit message:
+
+   ```text
+   fix: <!-- TODO: describe what was fixed -->
+   ```
+
+### 1.4. Part B: Run end-to-end tests remotely
+
+> [!NOTE]
+> End-to-end tests run on your local machine and send real [HTTP](../../../wiki/http.md) requests to the deployed version on the VM.
+
+#### 1.4.1. Redeploy the fixed version
+
+<!-- TODO: add specific deployment steps referencing the Lab 3 deployment wiki page or process once finalized -->
+
+1. Redeploy the fixed version to your VM using the same process as in Lab 3.
+
+#### 1.4.2. Run existing end-to-end tests
+
+1. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   <!-- TODO: add e2e test command once finalized -->
+   ```terminal
+   uv run poe test-e2e
+   ```
+
+2. All existing end-to-end tests should pass.
+
+#### 1.4.3. Add two end-to-end tests
+
+<!-- TODO: specify the exact boundary-value cases and the test file path -->
+
+1. [Open the file](../../../wiki/vs-code.md#open-the-file):
+   [`tests/e2e/<test-file>.py`](../../../tests/).
+2. Add two end-to-end tests that cover the following boundary-value cases:
+
+   `<!-- TODO: describe the boundary-value cases -->`
+
+   <details><summary>Click to open a hint</summary>
+
+   <!-- TODO: hint — explain the cases in plain English without concrete examples -->
+
+   </details>
+
+   <details><summary>Click to open the solution</summary>
+
+   <!-- TODO: solution — show ready test cases -->
+
+   </details>
+
+3. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   uv run poe test-e2e
+   ```
+
+4. Observe that at least one new test fails.
+
+#### 1.4.4. Fix the bug
+
+1. [Open the file](../../../wiki/vs-code.md#open-the-file) that contains the bug.
+2. Fix the bug.
+
+   <details><summary>Click to open a hint</summary>
+
+   <!-- TODO: hint — explain the bug in plain English without concrete instructions -->
+
+   </details>
+
+   <details><summary>Click to open the solution</summary>
+
+   <!-- TODO: solution — show the before/after code fix -->
+
+   </details>
+
+#### 1.4.5. Redeploy and rerun
+
+1. Redeploy the fixed version to the VM.
 2. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
-   docker compose --env-file .env.docker.secret up --build
+   uv run poe test-e2e
    ```
 
-3. Wait until the services are ready (2-3 minutes). You should see log output from the application and database containers.
-4. [Open a new `VS Code Terminal`](../../../wiki/vs-code.md#open-a-new-vs-code-terminal) to run commands while the services are running.
+3. All end-to-end tests should pass.
 
-### 1.4. Examine the database using `pgAdmin`
-
-1. Make sure you have [set up `pgAdmin`](../setup.md#1142-new-set-up-pgadmin).
-2. [Inspect columns](../../../wiki/pgadmin.md#inspect-columns) of the `interaction_logs` table.
-3. Note the column names: `id`, `learner_id`, `item_id`, `kind`, `created_at`.
-
-> [!NOTE]
-> Pay attention to the column name `created_at`. You will need it later.
-
-### 1.5. Enable the `/interactions` endpoint
-
-1. [Open the file](../../../wiki/vs-code.md#open-the-file):
-   `.env.docker.secret`.
-2. Change:
-
-   ```text
-   ENABLE_INTERACTIONS=false
-   ```
-
-   to:
-
-   ```text
-   ENABLE_INTERACTIONS=true
-   ```
-
-3. Save the file.
-
-> [!NOTE]
-> `.env.docker.secret` is listed in `.gitignore` and will not be committed.
-> The flag tells the application to register the `/interactions` route at startup.
-
-### 1.6. Restart the services
-
-1. Stop the `app` service:
-
-   [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   docker compose --env-file .env.docker.secret down app
-   ```
-
-2. Start the `app` service:
-
-   [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
-
-   ```terminal
-   docker compose --env-file .env.docker.secret up app --build
-   ```
-
-### 1.7. Try `GET /interactions`
-
-1. Open in a browser: <http://127.0.0.1:42001/docs>.
-2. [Authorize](./task-1.md#143-authorize-in-swagger-ui) with the API key.
-3. Expand the `GET /interactions` endpoint.
-4. Click `Try it out`.
-5. Click `Execute`.
-6. Observe the response: you should see a `500` Internal Server Error.
-
-### 1.8. Read the error
-
-1. Look at the error response in `Swagger UI`.
-2. Look at the application logs in the terminal where `Docker Compose` is running.
-3. The error mentions a missing or mismatched field: `timestamp`.
-
-### 1.9. Trace the bug
-
-1. [Open the file](../../../wiki/vs-code.md#open-the-file):
-   [`src/app/routers/interactions.py`](../../../src/app/routers/interactions.py).
-2. Look at the endpoint definition:
-
-   ```python
-   @router.get("/", response_model=list[InteractionModel])
-   async def get_interactions(...)
-   ```
-
-   **Note:** The path `"/"` is local to this router file.
-
-   `FastAPI` combines it with the `prefix="/interactions"` set in [`src/app/main.py`](../../../src/app/main.py) to produce the full path `/interactions`.
-
-   The `response_model` parameter tells `FastAPI` which schema to use when serializing the response. It is `InteractionModel`.
-3. [Open the file](../../../wiki/vs-code.md#open-the-file):
-   [`src/app/models/interaction.py`](../../../src/app/models/interaction.py).
-4. Look at the `InteractionModel` class (the response schema).
-5. The response schema has a field called `timestamp`.
-6. [Recall](#14-examine-the-database-using-pgadmin) that
-   the database table `interaction_logs` has a column called `created_at`, not `timestamp`.
-7. The `InteractionLog` class (the database model) has `created_at`, but the `InteractionModel` class (the response schema) has `timestamp`.
-8. This mismatch causes the error.
-
-### 1.10. Fix Bug 1: rename `timestamp` to `created_at`
-
-1. In [`src/app/models/interaction.py`](../../../src/app/models/interaction.py), change the `InteractionModel` class:
-
-   **Before:**
-
-   ```python
-   timestamp: datetime
-   ```
-
-   **After:**
-
-   ```python
-   created_at: datetime
-   ```
-
-2. Save the file.
-
-<details><summary>Hint: what to look for</summary>
-
-The field name in the response schema (`InteractionModel`) must match the field name in the database model (`InteractionLog`). The database column is `created_at`, so the response schema must also use `created_at`.
-
-</details>
-
-### 1.11. Verify `GET /interactions` works
-
-1. [Restart the services](#16-restart-the-services).
-2. Open `Swagger UI` and [authorize](./task-1.md#143-authorize-in-swagger-ui).
-3. Try `GET /interactions`.
-4. Observe: you should see a `200` status code with interaction data.
-
-### 1.12. Commit Bug 1 fix
+#### 1.4.6. Commit the fix
 
 1. [Commit](../../../wiki/git-workflow.md#commit) your changes.
 
    Use the following commit message:
 
    ```text
-   fix: rename timestamp to created_at in InteractionModel
-   ```
-
-### 1.13. Try `GET /interactions?item_id=2`
-
-1. In `Swagger UI`, expand the `GET /interactions` endpoint.
-2. Click `Try it out`.
-3. Enter `2` in the `item_id` field.
-4. Click `Execute`.
-5. Note the results that are returned.
-
-### 1.14. Compare with the database
-
-1. [Open `pgAdmin`](../../../wiki/pgadmin.md#open-pgadmin).
-2. [Run a query](../../../wiki/pgadmin.md#run-a-query) on the `interaction_logs` table:
-
-   ```sql
-   SELECT * FROM interaction_logs WHERE item_id = 2;
-   ```
-
-3. Compare the query results with the response from `Swagger UI`.
-4. Notice that the results don't match — the API returns different interactions than what the database query shows.
-
-### 1.15. Find Bug 2 in the code
-
-1. [Open the file](../../../wiki/vs-code.md#open-the-file):
-   [`src/app/routers/interactions.py`](../../../src/app/routers/interactions.py).
-2. Look at the filtering code:
-
-   ```python
-   interactions = [i for i in interactions if i.learner_id == item_id]
-   ```
-
-3. The code filters by `i.learner_id` instead of `i.item_id`.
-4. This means the endpoint returns interactions for a specific **learner**, not for a specific **item**.
-
-<details><summary>Hint: what to look for</summary>
-
-The query parameter is called `item_id`, so the filter should compare `i.item_id == item_id`, not `i.learner_id == item_id`.
-
-</details>
-
-### 1.16. Fix Bug 2: filter by `item_id`
-
-1. In [`src/app/routers/interactions.py`](../../../src/app/routers/interactions.py), change the filtering line:
-
-   **Before:**
-
-   ```python
-   interactions = [i for i in interactions if i.learner_id == item_id]
-   ```
-
-   **After:**
-
-   ```python
-   interactions = [i for i in interactions if i.item_id == item_id]
-   ```
-
-2. Save the file.
-3. [Restart the services](#16-restart-the-services).
-4. Verify in `Swagger UI` that `GET /interactions?item_id=2` now returns the correct results matching the database query.
-
-### 1.17. Commit Bug 2 fix
-
-1. [Commit](../../../wiki/git-workflow.md#commit) your changes.
-
-   Use the following commit message:
-
-   ```text
-   fix: filter interactions by item_id instead of learner_id
+   fix: <!-- TODO: describe what was fixed -->
    ```
 
 > [!IMPORTANT]
-> Each fix must be a **separate commit**. Do not combine them into one.
+> Each fix must be a **separate commit**. Do not combine the Part A and Part B fixes into one commit.
 
-### 1.18. Finish the task
+### 1.5. Part C: Generate tests with an AI agent
 
-1. [Create a PR](../../../wiki/git-workflow.md#create-a-pr-to-the-main-branch-in-your-fork) with your fixes.
+#### 1.5.1. Generate tests
+
+1. Open the AI agent in the back-end project directory.
+2. Give it this prompt:
+
+   > "Read the back-end source code and the existing unit tests. Generate five new unit tests that cover edge cases and boundary values not already tested."
+
+3. Wait for the agent to generate the tests.
+
+#### 1.5.2. Review and curate the tests
+
+1. Review each generated test against the following criteria:
+
+   - **Keep** — the test is correct, targets a real case, and adds coverage not already present.
+   - **Fix** — the test has a minor error (wrong assertion, wrong expected value) but the idea is sound — correct it.
+   - **Discard** — the test duplicates an existing test, is logically wrong, or tests behaviour outside the scope of the module.
+
+2. Keep at least two tests and discard at least one.
+
+#### 1.5.3. Run the full test suite
+
+1. [Run using the `VS Code Terminal`](../../../wiki/vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   uv run poe test
+   ```
+
+2. All tests (including the curated AI-generated ones) should pass.
+
+#### 1.5.4. Commit the curated tests
+
+1. [Commit](../../../wiki/git-workflow.md#commit) your changes.
+
+   Use the following commit message:
+
+   ```text
+   test: add curated AI-generated unit tests
+   ```
+
+### 1.6. Finish the task
+
+1. [Create a PR](../../../wiki/git-workflow.md#create-a-pr-to-the-main-branch-in-your-fork) with your changes.
 2. [Get a PR review](../../../wiki/git-workflow.md#get-a-pr-review) and complete the subsequent steps in the `Git workflow`.
 
 ---
@@ -271,8 +283,9 @@ The query parameter is called `item_id`, so the filter should compare `i.item_id
 ## 2. Acceptance criteria
 
 - [ ] Issue has the correct title.
-- [ ] `GET /interactions` returns interaction data.
-- [ ] `GET /interactions?item_id=2` returns only interactions for item 2.
-- [ ] Each fix is a separate commit.
+- [ ] All unit tests pass.
+- [ ] All end-to-end tests pass.
+- [ ] AI-generated tests include at least two kept tests and at least one discarded test.
+- [ ] The Part A fix and Part B fix are separate commits.
 - [ ] PR is approved.
 - [ ] PR is merged.

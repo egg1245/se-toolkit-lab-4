@@ -42,6 +42,8 @@
     - [1.14.2. (NEW) Set up `pgAdmin`](#1142-new-set-up-pgadmin)
   - [1.15. (NEW) Stop the services](#115-new-stop-the-services)
   - [1.16. (NEW) Add SSH key for the autochecker](#116-new-add-ssh-key-for-the-autochecker)
+  - [1.17. (NEW) Set up a coding agent](#117-new-set-up-a-coding-agent)
+  - [1.18. (NEW) Log in to the autochecker](#118-new-log-in-to-the-autochecker)
 - [2. Optional steps](#2-optional-steps)
   - [2.1. (NEW) Learn to go back after clicking a link](#21-new-learn-to-go-back-after-clicking-a-link)
   - [2.2. Set up a coding agent](#22-set-up-a-coding-agent)
@@ -354,6 +356,17 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 1. [Connect to your VM](../../wiki/vm.md#connect-to-the-vm).
 2. [Create the `autochecker` user](../../wiki/vm-autochecker.md#create-the-autochecker-user).
 3. [Add the instructor's SSH public key to the `autochecker` user](../../wiki/vm-autochecker.md#add-an-ssh-public-key-to-the-autochecker-user):
+
+### 1.17. (NEW) Set up a coding agent
+
+Follow the [`Coding agents`](../../wiki/coding-agents.md) guide to set up a coding agent on your machine.
+
+### 1.18. (NEW) Log in to the autochecker
+
+<!-- TODO: add autochecker login steps and link to wiki once the autochecker web UI is available -->
+
+1. Open the autochecker in a browser: `<autochecker-url>`
+2. Log in using your `GitHub` credentials.
 
 ---
 
