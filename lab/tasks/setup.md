@@ -132,12 +132,12 @@
 #### 1.4.2. Set up `Git`
 
 1. (Optional) [Read about `Git`](../../wiki/git.md#what-is-git).
-2. [Install `Git`](https://git-scm.com/install/) if not installed.
+2. [Install `Git`](https://git-scm.com/install/) if it's not installed.
 
 #### 1.4.3. Set up `Docker`
 
 1. (Optional) [Read about `Docker`](../../wiki/docker.md#what-is-docker).
-2. [Install `Docker`](../../wiki/docker.md#install-docker) if not installed.
+2. [Install `Docker`](../../wiki/docker.md#install-docker) if it's not installed.
 3. If you use `Docker Desktop`, open it.
 
    You should see `Engine running`.
