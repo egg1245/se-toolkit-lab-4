@@ -13,6 +13,7 @@ It allows you to install tools and dependencies without affecting the rest of yo
 Docs:
 
 - [Nix documentation](https://nix.dev/)
+- [NixOS & Flakes Book](https://nixos-and-flakes.thiscute.world/introduction/)
 
 ## Install `Nix`
 
