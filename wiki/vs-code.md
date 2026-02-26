@@ -336,8 +336,9 @@ Method 2:
 ### Run a command using the `VS Code Terminal`
 
 1. [Open the `VS Code Terminal`](#open-the-vs-code-terminal).
-2. Write or [paste](#paste-text-inside-the-vs-code-terminal) a command.
-3. Press `Enter`.
+2. [Check the current shell in the `VS Code Terminal`](#check-the-current-shell-in-the-vs-code-terminal).
+3. Write or [paste](#paste-text-inside-the-vs-code-terminal) a command.
+4. Press `Enter`.
 
 ## `Explorer`
 
