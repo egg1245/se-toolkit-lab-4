@@ -57,6 +57,7 @@
 - [Common actions](#common-actions)
   - [Open the directory](#open-the-directory)
     - [(`Windows` only) Open the directory in `WSL`](#windows-only-open-the-directory-in-wsl)
+    - [(`Windows` only) Reopen the directory in `WSL`](#windows-only-reopen-the-directory-in-wsl)
   - [Open the file](#open-the-file)
     - [Open the file using `code`](#open-the-file-using-code)
   - [Open the `Markdown` preview](#open-the-markdown-preview)
@@ -344,8 +345,7 @@ Method 2:
 ### (`Windows` only) Set the default shell for the `VS Code Terminal`
 
 1. Make sure you can [run `VS Code` in WSL](#windows-only-set-up-running-vs-code-in-wsl).
-2. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
-   `WSL: Reopen Folder in WSL`.
+2. [Reopen the directory in `WSL`](#windows-only-reopen-the-directory-in-wsl)
 3. [Run using the `Command Palette`](#run-a-command-using-the-command-palette):
    `Terminal: Select Default Profile`.
 4. There can be the following cases.
@@ -618,6 +618,11 @@ Here are some [workspace settings](#workspace-settings) that you can change:
 2. Click `Show Local`.
 3. Select the directory.
 4. [Check the current shell in the `VS Code Terminal`](#check-the-current-shell-in-the-vs-code-terminal).
+
+#### (`Windows` only) Reopen the directory in `WSL`
+
+1. [Run using the `Command Palette`](./vs-code.md#run-a-command-using-the-command-palette):
+   `WSL: Reopen Folder in WSL`.
 
 ### Open the file
 
