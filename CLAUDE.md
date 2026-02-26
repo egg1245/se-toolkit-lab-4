@@ -22,6 +22,12 @@ Read before making changes:
 
 - [`instructors/context/lab-conventions/conventions-lab.md`](instructors/context/lab-conventions/conventions-lab.md) — repo structure, README, setup, git-workflow, GitHub templates, VS Code config, task runner, narrative, Docker, CONTRIBUTORS, checklist, security
 
+## When editing code (`src/`, `frontend/`, `tests/`)
+
+Read and follow:
+
+- [`docs/contributing/conventions/code.md`](docs/contributing/conventions/code.md) — naming, comments, type safety, linting, shift-left testing, security
+
 ## Other files
 
 Do NOT apply task/wiki conventions to files under `instructors/` (internal design notes).
