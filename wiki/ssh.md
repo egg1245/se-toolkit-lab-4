@@ -19,6 +19,7 @@
   - [`Permission denied (publickey)`](#permission-denied-publickey)
   - [`Bad owner or permissions`](#bad-owner-or-permissions)
   - [`Connection timed out`](#connection-timed-out)
+- [`scp`](#scp)
 
 ## What is `SSH`
 
@@ -277,3 +278,15 @@ Password-based authentication asks you to type the remote user's password.
    ```
 
 5. Try to stop, delete, and create a new VM if there are still problems.
+
+## `scp`
+
+`scp` (`Secure Copy`) copies files between machines over [`SSH`](#what-is-ssh).
+
+Common pattern:
+
+```terminal
+scp -r <local-path> <user>@<host>:<remote-path>
+```
+
+The `-r` flag copies directories recursively.
