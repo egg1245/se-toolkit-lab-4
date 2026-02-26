@@ -292,6 +292,12 @@ Method 2:
 
 ### (`Windows` only) Set up running `VS Code` in `WSL`
 
+<img alt="VS Code and WSL" src="./images/vs-code/vs-code-wsl.png" style="width:400px"></img>
+
+[image source](https://code.visualstudio.com/docs/remote/wsl)
+
+Steps:
+
 1. [Enable `WSL`](https://code.visualstudio.com/docs/remote/wsl-tutorial#_enable-wsl).
 2. Open `VS Code`.
 3. [Install the extension](./vs-code.md#extensions):
