@@ -618,7 +618,7 @@ Steps:
 2. Open `VS Code`.
 3. [Install the extension](./vs-code.md#install-the-extension) with the identifier `ms-vscode-remote.remote-wsl`.
 
-   It lets you use `WSL` in `VS Code`.
+   This extension lets you use `VS Code` in [`WSL`](./operating-system.md#wsl).
 4. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
