@@ -37,7 +37,7 @@ Docs:
    [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
-   curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+   curl -fsSL https://install.determinate.systems/nix | sh -s -- install
    ```
 
 2. Follow the prompts to complete the installation.
