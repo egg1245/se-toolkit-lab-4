@@ -40,6 +40,7 @@
                       --no-progress \
                       --exclude-path '.venv' \
                       --exclude-path '.direnv' \
+                      --exclude-path 'node_modules' \
                       --root-dir . \
                       --cache \
                       --format json \
@@ -52,7 +53,7 @@
                   name = "lint-docs";
                   command = ''
                     ${pkgs.lib.getExe pkgs.markdownlint-cli2} \
-                      '**/*.md' '#.direnv' '#.venv'
+                      '**/*.md' '#.direnv' '#.venv' '#node_modules'
                   '';
                   help = "Lint all Markdown files";
                 }
