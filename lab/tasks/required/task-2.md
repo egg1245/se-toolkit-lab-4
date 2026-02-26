@@ -103,7 +103,7 @@ Title: `[Task] Back-end Testing`
 #### 1.3.3. Fix the bug
 
 1. [Open the file](../../../wiki/vs-code.md#open-the-file):
-   [`src/app/routers/interactions.py`](../../../src/app/routers/interactions.py).
+   [`backend/app/routers/interactions.py`](../../../backend/app/routers/interactions.py).
 2. Fix the bug in the `_filter_by_item_id` function.
 
 <details><summary>Click to open a hint</summary>
@@ -243,7 +243,7 @@ return [i for i in interactions if i.item_id == item_id]
 #### 1.4.4. Fix the bug
 
 1. [Open the file](../../../wiki/vs-code.md#open-the-file):
-   [`src/app/models/interaction.py`](../../../src/app/models/interaction.py).
+   [`backend/app/models/interaction.py`](../../../backend/app/models/interaction.py).
 2. Fix the bug in `InteractionModel`.
 
    <details><summary>Click to open a hint</summary>

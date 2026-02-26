@@ -68,33 +68,33 @@ Branching, committing, opening PRs, and the review process used throughout the l
 
 Entry point and configuration:
 
-- [`src/app/main.py`](src/app/main.py) — FastAPI app creation and router registration.
-- [`src/app/settings.py`](src/app/settings.py) — environment-based configuration.
-- [`src/app/auth.py`](src/app/auth.py) — API key authentication dependency.
-- [`src/app/database.py`](src/app/database.py) — database session setup.
-- [`src/app/run.py`](src/app/run.py) — entry point for running the server.
+- [`backend/app/main.py`](backend/app/main.py) — FastAPI app creation and router registration.
+- [`backend/app/settings.py`](backend/app/settings.py) — environment-based configuration.
+- [`backend/app/auth.py`](backend/app/auth.py) — API key authentication dependency.
+- [`backend/app/database.py`](backend/app/database.py) — database session setup.
+- [`backend/app/run.py`](backend/app/run.py) — entry point for running the server.
 
 Routers (HTTP endpoints):
 
-- [`src/app/routers/items.py`](src/app/routers/items.py)
-- [`src/app/routers/interactions.py`](src/app/routers/interactions.py)
-- [`src/app/routers/learners.py`](src/app/routers/learners.py)
+- [`backend/app/routers/items.py`](backend/app/routers/items.py)
+- [`backend/app/routers/interactions.py`](backend/app/routers/interactions.py)
+- [`backend/app/routers/learners.py`](backend/app/routers/learners.py)
 
 Models (Pydantic schemas):
 
-- [`src/app/models/item.py`](src/app/models/item.py)
-- [`src/app/models/interaction.py`](src/app/models/interaction.py)
-- [`src/app/models/learner.py`](src/app/models/learner.py)
+- [`backend/app/models/item.py`](backend/app/models/item.py)
+- [`backend/app/models/interaction.py`](backend/app/models/interaction.py)
+- [`backend/app/models/learner.py`](backend/app/models/learner.py)
 
 Database queries:
 
-- [`src/app/db/items.py`](src/app/db/items.py)
-- [`src/app/db/interactions.py`](src/app/db/interactions.py)
-- [`src/app/db/learners.py`](src/app/db/learners.py)
+- [`backend/app/db/items.py`](backend/app/db/items.py)
+- [`backend/app/db/interactions.py`](backend/app/db/interactions.py)
+- [`backend/app/db/learners.py`](backend/app/db/learners.py)
 
 Database seed:
 
-- [`src/app/data/init.sql`](src/app/data/init.sql) — initial schema and data loaded on first `PostgreSQL` start.
+- [`backend/app/data/init.sql`](backend/app/data/init.sql) — initial schema and data loaded on first `PostgreSQL` start.
 
 ## Infrastructure
 

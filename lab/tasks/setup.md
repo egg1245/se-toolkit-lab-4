@@ -283,7 +283,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
    > **NOTE**
    >
-   > The database is initialized from [`src/app/data/init.sql`](../../src/app/data/init.sql) only on the **first** start of the `PostgreSQL` container.
+   > The database is initialized from [`backend/app/data/init.sql`](../../backend/app/data/init.sql) only on the **first** start of the `PostgreSQL` container.
    >
    > If you need to re-initialize the database (e.g., after pulling upstream changes to `init.sql`), see [Resetting the database](../../wiki/docker-postgres.md#resetting-the-database).
 
