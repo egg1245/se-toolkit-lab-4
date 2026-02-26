@@ -13,11 +13,12 @@ It allows you to install tools and dependencies without affecting the rest of yo
 Docs:
 
 - [Nix documentation](https://nix.dev/)
-- [Determinate Systems installer](https://github.com/DeterminateSystems/nix-installer#install-determinate-nix)
 
 ## Install `Nix`
 
-1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. Install `Nix` using the [`Determinate Systems` installer](https://github.com/DeterminateSystems/nix-installer#install-determinate-nix):
+
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
    curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
