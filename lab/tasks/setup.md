@@ -204,10 +204,6 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 > [!NOTE]
 > See [`uv`](../../wiki/python.md#uv).
 
-> [!TIP]
-> Skip this step if you managed to [set up `direnv`](#18-new-optional-set-up-direnv).
-> You already have `uv` from the [devshell](../../wiki/nix.md#devshell).
-
 1. [Install `uv`](../../wiki/python.md#install-uv).
 
 #### 1.9.2. (UPD) Set up `Python` in `VS Code`
