@@ -4,33 +4,62 @@
 
 - [What is `Nix`](#what-is-nix)
 - [`nixpkgs`](#nixpkgs)
+  - [`nixpkgs` repository](#nixpkgs-repository)
+    - [Browse a `nixpkgs` repository revision](#browse-a-nixpkgs-repository-revision)
+  - [Search `nixpkgs`](#search-nixpkgs)
 - [Set up `Nix`](#set-up-nix)
-- [Install `Nix`](#install-nix)
-- [Verify `Nix` installation](#verify-nix-installation)
+  - [Install `Nix`](#install-nix)
+  - [Verify `Nix` installation](#verify-nix-installation)
+  - [Install `jq`](#install-jq)
+  - [Pin `nixpkgs`](#pin-nixpkgs)
+- [Flake](#flake)
+  - [`flake.lock`](#flakelock)
+  - [Flake registry](#flake-registry)
+  - [Common flake commands](#common-flake-commands)
+    - [`nix flake update`](#nix-flake-update)
+- [Troubleshooting](#troubleshooting)
+  - [Enable `nix-daemon`](#enable-nix-daemon)
 
 ## What is `Nix`
 
-`Nix` is a cross-platform package manager that provides reproducible, isolated software environments.
-It allows you to install tools and dependencies without affecting the rest of your system.
+`Nix` is a cross-platform [package manager](./package-manager.md#package) that provides reproducible, isolated software [environments](./environments.md#what-is-environment).
+It allows you to install [tools](./package-manager.md#tool) and [dependencies](./package-manager.md#dependency) without affecting the rest of your system.
+
+Many of the packages are available in [`nixpkgs`](#nixpkgs).
 
 Docs:
 
 - [Nix documentation](https://nix.dev/)
+- [Nix 2.33.3 Reference Manual](https://nix.dev/manual/nix/2.33/)
 - [NixOS & Flakes Book](https://nixos-and-flakes.thiscute.world/introduction/)
 
 ## `nixpkgs`
 
-`nixpkgs` is the official package collection for `Nix`, containing over 120,000 packages.
-It is the source from which `Nix` installs tools and dependencies.
+`nixpkgs` is the official [package](./package-manager.md#package) collection for `Nix`, containing over 120,000 packages.
+It is a source from which `Nix` installs [tools](./package-manager.md#tool) and [dependencies](./package-manager.md#dependency).
 
-According to `Repology`, `nixpkgs` contains the largest number of the newest versions of packages among `Linux` repositories.
+According to [`Repology`](https://repology.org/docs/about), `nixpkgs` contains the largest number of the newest versions of packages among `Linux` repositories (see the [comparison](https://repology.org/repositories/statistics/newest)).
 
 Docs:
 
-- [`nixpkgs` repository on `GitHub`](https://github.com/nixos/nixpkgs)
 - [Nixpkgs Reference Manual](https://nixos.org/manual/nixpkgs/stable/)
-- [Search nixpkgs](https://search.nixos.org/packages)
-- [`nixpkgs` on `Repology`](https://repology.org/repositories/statistics/newest)
+
+### `nixpkgs` repository
+
+`nixpkgs` on [`GitHub`](./github.md#what-is-github): <https://github.com/nixos/nixpkgs>
+
+#### Browse a `nixpkgs` repository revision
+
+See [Browse a repository revision](./github.md#browse-a-repository-revision):
+
+- `<repo-url>` is <https://github.com/nixos/nixpkgs>.
+- `<revision>` is a revision that you want to browse.
+
+Example: `https://github.com/nixos/nixpkgs/tree/ac055f38c798b0d87695240c7b761b82fc7e5bc2`
+
+### Search `nixpkgs`
+
+[Search nixpkgs](https://search.nixos.org/packages).
 
 ## Set up `Nix`
 
@@ -38,8 +67,9 @@ Complete these steps:
 
 1. [Install `Nix`](#install-nix).
 2. [Verify `Nix` installation](#verify-nix-installation).
+3. [Pin `nixpkgs`](#pin-nixpkgs).
 
-## Install `Nix`
+### Install `Nix`
 
 1. Install `Nix` using the [`Determinate Systems` installer](https://github.com/DeterminateSystems/nix-installer#install-determinate-nix):
 
@@ -54,7 +84,7 @@ Complete these steps:
 3. [Delete the current `VS Code Terminal`](./vs-code.md#delete-a-vs-code-terminal).
 4. [Open a new `VS Code Terminal`](./vs-code.md#open-a-new-vs-code-terminal) after the installation finishes.
 
-## Verify `Nix` installation
+### Verify `Nix` installation
 
 1. Check the version of the `nix` [program](./linux.md#program):
 
@@ -69,3 +99,57 @@ Complete these steps:
    ```terminal
    nix (Determinate Nix 3.15.2) 2.33.1
    ```
+
+### Install `jq`
+
+1. Install [`jq`](./useful-programs.md#jq) from [`nixpkgs`](#nixpkgs):
+
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   nix profile add nixpkgs#jq
+   ```
+
+### Pin `nixpkgs`
+
+1. Get the [commit hash](./git.md#commit-hash) of the [`nixpkgs` repository](#nixpkgs-repository) specified in the [`flake.lock`](#flakelock):
+
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   nix flake metadata --json | jq -r '.locks.nodes.nixpkgs.locked.rev'
+   ```
+
+   The output should be as follows:
+
+   ```terminal
+   ac055f38c798b0d87695240c7b761b82fc7e5bc2
+   ```
+
+2. Pin `nixpkgs` in your [flake registry](#flake-registry) to the same commit hash:
+
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   nix registry pin nixpkgs github:nixos/nixpkgs/ac055f38c798b0d87695240c7b761b82fc7e5bc2
+   ```
+
+## Flake
+
+<!-- TODO -->
+
+### `flake.lock`
+
+See the [`flake.lock`](../flake.lock) file.
+
+### Flake registry
+
+### Common flake commands
+
+#### `nix flake update`
+
+Update the revision of inputs used in this project using the [`nix flake update`](https://nix.dev/manual/nix/2.33/command-ref/new-cli/nix3-flake-update.html) command.
+
+## Troubleshooting
+
+### Enable `nix-daemon`
