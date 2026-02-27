@@ -129,9 +129,7 @@
 
 1. (Optional) [Read about `Docker`](../../wiki/docker.md#what-is-docker).
 2. [Install `Docker`](../../wiki/docker.md#install-docker) if it's not installed.
-3. (`Windows` only) Open `Docker Desktop`.
-
-   You should see `Engine running`.
+3. [Start `Docker`](../../wiki/docker.md#start-docker).
 
 #### 1.4.3. (UPD) (`Windows` only) Set the default shell for the `VS Code Terminal`
 
