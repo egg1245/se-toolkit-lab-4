@@ -144,21 +144,50 @@ Complete these steps:
 
 > `nil` is a [language server](./vs-code.md#language-server) for [`Nix`](#what-is-nix).
 
-[Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
-```terminal
-nix profile add nixpkgs#nil
-```
+   ```terminal
+   nix profile add nixpkgs#nil
+   ```
+
+2. Check the `nil` version:
+
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   nil --version
+   ```
+
+   The output should be:
+
+   ```terminal
+   nil 2025-06-13
+   ```
+
 
 ### Install `nixfmt`
 
 > `nixfmt` is a formatter for [`Nix`](#what-is-nix).
 
-[Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
-```terminal
-nix profile add nixpkgs#nixfmt
-```
+   ```terminal
+   nix profile add nixpkgs#nixfmt
+   ```
+
+2. Check the `nixfmt` version:
+
+   [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   nixfmt --version
+   ```
+
+   The output should be:
+
+   ```terminal
+   nixfmt 1.2.0
+   ```
 
 ## Flake
 
