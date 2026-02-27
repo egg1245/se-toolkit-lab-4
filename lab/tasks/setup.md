@@ -22,6 +22,7 @@
     - [1.6.2. (UPD) Clone your fork](#162-upd-clone-your-fork)
     - [1.6.3. (UPD) Open the cloned repo in `VS Code`](#163-upd-open-the-cloned-repo-in-vs-code)
   - [1.8. Continue creating a VM](#18-continue-creating-a-vm)
+  - [1.9. (NEW) (Optional) Set up `direnv`](#19-new-optional-set-up-direnv)
   - [1.9. Set up `Python` in `VS Code`](#19-set-up-python-in-vs-code)
     - [1.9.1. Install `uv`](#191-install-uv)
     - [1.9.2. (UPD) Install `Python` and dependencies](#192-upd-install-python-and-dependencies)
@@ -194,6 +195,10 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 
 1. [Set up `SSH`](../../wiki/ssh.md#set-up-ssh).
 2. [Create a VM using the subscription](../../wiki/vm.md#create-a-vm-using-the-subscription).
+
+### 1.9. (NEW) (Optional) Set up `direnv`
+
+1. [Set up `direnv`](../../wiki/direnv.md#set-up-direnv).
 
 ### 1.9. Set up `Python` in `VS Code`
 
