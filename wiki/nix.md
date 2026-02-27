@@ -16,6 +16,7 @@
   - [Install `nixfmt`](#install-nixfmt)
 - [Flake](#flake)
   - [`flake.lock`](#flakelock)
+  - [Devshell](#devshell)
   - [Common flake commands](#common-flake-commands)
     - [`nix flake update`](#nix-flake-update)
 - [Flake registry](#flake-registry)
@@ -202,6 +203,10 @@ Docs:
 - [Lock files](https://nix.dev/manual/nix/2.33/command-ref/new-cli/nix3-flake.html#lock-files)
 
 Example: [`flake.lock`](../flake.lock).
+
+### Devshell
+
+<!-- TODO -->
 
 ### Common flake commands
 
