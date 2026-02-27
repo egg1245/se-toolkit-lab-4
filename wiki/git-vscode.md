@@ -60,7 +60,13 @@
    [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
 
    ```terminal
-   cd path/to/the/directory
+   cd <directory-path>
+   ```
+
+   Example:
+
+   ```terminal
+   cd ~/Desktop/software-engineering-toolkit
    ```
 
 4. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
