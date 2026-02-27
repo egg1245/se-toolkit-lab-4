@@ -208,7 +208,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 #### 1.9.1. Install `uv`
 
 > [!NOTE]
-> [`uv`](../../wiki/python.md#uv) is a package manager for [`Python`](../../wiki/python.md).
+> See [`uv`](../../wiki/python.md#uv).
 
 1. [Install `uv`](../../wiki/python.md#install-uv).
 
