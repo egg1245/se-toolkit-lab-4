@@ -53,6 +53,9 @@
 - [`GitHub Actions`](#github-actions)
 - [Secrets](#secrets)
   - [Add a secret](#add-a-secret)
+- [File preview](#file-preview)
+  - [`Markdown` file preview](#markdown-file-preview)
+    - [Copy code block](#copy-code-block)
 
 ## What is `GitHub`
 
@@ -306,8 +309,6 @@ A placeholder for the name of the [compare branch](#compare-branch).
 4. Check the boxes under the PR description.
 5. Click `Create pull request`.
 
-<!-- TODO Click Markdown code block to copy -->
-
 ## Label
 
 A [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) helps you filter and organize [issues](#issue).
@@ -455,3 +456,19 @@ Secrets are accessed in workflow files as `${{ secrets.SECRET_NAME }}`.
 3. Click `New repository secret`.
 4. Enter the secret name and value.
 5. Click `Add secret`.
+
+## File preview
+
+### `Markdown` file preview
+
+#### Copy code block
+
+In a code block, click the copy icon to copy the block of code.
+
+<img alt="Copy code block" src="./images/github/code-block-copy.png" style="width:100px"></img>
+
+Code block example:
+
+```terminal
+ls .
+```
