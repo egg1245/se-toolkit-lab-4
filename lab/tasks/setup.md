@@ -21,8 +21,8 @@
     - [1.6.1. (UPD) Copy your fork `URL`](#161-upd-copy-your-fork-url)
     - [1.6.2. (UPD) Clone your fork](#162-upd-clone-your-fork)
     - [1.6.3. (UPD) Open the cloned repo in `VS Code`](#163-upd-open-the-cloned-repo-in-vs-code)
-  - [1.8. Continue creating a VM](#18-continue-creating-a-vm)
-  - [1.9. (NEW) (Optional) Set up `direnv`](#19-new-optional-set-up-direnv)
+  - [1.7. Continue creating a VM](#17-continue-creating-a-vm)
+  - [1.8. (NEW) (Optional) Set up `direnv`](#18-new-optional-set-up-direnv)
   - [1.9. Set up `Python` in `VS Code`](#19-set-up-python-in-vs-code)
     - [1.9.1. Install `uv`](#191-install-uv)
     - [1.9.2. (UPD) Set up `Python` in `VS Code`](#192-upd-set-up-python-in-vs-code)
@@ -183,7 +183,7 @@
 2. [Check the current shell in the `VS Code Terminal`](../../wiki/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 3. [Install recommended extensions](../../wiki/vs-code.md#install-recommended-extensions).
 
-### 1.8. Continue creating a VM
+### 1.7. Continue creating a VM
 
 > [!NOTE]
 > Don't overwrite the key if it already exists.
@@ -194,7 +194,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 1. [Set up `SSH`](../../wiki/ssh.md#set-up-ssh).
 2. [Create a VM using the subscription](../../wiki/vm.md#create-a-vm-using-the-subscription).
 
-### 1.9. (NEW) (Optional) Set up `direnv`
+### 1.8. (NEW) (Optional) Set up `direnv`
 
 1. [Set up `direnv`](../../wiki/direnv.md#set-up-direnv).
 
@@ -209,7 +209,7 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 > See [`uv`](../../wiki/python.md#uv).
 
 > [!TIP]
-> Skip this step if you managed to [set up `direnv`](#19-new-optional-set-up-direnv).
+> Skip this step if you managed to [set up `direnv`](#18-new-optional-set-up-direnv).
 > You already have `uv` from the [devshell](../../wiki/nix.md#devshell).
 
 1. [Install `uv`](../../wiki/python.md#install-uv).
