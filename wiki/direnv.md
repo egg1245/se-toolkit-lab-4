@@ -9,6 +9,7 @@
   - [Install the `VS Code` extension](#install-the-vs-code-extension)
   - [Run `direnv allow`](#run-direnv-allow)
   - [Reset and reload environment](#reset-and-reload-environment)
+  - [Reload the `VS Code Terminal`](#reload-the-vs-code-terminal)
 
 ## What is `direnv`
 
@@ -23,6 +24,7 @@ Complete these steps:
 5. [Install the `VS Code` extension](#install-the-vs-code-extension).
 6. [Run `direnv allow`](#run-direnv-allow).
 7. [Reset and reload environment](#reset-and-reload-environment).
+8. [Reload the `VS Code Terminal`](#reload-the-vs-code-terminal).
 
 ### Install `direnv`
 
@@ -92,3 +94,23 @@ Update the environment in which [`VS Code` extensions](./vs-code.md#extensions) 
 3. Click `Restart`.
    <img alt="Direnv restart extensions" src="./images/direnv/direnv-restart-extensions.png" style="width:300px">
 4. Wait 1-2 minutes for extensions to reload.
+
+### Reload the `VS Code Terminal`
+
+1. [Run using the `VS Code Terminal`](./vs-code.md#run-a-command-using-the-vs-code-terminal):
+
+   ```terminal
+   direnv reload
+   ```
+
+   The output should be similar to this text:
+
+   ```terminal
+   [1-front-tools]
+   ...
+   [2-back-tools]
+   ...
+   [[general commands]]
+   ...
+   ```
+
