@@ -26,6 +26,7 @@
   - [1.9. Set up `Python`](#19-set-up-python)
     - [1.9.1. Install `uv`](#191-install-uv)
     - [1.9.2. (UPD) Set up `Python` in `VS Code`](#192-upd-set-up-python-in-vs-code)
+  - [1.10. (NEW) Clean up `Docker`](#110-new-clean-up-docker)
   - [1.10. (UPD) Start the services](#110-upd-start-the-services)
     - [1.10.1. (UPD) Set up the `Docker` environment](#1101-upd-set-up-the-docker-environment)
     - [1.10.2. (UPD) Start the services using `Docker Compose`](#1102-upd-start-the-services-using-docker-compose)
@@ -220,6 +221,14 @@ Complete these steps if you can't [connect to your VM](../../wiki/vm.md#connect-
 > The dependencies have been updated in this project version.
 
 1. [Set up `Python` in `VS Code`](../../wiki/python.md#set-up-python-in-vs-code).
+
+### 1.10. (NEW) Clean up `Docker`
+
+> [!NOTE]
+> Old containers and volumes from a previous lab version may conflict with the updated services.
+> Stop running containers, remove stopped containers, and delete unused volumes so you start with a clean state.
+
+1. [Clean up `Docker`](../../wiki/docker.md#clean-up-docker).
 
 ### 1.10. (UPD) Start the services
 
