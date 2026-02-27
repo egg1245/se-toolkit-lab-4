@@ -51,6 +51,8 @@
 - [Secrets](#secrets)
   - [Add a secret](#add-a-secret)
 
+## What is `GitHub`
+
 ## The `GitHub` site
 
 The `GitHub` site has this [URL](./web-development.md#url): <https://github.com>.
