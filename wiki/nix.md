@@ -16,8 +16,8 @@
   - [`flake.lock`](#flakelock)
   - [Common flake commands](#common-flake-commands)
     - [`nix flake update`](#nix-flake-update)
-  - [Flake registry](#flake-registry)
-    - [`nix registry pin`](#nix-registry-pin)
+- [Flake registry](#flake-registry)
+  - [`nix registry pin`](#nix-registry-pin)
 - [Troubleshooting](#troubleshooting)
   - [Enable `nix-daemon`](#enable-nix-daemon)
 
@@ -157,13 +157,13 @@ Example: [`flake.lock`](../flake.lock).
 
 Update the revision of inputs used in this project using the [`nix flake update`](https://nix.dev/manual/nix/2.33/command-ref/new-cli/nix3-flake-update.html) command.
 
-### Flake registry
+## Flake registry
 
 Docs:
 
 - [`nix registry`](https://nix.dev/manual/nix/2.33/command-ref/new-cli/nix3-registry.html)
 
-#### `nix registry pin`
+### `nix registry pin`
 
 <https://nix.dev/manual/nix/2.33/command-ref/new-cli/nix3-registry-pin.html>
 
