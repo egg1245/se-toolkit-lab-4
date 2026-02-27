@@ -171,7 +171,7 @@
 
 #### 1.6.2. (UPD) Clone your fork
 
-1. [Clone your fork](../../wiki/git-vscode.md#clone-the-repo):
+1. [Clone your fork](../../wiki/git-vscode.md#clone-the-repository):
 
    - Replace `<repo-url>` with [`<your-fork-url>`](../../wiki/github.md#your-fork-url).
    - Replace `<repo-name>` with `se-toolkit-lab-4`.
