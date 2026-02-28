@@ -32,7 +32,7 @@ Docs:
 
 ## Remote
 
-A remote is a version of your [repository](./github.md#repository) hosted on a [remote host](./vm.md#remote-host) (e.g., on [`GitHub`](./github.md#what-is-github)).
+A remote is a version of your [repository](./github.md#repository) hosted on a [remote host](./computer-networks.md#remote-host) (e.g., on [`GitHub`](./github.md#what-is-github)).
 
 Remotes let you push and pull changes between your local repository and the remote host.
 
