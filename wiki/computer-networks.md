@@ -1,4 +1,4 @@
-# Networks
+# Computer networks
 
 <h2>Table of contents</h2>
 
