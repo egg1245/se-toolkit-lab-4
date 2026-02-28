@@ -27,9 +27,9 @@ Examples: a personal laptop, a university server, a [virtual machine](./vm.md#wh
 
 ## Internet
 
-The Internet is a global [network](#what-is-a-network) of interconnected [computer networks](#networks).
+The Internet is a global [network](#what-is-a-network) that connects millions of smaller networks worldwide.
 
-It uses standardized communication protocols (such as `TCP/IP`) to link billions of devices worldwide, enabling communication and access to information across the globe.
+It uses standardized communication protocols (such as `TCP/IP`) to link billions of devices, enabling communication and access to information across the globe.
 
 ## IP address
 
