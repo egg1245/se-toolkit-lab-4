@@ -19,7 +19,7 @@
   - [1.6. (UPD) Clone your fork and open it in `VS Code`](#16-upd-clone-your-fork-and-open-it-in-vs-code)
     - [1.6.1. (UPD) Copy your fork `URL`](#161-upd-copy-your-fork-url)
     - [1.6.2. (UPD) Clone your fork](#162-upd-clone-your-fork)
-    - [1.6.3. (UPD) Open the cloned repo in `VS Code`](#163-upd-open-the-cloned-repo-in-vs-code)
+  - [1.7. (UPD) Open the cloned repo and set up `VS Code`](#17-upd-open-the-cloned-repo-and-set-up-vs-code)
   - [1.7. Continue creating a VM](#17-continue-creating-a-vm)
   - [1.9. Set up `Python`](#19-set-up-python)
     - [1.9.1. Install `uv`](#191-install-uv)
@@ -153,7 +153,7 @@
 2. [Open in `VS Code` the directory](../../wiki/vs-code.md#open-the-directory):
    `software-engineering-toolkit`.
 
-### 1.6. (UPD) Clone your fork and open it in `VS Code`
+### 1.6. (UPD) Clone your fork
 
 #### 1.6.1. (UPD) Copy your fork `URL`
 
@@ -171,12 +171,17 @@
    - Replace `<repo-url>` with [`<your-fork-url>`](../../wiki/github.md#your-fork-url).
    - Replace `<repo-name>` with `se-toolkit-lab-4`.
 
-#### 1.6.3. (UPD) Open the cloned repo in `VS Code`
+### 1.7. (UPD) Open the cloned repo and set up `VS Code`
+
+> [!IMPORTANT]
+> Go by the links in the steps below and complete the checks ("You should see ...").
+> Otherwise, your setup will be broken.
 
 1. [Open in `VS Code` the directory](../../wiki/vs-code.md#open-the-directory):
    `se-toolkit-lab-4`.
 2. [Check the current shell in the `VS Code Terminal`](../../wiki/vs-code.md#check-the-current-shell-in-the-vs-code-terminal).
 3. [Install recommended extensions](../../wiki/vs-code.md#install-recommended-extensions).
+4. Ask the TA if something doesn't work.
 
 ### 1.7. Continue creating a VM
 
