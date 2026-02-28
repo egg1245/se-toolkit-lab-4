@@ -41,15 +41,15 @@
   - [1.17. (UPD) Set up a coding agent](#117-upd-set-up-a-coding-agent)
   - [1.18. (UPD) Log in to the autochecker](#118-upd-log-in-to-the-autochecker)
 - [2. Optional steps](#2-optional-steps)
-  - [1.4.5. (NEW) Set up `Nix`](#145-new-set-up-nix)
-  - [1.8. (NEW) Set up `direnv`](#18-new-set-up-direnv)
-  - [2.1. (UPD) Learn to go back after clicking a link](#21-upd-learn-to-go-back-after-clicking-a-link)
-  - [2.2. Set up a coding agent](#22-set-up-a-coding-agent)
-  - [2.3. Set up the shell prompt](#23-set-up-the-shell-prompt)
-  - [2.4. Customize the `Source Control`](#24-customize-the-source-control)
-  - [2.5. Get familiar with `GitLens`](#25-get-familiar-with-gitlens)
-  - [2.6. Create a label for tasks](#26-create-a-label-for-tasks)
-  - [2.7. View `Markdown` files in `VS Code`](#27-view-markdown-files-in-vs-code)
+  - [2.4. Set up a coding agent](#24-set-up-a-coding-agent)
+  - [2.1. (NEW) Set up `Nix`](#21-new-set-up-nix)
+  - [2.2. (NEW) Set up `direnv`](#22-new-set-up-direnv)
+  - [2.3. (UPD) Learn to go back after clicking a link](#23-upd-learn-to-go-back-after-clicking-a-link)
+  - [2.5. Set up the shell prompt](#25-set-up-the-shell-prompt)
+  - [2.6. Customize the `Source Control`](#26-customize-the-source-control)
+  - [2.7. Get familiar with `GitLens`](#27-get-familiar-with-gitlens)
+  - [2.8. Create a label for tasks](#28-create-a-label-for-tasks)
+  - [2.9. View `Markdown` files in `VS Code`](#29-view-markdown-files-in-vs-code)
 
 ## 1. Required steps
 
@@ -368,33 +368,16 @@ Use the autochecker to check the task completion.
 
 These enhancements can make your life easier:
 
-- [Set up `direnv`](#18-new-set-up-direnv)
-- [Learn to go back after clicking a link](#21-upd-learn-to-go-back-after-clicking-a-link)
-- [Set up a coding agent](#22-set-up-a-coding-agent)
-- [Set up the shell prompt](#23-set-up-the-shell-prompt)
-- [Customize the `Source Control`](#24-customize-the-source-control)
-- [Get familiar with `GitLens`](#25-get-familiar-with-gitlens)
-- [Create a label for tasks](#26-create-a-label-for-tasks)
+- [Set up a coding agent](#24-set-up-a-coding-agent)
+- [Set up `Nix`](#21-new-set-up-nix)
+- [Set up `direnv`](#22-new-set-up-direnv)
+- [Learn to go back after clicking a link](#23-upd-learn-to-go-back-after-clicking-a-link)
+- [Set up the shell prompt](#25-set-up-the-shell-prompt)
+- [Customize the `Source Control`](#26-customize-the-source-control)
+- [Get familiar with `GitLens`](#27-get-familiar-with-gitlens)
+- [Create a label for tasks](#28-create-a-label-for-tasks)
 
-### 1.4.5. (NEW) Set up `Nix`
-
-1. (Optional) [Read about `Nix`](../../wiki/nix.md#what-is-nix).
-2. [Set up `Nix`](../../wiki/nix.md#set-up-nix).
-
-### 1.8. (NEW) Set up `direnv`
-
-1. [Set up `direnv`](../../wiki/direnv.md#set-up-direnv).
-
-### 2.1. (UPD) Learn to go back after clicking a link
-
-> [!NOTE]
-
-- `VS Code` - see the [shortcut](../../wiki/vs-code.md#shortcut-go-back)
-- Browsers:
-  - `Firefox`: `Alt+ArrowLeft`
-  - Other browsers: google
-
-### 2.2. Set up a coding agent
+### 2.4. Set up a coding agent
 
 A coding agent can help you write code, explain concepts, and debug issues.
 
@@ -405,7 +388,26 @@ See [Coding agents](../../wiki/coding-agents.md).
   <img alt="Qwen response" src="../images/tasks/setup/qwen-response.png" style="width:300px">
 </div>
 
-### 2.3. Set up the shell prompt
+### 2.1. (NEW) Set up `Nix`
+
+1. (Optional) [Read about `Nix`](../../wiki/nix.md#what-is-nix).
+2. [Set up `Nix`](../../wiki/nix.md#set-up-nix).
+
+### 2.2. (NEW) Set up `direnv`
+
+1. [Set up `Nix`](#21-new-set-up-nix).
+2. [Set up `direnv`](../../wiki/direnv.md#set-up-direnv).
+
+### 2.3. (UPD) Learn to go back after clicking a link
+
+> [!NOTE]
+
+- `VS Code` - see the [shortcut](../../wiki/vs-code.md#shortcut-go-back)
+- Browsers:
+  - `Firefox`: `Alt+ArrowLeft`
+  - Other browsers: google
+
+### 2.5. Set up the shell prompt
 
 `Starship` shows your current `Git` branch, status, and other useful info directly in your [shell prompt](../../wiki/shell.md#shell-prompt) in almost any terminal, including the [`VS Code Terminal`](../../wiki/vs-code.md#vs-code-terminal).
 
@@ -418,7 +420,7 @@ Complete these steps:
 
    <img alt="Starship in the VS Code Terminal" src="../../wiki/images/starship/terminal-prompt.png" style="width:400px"></img>
 
-### 2.4. Customize the `Source Control`
+### 2.6. Customize the `Source Control`
 
 1. [Open the `Source Control`](../../wiki/vs-code.md#open-the-source-control).
 2. Click three dots to the right of `SOURCE CONTROL`.
@@ -426,7 +428,7 @@ Complete these steps:
 
    <img alt="Changes and GitLens" src="../../wiki/images/vs-code/source-control-allowed-views.png" style="width:400px"></img>
 
-### 2.5. Get familiar with `GitLens`
+### 2.7. Get familiar with `GitLens`
 
 [`GitLens`](../../wiki/gitlens.md) helps you work with `Git` in `VS Code`.
 
@@ -437,7 +439,7 @@ Complete these steps:
 3. [Inspect the current branch](../../wiki/gitlens.md#inspect-the-current-branch)
 4. [Inspect the remotes](../../wiki/gitlens.md#inspect-the-remotes)
 
-### 2.6. Create a label for tasks
+### 2.8. Create a label for tasks
 
 [Labels](../../wiki/github.md#label) help you filter and organize issues.
 
@@ -452,7 +454,7 @@ Complete these steps:
 2. [Add the label to issues](../../wiki/github.md#add-a-label-to-issues).
 3. [See all issues with the label](../../wiki/github.md#see-all-issues-with-a-label).
 
-### 2.7. View `Markdown` files in `VS Code`
+### 2.9. View `Markdown` files in `VS Code`
 
 If you want to view [`README.md`](../../README.md) and other `Markdown` files in `VS Code` instead of on `GitHub`:
 
