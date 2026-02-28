@@ -12,6 +12,8 @@
   - [Hostname](#hostname)
   - [`localhost`](#localhost)
   - [Remote host](#remote-host)
+- [Wi-Fi](#wi-fi)
+  - [Wi-Fi network](#wi-fi-network)
 
 ## What is a network
 
@@ -85,3 +87,17 @@ Connections to `localhost` never leave the host — they are handled entirely wi
 A remote [host](#host) is a host that is not the [local host](#localhost) — it is accessed over a [network](#what-is-a-network).
 
 Example: [your VM](./vm.md#your-vm) you connect to via [`SSH`](./ssh.md) is a remote host.
+
+## Wi-Fi
+
+`Wi-Fi` is a wireless technology that allows [machines](#machine) to connect to a [network](#what-is-a-network) without physical cables.
+
+It uses radio waves to transmit data between devices and a wireless access point (a router).
+
+### Wi-Fi network
+
+A `Wi-Fi` network is a [network](#what-is-a-network) that [machines](#machine) connect to using [Wi-Fi](#wi-fi).
+
+Each `Wi-Fi` network has a name (called `SSID`) that identifies it to nearby devices.
+
+Example: `UniversityStudent`, `Home_Network`.
